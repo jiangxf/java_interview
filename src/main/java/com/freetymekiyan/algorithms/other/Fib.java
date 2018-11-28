@@ -2,20 +2,20 @@ package com.freetymekiyan.algorithms.other;
 
 /**
  * Fibonnaci Number
- * 
+ * <p>
  * Tags: Math, Recursion, DP
  */
 class Fib {
     public static void main(String[] args) {
         Fib f = new Fib();
         for (int n = 0; n <= 10; n++) {
-            System.out.println(f.fib(n, new int[n+1]));
+            System.out.println(f.fib(n, new int[n + 1]));
             System.out.println(f.fib2(n));
             System.out.println(f.fib3(n));
             System.out.println("--------");
         }
     }
-    
+
     /**
      * DP, top-down approach
      */
@@ -23,9 +23,9 @@ class Fib {
         if (n == 0) return 0;
         if (n == 1) return 1;
         if (res[n] == 0) res[n] = fib(n - 1, res) + fib(n - 2, res);
-        return res[n];        
+        return res[n];
     }
-    
+
     /**
      * DP, bottom-up approach
      */
@@ -41,7 +41,7 @@ class Fib {
         }
         return res;
     }
-    
+
     /**
      * Recursion
      */

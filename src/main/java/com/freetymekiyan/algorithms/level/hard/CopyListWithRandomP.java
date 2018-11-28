@@ -1,21 +1,22 @@
 package com.freetymekiyan.algorithms.level.hard;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A linked list is given such that each node contains an additional random
  * pointer which could point to any node in the list or null.
- * 
+ * <p>
  * Return a deep copy of the list.
- * 
+ * <p>
  * Tags: Hashtable, Linkedlist
  */
 class CopyListWithRandomP {
-    
+
     public static void main(String[] args) {
-        
+
     }
-    
+
     /**
      * Use a hashmap to store map between original node and copy node
      */
@@ -23,7 +24,7 @@ class CopyListWithRandomP {
         Map<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
         return helper(head, map);
     }
-    
+
     /**
      * Get copy node from map
      */
@@ -36,7 +37,7 @@ class CopyListWithRandomP {
         res.random = helper(node.random, map); // build copy
         return res;
     }
-    
+
     /**
      * Insert a same node after current node
      * Then split into two lists
@@ -68,7 +69,7 @@ class CopyListWithRandomP {
         }
         return dummy;
     }
-    
+
     /**
      * Build a new list and connect original and new node together
      */
@@ -76,10 +77,15 @@ class CopyListWithRandomP {
         // TODO: 12/1/17 Implement this method
         return null;
     }
-    
+
     class RandomListNode {
         int label;
         RandomListNode next, random;
-        RandomListNode(int x) { this.label = x; }
-    };
+
+        RandomListNode(int x) {
+            this.label = x;
+        }
+    }
+
+    ;
 }

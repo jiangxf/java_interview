@@ -10,23 +10,22 @@ import java.util.Set;
  * For the method search, you'll be given a word,
  * and judge whether if you modify exactly one character into another character in this word,
  * the modified word is in the dictionary you just built.
-
- Example 1:
-
- Input: buildDict(["hello", "leetcode"]), Output: Null
- Input: search("hello"), Output: False
- Input: search("hhllo"), Output: True
- Input: search("hell"), Output: False
- Input: search("leetcoded"), Output: False
-
- Note:
-
- You may assume that all the inputs are consist of lowercase letters a-z.
- For contest purpose, the test data is rather small by now.
- You could think about highly efficient algorithm after the contest.
- Please remember to RESET your class variables declared in class MagicDictionary,
- as static/class variables are persisted across multiple test cases. Please see here for more details.
-
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: buildDict(["hello", "leetcode"]), Output: Null
+ * Input: search("hello"), Output: False
+ * Input: search("hhllo"), Output: True
+ * Input: search("hell"), Output: False
+ * Input: search("leetcoded"), Output: False
+ * <p>
+ * Note:
+ * <p>
+ * You may assume that all the inputs are consist of lowercase letters a-z.
+ * For contest purpose, the test data is rather small by now.
+ * You could think about highly efficient algorithm after the contest.
+ * Please remember to RESET your class variables declared in class MagicDictionary,
+ * as static/class variables are persisted across multiple test cases. Please see here for more details.
  */
 public class _676 {
 

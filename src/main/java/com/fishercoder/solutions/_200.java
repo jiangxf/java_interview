@@ -6,23 +6,22 @@ package com.fishercoder.solutions;
  * count the number of islands.
  * An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.
  * You may assume all four edges of the grid are all surrounded by water.
-
- Example 1:
-
- 11110
- 11010
- 11000
- 00000
- Answer: 1
-
- Example 2:
-
- 11000
- 11000
- 00100
- 00011
- Answer: 3
-
+ * <p>
+ * Example 1:
+ * <p>
+ * 11110
+ * 11010
+ * 11000
+ * 00000
+ * Answer: 1
+ * <p>
+ * Example 2:
+ * <p>
+ * 11000
+ * 11000
+ * 00100
+ * 00011
+ * Answer: 3
  */
 public class _200 {
 
@@ -60,6 +59,32 @@ public class _200 {
 
     public static class Solution2 {
 
+        public int numIslands(char[][] grid) {
+            if (grid == null || grid.length == 0 || grid[0].length == 0) {
+                return 0;
+            }
+            int[] dirs = new int[]{0, 1, 0, -1, 0};
+            UnionFind uf = new UnionFind(grid);
+            int m = grid.length;
+            int n = grid[0].length;
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (grid[i][j] == '1') {
+                        for (int k = 0; k < 4; k++) {
+                            int x = i + dirs[k];
+                            int y = j + dirs[k + 1];
+                            if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == '1') {
+                                int id1 = i * n + j;
+                                int id2 = x * n + y;
+                                uf.union(id1, id2);
+                            }
+                        }
+                    }
+                }
+            }
+            return uf.count;
+        }
+
         class UnionFind {
             int count;
             int m;
@@ -96,32 +121,6 @@ public class _200 {
                 }
                 return find(ids, ids[i]);
             }
-        }
-
-        public int numIslands(char[][] grid) {
-            if (grid == null || grid.length == 0 || grid[0].length == 0) {
-                return 0;
-            }
-            int[] dirs = new int[]{0, 1, 0, -1, 0};
-            UnionFind uf = new UnionFind(grid);
-            int m = grid.length;
-            int n = grid[0].length;
-            for (int i = 0; i < m; i++) {
-                for (int j = 0; j < n; j++) {
-                    if (grid[i][j] == '1') {
-                        for (int k = 0; k < 4; k++) {
-                            int x = i + dirs[k];
-                            int y = j + dirs[k + 1];
-                            if (x >= 0 && x < m && y >= 0 && y < n && grid[x][y] == '1') {
-                                int id1 = i * n + j;
-                                int id2 = x * n + y;
-                                uf.union(id1, id2);
-                            }
-                        }
-                    }
-                }
-            }
-            return uf.count;
         }
     }
 }

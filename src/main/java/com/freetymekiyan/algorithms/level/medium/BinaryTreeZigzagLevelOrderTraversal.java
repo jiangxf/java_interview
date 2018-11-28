@@ -2,11 +2,7 @@ package com.freetymekiyan.algorithms.level.medium;
 
 import com.freetymekiyan.algorithms.utils.Utils.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then

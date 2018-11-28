@@ -47,8 +47,8 @@ class BestTimeStock3 {
             peak = Math.max(peak, prices[i]);
             maxSince[i] = Math.max(maxSince[i + 1], peak - prices[i]);
             maxProfit =
-                Math.max(maxProfit, maxBy[i]
-                                    + maxSince[i]); // find i such that maxBy[i]+maxSince[i+1] is the max two-transaction profit, no overlap
+                    Math.max(maxProfit, maxBy[i]
+                            + maxSince[i]); // find i such that maxBy[i]+maxSince[i+1] is the max two-transaction profit, no overlap
         }
         return maxProfit;
     }

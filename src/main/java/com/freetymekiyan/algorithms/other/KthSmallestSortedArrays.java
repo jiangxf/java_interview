@@ -4,13 +4,13 @@ package com.freetymekiyan.algorithms.other;
  * Given two sorted arrays A, B of size m and n respectively. Find the k-th
  * smallest element in the union of A and B. You can assume that there are no
  * duplicate elements.
- * 
- * Tags: Array, 
+ * <p>
+ * Tags: Array,
  */
 class KthSmallestSortedArrays {
     public static void main(String[] args) {
-        int[] A = { 1, 2, 3, 4, 5, 6 };
-        int[] B = { 2, 3, 4, 5, 6, 7 };
+        int[] A = {1, 2, 3, 4, 5, 6};
+        int[] B = {2, 3, 4, 5, 6, 7};
         System.out.println(kthSmallest(0, A, B));
         System.out.println(kthSmallest(1, A, B));
         System.out.println(kthSmallest(10, A, B));
@@ -47,7 +47,7 @@ class KthSmallestSortedArrays {
         // after binary search, we almost get the median because it must be between these 4 numbers: A[l-1], A[l], B[k-l], and B[k-l+1]
         int a = Math.max(l > 0 ? A[l - 1] : Integer.MIN_VALUE, mid - l >= 0 ? B[mid - l] : Integer.MIN_VALUE);
         if (((n + m) & 1) == 1) // total number is odd
-           return (double) a;
+            return (double) a;
 
         /*total number is even*/
         int b = Math.min(l < n ? A[l] : Integer.MAX_VALUE, mid - l + 1 < m ? B[mid - l + 1] : Integer.MAX_VALUE);
@@ -71,7 +71,7 @@ class KthSmallestSortedArrays {
         while (i + j < k) {
             if (A[i] < B[j] && i < A.length) {
                 i++;
-            } else if (A[i] >= B[j] && j < B.length){
+            } else if (A[i] >= B[j] && j < B.length) {
                 j++;
             }
             if (i + j == k && A[i] < B[j]) {

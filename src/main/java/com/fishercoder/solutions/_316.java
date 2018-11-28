@@ -5,20 +5,22 @@ import java.util.Deque;
 
 /**
  * 316. Remove Duplicate Letters
- *
+ * <p>
  * Given a string which contains only lowercase letters,
  * remove duplicate letters so that every letter appear once and only once.
  * You must make sure your result is the smallest in lexicographical order among all possible results.
-
- Example:
- Given "bcabc"
- Return "abc"
-
- Given "cbacdcbc"
- Return "acdb"
+ * <p>
+ * Example:
+ * Given "bcabc"
+ * Return "abc"
+ * <p>
+ * Given "cbacdcbc"
+ * Return "acdb"
  */
 public class _316 {
-    /**credit: https://discuss.leetcode.com/topic/32259/java-solution-using-stack-with-comments/2*/
+    /**
+     * credit: https://discuss.leetcode.com/topic/32259/java-solution-using-stack-with-comments/2
+     */
     public String removeDuplicateLetters_use_stack(String s) {
         int[] res = new int[26]; //will contain number of occurences of character (i+'a')
         boolean[] visited = new boolean[26]; //will contain if character (i+'a') is present in current result Stack

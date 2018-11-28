@@ -103,7 +103,7 @@ public class RemoveKDigits {
             offset++;
         }
         return offset == len ? "0" // All zeros
-                                : new String(stk, offset, len - offset);
+                : new String(stk, offset, len - offset);
     }
 
 

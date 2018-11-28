@@ -16,10 +16,6 @@ public class ListNode {
         this.val = i;
     }
 
-    public int val() {
-        return val;
-    }
-
     public static ListNode createSinglyLinkedList() {
         ListNode head = new ListNode(1);
 
@@ -89,6 +85,10 @@ public class ListNode {
         ListNode head = createSinglyLinkedList();
         printList(head);
         System.out.println("The end.");
+    }
+
+    public int val() {
+        return val;
     }
 
     @Override

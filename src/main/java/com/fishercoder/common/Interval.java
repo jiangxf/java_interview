@@ -12,6 +12,12 @@ public class Interval implements Comparable<Interval> {
         end = 0;
     }
 
+    public Interval(int s, int e) {
+
+        this.start = s;
+        this.end = e;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -34,12 +40,6 @@ public class Interval implements Comparable<Interval> {
         int result = start;
         result = 31 * result + end;
         return result;
-    }
-
-    public Interval(int s, int e) {
-
-        this.start = s;
-        this.end = e;
     }
 
     @Override

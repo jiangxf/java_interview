@@ -1,54 +1,79 @@
 package com.fishercoder.solutions;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 694. Number of Distinct Islands
- *
+ * <p>
  * Given a non-empty 2D array grid of 0's and 1's, an island is a group of 1's (representing land)
  * connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
  * Count the number of distinct islands.
  * An island is considered to be the same as another if and only if
  * one island can be translated (and not rotated or reflected) to equal the other.
-
- Example 1:
-
- 11000
- 11000
- 00011
- 00011
-
- Given the above grid map, return 1.
-
- Example 2:
-
- 11011
- 10000
- 00001
- 11011
-
- Given the above grid map, return 3.
-
- Notice that:
-
- 11
- 1
-
- and
-
- 1
- 11
-
- are considered different island shapes, because we do not consider reflection / rotation.
-
- Note: The length of each dimension in the given grid does not exceed 50.
+ * <p>
+ * Example 1:
+ * <p>
+ * 11000
+ * 11000
+ * 00011
+ * 00011
+ * <p>
+ * Given the above grid map, return 1.
+ * <p>
+ * Example 2:
+ * <p>
+ * 11011
+ * 10000
+ * 00001
+ * 11011
+ * <p>
+ * Given the above grid map, return 3.
+ * <p>
+ * Notice that:
+ * <p>
+ * 11
+ * 1
+ * <p>
+ * and
+ * <p>
+ * 1
+ * 11
+ * <p>
+ * are considered different island shapes, because we do not consider reflection / rotation.
+ * <p>
+ * Note: The length of each dimension in the given grid does not exceed 50.
  */
 public class _694 {
     public static class Solution1 {
+        public int numDistinctIslands(int[][] grid) {
+            Set<Quadrilateral> set = new HashSet<>();
+            int m = grid.length;
+            int n = grid[0].length;
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (grid[i][j] == 1) {
+                        Quadrilateral quadrilateral = dfs(grid, i, j, m, n, new Quadrilateral(i, j));
+                        set.add(quadrilateral);
+                    }
+                }
+            }
+            return set.size();
+        }
+
+        private Quadrilateral dfs(int[][] grid, int i, int j, int m, int n, Quadrilateral quadrilateral) {
+            if (i < 0 || j < 0 || i >= m || j >= n || grid[i][j] == 0) {
+                return quadrilateral;
+            }
+            grid[i][j] = 0;
+            quadrilateral.addPoint(i, j);
+            quadrilateral.addArea();
+            quadrilateral = dfs(grid, i + 1, j, m, n, quadrilateral);
+            quadrilateral = dfs(grid, i - 1, j, m, n, quadrilateral);
+            quadrilateral = dfs(grid, i, j + 1, m, n, quadrilateral);
+            quadrilateral = dfs(grid, i, j - 1, m, n, quadrilateral);
+            return quadrilateral;
+        }
+
         /**
          * My original idea:
          * my not fully working yet: the equals() and hashcode() methods need to be refined
@@ -144,35 +169,6 @@ public class _694 {
             public void addArea() {
                 this.area++;
             }
-        }
-
-        public int numDistinctIslands(int[][] grid) {
-            Set<Quadrilateral> set = new HashSet<>();
-            int m = grid.length;
-            int n = grid[0].length;
-            for (int i = 0; i < m; i++) {
-                for (int j = 0; j < n; j++) {
-                    if (grid[i][j] == 1) {
-                        Quadrilateral quadrilateral = dfs(grid, i, j, m, n, new Quadrilateral(i, j));
-                        set.add(quadrilateral);
-                    }
-                }
-            }
-            return set.size();
-        }
-
-        private Quadrilateral dfs(int[][] grid, int i, int j, int m, int n, Quadrilateral quadrilateral) {
-            if (i < 0 || j < 0 || i >= m || j >= n || grid[i][j] == 0) {
-                return quadrilateral;
-            }
-            grid[i][j] = 0;
-            quadrilateral.addPoint(i, j);
-            quadrilateral.addArea();
-            quadrilateral = dfs(grid, i + 1, j, m, n, quadrilateral);
-            quadrilateral = dfs(grid, i - 1, j, m, n, quadrilateral);
-            quadrilateral = dfs(grid, i, j + 1, m, n, quadrilateral);
-            quadrilateral = dfs(grid, i, j - 1, m, n, quadrilateral);
-            return quadrilateral;
         }
     }
 

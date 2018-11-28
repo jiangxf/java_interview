@@ -5,49 +5,51 @@ import java.util.Map;
 
 /**
  * 533. Lonely Pixel II
- *
+ * <p>
  * Given a picture consisting of black and white pixels, and a positive integer N,
  * find the number of black pixels located at some specific row R and column C that align with all the following rules:
-
- Row R and column C both contain exactly N black pixels.
- For all rows that have a black pixel at column C, they should be exactly the same as row R
- The picture is represented by a 2D char array consisting of 'B' and 'W', which means black and white pixels respectively.
-
- Example:
- Input:
- [['W', 'B', 'W', 'B', 'B', 'W'],
- ['W', 'B', 'W', 'B', 'B', 'W'],
- ['W', 'B', 'W', 'B', 'B', 'W'],
- ['W', 'W', 'B', 'W', 'B', 'W']]
-
- N = 3
- Output: 6
- Explanation: All the bold 'B' are the black pixels we need (all 'B's at column 1 and 3).
-         0    1    2    3    4    5         column index
- 0    [['W', 'B', 'W', 'B', 'B', 'W'],
- 1     ['W', 'B', 'W', 'B', 'B', 'W'],
- 2     ['W', 'B', 'W', 'B', 'B', 'W'],
- 3     ['W', 'W', 'B', 'W', 'B', 'W']]
- row index
-
- Take 'B' at row R = 0 and column C = 1 as an example:
- Rule 1, row R = 0 and column C = 1 both have exactly N = 3 black pixels.
- Rule 2, the rows have black pixel at column C = 1 are row 0, row 1 and row 2. They are exactly the same as row R = 0.
-
- Note:
- The range of width and height of the input 2D array is [1,200].
+ * <p>
+ * Row R and column C both contain exactly N black pixels.
+ * For all rows that have a black pixel at column C, they should be exactly the same as row R
+ * The picture is represented by a 2D char array consisting of 'B' and 'W', which means black and white pixels respectively.
+ * <p>
+ * Example:
+ * Input:
+ * [['W', 'B', 'W', 'B', 'B', 'W'],
+ * ['W', 'B', 'W', 'B', 'B', 'W'],
+ * ['W', 'B', 'W', 'B', 'B', 'W'],
+ * ['W', 'W', 'B', 'W', 'B', 'W']]
+ * <p>
+ * N = 3
+ * Output: 6
+ * Explanation: All the bold 'B' are the black pixels we need (all 'B's at column 1 and 3).
+ * 0    1    2    3    4    5         column index
+ * 0    [['W', 'B', 'W', 'B', 'B', 'W'],
+ * 1     ['W', 'B', 'W', 'B', 'B', 'W'],
+ * 2     ['W', 'B', 'W', 'B', 'B', 'W'],
+ * 3     ['W', 'W', 'B', 'W', 'B', 'W']]
+ * row index
+ * <p>
+ * Take 'B' at row R = 0 and column C = 1 as an example:
+ * Rule 1, row R = 0 and column C = 1 both have exactly N = 3 black pixels.
+ * Rule 2, the rows have black pixel at column C = 1 are row 0, row 1 and row 2. They are exactly the same as row R = 0.
+ * <p>
+ * Note:
+ * The range of width and height of the input 2D array is [1,200].
  */
 public class _533 {
-    /**Credit: https://discuss.leetcode.com/topic/81686/verbose-java-o-m-n-solution-hashmap/5
-     *
+    /**
+     * Credit: https://discuss.leetcode.com/topic/81686/verbose-java-o-m-n-solution-hashmap/5
+     * <p>
      * This program is very well designed to do things:
      * 1. it scans the entire matrix once, but does two things in this scan:
      * first it records an array of cols that keeps count of how many 'B' are there in each column;
      * second, at the end of traversing each column, it puts this entire row as the key into a HashMap
      * when there N number of 'B's in this row.
-     *
+     * <p>
      * 2. then we could go through the HashMap keyset:
-     * if one row has N number of 'B's, we go through this row's each column to see if any element in this row is 'B' and also that element's column has N 'B's*/
+     * if one row has N number of 'B's, we go through this row's each column to see if any element in this row is 'B' and also that element's column has N 'B's
+     */
     public int findBlackPixel(char[][] picture, int N) {
         if (picture == null || picture.length == 0 || picture[0].length == 0) {
             return 0;
@@ -58,7 +60,7 @@ public class _533 {
         Map<String, Integer> map = new HashMap<>();
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < m; i++) {
-            int count  = 0;
+            int count = 0;
             for (int j = 0; j < n; j++) {
                 if (picture[i][j] == 'B') {
                     count++;

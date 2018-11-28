@@ -19,7 +19,7 @@ public class CharFrequencyOrderOfAString {
         TreeMap<Character, Integer> map = new TreeMap<>();
         for (int i = 0; i < s.length(); i++) {
             char key = s.charAt(i);
-            map.put(key, map.containsKey(key)? map.get(key) + 1 : 1);
+            map.put(key, map.containsKey(key) ? map.get(key) + 1 : 1);
         }
         while (map.size() > 0)
             System.out.println(map.pollFirstEntry());

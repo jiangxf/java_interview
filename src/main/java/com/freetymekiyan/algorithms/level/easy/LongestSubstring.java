@@ -1,13 +1,14 @@
 package com.freetymekiyan.algorithms.level.easy;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Given a string, find the length of the longest substring without repeating
  * characters. For example, the longest substring without repeating letters for
  * "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest
  * substring is "b", with the length of 1.
- * 
+ * <p>
  * Tags: Hashtable, Two pointers, String
  */
 class LongestSubstring {
@@ -20,7 +21,7 @@ class LongestSubstring {
         // System.out.println(lengthOfLongestSubstring("aeiou"));
         System.out.println(lengthOfLongestSubstring("hnwnkuewhsqmgbbuqcljjivswmdkqtbxixmvtrrbljptnsnfwzqfjmafadrrwsofsbcnuvqhffbsaqxwpqcac"));
     }
-    
+
     /**
      * Traverse the string
      * Get current character
@@ -30,11 +31,11 @@ class LongestSubstring {
      */
     public static int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) return 0;
-        
+
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         int start = 0;
         int max = 0;
-        
+
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             /*start point can be recent dup's next char or last start*/

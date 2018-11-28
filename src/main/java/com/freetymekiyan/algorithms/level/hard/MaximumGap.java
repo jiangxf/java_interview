@@ -1,18 +1,18 @@
 package com.freetymekiyan.algorithms.level.hard;
 
-import java.util.*;
+import java.util.Arrays;
 
 /**
  * Given an unsorted array, find the maximum difference between the successive
  * elements in its sorted form.
- * 
+ * <p>
  * Try to solve it in linear time/space.
- * 
+ * <p>
  * Return 0 if the array contains less than 2 elements.
- * 
+ * <p>
  * You may assume all elements in the array are non-negative integers and fit
  * in the 32-bit signed integer range.
- * 
+ * <p>
  * Tags: Sort
  */
 class MaximumGap {
@@ -20,7 +20,7 @@ class MaximumGap {
         MaximumGap mg = new MaximumGap();
         System.out.println(mg.maximumGap(new int[]{3, 6, 9, 1}));
     }
-    
+
     /**
      * O(n) Time, O(n) Space
      * Find max and min in one traverse
@@ -38,13 +38,13 @@ class MaximumGap {
             min = Math.min(min, i);
         }
         /*put into buckets*/
-        double dist = (double)(max - min) / (n - 1);
+        double dist = (double) (max - min) / (n - 1);
         int[] uppers = new int[n - 1];
         int[] lowers = new int[n - 1];
         Arrays.fill(uppers, -1);
         Arrays.fill(lowers, -1);
         for (int i : num) {
-            int idx = (i == max ? n - 2 : (int)((i - min) / dist));
+            int idx = (i == max ? n - 2 : (int) ((i - min) / dist));
             if (lowers[idx] == -1 || i < lowers[idx]) lowers[idx] = i;
             if (uppers[idx] == -1 || i > uppers[idx]) uppers[idx] = i;
         }

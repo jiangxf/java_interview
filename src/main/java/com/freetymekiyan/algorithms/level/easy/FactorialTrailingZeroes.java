@@ -2,16 +2,16 @@ package com.freetymekiyan.algorithms.level.easy;
 
 /**
  * Given an integer n, return the number of trailing zeroes in n!.
- * 
+ * <p>
  * Note: Your solution should be in logarithmic time complexity.
- * 
+ * <p>
  * Tag: Math
  */
 class FactorialTrailingZeroes {
     public static void main(String[] args) {
         System.out.println(trailingZeroes(20));
     }
-    
+
     /**
      * O(log5-n)
      */
@@ -23,7 +23,7 @@ class FactorialTrailingZeroes {
         }
         return r;
     }
-    
+
     /**
      * Recursive
      */

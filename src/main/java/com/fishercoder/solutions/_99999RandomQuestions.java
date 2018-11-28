@@ -9,11 +9,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class _99999RandomQuestions {
 
@@ -60,6 +56,64 @@ public class _99999RandomQuestions {
         return true;
     }
 
+    static String rollingString(String s, String[] operations) {
+        char[] chars = s.toCharArray();
+        for (String operation : operations) {
+            String[] ops = operation.split(" ");
+            for (int i = Integer.parseInt(ops[0]); i <= Integer.parseInt(ops[1]); i++) {
+                if ("L".equals(ops[2])) {
+                    if (chars[i] == 'a') {
+                        chars[i] = 'z';
+                    } else {
+                        chars[i] -= 1;
+                    }
+                } else if ("R".equals(ops[2])) {
+                    if (chars[i] == 'z') {
+                        chars[i] = 'a';
+                    } else {
+                        chars[i] += 1;
+                    }
+                }
+            }
+        }
+        return new String(chars);
+    }
+
+    public static String getShiftedString(String s, int left, int right) {
+        if (left == right) {
+            return s;
+        } else if (left > right) {
+            return shiftLeft(s, left - right);
+        } else {
+            return shiftRight(s, right - left);
+        }
+    }
+
+    private static String shiftRight(String s, int pos) {
+        pos %= s.length();
+        StringBuilder sb = new StringBuilder();
+        for (int i = s.length() - pos; i < s.length(); i++) {
+            sb.append(s.charAt(i));
+        }
+        int i = 0;
+        while (i < s.length() - pos) {
+            sb.append(s.charAt(i++));
+        }
+        return sb.toString();
+    }
+
+    private static String shiftLeft(String s, int pos) {
+        pos %= s.length();
+        StringBuilder sb = new StringBuilder();
+        for (int i = pos; i < s.length(); i++) {
+            sb.append(s.charAt(i));
+        }
+        int i = 0;
+        while (i < pos) {
+            sb.append(s.charAt(i++));
+        }
+        return sb.toString();
+    }
 
     /**
      * Given a string containing only three types of characters: '(', ')' and '*', write a function to check whether this string is valid. We define the validity of a string by these rules:
@@ -104,29 +158,6 @@ public class _99999RandomQuestions {
             return rec(input, start + 1, leftParen - 1);
         }
         return false;
-    }
-
-    static String rollingString(String s, String[] operations) {
-        char[] chars = s.toCharArray();
-        for (String operation : operations) {
-            String[] ops = operation.split(" ");
-            for (int i = Integer.parseInt(ops[0]); i <= Integer.parseInt(ops[1]); i++) {
-                if ("L".equals(ops[2])) {
-                    if (chars[i] == 'a') {
-                        chars[i] = 'z';
-                    } else {
-                        chars[i] -= 1;
-                    }
-                } else if ("R".equals(ops[2])) {
-                    if (chars[i] == 'z') {
-                        chars[i] = 'a';
-                    } else {
-                        chars[i] += 1;
-                    }
-                }
-            }
-        }
-        return new String(chars);
     }
 
     public static class GetMovies {
@@ -235,42 +266,6 @@ public class _99999RandomQuestions {
             }
             return s.substring(0, 1);
         }
-    }
-
-    public static String getShiftedString(String s, int left, int right) {
-        if (left == right) {
-            return s;
-        } else if (left > right) {
-            return shiftLeft(s, left - right);
-        } else {
-            return shiftRight(s, right - left);
-        }
-    }
-
-    private static String shiftRight(String s, int pos) {
-        pos %= s.length();
-        StringBuilder sb = new StringBuilder();
-        for (int i = s.length() - pos; i < s.length(); i++) {
-            sb.append(s.charAt(i));
-        }
-        int i = 0;
-        while (i < s.length() - pos) {
-            sb.append(s.charAt(i++));
-        }
-        return sb.toString();
-    }
-
-    private static String shiftLeft(String s, int pos) {
-        pos %= s.length();
-        StringBuilder sb = new StringBuilder();
-        for (int i = pos; i < s.length(); i++) {
-            sb.append(s.charAt(i));
-        }
-        int i = 0;
-        while (i < pos) {
-            sb.append(s.charAt(i++));
-        }
-        return sb.toString();
     }
 
 }

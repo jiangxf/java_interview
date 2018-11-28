@@ -1,26 +1,26 @@
 package com.freetymekiyan.algorithms.other;
 
 /**
- * Given an array which has n integers. It has both positive and negative 
- * integers. Now you need to sort this array in such a way that, the negative 
- * integers should be in the front, and the positive integers should at the 
+ * Given an array which has n integers. It has both positive and negative
+ * integers. Now you need to sort this array in such a way that, the negative
+ * integers should be in the front, and the positive integers should at the
  * back. Also the relative position should not be changed.
- * 
+ * <p>
  * Example:
- * -1 1 3 -2 2 
- * 
+ * -1 1 3 -2 2
+ * <p>
  * Output:
  * -1 -2 1 3 2.
- * 
+ * <p>
  * Required running time complexity is O(N) and the space complexity is O(1)
- * 
+ * <p>
  * Tags: Array, Sort
  */
 class NegBeforePos {
     public static void main(String[] args) {
-        
+
     }
-    
+
     /**
      * Two-pass O(n)
      * For the first pass just get the count of negative numbers
@@ -42,7 +42,7 @@ class NegBeforePos {
             else { // current value > 0, swap
                 int temp = A[negIndex];
                 A[negIndex] = A[posIndex];
-                A[posIndex] = temp; 
+                A[posIndex] = temp;
                 posIndex++; // update posIndex
             }
         }

@@ -12,37 +12,12 @@ public class NestedInteger {
         this.list = list;
     }
 
-    public void add(NestedInteger nestedInteger) {
-        if (this.list != null) {
-            this.list.add(nestedInteger);
-        } else {
-            this.list = new ArrayList();
-            this.list.add(nestedInteger);
-        }
-    }
-
-    public void setInteger(int num) {
-        this.integer = num;
-    }
-
     public NestedInteger(Integer integer) {
         this.integer = integer;
     }
 
     public NestedInteger() {
         this.list = new ArrayList();
-    }
-
-    public boolean isInteger() {
-        return integer != null;
-    }
-
-    public Integer getInteger() {
-        return integer;
-    }
-
-    public List<NestedInteger> getList() {
-        return list;
     }
 
     public static String printNi(NestedInteger thisNi, StringBuilder sb) {
@@ -61,6 +36,31 @@ public class NestedInteger {
         }
         sb.append("]");
         return sb.toString();
+    }
+
+    public void add(NestedInteger nestedInteger) {
+        if (this.list != null) {
+            this.list.add(nestedInteger);
+        } else {
+            this.list = new ArrayList();
+            this.list.add(nestedInteger);
+        }
+    }
+
+    public boolean isInteger() {
+        return integer != null;
+    }
+
+    public Integer getInteger() {
+        return integer;
+    }
+
+    public void setInteger(int num) {
+        this.integer = num;
+    }
+
+    public List<NestedInteger> getList() {
+        return list;
     }
 
 }

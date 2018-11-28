@@ -9,19 +9,19 @@ import java.util.Queue;
 
 /**
  * 515. Find Largest Value in Each Tree Row
- *
+ * <p>
  * You need to find the largest value in each row of a binary tree.
-
- Example:
- Input:
-
-      1
-     / \
-    3   2
-   / \   \
-  5  3   9
-
- Output: [1, 3, 9]
+ * <p>
+ * Example:
+ * Input:
+ * <p>
+ * 1
+ * / \
+ * 3   2
+ * / \   \
+ * 5  3   9
+ * <p>
+ * Output: [1, 3, 9]
  */
 public class _515 {
 

@@ -4,33 +4,35 @@ import com.fishercoder.common.NestedInteger;
 
 import java.util.Stack;
 
-/**Given a nested list of integers represented as a string, implement a parser to deserialize it.
-
- Each element is either an integer, or a list -- whose elements may also be integers or other lists.
-
- Note: You may assume that the string is well-formed:
-
- String is non-empty.
- String does not contain white spaces.
- String contains only digits 0-9, [, - ,, ].
- Example 1:
-
- Given s = "324",
-
- You should return a NestedInteger object which contains a single integer 324.
- Example 2:
-
- Given s = "[123,[456,[789]]]",
-
- Return a NestedInteger object containing a nested list with 2 elements:
-
- 1. An integer containing value 123.
- 2. A nested list containing two elements:
- i.  An integer containing value 456.
- ii. A nested list with one element:
- a. An integer containing value 789.*/
+/**
+ * Given a nested list of integers represented as a string, implement a parser to deserialize it.
+ * <p>
+ * Each element is either an integer, or a list -- whose elements may also be integers or other lists.
+ * <p>
+ * Note: You may assume that the string is well-formed:
+ * <p>
+ * String is non-empty.
+ * String does not contain white spaces.
+ * String contains only digits 0-9, [, - ,, ].
+ * Example 1:
+ * <p>
+ * Given s = "324",
+ * <p>
+ * You should return a NestedInteger object which contains a single integer 324.
+ * Example 2:
+ * <p>
+ * Given s = "[123,[456,[789]]]",
+ * <p>
+ * Return a NestedInteger object containing a nested list with 2 elements:
+ * <p>
+ * 1. An integer containing value 123.
+ * 2. A nested list containing two elements:
+ * i.  An integer containing value 456.
+ * ii. A nested list with one element:
+ * a. An integer containing value 789.
+ */
 public class _385 {
-    
+
     //Lessons: ask the interviewer to clarify the input, for this question, the input could be "324", "[324]", they are different
     //the former should return a nested integer with one single integer, the latter should return a nested integer with a list
 
@@ -39,6 +41,17 @@ public class _385 {
     //if it's a number, we parse the whole number and add to the previous nested integer object
     //if it's ',', we'll just continue;
     //if it's ']', we'll just pop one nested integer from the working stack and assign it to the result
+
+    public static void main(String... args) {
+        _385 test = new _385();
+//        String s = "[-1]";
+//        String s = "324";
+//        String s = "[]";
+//        String s = "[-1,-2]";
+        String s = "[-1,-2,[-3,-4,[5,[6,[7,8]]]]]";
+        NestedInteger result = test.deserialize(s);
+        System.out.println(result.printNi(result, new StringBuilder()));
+    }
 
     public NestedInteger deserialize(String s) {
         if (s == null || s.isEmpty() || s.length() == 0) {
@@ -116,16 +129,5 @@ public class _385 {
             }
         }
         return result;
-    }
-
-    public static void main(String... args) {
-        _385 test = new _385();
-//        String s = "[-1]";
-//        String s = "324";
-//        String s = "[]";
-//        String s = "[-1,-2]";
-        String s = "[-1,-2,[-3,-4,[5,[6,[7,8]]]]]";
-        NestedInteger result = test.deserialize(s);
-        System.out.println(result.printNi(result, new StringBuilder()));
     }
 }

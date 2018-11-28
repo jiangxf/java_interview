@@ -1,18 +1,18 @@
 package com.freetymekiyan.algorithms.level.hard;
 
-import java.util.*;
+import java.util.Stack;
 
 /**
  * Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle
  * containing all ones and return its area.
- * 
+ * <p>
  * Tags: Array, Hashtable, Stack, DP
  */
 class MaxRectangle {
     public static void main(String[] args) {
-        
+
     }
-    
+
     /**
      * row by row
      * create a height integer array to bigger than column size
@@ -28,7 +28,7 @@ class MaxRectangle {
         int[] height = new int[n + 1];
         height[n] = 0;
         int max = 0;
-        
+
         for (int i = 0; i < m; i++) {
             Stack<Integer> s = new Stack<Integer>();
             for (int j = 0; j < n + 1; j++) {

@@ -3,17 +3,17 @@ package com.freetymekiyan.algorithms.level.easy;
 /**
  * Given a positive integer, return its corresponding column title as appear in
  * an Excel sheet.
- *
+ * <p>
  * For example:
- *
- *     1 -> A
- *     2 -> B
- *     3 -> C
- *     ...
- *     26 -> Z
- *     27 -> AA
- *     28 -> AB
- *
+ * <p>
+ * 1 -> A
+ * 2 -> B
+ * 3 -> C
+ * ...
+ * 26 -> Z
+ * 27 -> AA
+ * 28 -> AB
+ * <p>
  * Tags: Math
  */
 class ExcelSheetColTitle {
@@ -44,16 +44,16 @@ class ExcelSheetColTitle {
         while (n > 0) {
             n--; // note the 1 offset
             int r = n % 26;
-            title.insert(0, (char)('A' + r));
+            title.insert(0, (char) ('A' + r));
             n = n / 26;
         }
         return title.toString();
     }
-    
+
     /**
      * Recursive version, one line
      */
     public static String convertToTitleRec(int n) {
-        return n <= 0 ? "" : convertToTitleRec(--n / 26) + (char)('A' + (n % 26));
+        return n <= 0 ? "" : convertToTitleRec(--n / 26) + (char) ('A' + (n % 26));
     }
 }

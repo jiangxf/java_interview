@@ -1,17 +1,18 @@
 package com.freetymekiyan.algorithms.other;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * Check whether a given graph is a tree
- * 
+ * <p>
  * Tags: Graph, Tree, DFS
  */
 class IsGraphTree<T> {
     public static void main(String[] args) {
-        
+
     }
-    
+
     /**
      * # of edges = # of vertices - 1
      * No cycles, use dfs to do cycle detection
@@ -25,7 +26,7 @@ class IsGraphTree<T> {
         if (set.size() != G.vertices.size()) return false;
         return true;
     }
-    
+
     private boolean dfs(Graph G, Vertex<T> V, HashSet<Vertex<T>> set) {
         set.add(V);
         for (Vertex<T> v : V.adjacent) {
@@ -34,17 +35,17 @@ class IsGraphTree<T> {
         }
         return false;
     }
-    
+
     class Vertex<T> {
         T value;
         List<Vertex<T>> adjacent;
     }
-    
+
     class Graph {
         List<Vertex> vertices;
         List<Edge> edges;
     }
-    
+
     class Edge {
         Vertex src;
         Vertex dest;

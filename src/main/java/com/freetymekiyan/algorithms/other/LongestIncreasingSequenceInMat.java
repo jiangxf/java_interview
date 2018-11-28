@@ -1,34 +1,34 @@
 package com.freetymekiyan.algorithms.other;
 
-import java.util.*;
+import java.util.Arrays;
 
 /**
- * Find the longest increasing(increasing means one step) sequence in an 
+ * Find the longest increasing(increasing means one step) sequence in an
  * integer matrix in 4 directions (up down left right), return the sequence
- * 
+ * <p>
  * For Example:
  * |1 2 3 4|
  * |8 7 6 5|
- * 
- * Output: 
+ * <p>
+ * Output:
  * [1, 2, 3, 4, 5, 6, 7, 8]
- * 
+ * <p>
  * Tags: DP, DFS
  */
 class LongestIncreasingSequenceInMat {
+    public static final int[][] DIRS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    int[][] cache;
+
     public static void main(String[] args) {
         LongestIncreasingSequenceInMat l = new LongestIncreasingSequenceInMat();
         int[][] mat = {
-            {1, 2, 3, 4}, 
-            {8, 7, 6, 5},
-            {9, 10, 11, 12}
+                {1, 2, 3, 4},
+                {8, 7, 6, 5},
+                {9, 10, 11, 12}
         };
         System.out.println(Arrays.toString(l.longest(mat)));
     }
-    
-    public static final int[][] DIRS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-    int[][] cache;
-    
+
     /**
      * DP
      * d[i][j] = max{d[i+1][j], d[i-1][j], d[i][j+1], d[i][j-1]} + 1
@@ -54,7 +54,7 @@ class LongestIncreasingSequenceInMat {
         for (int i = 0; i < maxPath; i++) res[i] = maxStart + i;
         return res;
     }
-    
+
     private int dfs(int i, int j, int[][] mat) {
         if (cache[i][j] != 0) return cache[i][j]; // has cache
         int m = mat.length;
@@ -62,7 +62,7 @@ class LongestIncreasingSequenceInMat {
         for (int[] d : DIRS) { // search 4 directions
             int ni = i + d[0]; // get next coordinates
             int nj = j + d[1];
-            if (ni >= 0 && ni < m && nj >= 0 && nj < n 
+            if (ni >= 0 && ni < m && nj >= 0 && nj < n
                     && mat[ni][nj] == mat[i][j] + 1) {
                 // if dfs(ni, nj) is bigger, update cache[i][j]
                 cache[i][j] = Math.max(cache[i][j], dfs(ni, nj, mat));

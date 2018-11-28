@@ -4,8 +4,9 @@ import com.fishercoder.common.ListNode;
 
 /**
  * 206. Reverse Linked List
- *
- * Reverse a singly linked list.*/
+ * <p>
+ * Reverse a singly linked list.
+ */
 public class _206 {
 
     public static class Solution1 {

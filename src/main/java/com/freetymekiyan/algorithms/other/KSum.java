@@ -1,25 +1,27 @@
 package com.freetymekiyan.algorithms.other;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
- * Given an array S of n integers, are there K elements (e.g., a, b, c, d, e … 
+ * Given an array S of n integers, are there K elements (e.g., a, b, c, d, e …
  * totally K elements) in S such that their sum equal to a given target? Find
- * all such unique K elements tuple(a, b, c, d, e, …) in the array which gives 
+ * all such unique K elements tuple(a, b, c, d, e, …) in the array which gives
  * the given target.
- * 
+ * <p>
  * Tags: Array, Two Pointers, Backtracking
  */
 class KSum {
     public static void main(String[] args) {
         KSum r = new KSum();
-        int[] num = { 7, 2, 5, 1, 6, 3, 8, 9, 10, 4 };
+        int[] num = {7, 2, 5, 1, 6, 3, 8, 9, 10, 4};
         int k = 6;
         int target = 24;
         List<List<Integer>> res = r.kSum(num, k, target);
         for (List<Integer> l : res) System.out.println(l);
     }
-    
+
     /**
      * Sort num array first
      */
@@ -29,7 +31,7 @@ class KSum {
         Arrays.sort(num); // sort first
         return kSum(num, k, target, 0);
     }
-    
+
     /**
      * Backtracking
      * Base case when k == 2, use 2 pointers and add it to result
@@ -55,8 +57,7 @@ class KSum {
                     i++;
                     j--;
                     res.add(tuple);
-                } 
-                else if (sum > target) j--;
+                } else if (sum > target) j--;
                 else i++;
             }
             return res;
@@ -64,7 +65,7 @@ class KSum {
         // k > 2
         for (int i = pos; i < num.length; i++) {
             if (i > pos && num[i] == num[i - 1]) continue; // skip duplicates
-            List<List<Integer>> k1Sum = kSum(num, k-1, target - num[i], i+1); // get k-1 sum from recursive calls
+            List<List<Integer>> k1Sum = kSum(num, k - 1, target - num[i], i + 1); // get k-1 sum from recursive calls
             for (List<Integer> s : k1Sum) {
                 List<Integer> tuple = new ArrayList<Integer>();
                 tuple.add(num[i]); // add current element

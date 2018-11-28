@@ -2,24 +2,24 @@ package com.freetymekiyan.algorithms.level.hard;
 
 /**
  * Two elements of a binary search tree (BST) are swapped by mistake.
- *
+ * <p>
  * Recover the tree without changing its structure.
- *
+ * <p>
  * Note:
  * A solution using O(n) space is pretty straight forward. Could you devise a
  * constant space solution?
- *
+ * <p>
  * Tags: Tree, DFS
  */
 class RecoverBST {
 
-    public static void main(String[] args) {
-
-    }
-
     TreeNode prev;
     TreeNode first;
     TreeNode second;
+
+    public static void main(String[] args) {
+
+    }
 
     /**
      * Do morris traversal to find those swapped nodes
@@ -79,6 +79,9 @@ class RecoverBST {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 }

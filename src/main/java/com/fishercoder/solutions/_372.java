@@ -2,22 +2,24 @@ package com.fishercoder.solutions;
 
 /**
  * Your task is to calculate ab mod 1337 where a is a positive integer and b is an extremely large positive integer given in the form of an array.
-
- Example1:
-
- a = 2
- b = [3]
-
- Result: 8
- Example2:
-
- a = 2
- b = [1,0]
-
- Result: 1024
+ * <p>
+ * Example1:
+ * <p>
+ * a = 2
+ * b = [3]
+ * <p>
+ * Result: 8
+ * Example2:
+ * <p>
+ * a = 2
+ * b = [1,0]
+ * <p>
+ * Result: 1024
  */
 public class _372 {
-    /**Reference: https://discuss.leetcode.com/topic/50586/math-solusion-based-on-euler-s-theorem-power-called-only-once-c-java-1-line-python*/
+    /**
+     * Reference: https://discuss.leetcode.com/topic/50586/math-solusion-based-on-euler-s-theorem-power-called-only-once-c-java-1-line-python
+     */
 
     public int superPow(int a, int[] b) {
         if (a % 1337 == 0) {

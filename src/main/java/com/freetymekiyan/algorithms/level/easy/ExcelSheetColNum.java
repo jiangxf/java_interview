@@ -2,27 +2,27 @@ package com.freetymekiyan.algorithms.level.easy;
 
 /**
  * Related to question Excel Sheet Column Title
- * 
+ * <p>
  * Given a column title as appear in an Excel sheet, return its corresponding
  * column number.
- * 
+ * <p>
  * For example:
- * 
- *     A -> 1
- *     B -> 2
- *     C -> 3
- *     ...
- *     Z -> 26
- *     AA -> 27
- *     AB -> 28 
- * 
+ * <p>
+ * A -> 1
+ * B -> 2
+ * C -> 3
+ * ...
+ * Z -> 26
+ * AA -> 27
+ * AB -> 28
+ * <p>
  * Tags: Math
  */
 class ExcelSheetColNum {
     public static void main(String[] args) {
         System.out.println(titleToNumber("AAA"));
     }
-    
+
     /**
      * Go through the title
      * Map A ~ Z to 1 ~ 26

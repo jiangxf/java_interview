@@ -62,6 +62,7 @@ package com.will.design;
 public class TicTacToe {
     Cell[] rows, columns; //Array of row and column cells
     private int N, fPD1 = 0, fPD2 = 0, sPD1 = 0, sPD2 = 0; //fPD1 -> first_player_diagonal1
+
     /**
      * Initialize your data structure here.
      */

@@ -2,22 +2,56 @@ package com.fishercoder.solutions;
 
 import java.util.ArrayList;
 import java.util.List;
-/**Given the following 5x5 matrix:
 
-  Pacific ~   ~   ~   ~   ~ 
-       ~  1   2   2   3  (5) *
-       ~  3   2   3  (4) (4) *
-       ~  2   4  (5)  3   1  *
-       ~ (6) (7)  1   4   5  *
-       ~ (5)  1   1   2   4  *
-          *   *   *   *   * Atlantic
-
-Return:
-
-[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]] (positions with parentheses in above matrix).*/
+/**
+ * Given the following 5x5 matrix:
+ * <p>
+ * Pacific ~   ~   ~   ~   ~
+ * ~  1   2   2   3  (5) *
+ * ~  3   2   3  (4) (4) *
+ * ~  2   4  (5)  3   1  *
+ * ~ (6) (7)  1   4   5  *
+ * ~ (5)  1   1   2   4  *
+ * *   *   *   * Atlantic
+ * <p>
+ * Return:
+ * <p>
+ * [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]] (positions with parentheses in above matrix).
+ */
 
 public class _417 {
     //looked at this post: https://discuss.leetcode.com/topic/62379/java-bfs-dfs-from-ocean
+
+    public static void main(String... args) {
+        _417 test = new _417();
+//        int[][] matrix = new int[][]{
+//                {1,2,2,3,5},
+//                {3,2,3,4,4},
+//                {2,4,5,3,1},
+//                {6,7,1,4,5},
+//                {5,1,1,2,4},
+//        };
+
+//        int[][] matrix = new int[][]{//this one is correct
+//                {3,5},
+//                {4,4},
+//        };
+
+//        int[][] matrix = new int[][]{//this one is correct
+//                {2,3,5},
+//                {3,4,4},
+//        };
+
+        int[][] matrix = new int[][]{
+                {2, 3, 5},
+                {3, 4, 4},
+                {5, 3, 1},
+        };
+        List<int[]> result = test.pacificAtlantic(matrix);
+        for (int[] point : result) {
+            System.out.println(point[0] + "\t" + point[1]);
+        }
+    }
 
     /**
      * One typical trick to work on 2d grid problems is to go through the border and put proper ones into a queue if using BFS.
@@ -66,37 +100,6 @@ public class _417 {
         dfs(matrix, visited, matrix[x][y], x, y + 1);
         dfs(matrix, visited, matrix[x][y], x - 1, y);
         dfs(matrix, visited, matrix[x][y], x, y - 1);
-    }
-
-    public static void main(String... args) {
-        _417 test = new _417();
-//        int[][] matrix = new int[][]{
-//                {1,2,2,3,5},
-//                {3,2,3,4,4},
-//                {2,4,5,3,1},
-//                {6,7,1,4,5},
-//                {5,1,1,2,4},
-//        };
-
-//        int[][] matrix = new int[][]{//this one is correct
-//                {3,5},
-//                {4,4},
-//        };
-
-//        int[][] matrix = new int[][]{//this one is correct
-//                {2,3,5},
-//                {3,4,4},
-//        };
-
-        int[][] matrix = new int[][]{
-                {2, 3, 5},
-                {3, 4, 4},
-                {5, 3, 1},
-        };
-        List<int[]> result = test.pacificAtlantic(matrix);
-        for (int[] point : result) {
-            System.out.println(point[0] + "\t" + point[1]);
-        }
     }
 
 }

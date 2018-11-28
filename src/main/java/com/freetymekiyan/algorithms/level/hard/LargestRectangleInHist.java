@@ -1,27 +1,28 @@
 package com.freetymekiyan.algorithms.level.hard;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Stack;
 
 /**
  * Given n non-negative integers representing the histogram's bar height where
  * the width of each bar is 1, find the area of largest rectangle in the
  * histogram.
- *
+ * <p>
  * Above is a histogram where width of each bar is 1, given height =
  * [2,1,5,6,2,3].
- *
+ * <p>
  * The largest rectangle is shown in the shaded area, which has area = 10 unit.
- *
+ * <p>
  * For example,
  * Given height = [2,1,5,6,2,3],
  * return 10.
- *
+ * <p>
  * Tags: Array, Stack
  */
 class LargestRectangleInHist {
     public static void main(String[] args) {
-        int[] height = { 2, 1, 5, 6, 2, 3 };
-        int[] height2 = { 1, 2, 3, 4, 5, 6 };
+        int[] height = {2, 1, 5, 6, 2, 3};
+        int[] height2 = {1, 2, 3, 4, 5, 6};
         System.out.println(new LargestRectangleInHist().largestRectangleArea(height2));
     }
 

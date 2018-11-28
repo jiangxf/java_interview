@@ -5,6 +5,16 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
 
+    public TreeNode(int x) {
+        this.val = x;
+    }
+
+    public TreeNode(TreeNode left, int val, TreeNode right) {
+        this.left = left;
+        this.val = val;
+        this.right = right;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -36,15 +46,5 @@ public class TreeNode {
     @Override
     public String toString() {
         return "TreeNode{" + "val=" + val + ", left=" + left + ", right=" + right + '}';
-    }
-
-    public TreeNode(int x) {
-        this.val = x;
-    }
-
-    public TreeNode(TreeNode left, int val, TreeNode right) {
-        this.left = left;
-        this.val = val;
-        this.right = right;
     }
 }

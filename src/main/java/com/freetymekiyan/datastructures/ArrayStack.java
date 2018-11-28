@@ -100,9 +100,9 @@ public class ArrayStack<Item> implements Iterable {
     @Override
     public String toString() {
         return "ArrayStack{" +
-               "a=" + Arrays.toString(a) +
-               ", N=" + N +
-               '}';
+                "a=" + Arrays.toString(a) +
+                ", N=" + N +
+                '}';
     }
 
     private class ReverseStackIterator implements Iterator {

@@ -7,16 +7,16 @@ import java.util.List;
  * Given a dictionary, a method to do lookup in dictionary and a M x N board where every cell has one character. Find
  * all possible words that can be formed by a sequence of adjacent characters. Note that we can move to any of 8
  * adjacent characters, but a word should not have multiple instances of same cell.
- *
+ * <p>
  * Input: words[] = {"GEEKS", "FOR", "QUIZ", "GO"};
  * boggle[][]   = {{'G','I','Z'},
  * {'U','E','K'},
  * {'Q','S','E'}};
- *
+ * <p>
  * Output:  Following words are present
  * GEEKS
  * QUIZ
- *
+ * <p>
  * http://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/
  */
 public class FindWords {

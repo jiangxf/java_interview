@@ -2,25 +2,27 @@ package com.freetymekiyan.algorithms.level.hard;
 
 /**
  * Write a program to solve a Sudoku puzzle by filling the empty cells.
- * 
+ * <p>
  * Empty cells are indicated by the character '.'.
- * 
+ * <p>
  * You may assume that there will be only one unique solution.
- * 
+ * <p>
  * Tags: Backtracking, Hash Table
  */
 class SudokuSolver {
+    int[] row, col, sqr;
+
     public static void main(String[] args) {
         char[][] board = {
-            {'.', '.', '9', '7', '4', '8', '.', '.', '.'}, 
-            {'7', '.', '.', '.', '.', '.', '.', '.', '.'}, 
-            {'.', '2', '.', '1', '.', '9', '.', '.', '.'}, 
-            {'.', '.', '7', '.', '.', '.', '2', '4', '.'}, 
-            {'.', '6', '4', '.', '1', '.', '5', '9', '.'}, 
-            {'.', '9', '8', '.', '.', '.', '3', '.', '.'}, 
-            {'.', '.', '.', '8', '.', '3', '.', '2', '.'}, 
-            {'.', '.', '.', '.', '.', '.', '.', '.', '6'}, 
-            {'.', '.', '.', '2', '7', '5', '9', '.', '.'}
+                {'.', '.', '9', '7', '4', '8', '.', '.', '.'},
+                {'7', '.', '.', '.', '.', '.', '.', '.', '.'},
+                {'.', '2', '.', '1', '.', '9', '.', '.', '.'},
+                {'.', '.', '7', '.', '.', '.', '2', '4', '.'},
+                {'.', '6', '4', '.', '1', '.', '5', '9', '.'},
+                {'.', '9', '8', '.', '.', '.', '3', '.', '.'},
+                {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
+                {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
+                {'.', '.', '.', '2', '7', '5', '9', '.', '.'}
         };
         SudokuSolver s = new SudokuSolver();
         s.solveSudoku(board);
@@ -31,9 +33,7 @@ class SudokuSolver {
             System.out.println();
         }
     }
-    
-    int[] row, col, sqr;
-    
+
     /**
      * Use three integer arrays as mask to check whether a move is valid
      */
@@ -46,7 +46,7 @@ class SudokuSolver {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] != '.') {
-                    int num = board[i][j] -'0';
+                    int num = board[i][j] - '0';
                     int k = (i - i % 3) + j / 3;
                     row[i] |= 1 << num;
                     col[j] |= 1 << num;
@@ -54,10 +54,10 @@ class SudokuSolver {
                 }
             }
         }
-        for (int i = 1; i <= 9; i++) 
+        for (int i = 1; i <= 9; i++)
             if (helper(board, 0, 0, 0, i)) return;
     }
-    
+
     private boolean helper(char[][] board, int i, int j, int k, int num) {
         if (j == 9) { // reach rightmost
             j = 0;
@@ -75,19 +75,19 @@ class SudokuSolver {
             row[i] |= 1 << num;
             col[j] |= 1 << num;
             sqr[k] |= 1 << num;
-            board[i][j] = (char)('0' + num);
+            board[i][j] = (char) ('0' + num);
         } else return false; // not valid, return false
         for (int n = 1; n <= 9; n++) // backtrack the next column
             if (helper(board, i, j + 1, k, n)) return true;
         // all possible combinations from this position generated
         // reset this position
-        row[i] ^= 1 << num; 
+        row[i] ^= 1 << num;
         col[j] ^= 1 << num;
         sqr[k] ^= 1 << num;
         board[i][j] = '.';
         return false;
     }
-    
+
     private boolean isValid(int i, int j, int k, int num) {
         if ((row[i] & 1 << num) > 0) return false; // both are 1
         if ((col[j] & 1 << num) > 0) return false; // both are 1

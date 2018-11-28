@@ -1,28 +1,29 @@
 package com.freetymekiyan.algorithms.other;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Given an unsorted array that may contain duplicates. Also given a number k
  * which is smaller than size of array. Write a function that returns true if
  * array contains duplicates within k distance.
- * 
+ * <p>
  * Examples:
- * 
+ * <p>
  * Input: k = 3, arr[] = {1, 2, 3, 4, 1, 2, 3, 4}
  * Output: false
  * All duplicates are more than k distance away.
- * 
+ * <p>
  * Input: k = 3, arr[] = {1, 2, 3, 1, 4, 5}
  * Output: true
  * 1 is repeated at distance 3.
- * 
+ * <p>
  * Input: k = 3, arr[] = {1, 2, 3, 4, 5}
  * Output: false
- * 
+ * <p>
  * Input: k = 3, arr[] = {1, 2, 3, 4, 4}
  * Output: true
- * 
+ * <p>
  * Tags: Array, Hashtable
  */
 class DupWithinKDistance {
@@ -30,7 +31,7 @@ class DupWithinKDistance {
         int arr[] = {10, 5, 3, 4, 3, 5, 6};
         System.out.println(checkDuplicatesWithinK(arr, 3));
     }
-    
+
     /**
      * O(n) Time, O(n) Space
      * Use Set to store elements within k
@@ -49,7 +50,7 @@ class DupWithinKDistance {
         }
         return false;
     }
-    
+
     /**
      * Simple Solution, 2 loops, O(kn)
      */

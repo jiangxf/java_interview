@@ -2,13 +2,12 @@ package com.fishercoder.solutions;
 
 /**
  * 7. Reverse Integer
- *
+ * <p>
  * Reverse digits of an integer.
-
- Example1: x = 123, return 321
-
- Example2: x = -123, return -321
-
+ * <p>
+ * Example1: x = 123, return 321
+ * <p>
+ * Example2: x = -123, return -321
  */
 public class _7 {
 

@@ -10,6 +10,11 @@ public class UndirectedGraphNode {
     public int label;
     public List<UndirectedGraphNode> neighbors;
 
+    public UndirectedGraphNode(int x) {
+        label = x;
+        neighbors = new ArrayList<>();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -32,10 +37,5 @@ public class UndirectedGraphNode {
         int result = label;
         result = 31 * result + (neighbors != null ? neighbors.hashCode() : 0);
         return result;
-    }
-
-    public UndirectedGraphNode(int x) {
-        label = x;
-        neighbors = new ArrayList<>();
     }
 }

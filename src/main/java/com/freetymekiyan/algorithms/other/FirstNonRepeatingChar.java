@@ -1,10 +1,10 @@
 package com.freetymekiyan.algorithms.other;
 
 /**
- * Given a string, find the first non-repeating character in it. For example, 
- * if the input string is “GeeksforGeeks”, then output should be ‘f’ and if 
+ * Given a string, find the first non-repeating character in it. For example,
+ * if the input string is “GeeksforGeeks”, then output should be ‘f’ and if
  * input string is “GeeksQuiz”, then output should be ‘G’.
- * 
+ * <p>
  * Tags: String
  */
 class FirstNonRepeatingChar {
@@ -13,13 +13,13 @@ class FirstNonRepeatingChar {
         FirstNonRepeatingChar r = new FirstNonRepeatingChar();
         System.out.println(s.charAt(r.firstNonRepeating(s)));
     }
-    
+
     /**
      * Use string characters as index and build a count array.
-     * Augment the count array by storing not just counts but also the index of 
-     * the first time you encountered the character 
-     * e.g. (3, 26) for ‘a’ meaning that ‘a’ got counted 3 times and the first 
-     * time it was seen is at position 26. 
+     * Augment the count array by storing not just counts but also the index of
+     * the first time you encountered the character
+     * e.g. (3, 26) for ‘a’ meaning that ‘a’ got counted 3 times and the first
+     * time it was seen is at position 26.
      * Scan the count array, instead of the string.
      */
     int firstNonRepeating(String s) {
@@ -30,7 +30,7 @@ class FirstNonRepeatingChar {
         }
         return res;
     }
-    
+
     /**
      * Build an array of character count and the index of its first appearance
      */
@@ -43,11 +43,11 @@ class FirstNonRepeatingChar {
         }
         return count;
     }
-    
+
     class CountIndex {
         int count;
         int index;
-        
+
         CountIndex() {
             count = 0;
             index = 0;

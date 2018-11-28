@@ -36,6 +36,7 @@ public class LRUCache {
     private Map<Integer, DLinkList> cache;
     private DLinkList head, tail;
     private int capacity, currentSize;
+
     public LRUCache(int capacity) {
         this.capacity = capacity;
         this.currentSize = 0;

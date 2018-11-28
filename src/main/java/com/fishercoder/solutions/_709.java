@@ -1,21 +1,23 @@
 package com.fishercoder.solutions;
 
-/**709. To Lower Case
- *
+/**
+ * 709. To Lower Case
+ * <p>
  * Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.
- *
- *  Example 1:
- *
+ * <p>
+ * Example 1:
+ * <p>
  * Input: "Hello"
  * Output: "hello"
  * Example 2:
- *
+ * <p>
  * Input: "here"
  * Output: "here"
  * Example 3:
- *
+ * <p>
  * Input: "LOVELY"
- * Output: "lovely"*/
+ * Output: "lovely"
+ */
 public class _709 {
     public static class Solution1 {
         public String toLowerCase(String str) {

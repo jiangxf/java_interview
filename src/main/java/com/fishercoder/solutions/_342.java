@@ -1,12 +1,31 @@
 package com.fishercoder.solutions;
-/**342. Power of Four
-Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
 
-Example:
-Given num = 16, return true. Given num = 5, return false.
-
-Follow up: Could you solve it without loops/recursion?*/
+/**
+ * 342. Power of Four
+ * Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
+ * <p>
+ * Example:
+ * Given num = 16, return true. Given num = 5, return false.
+ * <p>
+ * Follow up: Could you solve it without loops/recursion?
+ */
 public class _342 {
+    public static void main(String... strings) {
+        int temp = 4;
+        int maxPowerOf4 = 4;
+        while (temp > 0) {
+            temp *= 4;
+            if (temp > 0) {
+                maxPowerOf4 = temp;
+            }
+        }
+        System.out.println("maxPowerOf4 is: " + maxPowerOf4);
+
+
+        System.out.println(Integer.parseInt("55555555", 16));
+        System.out.println(Integer.toBinaryString(Integer.parseInt("55555555", 16)));
+    }
+
     //with my original idea in the bottom, just dive a little bit deeper, you can realize that another important feature of a number
     //that is power of four is that its only single one bit must appear on the odd position, and power of two won't meet this requirement
     //decimal number 8 has binary format: 0000-0000-0000-0000-0000-0000-0000-1000
@@ -42,21 +61,5 @@ public class _342 {
     //not be a power of 4, e.g. number 8
     public boolean isPowerOfFour_not_accepted(int num) {
         return (num > 3 && 1073741824 % num == 0);
-    }
-
-    public static void main(String... strings) {
-        int temp = 4;
-        int maxPowerOf4 = 4;
-        while (temp > 0) {
-            temp *= 4;
-            if (temp > 0) {
-                maxPowerOf4 = temp;
-            }
-        }
-        System.out.println("maxPowerOf4 is: " + maxPowerOf4);
-
-
-        System.out.println(Integer.parseInt("55555555", 16));
-        System.out.println(Integer.toBinaryString(Integer.parseInt("55555555", 16)));
     }
 }

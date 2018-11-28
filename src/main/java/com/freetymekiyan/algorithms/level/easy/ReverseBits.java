@@ -1,38 +1,41 @@
 package com.freetymekiyan.algorithms.level.easy;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Reverse bits of a given 32 bits <strong>unsigned</strong> integer.
- * 
- * Example: 
+ * <p>
+ * Example:
  * input 43261596, represented in binary as 00000010100101000001111010011100
  * return 964176192, represented in binary as 00111001011110000010100101000000
- * 
+ * <p>
  * Follow up:
- * If this function is <strong>called many times</strong>, how would you 
+ * If this function is <strong>called many times</strong>, how would you
  * optimize it?
- * 
+ * <p>
  * Answer:
  * Cache result for each bytes.
- * 
+ * <p>
  * Related problem: Reverse Integer
- * 
+ * <p>
  * Tags: Bit Manipulation
  */
 class ReverseBits {
+
+    private Map<Byte, Integer> cache = new HashMap<Byte, Integer>();
 
     public static void main(String[] args) {
         ReverseBits r = new ReverseBits();
         int a = 43261596;
         System.out.println(r.reverseBits(a));
         System.out.println(r.reverseBitsOpt(a));
-        
+
         int b = 1;
         System.out.println(r.reverseBits(b));
         System.out.println(r.reverseBitsOpt(b));
     }
-    
+
     /**
      * O(1) Time, O(1) Space
      * Move res 1 bit left, a
@@ -47,9 +50,7 @@ class ReverseBits {
         for (int i = 0; i < 32; i++) res = (res << 1) ^ ((n >>> i) & 1);
         return res;
     }
-    
-    private Map<Byte, Integer> cache = new HashMap<Byte, Integer>();
-    
+
     /**
      * O(1) Time, O(1) Space
      * Divide 32 bits into 4 bytes
@@ -59,14 +60,14 @@ class ReverseBits {
     public int reverseBitsOpt(int n) {
         byte[] bytes = new byte[4];
         for (int i = 0; i < 4; i++)
-            bytes[i] = (byte)((n >>> 8 * i) & 0xFF);
-        
+            bytes[i] = (byte) ((n >>> 8 * i) & 0xFF);
+
         int res = 0;
         for (int i = 0; i < 4; i++)
             res = (res << 8) ^ reverseBytes(bytes[i]);
         return res;
     }
-    
+
     public int reverseBytes(byte b) {
         if (cache.containsKey(b)) return cache.get(b);
         int res = 0;

@@ -8,14 +8,13 @@ import java.util.Set;
 /**
  * 432. All O`one Data Structure
  * Implement a data structure supporting the following operations:
-
- 1. Inc(Key) - Inserts a new key with value 1. Or increments an existing key by 1. Key is guaranteed to be a non-empty string.
- 2. Dec(Key) - If Key's value is 1, remove it from the data structure. Otherwise decrements an existing key by 1. If the key does not exist, this function does nothing. Key is guaranteed to be a non-empty string.
- 3. GetMaxKey() - Returns one of the keys with maximal value. If no element exists, return an empty string "".
- 4. GetMinKey() - Returns one of the keys with minimal value. If no element exists, return an empty string "".
-
- Challenge: Perform all these in O(1) time complexity.
-
+ * <p>
+ * 1. Inc(Key) - Inserts a new key with value 1. Or increments an existing key by 1. Key is guaranteed to be a non-empty string.
+ * 2. Dec(Key) - If Key's value is 1, remove it from the data structure. Otherwise decrements an existing key by 1. If the key does not exist, this function does nothing. Key is guaranteed to be a non-empty string.
+ * 3. GetMaxKey() - Returns one of the keys with maximal value. If no element exists, return an empty string "".
+ * 4. GetMinKey() - Returns one of the keys with minimal value. If no element exists, return an empty string "".
+ * <p>
+ * Challenge: Perform all these in O(1) time complexity.
  */
 public class _432 {
 
@@ -31,19 +30,6 @@ public class _432 {
         private Map<Integer, Bucket> countBucketMap;
         // keep track of count of keys
         private Map<String, Integer> keyCountMap;
-
-        // each Bucket contains all the keys with the same count
-        private class Bucket {
-            int count;
-            Set<String> keySet;
-            Bucket next;
-            Bucket pre;
-
-            public Bucket(int cnt) {
-                count = cnt;
-                keySet = new HashSet<>();
-            }
-        }
 
         /**
          * Initialize your data structure here.
@@ -142,6 +128,19 @@ public class _432 {
             newBucket.next = preBucket.next;
             preBucket.next.pre = newBucket;
             preBucket.next = newBucket;
+        }
+
+        // each Bucket contains all the keys with the same count
+        private class Bucket {
+            int count;
+            Set<String> keySet;
+            Bucket next;
+            Bucket pre;
+
+            public Bucket(int cnt) {
+                count = cnt;
+                keySet = new HashSet<>();
+            }
         }
     }
 }

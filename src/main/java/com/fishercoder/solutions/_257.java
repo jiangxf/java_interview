@@ -31,7 +31,7 @@ public class _257 {
             }
         }
     }
-    
+
     public static class Solution2 {
         public List<String> binaryTreePaths(TreeNode root) {
             List<String> paths = new ArrayList<>();

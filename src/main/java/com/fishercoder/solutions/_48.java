@@ -2,17 +2,19 @@ package com.fishercoder.solutions;
 
 /**
  * 48. Rotate Image
- *
+ * <p>
  * You are given an n x n 2D matrix representing an image.
-
- Rotate the image by 90 degrees (clockwise).
-
- Follow up:
- Could you do this in-place?
+ * <p>
+ * Rotate the image by 90 degrees (clockwise).
+ * <p>
+ * Follow up:
+ * Could you do this in-place?
  */
 public class _48 {
 
-    /**Note: this is an n*n matrix, in other words, it's a square, this makes it easier as well.*/
+    /**
+     * Note: this is an n*n matrix, in other words, it's a square, this makes it easier as well.
+     */
 
     public static class Solution1 {
         public void rotate(int[][] matrix) {
@@ -48,12 +50,13 @@ public class _48 {
     }
 
     public static class Solution2 {
-        /**First swap the rows bottom up, then swap the element on the diagonal:
+        /**
+         * First swap the rows bottom up, then swap the element on the diagonal:
          * 1, 2, 3                         7, 8, 9                           7, 4, 1
          * 4, 5, 6           becomes       4, 5, 6           becomes         8, 5, 2
          * 7, 8, 9                         1, 2, 3                           9, 6, 3
-         *
-         *  This is using O(n) of extra space
+         * <p>
+         * This is using O(n) of extra space
          */
         public void rotate(int[][] matrix) {
             int m = matrix.length;

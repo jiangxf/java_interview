@@ -6,15 +6,14 @@ import java.util.PriorityQueue;
 
 /**
  * 215. Kth Largest Element in an Array
- *
+ * <p>
  * Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
-
- For example,
- Given [3,2,1,5,6,4] and k = 2, return 5.
-
- Note:
- You may assume k is always valid, 1 ≤ k ≤ array's length.
-
+ * <p>
+ * For example,
+ * Given [3,2,1,5,6,4] and k = 2, return 5.
+ * <p>
+ * Note:
+ * You may assume k is always valid, 1 ≤ k ≤ array's length.
  */
 public class _215 {
 
@@ -39,10 +38,12 @@ public class _215 {
     }
 
     public static class Solution3 {
-        /**Quick Select algorithm
+        /**
+         * Quick Select algorithm
          * Time: O(n) in average, O(n^2) in worst case
-         * 
-         * Reference: https://discuss.leetcode.com/topic/14611/java-quick-select*/
+         * <p>
+         * Reference: https://discuss.leetcode.com/topic/14611/java-quick-select
+         */
         public int findKthLargest(int[] nums, int k) {
             int start = 0;
             int end = nums.length - 1;

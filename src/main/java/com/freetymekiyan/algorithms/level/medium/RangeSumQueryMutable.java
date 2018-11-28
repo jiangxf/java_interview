@@ -22,6 +22,21 @@ import org.junit.Test;
  */
 public class RangeSumQueryMutable {
 
+    @Test
+    public void testExamples() {
+        int[] input = {1, 3, 5};
+        NumArray n = new NumArray(input);
+        System.out.println(n.sumRange(0, 2));
+        n.update(1, 2);
+        System.out.println(n.sumRange(0, 2));
+    }
+
+// Your NumArray object will be instantiated and called as such:
+// NumArray numArray = new NumArray(nums);
+// numArray.sumRange(0, 1);
+// numArray.update(1, 10);
+// numArray.sumRange(1, 2);
+
     public class NumArray {
 
         private final int[] nums;
@@ -64,21 +79,5 @@ public class RangeSumQueryMutable {
         public int sumRange(int i, int j) {
             return getSum(j) - getSum(i - 1);
         }
-    }
-
-// Your NumArray object will be instantiated and called as such:
-// NumArray numArray = new NumArray(nums);
-// numArray.sumRange(0, 1);
-// numArray.update(1, 10);
-// numArray.sumRange(1, 2);
-
-
-    @Test
-    public void testExamples() {
-        int[] input = {1, 3, 5};
-        NumArray n = new NumArray(input);
-        System.out.println(n.sumRange(0, 2));
-        n.update(1, 2);
-        System.out.println(n.sumRange(0, 2));
     }
 }

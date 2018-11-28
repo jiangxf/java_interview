@@ -6,19 +6,25 @@ package com.fishercoder.solutions;
  * I pick a number from 1 to n. You have to guess which number I picked.
  * Every time you guess wrong, I'll tell you whether the number is higher or lower.
  * You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
-
- -1 : My number is lower
- 1 : My number is higher
- 0 : Congrats! You got it!
- Example:
- n = 10, I pick 6.
- Return 6.
-
+ * <p>
+ * -1 : My number is lower
+ * 1 : My number is higher
+ * 0 : Congrats! You got it!
+ * Example:
+ * n = 10, I pick 6.
+ * Return 6.
  */
 public class _374 {
-    /**The core problem/trouble to solve this problem is to figure out the problem description:
+    public static void main(String... strings) {
+        _374 test = new _374();
+        System.out.println(test.guessNumber(1000));
+    }
+
+    /**
+     * The core problem/trouble to solve this problem is to figure out the problem description:
      * this API: guess(int num) means to take your guess num and let you know if your guessed num is bigger or smaller than the answer.
-     * That's why if num > target, it returns -1 which means the target is smaller than your guess!!!*/
+     * That's why if num > target, it returns -1 which means the target is smaller than your guess!!!
+     */
 
     public int guessNumber(int n) {
         int left = 1;
@@ -51,11 +57,6 @@ public class _374 {
         } else {
             return 0;
         }
-    }
-
-    public static void main(String... strings) {
-        _374 test = new _374();
-        System.out.println(test.guessNumber(1000));
     }
 
 }

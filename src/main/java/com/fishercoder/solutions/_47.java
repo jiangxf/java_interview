@@ -6,17 +6,28 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**Given a collection of numbers that might contain duplicates, return all possible unique permutations.
-
- For example,
- [1,1,2] have the following unique permutations:
- [
- [1,1,2],
- [1,2,1],
- [2,1,1]
- ]*/
+/**
+ * Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+ * <p>
+ * For example,
+ * [1,1,2] have the following unique permutations:
+ * [
+ * [1,1,2],
+ * [1,2,1],
+ * [2,1,1]
+ * ]
+ */
 public class _47 {
-    /**credit: https://discuss.leetcode.com/topic/31445/really-easy-java-solution-much-easier-than-the-solutions-with-very-high-vote*/
+    public static void main(String... args) {
+        int[] nums = new int[]{1, 1, 2};
+        _47 test = new _47();
+        List<List<Integer>> result = test.permuteUnique(nums);
+        CommonUtils.printListList(result);
+    }
+
+    /**
+     * credit: https://discuss.leetcode.com/topic/31445/really-easy-java-solution-much-easier-than-the-solutions-with-very-high-vote
+     */
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> result = new ArrayList();
         if (nums == null || nums.length == 0) {
@@ -28,7 +39,6 @@ public class _47 {
         dfs(nums, used, list, result);
         return result;
     }
-
 
     private void dfs(int[] nums, boolean[] used, List<Integer> list, List<List<Integer>> result) {
         if (list.size() == nums.length) {
@@ -53,12 +63,5 @@ public class _47 {
             used[i] = false;
             list.remove(list.size() - 1);
         }
-    }
-
-    public static void main(String... args) {
-        int[] nums = new int[]{1, 1, 2};
-        _47 test = new _47();
-        List<List<Integer>> result = test.permuteUnique(nums);
-        CommonUtils.printListList(result);
     }
 }

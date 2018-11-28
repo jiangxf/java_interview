@@ -1,10 +1,12 @@
 package com.freetymekiyan.algorithms.other;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * k largest(or smallest) elements in an array
- *
+ * <p>
  * Tags: Array, Sort, Heap
  */
 class KthLargest {
@@ -67,9 +69,9 @@ class KthLargest {
      */
     private int partition(int[] a, int left, int right) {
         int pivot = a[left + (right - left) / 2];
-        while(left <= right) {
-            while(a[left] > pivot) left++;
-            while(a[right] < pivot) right--;
+        while (left <= right) {
+            while (a[left] > pivot) left++;
+            while (a[right] < pivot) right--;
             if (left <= right) {
                 int temp = a[left];
                 a[left] = a[right];

@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  * 685. Redundant Connection II
- *
+ * <p>
  * In this problem, a rooted tree is a directed graph such that, there is exactly one node (the root) for which all other nodes are
  * descendants of this node, plus every node has exactly one parents, except for the root node which has no parents.
  * The given input is a directed graph that started as a rooted tree with N nodes (with distinct values 1, 2, ..., N),
@@ -16,31 +16,46 @@ import java.util.Set;
  * represents a directed edge connecting nodes u and v, where u is a parents of child v.
  * Return an edge that can be removed so that the resulting graph is a rooted tree of N nodes.
  * If there are multiple answers, return the answer that occurs last in the given 2D-array.
-
- Example 1:
- Input: [[1,2], [1,3], [2,3]]
- Output: [2,3]
- Explanation: The given directed graph will be like this:
-   1
-  / \
- v   v
- 2-->3
-
- Example 2:
- Input: [[1,2], [2,3], [3,4], [4,1], [1,5]]
- Output: [4,1]
- Explanation: The given directed graph will be like this:
- 5 <- 1 -> 2
-      ^    |
-      |    v
-      4 <- 3
-
- Note:
- The size of the input 2D-array will be between 3 and 1000.
- Every integer represented in the 2D-array will be between 1 and N, where N is the size of the input array.
+ * <p>
+ * Example 1:
+ * Input: [[1,2], [1,3], [2,3]]
+ * Output: [2,3]
+ * Explanation: The given directed graph will be like this:
+ * 1
+ * / \
+ * v   v
+ * 2-->3
+ * <p>
+ * Example 2:
+ * Input: [[1,2], [2,3], [3,4], [4,1], [1,5]]
+ * Output: [4,1]
+ * Explanation: The given directed graph will be like this:
+ * 5 <- 1 -> 2
+ * ^    |
+ * |    v
+ * 4 <- 3
+ * <p>
+ * Note:
+ * The size of the input 2D-array will be between 3 and 1000.
+ * Every integer represented in the 2D-array will be between 1 and N, where N is the size of the input array.
  */
 public class _685 {
     public static class Solution1 {
+        public int[] findRedundantDirectedConnection(int[][] edges) {
+            UnionFind unionFind = new UnionFind(edges);
+            /**two cases:
+             * 1. the entire edges are just one directed loop, in this case, just return the last edge, see test2 in _685Test.java
+             * 2. there's one directed loop, but one node of the loop has two parents, in this case, what we'll need to do
+             * is just to return the edge in this loop that points to the child that has two parents, see test1 in _685Test.java
+             * also, in case 2, use the id of the node that has two parents as the id for all nodes in this loop, this way, I could know which of its
+             * two parents is in the loop and should be the redundant one to return.
+             * */
+            for (int[] edge : edges) {
+                unionFind.union(edge);
+            }
+            return unionFind.findRedundantDirectedConnection();
+        }
+
         /**
          * My original solution, failed by _685Test.test3
          */
@@ -53,30 +68,6 @@ public class _685 {
             int[] redundantConn;
             int m;
             int n;
-
-            class LinkedNode {
-                List<LinkedNode> parents;//at most, there's one node that has two parents
-                int val;
-
-                public LinkedNode(int val) {
-                    this.val = val;
-                }
-
-                public LinkedNode(int val, LinkedNode parent) {
-                    if (parents == null) {
-                        parents = new ArrayList<>();
-                    }
-                    this.parents.add(parent);
-                    this.val = val;
-                }
-
-                public void addParent(LinkedNode parent) {
-                    if (parents == null) {
-                        parents = new ArrayList<>();
-                    }
-                    this.parents.add(parent);
-                }
-            }
 
             public UnionFind(int[][] edges) {
                 this.edges = edges;
@@ -160,26 +151,37 @@ public class _685 {
                 }
                 return -1;
             }
-        }
 
-        public int[] findRedundantDirectedConnection(int[][] edges) {
-            UnionFind unionFind = new UnionFind(edges);
-            /**two cases:
-             * 1. the entire edges are just one directed loop, in this case, just return the last edge, see test2 in _685Test.java
-             * 2. there's one directed loop, but one node of the loop has two parents, in this case, what we'll need to do
-             * is just to return the edge in this loop that points to the child that has two parents, see test1 in _685Test.java
-             * also, in case 2, use the id of the node that has two parents as the id for all nodes in this loop, this way, I could know which of its
-             * two parents is in the loop and should be the redundant one to return.
-             * */
-            for (int[] edge : edges) {
-                unionFind.union(edge);
+            class LinkedNode {
+                List<LinkedNode> parents;//at most, there's one node that has two parents
+                int val;
+
+                public LinkedNode(int val) {
+                    this.val = val;
+                }
+
+                public LinkedNode(int val, LinkedNode parent) {
+                    if (parents == null) {
+                        parents = new ArrayList<>();
+                    }
+                    this.parents.add(parent);
+                    this.val = val;
+                }
+
+                public void addParent(LinkedNode parent) {
+                    if (parents == null) {
+                        parents = new ArrayList<>();
+                    }
+                    this.parents.add(parent);
+                }
             }
-            return unionFind.findRedundantDirectedConnection();
         }
     }
 
     public static class Solution2 {
-        /**credit: https://discuss.leetcode.com/topic/105108/c-java-union-find-with-explanation-o-n*/
+        /**
+         * credit: https://discuss.leetcode.com/topic/105108/c-java-union-find-with-explanation-o-n
+         */
         public int[] findRedundantDirectedConnection(int[][] edges) {
             int[] can1 = {-1, -1};
             int[] can2 = {-1, -1};

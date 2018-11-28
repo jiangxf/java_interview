@@ -4,9 +4,9 @@ import com.fishercoder.common.ListNode;
 
 /**
  * 203. Remove Linked List Elements
- *
+ * <p>
  * Remove all elements from a linked list of integers that have value val.
- *
+ * <p>
  * Example
  * Given: 1 --> 2 --> 6 --> 3 --> 4 --> 5 --> 6, val = 6
  * Return: 1 --> 2 --> 3 --> 4 --> 5
@@ -16,7 +16,7 @@ public class _203 {
         /**
          * This is a very good question to test your understanding of pointers/memory/addresses, although it's marked as EASY.
          * All the three nodes: dummy, curr and prev are indispensable.
-         *
+         * <p>
          * 1. Eventually, we should return dummy.next as the final result.
          * 2. we assign head to curr, dummy to prev
          * 3. and then we use prev and curr to traverse through the list and do the work

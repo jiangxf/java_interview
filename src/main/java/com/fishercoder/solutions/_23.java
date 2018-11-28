@@ -7,9 +7,10 @@ import java.util.PriorityQueue;
 
 /**
  * 23. Merge k Sorted Lists
- *
+ * <p>
  * Merge k sorted linked lists and return it as one sorted list.
- * Analyze and describe its complexity.*/
+ * Analyze and describe its complexity.
+ */
 
 public class _23 {
 

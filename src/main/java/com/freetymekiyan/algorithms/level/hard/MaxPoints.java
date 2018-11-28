@@ -1,12 +1,12 @@
 package com.freetymekiyan.algorithms.level.hard;
 
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Given n points on a 2D plane, find the maximum number of points that lie on
  * the same straight line.
- *
+ * <p>
  * Tags: Hashtable, math
  */
 class MaxPoints {
@@ -33,7 +33,7 @@ class MaxPoints {
             int max = 0;
             int countSame = 0; // # of same points
             for (int j = i + 1; j < points.length; j++) {
-                if (points[i].x == points[j].x && points[i].y == points[j].y ) countSame++; // same point
+                if (points[i].x == points[j].x && points[i].y == points[j].y) countSame++; // same point
                 else {
                     String key = normalize(points[i], points[j]); // a|b|c
                     if (map.containsKey(key)) { // on the line
@@ -55,7 +55,7 @@ class MaxPoints {
     /**
      * use ax + by = c to represent a line and a|b|c as a key for that line
      * a, b, c should be normalized, how?
-     *
+     * <p>
      * special case, vertical, horizontal
      */
     private static String normalize(Point p1, Point p2) {
@@ -81,7 +81,7 @@ class MaxPoints {
                 b = Math.abs(b);
             } else { // force both positive
                 a = Math.abs(a);
-                b =  Math.abs(b);
+                b = Math.abs(b);
             }
             c = a * p1.x + b * p1.y; // c = ax + by
         }
@@ -99,7 +99,15 @@ class MaxPoints {
     class Point {
         int x;
         int y;
-        Point() { x = 0; y = 0;}
-        Point(int a, int b) { x = a; y = b; }
+
+        Point() {
+            x = 0;
+            y = 0;
+        }
+
+        Point(int a, int b) {
+            x = a;
+            y = b;
+        }
     }
 }

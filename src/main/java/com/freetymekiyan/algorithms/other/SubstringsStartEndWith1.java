@@ -2,14 +2,14 @@ package com.freetymekiyan.algorithms.other;
 
 /**
  * Given a binary string, count number of substrings that start and end with 1.
- * 
+ * <p>
  * Tags: String, Math
  */
 class SubstringsStartEndWith1 {
     public static void main(String[] args) {
-        
+
     }
-    
+
     /**
      * O(n) Time
      * Count # of 1's in the string and return combinations c*(c-1) / 2

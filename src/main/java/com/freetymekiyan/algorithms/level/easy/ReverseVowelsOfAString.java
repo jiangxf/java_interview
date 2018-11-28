@@ -31,8 +31,12 @@ public class ReverseVowelsOfAString {
         int i = 0;
         int j = s.length() - 1;
         while (i < j) {
-            while (i < j && vowels.indexOf(s.charAt(i)) == -1) { i++; }
-            while (i < j && vowels.indexOf(s.charAt(j)) == -1) { j--; }
+            while (i < j && vowels.indexOf(s.charAt(i)) == -1) {
+                i++;
+            }
+            while (i < j && vowels.indexOf(s.charAt(j)) == -1) {
+                j--;
+            }
             char c = sb.charAt(i);
             sb.setCharAt(i, sb.charAt(j));
             sb.setCharAt(j, c);

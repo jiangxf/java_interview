@@ -1,12 +1,12 @@
 package com.freetymekiyan.algorithms.level.easy;
 
 /**
- * Given an array and a value, remove all instances of that value in place and 
+ * Given an array and a value, remove all instances of that value in place and
  * return the new length.
- * 
- * The order of elements can be changed. It doesn't matter what you leave 
+ * <p>
+ * The order of elements can be changed. It doesn't matter what you leave
  * beyond the new length.
- * 
+ * <p>
  * Tags: Array, Two pointers
  */
 class RemoveElement {
@@ -14,11 +14,11 @@ class RemoveElement {
         RemoveElement r = new RemoveElement();
         // int[] A = { 1 };
         // int[] A = { 1, 2, 3, 4 };
-        int[] A = { 1, 2, 1 };
+        int[] A = {1, 2, 1};
         int elem = 1;
         System.out.println(r.removeElement(A, elem));
     }
-    
+
     /**
      * Order is not important
      * Just move the last elem to removed position

@@ -4,20 +4,20 @@ import java.util.Arrays;
 
 /**
  * Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
- *
+ * <p>
  * Below is one possible representation of s1 = "great":
- *
+ * <p>
  * great /    \ gr    eat / \    /  \ g   r  e   at / \ a   t To scramble the string, we may choose any non-leaf node
  * and swap its two children.
- *
+ * <p>
  * For example, if we choose the node "gr" and swap its two children, it produces a scrambled string "rgeat". rgeat /
  * \ rg    eat / \    /  \ r   g  e   at / \ a   t We say that "rgeat" is a scrambled string of "great".
- *
+ * <p>
  * Similarly, if we continue to swap the children of nodes "eat" and "at", it produces a scrambled string "rgtae". rgtae
  * /    \ rg    tae / \    /  \ r   g  ta  e / \ t   a We say that "rgtae" is a scrambled string of "great".
- *
+ * <p>
  * Given two strings s1 and s2 of the same length, determine if s2 is a scrambled string of s1.
- *
+ * <p>
  * Tags: DP, String
  */
 class ScrambleStr {
@@ -52,8 +52,8 @@ class ScrambleStr {
                     boolean r = false;
                     for (int k = 1; k < len && r == false; k++) {
                         r =
-                            (res[k - 1][i][j] && res[len - k - 1][i + k][j + k]) || (res[k - 1][i][j + len - k]
-                                                                                     && res[len - k - 1][i + k][j]);
+                                (res[k - 1][i][j] && res[len - k - 1][i + k][j + k]) || (res[k - 1][i][j + len - k]
+                                        && res[len - k - 1][i + k][j]);
                     }
                     res[len - 1][i][j] = r;
                 }
@@ -67,7 +67,7 @@ class ScrambleStr {
      * --------s22--------, and test the corresponding part (s11 and s21 && s12 and s22) with isScramble. separate s2
      * into two parts, namely --------s23--------, --s24--, and test the corresponding part (s11 and s24 && s12 and s23)
      * with isScramble.
-     *
+     * <p>
      * Note that before testing each sub-part with isScramble, anagram is used first to test if the corresponding parts
      * are anagrams. If not, skip directly.
      */
@@ -93,8 +93,8 @@ class ScrambleStr {
                 return true;
             }
             if (isScramble(s1.substring(0, i), s2.substring(s2.length() - i)) && isScramble(s1.substring(i),
-                                                                                            s2.substring(0, s2.length()
-                                                                                                            - i))) {
+                    s2.substring(0, s2.length()
+                            - i))) {
                 return true;
             }
         }

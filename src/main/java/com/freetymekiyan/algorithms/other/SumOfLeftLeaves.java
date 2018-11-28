@@ -2,7 +2,7 @@ package com.freetymekiyan.algorithms.other;
 
 /**
  * Find sum of all left leaves in a given Binary Tree
- *
+ * <p>
  * Tags: Tree, DFS
  */
 class SumOfLeftLeaves {
@@ -33,26 +33,26 @@ class SumOfLeftLeaves {
         }
         return res;
     }
-    
+
     private boolean isLeaf(TreeNode n) {
         if (n == null) return false;
         if (n.left == null && n.right == null) return true;
         return false;
     }
-    
+
     private TreeNode buildTree() {
         TreeNode t0 = new TreeNode(20);
         TreeNode t1 = new TreeNode(9);
         TreeNode t2 = new TreeNode(49);
-        
+
         TreeNode t3 = new TreeNode(5);
         TreeNode t4 = new TreeNode(12);
         TreeNode t5 = new TreeNode(15);
-        
+
         TreeNode t6 = new TreeNode(23);
         TreeNode t7 = new TreeNode(52);
         TreeNode t8 = new TreeNode(50);
-        
+
         t0.left = t1;
         t0.right = t2;
         t1.left = t3;
@@ -61,7 +61,7 @@ class SumOfLeftLeaves {
         t2.left = t6;
         t2.right = t7;
         t7.left = t8;
-        
+
         return t0;
     }
 
@@ -69,7 +69,7 @@ class SumOfLeftLeaves {
         TreeNode left;
         TreeNode right;
         int val;
-        
+
         public TreeNode(int val) {
             this.val = val;
         }

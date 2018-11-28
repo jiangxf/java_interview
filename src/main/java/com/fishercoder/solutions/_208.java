@@ -2,11 +2,11 @@ package com.fishercoder.solutions;
 
 /**
  * 208. Implement Trie (Prefix Tree)
- *
+ * <p>
  * Implement a trie with insert, search, and startsWith methods.
-
- Note:
- You may assume that all inputs are consist of lowercase letters a-z.
+ * <p>
+ * Note:
+ * You may assume that all inputs are consist of lowercase letters a-z.
  */
 
 public class _208 {

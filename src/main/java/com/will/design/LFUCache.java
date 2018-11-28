@@ -36,6 +36,7 @@ public class LFUCache {
     private Map<Integer, Integer> cache;
     private Map<Integer, Node> fMap; //frequency
     private Node head;
+
     public LFUCache(int capacity) {
         currentSize = 0;
         this.capacity = capacity;

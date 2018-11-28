@@ -5,13 +5,12 @@ import java.util.Map;
 
 /**
  * 340. Longest Substring with At Most K Distinct Characters
- *
+ * <p>
  * Given a string, find the length of the longest substring T that contains at most k distinct characters.
-
- For example, Given s = “eceba” and k = 2,
-
- T is "ece" which its length is 3.
-
+ * <p>
+ * For example, Given s = “eceba” and k = 2,
+ * <p>
+ * T is "ece" which its length is 3.
  */
 public class _340 {
 
@@ -41,7 +40,9 @@ public class _340 {
     }
 
     public static class Solution2 {
-        /**This is a more generic solution for any characters.*/
+        /**
+         * This is a more generic solution for any characters.
+         */
         public int lengthOfLongestSubstringKDistinct(String s, int k) {
             Map<Character, Integer> map = new HashMap<>();
             int longest = 0;

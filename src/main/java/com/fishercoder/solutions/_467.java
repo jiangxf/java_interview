@@ -1,31 +1,35 @@
 package com.fishercoder.solutions;
 
-/**Consider the string s to be the infinite wraparound string of "abcdefghijklmnopqrstuvwxyz", so s will look like this: "...zabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd....".
-
- Now we have another string p. Your job is to find out how many unique non-empty substrings of p are present in s. In particular, your input is the string p and you need to output the number of different non-empty substrings of p in the string s.
-
- Note: p consists of only lowercase English letters and the size of p might be over 10000.
-
- Example 1:
- Input: "a"
- Output: 1
-
- Explanation: Only the substring "a" of string "a" is in the string s.
- Example 2:
- Input: "cac"
- Output: 2
- Explanation: There are two substrings "a", "c" of string "cac" in the string s.
- Example 3:
- Input: "zab"
- Output: 6
- Explanation: There are six substrings "z", "a", "b", "za", "ab", "zab" of string "zab" in the string s.*/
+/**
+ * Consider the string s to be the infinite wraparound string of "abcdefghijklmnopqrstuvwxyz", so s will look like this: "...zabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcd....".
+ * <p>
+ * Now we have another string p. Your job is to find out how many unique non-empty substrings of p are present in s. In particular, your input is the string p and you need to output the number of different non-empty substrings of p in the string s.
+ * <p>
+ * Note: p consists of only lowercase English letters and the size of p might be over 10000.
+ * <p>
+ * Example 1:
+ * Input: "a"
+ * Output: 1
+ * <p>
+ * Explanation: Only the substring "a" of string "a" is in the string s.
+ * Example 2:
+ * Input: "cac"
+ * Output: 2
+ * Explanation: There are two substrings "a", "c" of string "cac" in the string s.
+ * Example 3:
+ * Input: "zab"
+ * Output: 6
+ * Explanation: There are six substrings "z", "a", "b", "za", "ab", "zab" of string "zab" in the string s.
+ */
 public class _467 {
-    /**A naive solution would definitely result in TLE.
+    /**
+     * A naive solution would definitely result in TLE.
      * Since the pattern keeps repeating, DP is the way to go.
      * Because the input consists merely of lowercase English letters, we could maintain an array of size 26,
      * keep updating this array, counting the substrings that end with this letter, keep updating it with the largest one possible.
-     * 
-     * Inspired by this: https://discuss.leetcode.com/topic/70658/concise-java-solution-using-dp*/
+     * <p>
+     * Inspired by this: https://discuss.leetcode.com/topic/70658/concise-java-solution-using-dp
+     */
     public static int findSubstringInWraproundString(String p) {
         if (p == null || p.isEmpty()) {
             return 0;

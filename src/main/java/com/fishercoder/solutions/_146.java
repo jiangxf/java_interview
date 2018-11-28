@@ -6,35 +6,36 @@ import java.util.Map;
 
 /**
  * 146. LRU Cache
- *
+ * <p>
  * Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
-
- get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
- put(key, value) - Set or insert the value if the key is not already present.
- When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
-
- Follow up:
- Could you do both operations in O(1) time complexity?
-
- Example:
-
- LRUCache cache = new LRUCache(2);//capacity
-
-        cache.put(1, 1);
-        cache.put(2, 2);
-        cache.get(1);       // returns 1
-        cache.put(3, 3);    // evicts key 2
-        cache.get(2);       // returns -1 (not found)
-        cache.put(4, 4);    // evicts key 1
-        cache.get(1);       // returns -1 (not found)
-        cache.get(3);       // returns 3
-        cache.get(4);       // returns 4
-        */
+ * <p>
+ * get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+ * put(key, value) - Set or insert the value if the key is not already present.
+ * When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
+ * <p>
+ * Follow up:
+ * Could you do both operations in O(1) time complexity?
+ * <p>
+ * Example:
+ * <p>
+ * LRUCache cache = new LRUCache(2);//capacity
+ * <p>
+ * cache.put(1, 1);
+ * cache.put(2, 2);
+ * cache.get(1);       // returns 1
+ * cache.put(3, 3);    // evicts key 2
+ * cache.get(2);       // returns -1 (not found)
+ * cache.put(4, 4);    // evicts key 1
+ * cache.get(1);       // returns -1 (not found)
+ * cache.get(3);       // returns 3
+ * cache.get(4);       // returns 4
+ */
 
 public class _146 {
 
     public class Solution1 {
         public class LRUCache {
+            private final int max;
             /**
              * The shortest implementation is to use LinkedHashMap:
              * specify a size of the linkedHashMap;
@@ -46,7 +47,6 @@ public class _146 {
              */
 
             private Map<Integer, Integer> cache;
-            private final int max;
 
             public LRUCache(int capacity) {
                 max = capacity;
@@ -69,34 +69,11 @@ public class _146 {
 
     public class Solution2 {
         public class LRUCache {
-            /**
-             * The more verbose solution is to write a doubly linked list plus a map.
-             */
-            private class Node {
-                int key;
-                int value;
-
-                LRUCache.Node prev;
-                LRUCache.Node next;
-
-                Node(int k, int v) {
-                    this.key = k;
-                    this.value = v;
-                }
-
-                Node() {
-                    this.key = 0;
-                    this.value = 0;
-                }
-            }
-
             private int capacity;
             private int count;
             private LRUCache.Node head;
             private LRUCache.Node tail;
             private Map<Integer, LRUCache.Node> map;
-            // ATTN: the value should be Node type! This is the whole point of having a class called Node!
-
             public LRUCache(int capacity) {
                 this.capacity = capacity;
                 this.count = 0;// we need a count to keep track of the number of elements in the cache so
@@ -107,6 +84,7 @@ public class _146 {
                 head.next = tail;
                 tail.prev = head;
             }
+            // ATTN: the value should be Node type! This is the whole point of having a class called Node!
 
             public int get(int key) {
                 LRUCache.Node node = map.get(key);
@@ -165,6 +143,27 @@ public class _146 {
                 node.next = next;
                 node.prev = head;
                 next.prev = node;
+            }
+
+            /**
+             * The more verbose solution is to write a doubly linked list plus a map.
+             */
+            private class Node {
+                int key;
+                int value;
+
+                LRUCache.Node prev;
+                LRUCache.Node next;
+
+                Node(int k, int v) {
+                    this.key = k;
+                    this.value = v;
+                }
+
+                Node() {
+                    this.key = 0;
+                    this.value = 0;
+                }
             }
         }
     }

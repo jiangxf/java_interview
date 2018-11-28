@@ -2,21 +2,21 @@ package com.freetymekiyan.algorithms.level.hard;
 
 /**
  * Given an unsorted integer array, find the first missing positive integer.
- * 
+ * <p>
  * For example,
  * Given [1,2,0] return 3,
  * and [3,4,-1,1] return 2.
- * 
+ * <p>
  * Your algorithm should run in O(n) time and uses constant space.
- * 
+ * <p>
  * Tags: Array
  */
 class FirstMissingPositive {
     public static void main(String[] args) {
-        int[] A = {1,2,0};
+        int[] A = {1, 2, 0};
         System.out.println(new FirstMissingPositive().firstMissingPositive(A));
     }
-    
+
     /**
      * Position of integer n should be n - 1 if sorted
      * Correct form [1, 2, 3, 4, ..., #, n]
@@ -33,7 +33,7 @@ class FirstMissingPositive {
                 num = A[i];
             }
         }
-        for (int i = 0; i < n; i++) 
+        for (int i = 0; i < n; i++)
             if (A[i] != i + 1) return i + 1;
         return n + 1; // nothing in middle losing, return largest
     }

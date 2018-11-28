@@ -41,6 +41,7 @@ public class Twitter {
     private static long tweetCount = 0L;
     private Map<Integer, User> userMap;
     private Map<Integer, Tweet> tweetMap;
+
     /**
      * Initialize your data structure here.
      */

@@ -3,20 +3,20 @@ package com.freetymekiyan.algorithms.level.hard;
 /**
  * There are N children standing in a line. Each child is assigned a rating
  * value.
- *
+ * <p>
  * You are giving candies to these children subjected to the following
  * requirements:
- *
+ * <p>
  * Each child must have at least one candy.
  * Children with a higher rating get more candies than their neighbors.
  * What is the minimum candies you must give?
- *
+ * <p>
  * Tags: Greedy
  */
 class Candy {
 
     public static void main(String[] args) {
-        
+
     }
 
     /**
@@ -35,13 +35,13 @@ class Candy {
 
         int res = candies[candies.length - 1];
         for (int i = ratings.length - 2; i >= 0; i--) {
-            if (ratings[i] > ratings[i + 1])    
+            if (ratings[i] > ratings[i + 1])
                 candies[i] = Math.max(candies[i], candies[i + 1] + 1);
             res += candies[i];
         }
         return res;
     }
-    
+
     /**
      * O(n) Time, O(1) Space
      * Use a var to store decreasing sequence length

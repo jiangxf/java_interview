@@ -2,11 +2,12 @@ package com.fishercoder.solutions;
 
 /**
  * 344. Reverse String
- *
+ * <p>
  * Write a function that takes a string as input and returns the string reversed.
-
- Example:
- Given s = "hello", return "olleh".*/
+ * <p>
+ * Example:
+ * Given s = "hello", return "olleh".
+ */
 public class _344 {
     public String reverseString_cheating(String s) {
         return new StringBuilder(s).reverse().toString();

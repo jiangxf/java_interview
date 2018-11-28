@@ -2,25 +2,25 @@ package com.freetymekiyan.algorithms.level.hard;
 
 /**
  * Given a binary tree, find the maximum path sum.
- *
+ * <p>
  * The path may start and end at any node in the tree.
- *
+ * <p>
  * For example:
  * Given the below binary tree,
- *
- *        1
- *       / \
- *      2   3
+ * <p>
+ * 1
+ * / \
+ * 2   3
  * Return 6.
- *
+ * <p>
  * Tags: Tree, DFS
  */
 class BinaryTreeMaxPathSum {
+    int max;
+
     public static void main(String[] args) {
 
     }
-
-    int max;
 
     /**
      * Post order traversal
@@ -53,6 +53,9 @@ class BinaryTreeMaxPathSum {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int x) { val = x; }
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 }

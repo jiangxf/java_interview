@@ -1,11 +1,11 @@
 package com.freetymekiyan.algorithms.other;
 
 /**
- * Given a number n, create an array of size 2n such that the array contains 2 
- * instances of every number from 1 to n, and the number of elements between 
- * two instances of a number i is equal to i. If such a configuration is not 
+ * Given a number n, create an array of size 2n such that the array contains 2
+ * instances of every number from 1 to n, and the number of elements between
+ * two instances of a number i is equal to i. If such a configuration is not
  * possible, then print the same.
- * 
+ * <p>
  * Tags: Array, BackTracking
  */
 class Fill2Instances {
@@ -13,9 +13,9 @@ class Fill2Instances {
         Fill2Instances f = new Fill2Instances();
         f.fill(7);
     }
-    
+
     /**
-     * 
+     *
      */
     public void fill(int n) {
         int[] res = new int[2 * n];
@@ -25,7 +25,7 @@ class Fill2Instances {
             System.out.println("Not possible");
         }
     }
-    
+
     /**
      * Backtrack from position n to 0
      */

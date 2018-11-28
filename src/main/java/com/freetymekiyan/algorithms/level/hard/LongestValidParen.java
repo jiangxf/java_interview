@@ -5,15 +5,15 @@ import java.util.Stack;
 /**
  * Given a string containing just the characters '(' and ')'
  * find the length of the longest valid (well-formed) parentheses substring.
- * 
+ * <p>
  * For "(()", the longest valid parentheses substring is "()", which has length  * = 2.
  * Another example is ")()())", where the longest valid parentheses substring
  * is "()()", which has length = 4.
- * 
+ * <p>
  * Follow up:
- * 
+ * <p>
  * What if there are curly bracs and brakets as well? {} []?
- * 
+ * <p>
  * Tags: DP, String
  */
 class LongestValidParen {
@@ -31,17 +31,17 @@ class LongestValidParen {
         System.out.println(longestValidParentheses("(())()")); // 6
         System.out.println(longestValidParentheses(")()()")); // 4
     }
-    
+
     /**
      * Optimized DP
      * Build a stack for indices of open parentheses
      * Traverse the string, if current is open paren, push to stack
-     * Otherwise, its close paren. 
+     * Otherwise, its close paren.
      * If stack is empty, no open paren left, reset len to 0.
-     * If not, pop the index from stack, matchedLen = current index - index of 
+     * If not, pop the index from stack, matchedLen = current index - index of
      * pop open paren + 1
      * If stack is empty, means this matchedLen can be added to the whole len
-     * If not, 
+     * If not,
      */
     public static int longestValidParentheses(String s) {
         if (s == null) return 0;
@@ -76,9 +76,9 @@ class LongestValidParen {
 
         int max = 0;
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '(') stack.push(i);  
+            if (s.charAt(i) == '(') stack.push(i);
             else if (stack.isEmpty()) continue;
-            else if (stack.peek() > 0) 
+            else if (stack.peek() > 0)
                 dp[i] = 2 + dp[stack.pop() - 1] + dp[i - 1]; // connect two valid sequences, or increase the length of current valid sequence. 
             else {
                 dp[i] = 2 + dp[i - 1]; // leftmost char is a '('
@@ -88,14 +88,14 @@ class LongestValidParen {
         }
         return max;
     }
-    
+
     /**
      * Two pass
      * Use a stack to store index of unmatched parentheses
      * Go through the stack and find maximum of difference between indices
      * Include len - first and last - 0
      */
-    public int longestValidParenthesesC (String s) {
+    public int longestValidParenthesesC(String s) {
         Stack<Integer> st = new Stack<Integer>(); // store the index of unmatched parens
         int len = s.length();
         int longest = 0;

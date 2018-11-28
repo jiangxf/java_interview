@@ -5,27 +5,27 @@ import java.util.Map;
 
 /**
  * Determine if a Sudoku is valid, according to: Sudoku Puzzles - The Rules.
- *
+ * <p>
  * The Sudoku board could be partially filled, where empty cells are filled
  * with the character '.'.
- *
+ * <p>
  * Note:
  * A valid Sudoku board (partially filled) is not necessarily solvable. Only
  * the filled cells need to be validated.
- *
+ * <p>
  * Tags: Hash table
  */
 class ValidSudoku {
     public static void main(String[] args) {
         ValidSudoku v = new ValidSudoku();
-        
+
         char[][] board = new char[9][9];
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 if (i == 0 && j == 0) {
                     board[i][j] = '.';
                 } else if (i == 0 && j != 0) {
-                    board[i][j] = (char)('0' + j + 1);
+                    board[i][j] = (char) ('0' + j + 1);
                 } else {
                     board[i][j] = '.';
                 }
@@ -63,7 +63,7 @@ class ValidSudoku {
         int[] col = new int[9];
         int[] sqr = new int[9];
 
-        for (int i = 0; i < 9; i++){
+        for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] != '.') {
                     int num = board[i][j] - '0';

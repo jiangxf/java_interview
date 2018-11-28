@@ -55,13 +55,13 @@ import java.util.Set;
  */
 public class _353 {
     public class SnakeGame {
-        private Set<Integer> set;//Use a set to hold all occupied points for the snake body, this is for easy access for the case of eating its own body
-        private Deque<Integer> body;//use a queue to hold all occupied points for the snake body as well, this is for easy access to update the tail
         int[][] food;
         int score;
         int foodIndex;
         int width;
         int height;
+        private Set<Integer> set;//Use a set to hold all occupied points for the snake body, this is for easy access for the case of eating its own body
+        private Deque<Integer> body;//use a queue to hold all occupied points for the snake body as well, this is for easy access to update the tail
 
         /**
          * Initialize your data structure here.

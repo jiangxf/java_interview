@@ -8,16 +8,17 @@ import java.util.List;
 /**
  * 234. Palindrome Linked List
  * Given a singly linked list, determine if it is a palindrome.
-
- Follow up:
- Could you do it in O(n) time and O(1) space?
+ * <p>
+ * Follow up:
+ * Could you do it in O(n) time and O(1) space?
  */
 
 public class _234 {
     public static class Solution1 {
-        /**O(n) time
+        /**
+         * O(n) time
          * O(1) space
-         * */
+         */
         public boolean isPalindrome(ListNode head) {
             if (head == null) {
                 return true;
@@ -55,9 +56,10 @@ public class _234 {
     }
 
     public static class Solution2 {
-        /**O(n) time
+        /**
+         * O(n) time
          * O(n) space
-         * */
+         */
         public boolean isPalindrome(ListNode head) {
             int len = 0;
             ListNode fast = head;

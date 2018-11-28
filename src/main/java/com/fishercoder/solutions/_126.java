@@ -1,46 +1,42 @@
 package com.fishercoder.solutions;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * 126. Word Ladder II
-
- Given two words (beginWord and endWord), and a dictionary's word list,
- find all shortest transformation sequence(s) from beginWord to endWord, such that:
-
- Only one letter can be changed at a time
- Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
-
- For example,
- Given:
- beginWord = "hit"
- endWord = "cog"
- wordList = ["hot","dot","dog","lot","log","cog"]
-
- Return
- [
- ["hit","hot","dot","dog","cog"],
- ["hit","hot","lot","log","cog"]
- ]
-
- Note:
- Return an empty list if there is no such transformation sequence.
- All words have the same length.
- All words contain only lowercase alphabetic characters.
- You may assume no duplicates in the word list.
- You may assume beginWord and endWord are non-empty and are not the same.
+ * <p>
+ * Given two words (beginWord and endWord), and a dictionary's word list,
+ * find all shortest transformation sequence(s) from beginWord to endWord, such that:
+ * <p>
+ * Only one letter can be changed at a time
+ * Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
+ * <p>
+ * For example,
+ * Given:
+ * beginWord = "hit"
+ * endWord = "cog"
+ * wordList = ["hot","dot","dog","lot","log","cog"]
+ * <p>
+ * Return
+ * [
+ * ["hit","hot","dot","dog","cog"],
+ * ["hit","hot","lot","log","cog"]
+ * ]
+ * <p>
+ * Note:
+ * Return an empty list if there is no such transformation sequence.
+ * All words have the same length.
+ * All words contain only lowercase alphabetic characters.
+ * You may assume no duplicates in the word list.
+ * You may assume beginWord and endWord are non-empty and are not the same.
  */
 
 public class _126 {
 
     public static class Solution1 {
-        /** Reference: https://discuss.leetcode.com/topic/2857/share-two-similar-java-solution-that-accpted-by-oj */
+        /**
+         * Reference: https://discuss.leetcode.com/topic/2857/share-two-similar-java-solution-that-accpted-by-oj
+         */
 
         Map<String, List<String>> map;
         List<List<String>> results;
@@ -71,7 +67,7 @@ public class _126 {
                 String word = queue.poll();
 
                 int step = ladder.get(word)
-                    + 1;//'step' indicates how many steps are needed to travel to one word.
+                        + 1;//'step' indicates how many steps are needed to travel to one word.
 
                 if (step > min) {
                     break;

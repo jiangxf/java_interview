@@ -1,11 +1,7 @@
 package com.fishercoder.solutions;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Given a List of words, return the words that can be typed using letters of alphabet on only one row's of American keyboard like the image below.

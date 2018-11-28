@@ -4,25 +4,30 @@ import java.util.Arrays;
 
 /**
  * 493. Reverse Pairs
- *
+ * <p>
  * Given an array nums, we call (i, j) an important reverse pair if i < j and nums[i] > 2*nums[j].
-
- You need to return the number of important reverse pairs in the given array.
-
- Example1:
-
- Input: [1,3,2,3,1]
- Output: 2
- Example2:
-
- Input: [2,4,3,5,1]
- Output: 3
-
- Note:
- The length of the given array will not exceed 50,000.
- All the numbers in the input array are in the range of 32-bit integer.
+ * <p>
+ * You need to return the number of important reverse pairs in the given array.
+ * <p>
+ * Example1:
+ * <p>
+ * Input: [1,3,2,3,1]
+ * Output: 2
+ * Example2:
+ * <p>
+ * Input: [2,4,3,5,1]
+ * Output: 3
+ * <p>
+ * Note:
+ * The length of the given array will not exceed 50,000.
+ * All the numbers in the input array are in the range of 32-bit integer.
  */
 public class _493 {
+
+    public static void main(String... args) {
+        System.out.println(2147483647 * 2);//this is -1
+        System.out.println(2147483647 * 2.0);//this is 4.294967294E9
+    }
 
     public static class Solution1 {
 
@@ -49,10 +54,5 @@ public class _493 {
             Arrays.sort(nums, start, end + 1);
             return cnt;
         }
-    }
-
-    public static void main(String... args) {
-        System.out.println(2147483647 * 2);//this is -1
-        System.out.println(2147483647 * 2.0);//this is 4.294967294E9
     }
 }

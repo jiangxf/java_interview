@@ -1,27 +1,28 @@
 package com.freetymekiyan.algorithms.other;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
- * Given a matrix with each grid a color type. Start from a random point, find 
- * the perimeter of the region of the same color. 
- * 
+ * Given a matrix with each grid a color type. Start from a random point, find
+ * the perimeter of the region of the same color.
+ * <p>
  * Tags: BFS
  */
 class MatrixColor {
     public static void main(String[] args) {
         MatrixColor m = new MatrixColor();
         int[][] mat = {
-            {2, 2, 1, 2},
-            {2, 2, 1, 2},
-            {2, 1, 1, 2},
-            {2, 2, 1, 2}, 
+                {2, 2, 1, 2},
+                {2, 2, 1, 2},
+                {2, 1, 1, 2},
+                {2, 2, 1, 2},
         };
         System.out.println(m.findPerimeter(mat, 0, 2));
         System.out.println(m.findPerimeter(mat, 0, 1));
         System.out.println(m.findPerimeter(mat, 0, 3));
     }
-    
+
     /**
      * BFS
      * addRecursive the start point to a queue, and set it as visited
@@ -34,13 +35,13 @@ class MatrixColor {
      */
     public int findPerimeter(int[][] mat, int x, int y) {
         if (mat == null || mat.length == 0 || mat[0].length == 0) return 0;
-        
+
         Queue<Integer> q = new LinkedList<Integer>();
         int m = mat.length;
         int n = mat[0].length;
         boolean[][] visited = new boolean[m][n];
         int[][] dir = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
-        
+
         q.add(x * n + y);
         visited[x][y] = true;
         int perimeter = 0;
@@ -63,8 +64,7 @@ class MatrixColor {
                                 visited[nX][nY] = true;
                             }
                         } else count++;
-                    }
-                    else count++;
+                    } else count++;
                 }
                 perimeter += count;
                 // System.out.println("count: " + count + " p: " + perimeter);

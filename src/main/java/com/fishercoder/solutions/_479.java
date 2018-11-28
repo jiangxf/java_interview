@@ -2,21 +2,30 @@ package com.fishercoder.solutions;
 
 /**
  * 479. Largest Palindrome Product
- *
+ * <p>
  * Find the largest palindrome made from the product of two n-digit numbers.
- Since the result could be very large, you should return the largest palindrome mod 1337.
-
- Example:
- Input: 2
- Output: 987
-
- Explanation: 99 x 91 = 9009, 9009 % 1337 = 987
-
- Note:
- The range of n is [1,8].
+ * Since the result could be very large, you should return the largest palindrome mod 1337.
+ * <p>
+ * Example:
+ * Input: 2
+ * Output: 987
+ * <p>
+ * Explanation: 99 x 91 = 9009, 9009 % 1337 = 987
+ * <p>
+ * Note:
+ * The range of n is [1,8].
  */
 public class _479 {
-    /**reference: https://discuss.leetcode.com/topic/74125/java-solution-using-assumed-max-palindrom*/
+    public static void main(String... args) {
+        System.out.println(Long.MAX_VALUE);
+        System.out.println(Math.pow(99999999, 2) < Long.MAX_VALUE);
+        _479 test = new _479();
+        System.out.println(test.largestPalindrome(3));
+    }
+
+    /**
+     * reference: https://discuss.leetcode.com/topic/74125/java-solution-using-assumed-max-palindrom
+     */
     public int largestPalindrome(int n) {
         // if input is 1 then max is 9
         if (n == 1) {
@@ -62,12 +71,5 @@ public class _479 {
     private long createPalindrom(long num) {
         String str = num + new StringBuilder().append(num).reverse().toString();
         return Long.parseLong(str);
-    }
-
-    public static void main(String... args) {
-        System.out.println(Long.MAX_VALUE);
-        System.out.println(Math.pow(99999999, 2) < Long.MAX_VALUE);
-        _479 test = new _479();
-        System.out.println(test.largestPalindrome(3));
     }
 }

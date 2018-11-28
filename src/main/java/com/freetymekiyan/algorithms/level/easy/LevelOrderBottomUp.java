@@ -42,7 +42,7 @@ class LevelOrderBottomUp {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> res = new LinkedList<List<Integer>>();
         if (root == null) return res;
-        
+
         /*store the nodes of thie level*/
         Queue<TreeNode> q = new LinkedList<TreeNode>();
         q.add(root);

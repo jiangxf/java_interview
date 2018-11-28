@@ -1,15 +1,15 @@
 package com.freetymekiyan.algorithms.other;
 
-import java.util.*;
+import java.util.Iterator;
 
 /**
  * Google:
  * Implement peek() for java iterator()
- *
+ * <p>
  * Example [1,2,3,4,5]
  * peek() = 1, peek() = 1, next() = 1, peek() = 2, next() = 2, peek() = 3
  * hasNext() = true,
- *
+ * <p>
  * Tags: Data Structures
  */
 class PeekIterator<T> implements Iterator<T> {
