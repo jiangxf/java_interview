@@ -14,15 +14,15 @@ Recursion Linked List
  * Approach 1: Divide and Conquer
  * 该解法与 Sort List 十分相似（整体流程几乎一样呢...)
  * https://github.com/cherryljr/LintCode/blob/master/Sort%20List.java
- *
+ * <p>
  * 具体流程：
- *  1. 用快慢指针找到List的 preMiddle node (注意这里找的是 preMid 而不是mid, mid用来构造root节点)
- *  则有 mid = preMid.next, mid 就是我们的 root 节点。
- *  2. 然后利用 mid右边的链表 开始建立 root 的右子树 root.right = sortedListToBST(mid.next); // 右半段 [mid.next...end]
- *  同时注意需要将 preMid.next = null;	// 将前面的节点与后面的节点断开
- *  然后利用 mid左边的链表 开始建立 root 的右左树 root.left = sortedListToBST(head); // 右半段 [head...preMid]
- *  3. 递归调用以上过程即可
- *
+ * 1. 用快慢指针找到List的 preMiddle node (注意这里找的是 preMid 而不是mid, mid用来构造root节点)
+ * 则有 mid = preMid.next, mid 就是我们的 root 节点。
+ * 2. 然后利用 mid右边的链表 开始建立 root 的右子树 root.right = sortedListToBST(mid.next); // 右半段 [mid.next...end]
+ * 同时注意需要将 preMid.next = null;	// 将前面的节点与后面的节点断开
+ * 然后利用 mid左边的链表 开始建立 root 的右左树 root.left = sortedListToBST(head); // 右半段 [head...preMid]
+ * 3. 递归调用以上过程即可
+ * <p>
  * 时间复杂度分析：
  * 该题与Convert Sorted Arrays to Binary Search Tree的不同在于LinkedList无法通过 index 直接对 middle node 进行访问.
  * 所以每次递归都要执行 findPreMid 这一步，而 findPreMid 函数的复杂度是 O(n) 的。
@@ -101,7 +101,7 @@ public class Solution {
  *  然后将 curr 作为 root 建立根节点，然后 curr 继续向后面移动一位，继续构建一棵 BST.
  *  4. 我们可以发现，前后建立的两棵树为 root 的左右子树，因此我们将它们连接起来。
  *  5. 递归调用即可
- *  
+ *
  * 时间复杂度分析：
  *  我们可以分析出来，建树过程中 curr 从 head 开始，逐步向后移动直到链表末尾，总共需要遍历 n 个节点。
  *  因此时间复杂度为：O(n)

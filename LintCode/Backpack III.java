@@ -29,7 +29,7 @@ public class Solution {
         if (V == null || V.length == 0) {
             return 0;
         }
-        
+
         int[] dp = new int[m + 1];
         // Initialize
         for (int i = 0; i * A[0] <= m; i++) {

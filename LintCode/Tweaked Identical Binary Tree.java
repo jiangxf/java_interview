@@ -33,15 +33,16 @@ Binary Tree
 	corner case: if both null, true;
 	if one null, false
 */
+
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
 public class Solution {
@@ -50,14 +51,14 @@ public class Solution {
      * @return true if they are tweaked identical, or false.
      */
     public boolean isTweakedIdentical(TreeNode a, TreeNode b) {
-    	if (a == null || b == null) {
-    		return a == null && b == null;
-    	}
-    	if (a.val != b.val) {
-    		return false;
-    	}
-    	return (isTweakedIdentical(a.left, b.left) && isTweakedIdentical(a.right, b.right))
-    		|| (isTweakedIdentical(a.left, b.right) && isTweakedIdentical(a.right, b.left));
+        if (a == null || b == null) {
+            return a == null && b == null;
+        }
+        if (a.val != b.val) {
+            return false;
+        }
+        return (isTweakedIdentical(a.left, b.left) && isTweakedIdentical(a.right, b.right))
+                || (isTweakedIdentical(a.left, b.right) && isTweakedIdentical(a.right, b.left));
     }
 }
 

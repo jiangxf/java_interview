@@ -1,7 +1,7 @@
 李特这特题目有点蛋疼，因为目前只接受一种结果。
-我做的恰好和它要的结果不一样，但是我觉得我这种走法走出来也是没错的。
-基本想法就是从一个点开始往一个方向走，每次flip一个bit, 碰壁的时候就回头走。
-```
+        我做的恰好和它要的结果不一样，但是我觉得我这种走法走出来也是没错的。
+        基本想法就是从一个点开始往一个方向走，每次flip一个bit,碰壁的时候就回头走。
+        ```
 /*
 
 The gray code is a binary numeral system where two successive values differ in only one bit.
@@ -76,69 +76,69 @@ Now:
 
 public class Solution {
 
-public List<Integer> grayCode(int n) {
+    public List<Integer> grayCode(int n) {
 
-List<Integer> rst = new ArrayList<Integer>();
+        List<Integer> rst = new ArrayList<Integer>();
 
-if (n < 0) {
+        if (n < 0) {
 
-return rst;
+            return rst;
 
-}
+        }
 
-char[] bits = new char[n];
+        char[] bits = new char[n];
 
-for (int i = 0; i < bits.length; i++) {
+        for (int i = 0; i < bits.length; i++) {
 
-bits[i] = '0';
+            bits[i] = '0';
 
-}
+        }
 
-String str = new String(bits);
+        String str = new String(bits);
 
-if (n == 0) {
+        if (n == 0) {
 
-str = "0";
+            str = "0";
 
-}
+        }
 
-rst.add(Integer.parseInt(str, 2));
+        rst.add(Integer.parseInt(str, 2));
 
-int step = n - 1;
+        int step = n - 1;
 
-boolean LR = true;//L: true; R: false
+        boolean LR = true;//L: true; R: false
 
-int steps = (int)Math.pow(2, n) - 1;
+        int steps = (int) Math.pow(2, n) - 1;
 
-for (int i = 0; i < steps; i++) {
+        for (int i = 0; i < steps; i++) {
 
-bits[step] = bits[step] == '0' ? '1' : '0';
+            bits[step] = bits[step] == '0' ? '1' : '0';
 
-str = new String(bits);
+            str = new String(bits);
 
-rst.add(Integer.parseInt(str, 2));
+            rst.add(Integer.parseInt(str, 2));
 
-if (LR) {
+            if (LR) {
 
-step--;
+                step--;
 
-} else {
+            } else {
 
-step++;
+                step++;
 
-}
+            }
 
-if (step == (n - 1) || step == 0) {//Turn around
+            if (step == (n - 1) || step == 0) {//Turn around
 
-LR = !LR;
+                LR = !LR;
 
-}
+            }
 
-}
+        }
 
-return rst;
+        return rst;
 
-}
+    }
 
 }
 ```

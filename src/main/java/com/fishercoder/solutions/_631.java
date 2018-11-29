@@ -182,6 +182,7 @@ public class _631 {
         class Formula {
             HashMap<String, Integer> cells;
             int val;
+
             Formula(HashMap<String, Integer> c, int v) {
                 val = v;
                 cells = c;

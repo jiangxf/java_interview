@@ -29,7 +29,7 @@ public class Solution {
         if (rst < 0 || rst > Integer.MAX_VALUE) {
             return 0;
         }
-        return sign ? (int)rst : -(int)rst;
+        return sign ? (int) rst : -(int) rst;
     }
 }
 

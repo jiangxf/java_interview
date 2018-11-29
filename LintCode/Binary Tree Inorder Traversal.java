@@ -25,7 +25,7 @@ Recursion Binary Tree Binary Tree Traversal
  * If we want to implement the Inorder Traversal.
  * We just need to print/store the curr.node
  * when we visited the curr node at the second time.
- *
+ * <p>
  * Time Complexity:  O(n)
  * Space Complexity: O(n)
  */
@@ -125,7 +125,7 @@ public class Solution {
  *  Else
  *      a. In current's left subtree, make current the right child of the rightmost node
  *      b. Go to this left child, i.e., current = current.left
- * 
+ *
  * Complexity Analysis
  * Time complexity : O(n).
  *  To prove that the time complexity is O(n),

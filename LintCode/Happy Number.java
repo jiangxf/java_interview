@@ -1,8 +1,8 @@
 Basic Implementation of the requirements.
 
-用HashSet存查看过的数值。若重复，return false.
+        用HashSet存查看过的数值。若重复，return false.
 
-```
+        ```
 /*
 Write an algorithm to determine if a number is happy.
 
@@ -33,23 +33,23 @@ public class Solution {
         if (n <= 0) {
             return false;
         }
-        
+
         long sum = n;
         HashSet<Long> set = new HashSet<Long>();
-        
+
         while (sum != 1) {
             String s = String.valueOf(sum);
             sum = 0;
-            for (char c : s.toCharArray()){
-                sum += (c-'0')*(c-'0');
+            for (char c : s.toCharArray()) {
+                sum += (c - '0') * (c - '0');
             }
             if (set.contains(sum)) {
-                return false;   
+                return false;
             } else {
                 set.add(sum);
             }
         }
-        
+
         return true;
     }
 }

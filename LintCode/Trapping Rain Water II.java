@@ -25,11 +25,11 @@ LintCode Copyright Heap Matrix
  * 并维持两个参数 leftMax 与 rightMax 分别代表当前的 左侧最高高度 与 右侧最高高度。（初始值为0）
  * 然后比较 height[left] 与 height[right], 看哪个更低，根据木桶原理（水位高度由短板决定）
  * 我们就从更低的那一侧进行灌水，（假设当前左侧高度比右侧低）
- *  那么如果左侧高度比 leftMax 低，说明能够把水灌进去。灌水的高度为：leftMax - height[left]，然后 left 指针向右移动一位。
- *  如果 左侧高度 比 leftMax 高，说明无法把水灌进去，则更新 leftMax 即可。（对于 right 操作基本类似）
- *  然后继续比较 height[left] 与 height[right]， 直至 left 与 right 相遇。
+ * 那么如果左侧高度比 leftMax 低，说明能够把水灌进去。灌水的高度为：leftMax - height[left]，然后 left 指针向右移动一位。
+ * 如果 左侧高度 比 leftMax 高，说明无法把水灌进去，则更新 leftMax 即可。（对于 right 操作基本类似）
+ * 然后继续比较 height[left] 与 height[right]， 直至 left 与 right 相遇。
  * 以上就是 Trapping Rain Water 的解法。
- *
+ * <p>
  * 那么在本题中，问题由原来的 一维 转换成了 二维。
  * 但是问题突破口不变，我们仍然可以从 最外层的最低水位高度 开始向内部灌水。
  * 相同的，完成该步灌水操作后，该点向内移动一位（从 heap 中移除该点 并将灌水操作后的水位值 add 到 heap 中），
@@ -39,29 +39,12 @@ LintCode Copyright Heap Matrix
  * 并且随着灌水过程的向内推进我们的 外侧水位墙 是不规则的。
  * 如果采取遍历所有值的方法，我们还需要记录其所有的外侧点，并且将花费 O(n) 的时间复杂度。
  * 为了解决这个问题，我们使用了 最小堆 这个数据结构来帮助我们快速获得 外侧水位 中的最小值，时间复杂度为 O(logn).
- *
+ * <p>
  * 时间复杂度分析：
- *  利用 PriorityQueue 获得 外侧水位的最小值 时间复杂度为 O(log(m + n)),而我们需要遍历整个 [m, n] 的数组，
- *  因此总体时间复杂为：O(m * n * log(m + n))
+ * 利用 PriorityQueue 获得 外侧水位的最小值 时间复杂度为 O(log(m + n)),而我们需要遍历整个 [m, n] 的数组，
+ * 因此总体时间复杂为：O(m * n * log(m + n))
  */
 public class Solution {
-    class Cell implements Comparable<Cell> {
-        int row;
-        int col;
-        int height;
-
-        Cell(int row, int col, int height) {
-            this.row = row;
-            this.col = col;
-            this.height = height;
-        }
-
-        @Override
-        public int compareTo(Cell other) {
-            return this.height - other.height;
-        }
-    }
-
     /**
      * @param heights: a matrix of integers
      * @return: an integer
@@ -119,5 +102,22 @@ public class Solution {
         }
 
         return rst;
+    }
+
+    class Cell implements Comparable<Cell> {
+        int row;
+        int col;
+        int height;
+
+        Cell(int row, int col, int height) {
+            this.row = row;
+            this.col = col;
+            this.height = height;
+        }
+
+        @Override
+        public int compareTo(Cell other) {
+            return this.height - other.height;
+        }
     }
 }

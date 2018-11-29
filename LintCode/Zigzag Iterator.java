@@ -1,7 +1,7 @@
-这个题目相对简单. 做的时候我先考虑起来k条怎么办. 那么用个map把index和每个listmark一下就好了。
-每次next(), 相应的list的头拿下来就好。
-然后就跑圈呗，每次刷一个list头。不难。只要把几个variable维护清楚就行。
-```
+这个题目相对简单.做的时候我先考虑起来k条怎么办.那么用个map把index和每个listmark一下就好了。
+        每次next(),相应的list的头拿下来就好。
+        然后就跑圈呗，每次刷一个list头。不难。只要把几个variable维护清楚就行。
+        ```
 /*
 Given two 1d vectors, implement an iterator to return their elements alternately.
 
@@ -38,47 +38,48 @@ return list.get(0), also list.remove(0)
 Note: be careful with all the size, length, index. size does not change once fixed. Remember in next(): index++ and length--;
 */
 public class ZigzagIterator {
-	private HashMap<Integer, List<Integer>> map;
+    private HashMap<Integer, List<Integer>> map;
     private int length = 0;
     private int size = 0;
     private int index = 0;
+
     public ZigzagIterator(List<Integer> v1, List<Integer> v2) {
         map = new HashMap<Integer, List<Integer>>();
         if (v1 != null && v1.size() > 0) {
-        	map.put(size, v1);
-        	length += v1.size();
-        	size++;
+            map.put(size, v1);
+            length += v1.size();
+            size++;
         }
         if (v2 != null && v2.size() > 0) {
-        	map.put(size, v2);
-        	length += v2.size();
-        	size++;
+            map.put(size, v2);
+            length += v2.size();
+            size++;
         }
         if (length == 0) {
-        	return;
+            return;
         }
     }
 
     public int next() {
-        while(map.get(index).size() == 0) {
-        	index++;
-        	if (index == size) {
-        		index = 0;
-        	}
+        while (map.get(index).size() == 0) {
+            index++;
+            if (index == size) {
+                index = 0;
+            }
         }
         int rst = map.get(index).get(0);
         map.get(index).remove(0);
         length--;
         index++;
         if (index == size) {
-        	index = 0;
+            index = 0;
         }
         return rst;
     }
 
     public boolean hasNext() {
         return length > 0;
-    }	
+    }
 }
 
 

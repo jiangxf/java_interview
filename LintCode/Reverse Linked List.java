@@ -1,7 +1,7 @@
 用head来遍历所有node。
-基本思路为利用temp作为中介将head与head.next进行交换一直继续下去
+        基本思路为利用temp作为中介将head与head.next进行交换一直继续下去
 
-```
+        ```
 /*
 Reverse a linked list.
 
@@ -21,7 +21,7 @@ public class Solution {
         if (head == null || head.next == null) {
             return head;
         }
-        
+
         ListNode prev = null;
 
         while (head != null) {
@@ -30,7 +30,7 @@ public class Solution {
             prev = head;
             head = temp;
         }
-        
+
         return prev;
     }
 }

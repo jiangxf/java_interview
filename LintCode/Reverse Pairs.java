@@ -9,8 +9,8 @@ Given A = [2, 4, 1, 3, 5] , (2, 1), (4, 1), (4, 3) are reverse pairs. return 3
 Tags 
 Array Merge Sort
  */
- 
- /**
+
+/**
  * Main Idea: Divide and Conquer
  * 为了求逆序对，最简单粗暴的方法就是每遇到一个数，就对它前面所有的数进行一次遍历。
  * 从而得到这个数可以组成几个逆序对，相应的时间复杂度也为: O(n^2)
@@ -23,7 +23,7 @@ Array Merge Sort
  * 因此这道题目也可以使用 归并排序 来进行解决。
  * 通过以上分析，我们可以发现该题不管是使用 Tree 还是 Merge Sort 其核心都是：分治思想
  * 下面请看 4 种解决方法的详细分析与代码实现。
- *
+ * <p>
  * 参考资料：
  * https://leetcode.com/articles/reverse-pairs/
  * https://leetcode.com/problems/reverse-pairs/discuss/97268/General-principles-behind-problems-similar-to-%22Reverse-Pairs%22
@@ -48,17 +48,6 @@ Array Merge Sort
  * 详情请看 Approach 2
  */
 public class Solution {
-    class Node {
-        int val, count;
-        Node left, right;
-
-        Node(int val) {
-            this.val = val; // 节点值
-            this.count = 1; // 大于等于该节点的元素个数
-            this.left = this.right = null;
-        }
-    }
-
     /*
      * @param A: an array
      * @return: total of reverse pairs
@@ -83,13 +72,13 @@ public class Solution {
         // 如果 root 为空，直接返回 0 即可
         if (root == null) {
             return 0;
-        // 如果 root.val 与 所要查找的值 相等，则直接返回 root.count 即可
+            // 如果 root.val 与 所要查找的值 相等，则直接返回 root.count 即可
         } else if (root.val == target) {
             return root.count;
-        // 如果 root.val 小于 所要查找的值，说明目前还无法组成逆序对，进一步对 root 的右子树进行查找
+            // 如果 root.val 小于 所要查找的值，说明目前还无法组成逆序对，进一步对 root 的右子树进行查找
         } else if (root.val < target) {
             return search(root.right, target);
-        // 如果 root.val 大于 所要查找的值，说明可以组成逆序对，并且进一步对 root 的左子树进行查找
+            // 如果 root.val 大于 所要查找的值，说明可以组成逆序对，并且进一步对 root 的左子树进行查找
         } else {
             return root.count + search(root.left, target);
         }
@@ -99,20 +88,31 @@ public class Solution {
         // 如果 root 为空，直接建立新的节点并返回
         if (root == null) {
             return new Node(val);
-        // 如果 root.val == val，则 root.count 需要加1
+            // 如果 root.val == val，则 root.count 需要加1
         } else if (root.val == val) {
             root.count++;
-        // 如果 root.val < val,则说明新插入的值比 root 要大
-        // 所以更新 root.count 使其 加1，并将其插入到 root 的右子树中
+            // 如果 root.val < val,则说明新插入的值比 root 要大
+            // 所以更新 root.count 使其 加1，并将其插入到 root 的右子树中
         } else if (root.val < val) {
             root.count++;
             root.right = insert(root.right, val);
-        // 如果 root.val > val，这说明新插入的值比 root 小，
-        // root.count 无需更新，将新节点插入到 root 的左子树中即可。
+            // 如果 root.val > val，这说明新插入的值比 root 小，
+            // root.count 无需更新，将新节点插入到 root 的左子树中即可。
         } else {
             root.left = insert(root.left, val);
         }
         return root;
+    }
+
+    class Node {
+        int val, count;
+        Node left, right;
+
+        Node(int val) {
+            this.val = val; // 节点值
+            this.count = 1; // 大于等于该节点的元素个数
+            this.left = this.right = null;
+        }
     }
 }
 

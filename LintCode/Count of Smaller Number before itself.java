@@ -17,16 +17,16 @@ Binary Search LintCode Copyright Segment Tree
  * Approach 1: Segment Tree
  * 如何找到问题的切入点？
  * 对于每一个元素A[i]我们查询比它小数，转换成区间的查询就是查询在它前面的数当中有多少在区间[0, A[i] - 1]当中。
- *
+ * <p>
  * 因此我们可以为 0-10000区间 建立线段树，并将所有区间的 count 置为0。每一个最小区间（即叶节点）的 count 代表到目前为止该数的数量。
  * 然后开始遍历数组，遇到A[i]时，去查0 ～ A[i]-1 区间的 count 即这个区间中有多少数存在，这就是比 A[i] 小的数的数量。
  * 查完后将 A[i] 区间的 count 加1即可，也就是把 A[i] 插入到线段树i的位置上。
  * 该解法可以详见：
  * http://www.jiuzhang.com/tutorial/segment-tree/168
  * 但是该解法存在着缺点：
- *  1. 我们需要事先知道题目所给出测试数据的范围
- *  2. 使用了大量的额外空间
- *
+ * 1. 我们需要事先知道题目所给出测试数据的范围
+ * 2. 使用了大量的额外空间
+ * <p>
  * 对此我们可以对该解法进行一个小小的改进。
  * 首先我们遍历整个数组得到数据的最小值 minValue，然后再利用 diff[] 数组来存储输入数组中每个元素与最小值之间的差值，
  * 并记录下最大的差值 maxValue.
@@ -39,21 +39,6 @@ Binary Search LintCode Copyright Segment Tree
  * 2. 使用了相对较少的额外空间
  */
 public class Solution {
-    /*
-     * @param A: an integer array
-     * @return: A list of integers includes the index of the first number and the index of the last number
-     */
-    class SegmentTreeNode {
-        int start, end, count;
-        SegmentTreeNode left, right;
-
-        SegmentTreeNode(int start, int end, int count) {
-            this.start = start;
-            this.end = end;
-            this.count = count;
-            left = right = null;
-        }
-    }
     SegmentTreeNode root;
 
     public List<Integer> countOfSmallerNumberII(int[] A) {
@@ -82,9 +67,9 @@ public class Solution {
         // 注意:实际查询时我们的范围是 [-1...maxValue-1]
         root = buildHelper(0, maxValue);
         int count = 0;
-        for(int i = 0; i < diff.length; i++) {
+        for (int i = 0; i < diff.length; i++) {
             // 查询当前所有差值小于 diff[i] 的数的个数
-            count = query(root, 0, diff[i]-1);
+            count = query(root, 0, diff[i] - 1);
             // 将 diff[i] 插入线段树中
             modify(root, diff[i], 1);
             rst.add(count);
@@ -168,6 +153,22 @@ public class Solution {
         // 因此需要从叶子节点向上返回到根节点, 去更新线段树上的值
         root.count = root.left.count + root.right.count;
     }
+
+    /*
+     * @param A: an integer array
+     * @return: A list of integers includes the index of the first number and the index of the last number
+     */
+    class SegmentTreeNode {
+        int start, end, count;
+        SegmentTreeNode left, right;
+
+        SegmentTreeNode(int start, int end, int count) {
+            this.start = start;
+            this.end = end;
+            this.count = count;
+            left = right = null;
+        }
+    }
 }
 
 /**
@@ -175,13 +176,13 @@ public class Solution {
  * 经过 Approach 1 中的分析，我们可以得知可以将该问题转换为一个 区间和求解 的问题。
  * 那么该类型问题最好的解法无疑是 Binary Index Tree.
  * 它有着比线段树更好的时空复杂度和更简单的代码实现。
- *
+ * <p>
  * 主体思路与 Approach 1 中相同，只不过这里需要注意的是 BITree 的下标我们需要从 1 开始使用。
  * 所以在计算 各个元素 A[i] 与最小值 minValue 的差值时，我们需要进行一次 加1 操作。
  * 使得最终结果分布于 [1...maxValue]。而同样查询范围为：[0...maxValue-1]
  * (BITree中查询 BITree[0] 直接返回初始值0)
  * 其他操作与 Segment Tree 解法相同。
- *
+ * <p>
  * 若对于 Binary Index Tree 不了解或者想进一步了解的可以看这里:
  * https://github.com/cherryljr/LeetCode/blob/master/Binary%20Index%20Tree%20Template.java
  */
@@ -255,7 +256,7 @@ public class Solution {
  * 这个方法虽然解决了 负数问题 并 节约了一定的额外空间。
  * 但是仍然浪费了一些空间，特别是当出现 [0, 1, 2, 10000] 这种数据时，将浪费巨大的额外空间。
  * 因此我们可以通过对数据进行 离散化 来优化我们的额外空间。
- *
+ * <p>
  * 所谓的 离散化 就是指把稀疏的数字映射到一个数组中，而这个数组的元素是紧凑的，这样就可以节约空间。
  * 举个例子：
  * 数组arr = [1, 3, 0, 5]，按照 计算差值的方法 映射到新的数组结果为：new_arr = [1, 1, 0, 1, 0, 1]。
@@ -266,11 +267,11 @@ public class Solution {
  * 也就是说，arr[0] = 1 在sorted_arr对应在第二位，因此new_arr[0] = 1；
  * arr[1] = 3在sorted_arr对应在第三位，因此new_arr[1] = 2，……依次类推。这样就完成了离散化。
  * 具体实现就是：先拷贝一份原始数组进行 排序，然后遍历原始数组 data,利用 二分查找法 在 排序后的数组中 查找对应的位置。这个位置就是对应的 new_arr[i] 的值。
- *
+ * <p>
  * 然后我们就可以利用 离散化 后的数组 new_arr 来构建我们的 BITree.
  * 注意：这里的 new_arr 并不是 BITree 数组，而是我们为了构建 BITree 数组所进行离散化后的数组。
  * 后面的操作与 Approach 2 相同。
- *
+ * <p>
  * Note:
  * 我们可以发现，通过离散化，我们可以大幅地节约额外空间的消耗。
  * 但是同时，它也增加了算法的时间复杂度。（排序O(nlogn) + 对 n 个数进行二分查找 O(nlogn)）

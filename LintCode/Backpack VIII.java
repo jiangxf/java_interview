@@ -22,17 +22,17 @@ Backpack Dynamic Programming
  * dp[i][j]表示：在前 i 个元素中，取得价值为 j 的方案是否成立
  * 因此 dp[i][j] |= dp[i - 1][j - k * value[i]] (j >= k * value[i])
  * 最后我们只需要统计 dp[n-1][m] 中有几个方案为 true 即可。
- *
+ * <p>
  * 注意点：题目要求至少取一个值，即全部都不取（结果为0）的方案是不成立的
  * 而我们这里是认为一个都不取的方案是成立的，因此结果需要 减去1.
- *
+ * <p>
  * 关于 多重背包问题 的详细解析与解法优化可以参考：
  * https://github.com/cherryljr/LintCode/edit/master/Backpack%20VII.java
  */
 public class Solution {
     /**
-     * @param m: the value from 1 - m
-     * @param value: the value of coins
+     * @param m:      the value from 1 - m
+     * @param value:  the value of coins
      * @param amount: the number of coins
      * @return: how many different value
      */
@@ -76,8 +76,8 @@ public class Solution {
  */
 public class Solution {
     /**
-     * @param m: the value from 1 - m
-     * @param value: the value of coins
+     * @param m:      the value from 1 - m
+     * @param value:  the value of coins
      * @param amount: the number of coins
      * @return: how many different value
      */
@@ -117,8 +117,8 @@ public class Solution {
  */
 public class Solution {
     /**
-     * @param m: the value from 1 - m
-     * @param value: the value of coins
+     * @param m:      the value from 1 - m
+     * @param value:  the value of coins
      * @param amount: the number of coins
      * @return: how many different value
      */

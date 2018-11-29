@@ -1,15 +1,14 @@
-
 注意找的是greater/bigger than target。
 
-由于给定条件允许O(nLogn):   
-   sort
-   two pointer
+        由于给定条件允许O(nLogn):
+        sort
+        two pointer
 
-while里面two pointer移动。每次如果num[left]+num[right] > target，那么其中所有num[left++]的加上num[right]都>target.   
-也就是,num[right]不动，计算加入挪动left能有多少组，那就是: right-left这么多。 全部加到count上去。     
-然后right--.换个right去和前面的left部分作比较。
-这道题目与Triangle Count考查的点是一样的。
-```
+        while里面two pointer移动。每次如果num[left]+num[right]>target，那么其中所有num[left++]的加上num[right]都>target.
+        也就是,num[right]不动，计算加入挪动left能有多少组，那就是:right-left这么多。 全部加到count上去。
+        然后right--.换个right去和前面的left部分作比较。
+        这道题目与Triangle Count考查的点是一样的。
+        ```
 /*
 Given an array of integers, find how many pairs in the array such that 
 their sum is bigger than a specific target number. Please return the number of pairs.
@@ -80,10 +79,10 @@ public class Solution {
         int mid;
         int sum;
         while (start + 1 < end) {
-            mid = start + (end - start) /2;
-            if (mid - 1 >= 0 && nums[mid-1] <= target && target < nums[mid]) {
+            mid = start + (end - start) / 2;
+            if (mid - 1 >= 0 && nums[mid - 1] <= target && target < nums[mid]) {
                 return mid;
-            } else if (mid + 1 < nums.length &&  nums[mid] <= target && target < nums[mid + 1]) {
+            } else if (mid + 1 < nums.length && nums[mid] <= target && target < nums[mid + 1]) {
                 return mid + 1;
             } else if (target < nums[mid]) {
                 end = mid;

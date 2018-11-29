@@ -31,6 +31,7 @@ public class Solution {
     private char target;
     private char mark;
     private Queue<Integer> queue = new LinkedList<Integer>();
+
     public void solve(char[][] board) {
         if (board == null || board.length == 0) {
             return;
@@ -44,7 +45,7 @@ public class Solution {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 if (i == 0 || i == row - 1 || j == 0 || j == col - 1) {
-                    check(i,j);
+                    check(i, j);
                 }
             }
         }
@@ -53,17 +54,18 @@ public class Solution {
             for (int j = 0; j < col; j++) {
                 if (board[i][j] == target) {
                     board[i][j] = 'X';
-                } 
+                }
                 if (board[i][j] == mark) {
                     board[i][j] = target;
                 }
             }
         }
     }
+
     //BFS
     public void check(int i, int j) {
         fill(board, i, j);
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int val = queue.poll();
             int x = val / col;
             int y = val % col;
@@ -73,6 +75,7 @@ public class Solution {
             fill(board, x, y + 1);
         }
     }
+
     public void fill(char[][] board, int i, int j) {
         if (i < 0 || i >= row || j < 0 || j >= col || board[i][j] != target) {
             return;

@@ -63,10 +63,11 @@ public class Solution {
      * @param triangle: a list of lists of integers.
      * @return: An integer, minimum path sum.
      */
-       
+
     //Version 2 : Memorize Search
     private int n;
     private ArrayList<ArrayList<Integer>> triangle;
+
     public int minimumTotal(ArrayList<ArrayList<Integer>> triangle) {
         if (triangle == null || triangle.size() == 0) {
             return 0;
@@ -81,7 +82,7 @@ public class Solution {
         }
         return searchHelper(0, 0, sum);
     }
-    
+
     public int searchHelper(int r, int c, int[][] sum) {
         if (r >= this.n) {
             return 0;

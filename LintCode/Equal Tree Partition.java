@@ -51,10 +51,10 @@ Binary Tree Amazon
  * 所以这道题的考点就是更新每个结点的结点值，我们可以使用 递归 来做。
  * 写法和 Binary Tree Maximum Path Sum's Approach 2 相同
  * https://github.com/cherryljr/LintCode/blob/master/Binary%20Tree%20Maximum%20Path%20Sum.java
- *
+ * <p>
  * 时间复杂度为：O(n)
  * 空间复杂度为：O(1)
- *
+ * <p>
  * 本题做法为了省空间直接对节点的值进行了修改，在实际应用中并不是一个很好的做法。（不应该破坏原有的数据）
  * 因此这边给出了一个利用 Stack 保存数据的方法以供参考：
  * https://leetcode.com/articles/equal-tree-partition/
@@ -105,7 +105,7 @@ public class Solution {
             return 0L;
         }
 
-        root.val +=  getSum(root.left) + getSum(root.right);
+        root.val += getSum(root.left) + getSum(root.right);
         return root.val;
     }
 }

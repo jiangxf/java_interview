@@ -26,12 +26,12 @@ Dynamic Programming LinkedIn Airbnb
  * So we could use dp[i] to represent that:
  * the max profit could be robbed form the first i house.
  * The Function is:
- *  dp[i] = Math.max(dp[i - 2] + A[i-1], dp[i - 1])
+ * dp[i] = Math.max(dp[i - 2] + A[i-1], dp[i - 1])
  * The answer is:
- *  dp[A.length]
- * 
+ * dp[A.length]
+ * <p>
  * Time Complexity: O(n); Space Complexity: O(1)
- *  
+ * <p>
  * Note: Remember to Initialize the dp array.
  */
 public class Solution {
@@ -50,7 +50,7 @@ public class Solution {
         dp[0] = 0;
         dp[1] = A[0];
         for (int i = 2; i <= A.length; i++) {
-            dp[i] = Math.max(dp[i - 2] + A[i-1], dp[i - 1]);
+            dp[i] = Math.max(dp[i - 2] + A[i - 1], dp[i - 1]);
         }
 
         return dp[A.length];
@@ -63,11 +63,11 @@ public class Solution {
  * so we just need to save the two status.
  * It means that the size of array could be reduce from O(n) to O(2) by using the modulo operator %.
  * So the function is:
- *  dp[i % 2] = Math.max(dp[(i-2) % 2] + A[i-1], dp[(i-1) % 2])
- *  (i%2 could be optimized as i&1 to speed up the operation)
+ * dp[i % 2] = Math.max(dp[(i-2) % 2] + A[i-1], dp[(i-1) % 2])
+ * (i%2 could be optimized as i&1 to speed up the operation)
  * And the result is:
- *  dp[A.length % 2]
- *
+ * dp[A.length % 2]
+ * <p>
  * Time Complexity: O(n); Space Complexity: O(1)
  */
 public class Solution {
@@ -84,7 +84,7 @@ public class Solution {
         dp[0] = 0;
         dp[1] = A[0];
         for (int i = 2; i <= A.length; i++) {
-            dp[i & 1] = Math.max(dp[(i-2) & 1] + A[i-1], dp[(i-1) & 1]);
+            dp[i & 1] = Math.max(dp[(i - 2) & 1] + A[i - 1], dp[(i - 1) & 1]);
         }
 
         return dp[A.length & 1];
@@ -97,9 +97,9 @@ public class Solution {
  * Approach 1: Sequence DP
  * Basic DP question, we only need to analyze the status that
  * the current house is robbed or not.
- *  if rob current house, previous house must not be robbed
- *  if not rob the current house, take the max value of robbed (i-1)th house and not rob (i-1)th house
- *
+ * if rob current house, previous house must not be robbed
+ * if not rob the current house, take the max value of robbed (i-1)th house and not rob (i-1)th house
+ * <p>
  * Time Complexity: O(n); Space Complexity: O(n)
  */
 public class Solution {
@@ -126,7 +126,7 @@ public class Solution {
 /**
  * Approach 2: Sequence DP (Optimized)
  * Above all, we can convert this to O(1) space easily
- * 
+ * <p>
  * Time Complexity: O(n); Space Complexity: O(1)
  */
 public class Solution {
@@ -142,8 +142,8 @@ public class Solution {
         // max monney can get if rob current house
         long rob = 0;
         // max money can get if not rob current house
-        long notrob = 0;    
-        for(int i = 0; i < A.length; i++) {
+        long notrob = 0;
+        for (int i = 0; i < A.length; i++) {
             // if rob current value, previous house must not be robbed
             long currob = notrob + A[i];
             //if not rob ith house, take the max value of robbed (i-1)th house and not rob (i-1)th house

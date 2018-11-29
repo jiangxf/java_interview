@@ -38,25 +38,25 @@ LintCode Copyright Heap Google
  * 我们很容易想到使用 扫描线 来进行解决。（扫描过程中取最高的 height 即可）
  * 如果对 扫描线 不清楚的，可以看一下 Number of Airplanes in the Sky 这个基础应用：
  * https://github.com/cherryljr/LintCode/blob/master/Number%20of%20Airplanes%20in%20the%20Sky.java
- *
+ * <p>
  * 具体过程如下所示：
- *  1. 首先，将 buildings 各个区间中的各个端点单独出来，用于建立扫描线扫描时所需的 Point.
- *  Point 主要包含 端点的位置信息(pos) 与 该端点是起始还是末尾(flag) 以及 该端点说对应大楼的高度(height)
- *  但是因为 height 均为非负数，所以可以用 height 的正负值来代表其是大楼的 起始/结束 位置。
- *  这样能够节省一个参数的空间，并且这样我们使用一个二维数组就能够解决 Point,而不必去建立一个 Point 类。
- *  2. 将建立的 points 按照 从小到大的 顺序进行排序，以用于 Scan Line 的扫描。
- *  3. 开始进行扫描，这时候我们发现了一个问题：虽然 扫描线 能够轻易地帮我们扫描出各个区间的情况，
- *  比如 某段区间有几栋大楼（等同于飞机航线问题），但是我们还需要得到这几栋大楼的 最高高度 来作为我们的 outline.
- *  因此我们需要 在几个heights中 快速求得 最高的高度。毫无疑问，我们可以使用 maxHeap 来帮助我们解决这个问题。
- *  这样，当我们遇到一个 起始point 时,我们就将其对应的大楼高度 add 到 maxHeap 中。
- *  当遇到一个 终止point 时，我们就将对应的点从 maxHeap 中 remove 出去。
- *  这样每次 maxHeap 的 peek() 元素就是我们需要的的 最高高度（即outline).
- *
- *  时间复杂度：
- *   建立 Scan Line 所需的 points,并进行排序：O(nlogn)
- *   进行 扫描，利用 maxHeap 来获取 扫描线 当前的最高高度(outline),因为 maxHeap 的 remove() 操作为 O(n)
- *   因此总时间复杂度为：O(n^2)
- *
+ * 1. 首先，将 buildings 各个区间中的各个端点单独出来，用于建立扫描线扫描时所需的 Point.
+ * Point 主要包含 端点的位置信息(pos) 与 该端点是起始还是末尾(flag) 以及 该端点说对应大楼的高度(height)
+ * 但是因为 height 均为非负数，所以可以用 height 的正负值来代表其是大楼的 起始/结束 位置。
+ * 这样能够节省一个参数的空间，并且这样我们使用一个二维数组就能够解决 Point,而不必去建立一个 Point 类。
+ * 2. 将建立的 points 按照 从小到大的 顺序进行排序，以用于 Scan Line 的扫描。
+ * 3. 开始进行扫描，这时候我们发现了一个问题：虽然 扫描线 能够轻易地帮我们扫描出各个区间的情况，
+ * 比如 某段区间有几栋大楼（等同于飞机航线问题），但是我们还需要得到这几栋大楼的 最高高度 来作为我们的 outline.
+ * 因此我们需要 在几个heights中 快速求得 最高的高度。毫无疑问，我们可以使用 maxHeap 来帮助我们解决这个问题。
+ * 这样，当我们遇到一个 起始point 时,我们就将其对应的大楼高度 add 到 maxHeap 中。
+ * 当遇到一个 终止point 时，我们就将对应的点从 maxHeap 中 remove 出去。
+ * 这样每次 maxHeap 的 peek() 元素就是我们需要的的 最高高度（即outline).
+ * <p>
+ * 时间复杂度：
+ * 建立 Scan Line 所需的 points,并进行排序：O(nlogn)
+ * 进行 扫描，利用 maxHeap 来获取 扫描线 当前的最高高度(outline),因为 maxHeap 的 remove() 操作为 O(n)
+ * 因此总时间复杂度为：O(n^2)
+ * <p>
  * 参考资料：
  * https://leetcode.com/problems/the-skyline-problem/discuss/61192/Once-for-all-explanation-with-clean-Java-code(O(n2)time-O(n)-space)
  * https://briangordon.github.io/2014/08/the-skyline-problem.html

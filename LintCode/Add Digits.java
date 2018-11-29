@@ -44,8 +44,8 @@ public class Solution {
 /**
  * Approach 2: Mathematics
  * 数学推导规律，O(1)时间复杂度。
- *  num = a0 + a1 * 10 + a2 * 100 + ... + ak * 10^k
- *  = (a0 + a1 + ... + ak) + 9(a1 + a2 + ... + ak) + 99(a2 + ... + ak) + ... + (10^k - 1)ak
+ * num = a0 + a1 * 10 + a2 * 100 + ... + ak * 10^k
+ * = (a0 + a1 + ... + ak) + 9(a1 + a2 + ... + ak) + 99(a2 + ... + ak) + ... + (10^k - 1)ak
  * 其中a0 + a1 + ... + ak是下一步计算要得到的结果，记为num1，重复上述过程：
  * num = num1 + 9 * x1, 其中 x = (a1 + a2 + ... + ak) + 11 * (a2 + ... + ak) + ...
  * num1 = num2 + 9 * x2

@@ -24,7 +24,7 @@ Dynamic Programming
  */
 public class Solution {
     /**
-     * @param nums: an integer array and all positive numbers, no duplicates
+     * @param nums:   an integer array and all positive numbers, no duplicates
      * @param target: An integer
      * @return: An integer
      */

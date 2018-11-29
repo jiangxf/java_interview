@@ -15,15 +15,15 @@ Dynamic Programming
  * Approach 1: Sequence DP
  * 方案总个数问题，并且数组不能够交换位置 =>  DP
  * State:
- *  dp[i]表示 从0到i层 总共的走法方案个数
+ * dp[i]表示 从0到i层 总共的走法方案个数
  * Function:
- *  爬台阶到i点总共有的方法，取决于 i-1点 和 i-2点 的情况。
- *  也就是 dp[i] = dp[i - 1] + dp[i - 2]
+ * 爬台阶到i点总共有的方法，取决于 i-1点 和 i-2点 的情况。
+ * 也就是 dp[i] = dp[i - 1] + dp[i - 2]
  * Initialize:
- *  dp[0] = 1, dp[1] = 1.
+ * dp[0] = 1, dp[1] = 1.
  * Answer:
- *  dp[n]
- *
+ * dp[n]
+ * <p>
  * 时间复杂度：O(n) 空间复杂度：O(n)
  */
 public class Solution {
@@ -54,7 +54,7 @@ public class Solution {
  * 即我们可以 滚动数组 的方式，覆盖掉已经没用的状态，仅仅保持需要的这两个状态即可。
  * 而滚动数组最简单的实现方式就是对原本的 数组下标 进行取余操作。
  * （并且如果遇到数组大小为 2^n 的时候，我们还能通过 &(2^n-1) 操作对 %2^n 运算进行优化）
- *
+ * <p>
  * 在 DP 问题中，我们经常会使用 滚动数组 对空间复杂度进行优化。
  * 该方法直接简洁明了，并且几乎不需要对原来的代码进行改动。
  * 对于 一维序列的DP问题(Sequence DP) 我们通常可以使用一个固定大小的数组 dp[k] 来作为一个滚动数组。
@@ -62,7 +62,7 @@ public class Solution {
  * 经过优化后 空间复杂度 可以由 O(n) 降低到 O(1)
  * 类似的问题有：
  * https://github.com/cherryljr/LintCode/blob/master/House%20Robber.java
- *
+ * <p>
  * 对于 二维矩阵的DP问题(Matrix DP) 我们通常可以使用一个固定大小的二维数组 dp[k][n] 来作为一个滚动数组。
  * 同样 k 的值由分析状态方程确定。在 二维矩阵问题中，
  * 通常 当前状态 是由前一 行/列 的状态 和 前一个或多个状态(通常就是指其左侧的点) 所决定的。
@@ -91,7 +91,7 @@ public class Solution {
 
         // Function
         for (int i = 2; i <= n; i++) {
-            dp[i & 1] = dp[(i-1) & 1] + dp[(i-2) & 1];
+            dp[i & 1] = dp[(i - 1) & 1] + dp[(i - 2) & 1];
         }
 
         // Answer

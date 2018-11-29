@@ -27,7 +27,7 @@ return [2], since 2 happens twice, however -5 only occur once.
  * Approach: Divide and Conquer
  * 采用分治的方法，递归算出每个结点的子树和。
  * 然后使用 map 记录下来即可。后面的流程就十分清晰了...
- *
+ * <p>
  * 与这道题目相似的还有 Equal Tree Partition, 他们都用到了相同的做法：
  * https://github.com/cherryljr/LintCode/blob/master/Equal%20Tree%20Partition.java
  */

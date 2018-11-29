@@ -21,28 +21,29 @@ Hide Similar Problems Reverse Words in a String II
 */
 
 // Approach 1: Using trim() and split() method
-After trim and split the String s, we will get string array that consist of each indivisual word.
-We only need to append them from end to start, we will approach reverse words in the string.
-Attention:
-    1. the input may be "  " or "   a   b  ", so we should use trim() to remove spaces
-    2. there maybe two or more spaces between indivisual words, so we use regular expression to remove them
-    3. Instead of using substring, insert the word-characters directly in the StringBuilder. 
-       Assuming they're using a linked-list or tree, this could be a whole last faster.
+After trim and split the String s,we will get string array that consist of each indivisual word.
+        We only need to append them from end to start,we will approach reverse words in the string.
+        Attention:
+        1.the input may be"  "or"   a   b  ",so we should use trim()to remove spaces
+        2.there maybe two or more spaces between indivisual words,so we use regular expression to remove them
+        3.Instead of using substring,insert the word-characters directly in the StringBuilder.
+        Assuming they're using a linked-list or tree, this could be a whole last faster.
+
 // Code Below
 public class Solution {
     public static String reverseWords(String s) {
         if (s == null || s.length() == 0) {
             return "";
         }
-        
+
         String[] temp = s.trim().split("\\s+");  // Use regular expression to remove spaces
         StringBuilder rst = new StringBuilder();
-        
+
         // for (int i = temp.length - 1; i >= 0; i--) {
         for (int i = temp.length - 1; i > 0; i--) {
-            rst.append(temp[i] + " ");   
+            rst.append(temp[i] + " ");
         }
-        
+
         // remove the last " "
         // return rst.substring(0, rst.length() - 1);
         return rst.append(temp[0]).toString();
@@ -50,7 +51,7 @@ public class Solution {
 }
 
 // Approach 2: Two-pointers (no trim(), no split(), no StringBuilder)
-public class Solution { 
+public class Solution {
     public String reverseWords(String s) {
         if (s == null) {
             return null;
@@ -66,54 +67,54 @@ public class Solution {
         // step 3. clean up spaces
         return cleanSpaces(a, n);
     }
-  
+
     private void reverseWords(char[] a, int n) {
         int i = 0, j = 0;
         while (i < n) {
             // skip spaces
             while (i < j || i < n && a[i] == ' ') {
-                i++; 
+                i++;
             }
             // skip non spaces
             while (j < i || j < n && a[j] != ' ') {
-                j++; 
+                j++;
             }
             reverse(a, i, j - 1);   // reverse the word
         }
     }
-  
+
     // trim leading, trailing and multiple spaces
     String cleanSpaces(char[] a, int n) {
         int i = 0, j = 0;
         while (j < n) {
             // skip spaces
             while (j < n && a[j] == ' ') {
-                j++;  
+                j++;
             }
             // keep non spaces
             while (j < n && a[j] != ' ') {
-                a[i++] = a[j++]; 
+                a[i++] = a[j++];
             }
             // skip spaces
             while (j < n && a[j] == ' ') {
-                j++;         
+                j++;
             }
             // keep only one space
             if (j < n) {
-                a[i++] = ' ';    
+                a[i++] = ' ';
             }
         }
 
         return new String(a).substring(0, i);
     }
-  
+
     // reverse a[] from a[i] to a[j]
     private void reverse(char[] a, int i, int j) {
         while (i < j) {
-          char t = a[i];
-          a[i++] = a[j];
-          a[j--] = t;
+            char t = a[i];
+            a[i++] = a[j];
+            a[j--] = t;
         }
     }
-  
+
 }

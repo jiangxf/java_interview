@@ -1,10 +1,10 @@
-与 Majority Number 不同在于这边是 1/3. 故可以将原来的 两两抵消 改为 三三抵消。
-这样最后剩下来的可能为两个数，故我们用 candidateA 与 candidateB 来储存他们。
-然后再一次遍历数组，看 candidateA 与 candidateB 出现的次数谁更多，谁便是最后的结果
+与 Majority Number 不同在于这边是 1/3.故可以将原来的 两两抵消 改为 三三抵消。
+        这样最后剩下来的可能为两个数，故我们用 candidateA 与 candidateB 来储存他们。
+        然后再一次遍历数组，看 candidateA 与 candidateB 出现的次数谁更多，谁便是最后的结果
 
-Note：
-	不能直接比较 countA 与 countB, 因为他们代表的是当前情况下，即使被抵消之后的剩下的元素中
-	相同的个数。
+        Note：
+        不能直接比较 countA 与 countB,因为他们代表的是当前情况下，即使被抵消之后的剩下的元素中
+        相同的个数。
 
 /*
 
@@ -36,7 +36,7 @@ public class Solution {
         int countB = 0;
         int candidateA = -1;
         int candidateB = -1;
-        
+
         // 注意判断顺序
         for (int i : nums) {
             if (candidateA == i) {
@@ -54,8 +54,8 @@ public class Solution {
                 countB--;
             }
         }
-        
-	// remember to reset the count of A, B
+
+        // remember to reset the count of A, B
         countA = countB = 0;
         for (int i : nums) {
             if (i == candidateA) {
@@ -64,7 +64,7 @@ public class Solution {
                 countB++;
             }
         }
-        
+
         return countA > countB ? candidateA : candidateB;
     }
 }

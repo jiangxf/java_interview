@@ -30,7 +30,7 @@ Backtracking
  * 每遍历到一个字符，就将对应位置的 visited 置为 true.
  * 从一个字符出发，都可以朝四个方向走，只要有一个方向为 true 即可。
  * 当走的长度 index 与 word 长度相等时，则说明 word 能在字符表中被找到。
- *
+ * <p>
  * Note: 记得回溯，即要将 visited 的值置回为 false.
  * 需要回溯的原因是：不能影响到以其他 路径 进行DFS时的情况。
  * 当前visited只是标记以当前路径进行遍历时，遍历过的元素。
@@ -42,9 +42,9 @@ Backtracking
  * 这些题目中的元素都可能被多次遍历到，因此都使用了 Backtracking 这个方法。
  * 而在 The Maze / Island 中，每个点总共只需要被遍历过一次即可（O(n))
  * 在这种情况下，就是纯粹的 DFS 问题（当然也可以使用 BFS 解决）,
- * 因为每个点只会被遍历一次，所以只要将被遍历过就将 visited[i][j] 置为 true 即可. 
+ * 因为每个点只会被遍历一次，所以只要将被遍历过就将 visited[i][j] 置为 true 即可.
  * 不需要回溯。（不存在影响到其他遍历过程的问题）
- *
+ * <p>
  * 为了节省空间，我们可以省去 visited 数组，而直接对原来的 board[][] 进行修改，
  * 来区分是否被访问过。如:将被访问过的元素置为 '#'.
  */
@@ -54,7 +54,7 @@ class Solution {
 
     /**
      * @param board: A list of lists of character
-     * @param word: A string
+     * @param word:  A string
      * @return: A boolean
      */
     public boolean exist(char[][] board, String word) {
@@ -67,7 +67,7 @@ class Solution {
 
         // visited = new boolean[board.length][board[0].length];
         for (int i = 0; i < board.length; i++) {
-            for (int  j = 0; j < board[0].length; j++) {
+            for (int j = 0; j < board[0].length; j++) {
                 // If the dfs's result it true, it means that we can find the word in board.
                 if (dfs(board, i, j, word, 0)) {
                     return true;
@@ -102,10 +102,10 @@ class Solution {
         //     }
         // }
         // go to the four directions, check whether we can find the next character of the word or not.
-        if (dfs(board, i-1, j, word, index+1)
-                || dfs(board, i+1, j, word, index+1)
-                || dfs(board, i, j-1, word, index+1)
-                || dfs(board, i, j+1, word, index+1)) {
+        if (dfs(board, i - 1, j, word, index + 1)
+                || dfs(board, i + 1, j, word, index + 1)
+                || dfs(board, i, j - 1, word, index + 1)
+                || dfs(board, i, j + 1, word, index + 1)) {
             return true;
         }
         // Backtracking

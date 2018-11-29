@@ -1,5 +1,5 @@
-组合题。 Recursive Search / DFS 的典型题目
-参考Subset即可。
+组合题。 Recursive Search/DFS 的典型题目
+        参考Subset即可。
 
 /*
 Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
@@ -25,12 +25,12 @@ public class Solution {
         if (k > n) {
             return result;
         }
-        
+
         helper(result, new ArrayList<Integer>(), 1, n, k);
         return result;
     }
-    
-    private void helper(List<List<Integer>> result, 
+
+    private void helper(List<List<Integer>> result,
                         List<Integer> list,
                         int startIndex,
                         int n,
@@ -38,9 +38,9 @@ public class Solution {
         if (list.size() == k) {
             result.add(new ArrayList(list));
             //	记得return.减少不必要的运算
-            return;	
+            return;
         }
-        
+
         for (int i = startIndex; i <= n; i++) {
             list.add(i);
             helper(result, list, i + 1, n, k);

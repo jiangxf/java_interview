@@ -28,9 +28,9 @@ Given flowers = [1,2,3], k = 1, return -1.
  * 但是其实这种规模，数据集不太变态的话 O(n^2) 也是能过的。
  * 本题暴力解法十分清晰明了，直接对于每个位置，进行左右距离为 k 的扫描即可。
  * 如果找到符合的情况，即可返回。
- *
+ * <p>
  * 时间复杂度为：O(nk)
- *
+ * <p>
  * 注：相比于之后要介绍的两种解法，这个解法看上去是复杂度最高，最无脑的了。
  * 但是运行情况却是最好的...这是因为当 k 的值很大时，我们需要进行 O(k) 的扫描次数其实非常少。
  * 而当 k 值较小时，其时间复杂度将趋近于 O(n)
@@ -39,7 +39,7 @@ Given flowers = [1,2,3], k = 1, return -1.
 public class Solution {
     /**
      * @param flowers: the place where the flower will open in that day
-     * @param k:  an integer
+     * @param k:       an integer
      * @return: in which day meet the requirements
      */
     public int kEmptySlots(int[] flowers, int k) {
@@ -97,17 +97,17 @@ public class Solution {
  * Approach 2: Bucket
  * 将其按照 k 的大小分成 Math.ceil(n / k) 个部分，然后进行分析即可
  * 时间复杂度：O(n)
- * 
+ * <p>
  * 类似的问题：
  * Maximum Gap:
- *  https://github.com/cherryljr/LeetCode/blob/master/Maximum%20Gap.java
+ * https://github.com/cherryljr/LeetCode/blob/master/Maximum%20Gap.java
  * 视频讲解:
- *  https://www.youtube.com/watch?v=K8Nk0AiIX4s
+ * https://www.youtube.com/watch?v=K8Nk0AiIX4s
  */
 public class Solution {
     /**
      * @param flowers: the place where the flower will open in that day
-     * @param k:  an integer
+     * @param k:       an integer
      * @return: in which day meet the requirements
      */
     public int kEmptySlots(int[] flowers, int k) {
@@ -151,17 +151,17 @@ public class Solution {
  * 在 Approach 1 中，我们需要对左右距离为 k 的范围进行一次查找，时间复杂度为 O(k)
  * 因此我们想可以使用 BST 来对这个查找过程进行一个优化，从而达到 O(logn) 的时间复杂度。
  * 因为 BST 的每次插入和查询时间复杂度都为 O(logn)，因此总体时间复杂度为 O(nlogn)
- *
+ * <p>
  * Java自带的 BST 就是 TreeSet 了（这里存储的元素值不会重复）。
  * 因此我们可以利用 TreeSet 来帮助我们实现这个做法。
- *
+ * <p>
  * 但是实际上这个方法效果是最差的...原因上面已经经过分析了 Approach 1 是最好的，
  * 而该方法又比不过 Approach 2,因此只能是最差的了...
  */
 public class Solution {
     /**
      * @param flowers: the place where the flower will open in that day
-     * @param k:  an integer
+     * @param k:       an integer
      * @return: in which day meet the requirements
      */
     public int kEmptySlots(int[] flowers, int k) {
@@ -170,7 +170,7 @@ public class Solution {
             return -1;
         }
 
-        k++;    
+        k++;
         TreeSet<Integer> set = new TreeSet<>();
         for (int i = 0; i < flowers.length; i++) {
             if (i > 0) {

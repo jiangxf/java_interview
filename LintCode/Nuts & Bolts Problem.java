@@ -31,7 +31,7 @@ Sort Quick Sort
 
 /**
  * public class NBCompare {
- *     public int cmp(String a, String b);
+ * public int cmp(String a, String b);
  * }
  * You can use compare.cmp(a, b) to compare nuts "a" and bolts "b",
  * if "a" is bigger than "b", it will return 1, else if they are equal,
@@ -40,8 +40,8 @@ Sort Quick Sort
  */
 public class Solution {
     /**
-     * @param nuts: an array of integers
-     * @param bolts: an array of integers
+     * @param nuts:    an array of integers
+     * @param bolts:   an array of integers
      * @param compare: a instance of Comparator
      * @return: nothing
      */
@@ -66,9 +66,9 @@ public class Solution {
         qsort(nuts, bolts, compare, part_inx + 1, u);
     }
 
-    int partition(String[] data, String pivot, NBComparator compare, int start, int end){
+    int partition(String[] data, String pivot, NBComparator compare, int start, int end) {
         int lo = start, hi = end;
-        for (int i = start; i <= end; i++){
+        for (int i = start; i <= end; i++) {
             if (comp(compare, data[i], pivot) == 0) {
                 swap(data, lo, i);
                 break;
@@ -90,12 +90,12 @@ public class Solution {
         return lo;
     }
 
-    int comp(NBComparator compare, String a, String b){
+    int comp(NBComparator compare, String a, String b) {
         int ans = compare.cmp(a, b);
         return ans == 2 ? -compare.cmp(b, a) : ans;
     }
 
-    void swap(String[] data, int lo, int hi){
+    void swap(String[] data, int lo, int hi) {
         String tmp = data[lo];
         data[lo] = data[hi];
         data[hi] = tmp;

@@ -19,8 +19,8 @@ Count the above calculated result: how many bit difference do a and b have.
 
 class Solution {
     /**
-     *@param a, b: Two integer
-     *return: An integer
+     * @param a, b: Two integer
+     *           return: An integer
      */
     public static int bitSwapRequired(int a, int b) {
         int count = 0;

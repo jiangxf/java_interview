@@ -31,14 +31,14 @@ Amazon Union Find
  * 因为本题各个点的 value 为字符串，不能通过 数组 来实现。因此我们选用了 HashMap 来实现我们的 Union Find.
  * 本题的 UnionFind 这个类是直接从模板拿过来的。具体模板与代码解析可以参见：
  * https://github.com/cherryljr/LintCode/blob/master/Find%20the%20Weak%20Connected%20Component%20in%20the%20Directed%20Graph.java
- *
+ * <p>
  * 具体解法为：
- *  首先，利用 build 方法对 unionFind 进行初始化。
- *  然后，根据 ListA 和 ListB 的对应关系，将各个 String 合并起来形成连通块。
- *  之后，遍历 ListA 和 ListB 的各个元素，找出其对应的 root(Big Brother)。
- *  利用 map 将 每个root 与 其对应说管理的node 储存起来。用于之后寻找最大的连通块。
- *  （key -> root的值(string); value -> root说管理的各个节点(Set). 这里利用了 Set 对重复的节点进行去重）
- *  最后我们只需要遍历一次 map,找出 size最大 的value即可。
+ * 首先，利用 build 方法对 unionFind 进行初始化。
+ * 然后，根据 ListA 和 ListB 的对应关系，将各个 String 合并起来形成连通块。
+ * 之后，遍历 ListA 和 ListB 的各个元素，找出其对应的 root(Big Brother)。
+ * 利用 map 将 每个root 与 其对应说管理的node 储存起来。用于之后寻找最大的连通块。
+ * （key -> root的值(string); value -> root说管理的各个节点(Set). 这里利用了 Set 对重复的节点进行去重）
+ * 最后我们只需要遍历一次 map,找出 size最大 的value即可。
  */
 public class Solution {
     /**

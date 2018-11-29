@@ -22,12 +22,12 @@ public class Solution {
         if (num == null || num.length() == 0) {
             return true;
         }
-        HashMap<Character, Character> map = new HashMap<Character,Character>();
-        map.put('0','0');
-        map.put('1','1');
-        map.put('8','8');
-        map.put('6','9');
-        map.put('9','6');
+        HashMap<Character, Character> map = new HashMap<Character, Character>();
+        map.put('0', '0');
+        map.put('1', '1');
+        map.put('8', '8');
+        map.put('6', '9');
+        map.put('9', '6');
         int left = 0;
         int right = num.length() - 1;
         while (left <= right) {
@@ -51,33 +51,33 @@ Didn't use HashMap. I beleive hash map is used to mark the spot?
 public class Solution {
     public boolean isStrobogrammatic(String num) {
         if (num == null || num.length() == 0) {
-        	return true;
+            return true;
         }
         //Any non-strobogrammatic
         if (num.indexOf("2") >= 0 || num.indexOf("3") >= 0 ||
-        	num.indexOf("4") >= 0 || num.indexOf("5") >= 0 ||
-        	num.indexOf("7") >= 0) {
-        	return false;
+                num.indexOf("4") >= 0 || num.indexOf("5") >= 0 ||
+                num.indexOf("7") >= 0) {
+            return false;
         }
         //If only 6 or 9 exist:
         if ((num.indexOf("6") >= 0 && num.indexOf("9") < 0) ||
-        	(num.indexOf("9") >= 0 && num.indexOf("6") < 0)) {
-        	return false;
+                (num.indexOf("9") >= 0 && num.indexOf("6") < 0)) {
+            return false;
         }
         //Check if (6,9) or other strobogrammatic # are appearing at symmetric position
-    	char[] arr = num.toCharArray();
-    	int leng = num.length();
-    	for (int i = 0; i < leng; i++) {
-    	    if (arr[i] == '6' || arr[i] == '9') {
-        		if ((arr[i] == '6' && arr[leng - i - 1] != '9') ||
-        			(arr[i] == '9' && arr[leng - i - 1] != '6')) {
-        			return false;
-        		}
-    		    arr[i] = arr[leng - i - 1] = 'M';//marker
-    		} else if (arr[i] != 'M' && arr[i] != arr[leng - i - 1]) {
-    		    return false;
-    		}
-    	}
+        char[] arr = num.toCharArray();
+        int leng = num.length();
+        for (int i = 0; i < leng; i++) {
+            if (arr[i] == '6' || arr[i] == '9') {
+                if ((arr[i] == '6' && arr[leng - i - 1] != '9') ||
+                        (arr[i] == '9' && arr[leng - i - 1] != '6')) {
+                    return false;
+                }
+                arr[i] = arr[leng - i - 1] = 'M';//marker
+            } else if (arr[i] != 'M' && arr[i] != arr[leng - i - 1]) {
+                return false;
+            }
+        }
         return true;
     }
 }

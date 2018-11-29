@@ -27,7 +27,7 @@ Snapchat
  * 是 Merge k Sorted Array 的变形题。解决方法相同。
  * 因为是 array 所以还是需要建立一个 类 来保存其 值 与 位置 的信息，
  * 这样我们才能找到其对应的下一个位置上的数。
- *
+ * <p>
  * 因为原始数组中是按照 k 个数字的间隔 从小到大 排序的。
  * 因此这就意味着：原数组的 前k个 元素就是整个数组中的 前k小的数。
  * 那么在初始化 PriorityQueue 时，我们只需要把它们放进去即可
@@ -35,24 +35,14 @@ Snapchat
  * 后面的就是依次从 PriorityQueue 中 poll 出当前最小的元素，添加到 rst 里面即可。
  * 然后检查被 poll 出来的元素所属的排序数组是否还有下一个值(这里就用到了 index 信息了)，有的话就将其 add 到 PriorityQueue.
  * 一直重复下去，直到 PriorityQueue 为空。
- *
+ * <p>
  * Merge k Sorted Array：
  * https://github.com/cherryljr/LintCode/blob/master/Merge%20k%20Sorted%20Arrays.java
  */
 public class Solution {
-    class Node {
-        int value;
-        int index;
-
-        public Node(int value, int index) {
-            this.value = value;
-            this.index = index;
-        }
-    }
-
     /**
      * @param arr: The K spaced array
-     * @param k: The param k
+     * @param k:   The param k
      * @return: Return the sorted array
      */
     public int[] getSortedArray(int[] arr, int k) {
@@ -78,5 +68,15 @@ public class Solution {
         }
 
         return rst;
+    }
+
+    class Node {
+        int value;
+        int index;
+
+        public Node(int value, int index) {
+            this.value = value;
+            this.index = index;
+        }
     }
 }

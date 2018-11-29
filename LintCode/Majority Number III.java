@@ -1,11 +1,11 @@
 与 Majority Number 核心思想相同，将 k 个不同的数进行 抵消。
-但是该题不能像 Majority Number II 一样使用 candidateA, candidateB... 来储存
-因为这样代码书写过于复杂。故我们使用了 HashMap 这个数据结构来帮助我们实现这个算法。
- 1. 首先遍历整个List,将元素添加到 HashMap 中。其中 key 为元素值，value 为出现的次数
- 2. 当 Map 的大小大于等于 k 时，我们便 remove 这个 k 个不同的数。（抵消）
- 3. 最后重新计算 Map 中各个值在List中出现的次数，并取出那个次数最大的，便是我们需要的结果
- 
- http://www.cs.utexas.edu/users/misra/scannedPdf.dir/FindRepeatedElements.pdf
+        但是该题不能像 Majority Number II 一样使用 candidateA,candidateB...来储存
+        因为这样代码书写过于复杂。故我们使用了 HashMap 这个数据结构来帮助我们实现这个算法。
+        1.首先遍历整个List,将元素添加到 HashMap 中。其中 key 为元素值，value 为出现的次数
+        2.当 Map 的大小大于等于 k 时，我们便 remove 这个 k 个不同的数。（抵消）
+        3.最后重新计算 Map 中各个值在List中出现的次数，并取出那个次数最大的，便是我们需要的结果
+
+        http://www.cs.utexas.edu/users/misra/scannedPdf.dir/FindRepeatedElements.pdf
 
 /*
 Description
@@ -28,7 +28,7 @@ LintCode Copyright Hash Table Linked List
 public class Solution {
     /**
      * @param nums: A list of integers
-     * @param k: As described
+     * @param k:    As described
      * @return: The majority number
      */
     public int majorityNumber(ArrayList<Integer> nums, int k) {
@@ -40,17 +40,17 @@ public class Solution {
             } else {
                 counters.put(i, counters.get(i) + 1);
             }
-            
+
             if (counters.size() >= k) {
                 removeKey(counters);
             }
         }
-        
+
         // corner case
         if (counters.size() == 0) {
             return Integer.MIN_VALUE;
         }
-        
+
         // recalculate counters
         for (Integer i : counters.keySet()) {
             counters.put(i, 0);
@@ -60,7 +60,7 @@ public class Solution {
                 counters.put(i, counters.get(i) + 1);
             }
         }
-        
+
         // find the max key
         int maxCounter = 0, maxKey = 0;
         for (Integer i : counters.keySet()) {
@@ -69,10 +69,10 @@ public class Solution {
                 maxKey = i;
             }
         }
-        
+
         return maxKey;
     }
-    
+
     private void removeKey(HashMap<Integer, Integer> counters) {
         Set<Integer> keySet = counters.keySet();
         List<Integer> removeList = new ArrayList<>();

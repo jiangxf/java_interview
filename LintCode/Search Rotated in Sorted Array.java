@@ -1,15 +1,15 @@
 O(logn)
-  画图分析  
-  首先比较A[start] < A[mid]? 然后分成1,2两种情况    
-  在 1 和 2 里面分别讨论 target 的位置     
-      1. A[start] < A[mid] ?     
-          说明在前半段    
-          - start<target<mid     
-          - target > mid      
-      2. A[start] > A[mid]     
-          说明 start 还在前半段，而mid在后半段     
-          - mid < target < end     
-          - target < mid     
+        画图分析
+        首先比较A[start]<A[mid]?然后分成1,2两种情况
+        在 1和 2里面分别讨论 target 的位置
+        1.A[start]<A[mid]?
+        说明在前半段
+        -start<target<mid
+          -target>mid
+                  2.A[start]>A[mid]
+                  说明 start 还在前半段，而mid在后半段
+                  -mid<target<end
+          -target<mid
 
 /*
 Suppose a sorted array is rotated at some pivot unknown to you beforehand.
@@ -38,7 +38,7 @@ public class Solution {
         int start = 0;
         int end = A.length - 1;
         int mid;
-        
+
         while (start + 1 < end) {
             mid = start + (end - start) / 2;
             if (A[mid] == target) {
@@ -62,8 +62,8 @@ public class Solution {
                     end = mid;
                 }
             }
-        } 
-        
+        }
+
         if (A[start] == target) {
             return start;
         }

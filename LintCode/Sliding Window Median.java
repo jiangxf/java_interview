@@ -31,7 +31,7 @@ LintCode Copyright Heap
  * Approach: Two PriorityQueue (maxHeap + minHeap)
  * 与 LeetCode 上的 Sliding Window Median 几乎相同。
  * 只在 median 的定义上有点小小的区别（LintCode上的处理更加简单）
- * 
+ * <p>
  * 该题的更好的解决方法是采用 TreeSet / TreeMap 这个数据结构来实现。时间复杂度为 O(nlogn)
  * 因为基本相同，这边就不提供 LintCode 的 Two TreeSet 的解法了。
  * 详细解析可以参见：

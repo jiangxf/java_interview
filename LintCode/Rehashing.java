@@ -1,7 +1,7 @@
 开哈希的 rehash 方法。
-遍历原来的整个 HashMap 的数组。
-如果节点不为空，则遍历该链表，重新计算 HashCode.
-插入时若节点不为空，则按照开哈希的方法解决冲突。
+        遍历原来的整个 HashMap 的数组。
+        如果节点不为空，则遍历该链表，重新计算 HashCode.
+        插入时若节点不为空，则按照开哈希的方法解决冲突。
 
 /*
 Description
@@ -42,39 +42,39 @@ Hash Table LintCode Copyright
 /**
  * Definition for ListNode
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class Solution {
     /**
      * @param hashTable: A list of The first node of linked list
      * @return: A list of The first node of linked list which have twice size
-     */    
+     */
     public ListNode[] rehashing(ListNode[] hashTable) {
         if (hashTable.length == 0) {
             return hashTable;
         }
-        
+
         int newCapacity = hashTable.length * 2;
         ListNode[] newTable = new ListNode[newCapacity];
-        
+
         // Traverse the Arrays
         for (int i = 0; i < hashTable.length; i++) {
-        	// Traverse the LinkedList
+            // Traverse the LinkedList
             while (hashTable[i] != null) {
-            	// get the newIndex
-                int newIndex 
-                = (hashTable[i].val % newCapacity + newCapacity) % newCapacity;
+                // get the newIndex
+                int newIndex
+                        = (hashTable[i].val % newCapacity + newCapacity) % newCapacity;
                 // if the newTable[newIndex] is null then insert the node directly
                 if (newTable[newIndex] == null) {
                     newTable[newIndex] = new ListNode(hashTable[i].val);
                 } else {
-                	// if it's not null, traverse the linkedlist until the next node is null then insert it
+                    // if it's not null, traverse the linkedlist until the next node is null then insert it
                     ListNode dummy = newTable[newIndex];
                     while (dummy.next != null) {
                         dummy = dummy.next;
@@ -84,7 +84,7 @@ public class Solution {
                 hashTable[i] = hashTable[i].next;
             }
         }
-        
+
         return newTable;
     }
 };

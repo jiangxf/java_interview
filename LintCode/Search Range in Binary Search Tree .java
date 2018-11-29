@@ -1,10 +1,10 @@
-等于遍历了所有k1<= x <= k2的x node。
+等于遍历了所有k1<=x<=k2的x node。
 
-如果是用Binary Search Tree搜索，那么一般是if (...) else {...}，也就是一条路走到底，直到找到target.
+        如果是用Binary Search Tree搜索，那么一般是if(...)else{...}，也就是一条路走到底，直到找到target.
 
-这里, 把 left/right/match的情况全部cover了，然后把k1,k2的边框限制好，中间就全部遍历了。
+        这里,把 left/right/match的情况全部cover了，然后把k1,k2的边框限制好，中间就全部遍历了。
 
-```
+        ```
 /*
 
 Given two values k1 and k2 (where k1 < k2) and a root pointer to a Binary Search Tree. 
@@ -42,19 +42,20 @@ Find maximum and turn around.
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
 public class Solution {
     private ArrayList<Integer> results;
+
     /**
      * @param root: The root of the binary search tree.
-     * @param k1 and k2: range k1 to k2.
+     * @param k1    and k2: range k1 to k2.
      * @return: Return all keys that k1<=key<=k2 in increasing order.
      */
     public ArrayList<Integer> searchRange(TreeNode root, int k1, int k2) {
@@ -62,7 +63,7 @@ public class Solution {
         helper(root, k1, k2);
         return results;
     }
-    
+
     private void helper(TreeNode root, int k1, int k2) {
         if (root == null) {
             return;

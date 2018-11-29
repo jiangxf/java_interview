@@ -20,7 +20,7 @@ Sort Array Two Pointers LintCode Copyright
  * 看到两个数组要求最小差值，第一反应就是将两个数组进行排序。
  * 然后我们就可以通过遍历来解决这个问题。
  * （暴力遍历的解法将耗费 O(n^2) 的时间，所以可以直接排除）
- *
+ * <p>
  * 在遍历的时候，我们可以利用已经按照 从小到大 排序好了的特点，
  * 使用 Two Pointers 在 O(n) 的时间内完成 min difference 的寻找。
  * pointerA 和 pointerB 初始时均指向数组起点，

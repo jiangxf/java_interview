@@ -1,5 +1,5 @@
-ºÜ¼òµ¥µÄÒ»µÀÌâÄ¿¡£
-Ê¹ÓÃ ·ÖÖÎ µÄ·½·¨¼´¿É½â¾ö¡£
+ï¿½Ü¼òµ¥µï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
+        Ê¹ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É½ï¿½ï¿½ï¿½ï¿½
 
 /*
 Description
@@ -26,12 +26,12 @@ Binary Tree
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
 public class Solution {
@@ -43,7 +43,7 @@ public class Solution {
         if (root == null) {
             return null;
         }
-        
+
         TreeNode cloneRoot = new TreeNode(root.val);
         cloneRoot.left = cloneTree(root.left);
         cloneRoot.right = cloneTree(root.right);

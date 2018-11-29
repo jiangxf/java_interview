@@ -74,7 +74,7 @@ Breadth First Search
  * 得益于 BFS 的特点（依次向外扩展，类似 infection，
  * 即：先走完所有一步能走到的点，再走完所有两步才能走到的点，然后是三步...依次类推...）
  * 所以我们第一个遇到的 出口 就是离我们最近的出口。
- *
+ * <p>
  * 相似题目：The Maze II in LeetCode:
  * https://github.com/cherryljr/LeetCode/blob/master/The%20Maze%20II.java
  */
@@ -121,7 +121,7 @@ public class Solution {
                 }
                 if (distance[p[0]][p[1]] + 1 < distance[x][y]) {
                     distance[x][y] = distance[p[0]][p[1]] + 1;
-                    queue.add(new int[] {x, y});
+                    queue.add(new int[]{x, y});
                 }
             }
         }

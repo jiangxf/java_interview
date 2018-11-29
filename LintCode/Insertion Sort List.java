@@ -1,10 +1,10 @@
 想明白原理就好做了：
-基本上就是正常的想法：已经有个sorted list, insert一个element进去。怎么做？
-    while 里面每个元素都小于 curr, keep going
-    一旦curr在某个点小了，加进去当下这个空隙。
-这个题目也就是：把list里面每个元素都拿出来，scan and insert一遍！
+        基本上就是正常的想法：已经有个sorted list,insert一个element进去。怎么做？
+        while 里面每个元素都小于 curr,keep going
+        一旦curr在某个点小了，加进去当下这个空隙。
+        这个题目也就是：把list里面每个元素都拿出来，scan and insert一遍！
 
-```
+        ```
 /*
 Sort a linked list using insertion sort.
 
@@ -39,11 +39,11 @@ public class Solution {
         if (head == null || head.next == null) {
             return head;
         }
-        
+
         ListNode sortedListHead = new ListNode(0);//dummy head
-        ListNode pre,curr,next;
+        ListNode pre, curr, next;
         curr = head;
-        
+
         while (curr != null) {// insert every single curr into sorted list
             next = curr.next; //prepare for insertion && swapping.
             pre = sortedListHead;//the list to scan
@@ -54,10 +54,10 @@ public class Solution {
             //when pre.next == null , or curr is less than a node in pre.next, we want to insert curr before that pre.next node
             curr.next = pre.next;
             pre.next = curr;
-            
+
             curr = next;//use the original next, instead of the new curr.next
         }//end while
-        
+
         return sortedListHead.next;
     }
 }
@@ -72,17 +72,18 @@ list every time with a new head.
 If the head.val is less/equal than the next.val, we stop the at this next pointer, then cut it,
 insert head.
 */
+
 /**
  * Definition for ListNode.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int val) {
- *         this.val = val;
- *         this.next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int val) {
+ * this.val = val;
+ * this.next = null;
  * }
- */ 
+ * }
+ */
 public class Solution {
     /**
      * @param head: The first node of linked list.

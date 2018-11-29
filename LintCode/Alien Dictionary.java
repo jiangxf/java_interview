@@ -43,7 +43,7 @@ Hide Similar Problems (M) Course Schedule II
 
 public class Solution {
     public String alienOrder(String[] words) {
-        
+
     }
 }
 

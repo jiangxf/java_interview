@@ -53,18 +53,18 @@ LintCode Copyright Trie Airbnb
  * 因为当遍历字符串中的 下一个字符 时，Trie 只需要检查一个字符即可 O(1)，时间复杂度更低，
  * 而 HashMap 需要遍历整个字符串 O(n)，计算出 HashCode 用于查找。
  * 并且 Tire 更加节省空间。因为 Trie树 可以对 公共前缀 的单词进行合并。
- *
+ * <p>
  * 具体操作：
  * 利用 词典中的单词 构建 Trie树。
  * 利用 DFS 搜寻 board, 将 DFS 得到的单词在 Trie 进行查询，看是否是词典中的单词（有效）
- *
+ * <p>
  * Note：
  * 为了大家能够更加直观地学习 Trie树，该部分的代码书写会尽量 简明直观。
  * 在充分理解了 Trie树 的数据结构和使用方法后，大家可以看 Approach 2 的优化版写法。
  */
 public class Solution {
     Set<String> rst = new HashSet<>();
-    
+
     /*
      * @param board: A list of lists of character
      * @param words: A list of string
@@ -89,7 +89,7 @@ public class Solution {
 
         return new ArrayList<>(rst);
     }
-    
+
     private void dfs(char[][] board, int i, int j, String str, Trie trie) {
         if (i < 0 || i >= board.length || j < 0 || j >= board[0].length || board[i][j] == '#') {
             return;
@@ -118,6 +118,7 @@ public class Solution {
     class TrieNode {
         TrieNode[] child;
         boolean isWord; // 标志该字符可以作为单词的结尾
+
         TrieNode() {
             child = new TrieNode[26];
             isWord = false;
@@ -126,6 +127,7 @@ public class Solution {
 
     class Trie {
         TrieNode root;
+
         Trie() {
             root = new TrieNode();
         }
@@ -173,18 +175,18 @@ public class Solution {
  * Approach 2: Trie + Backtracking
  * 解题方法与用到的数据结构是完全相同的，但是对 Approach 1 中的代码进行了一定的优化。
  * 优化点：
- *  1. 移除 Trie 这个类，我们不需要每次 DFS 都从 root 节点开始。
- *  2. 每次进行 DFS 之前，判断条件的合理性，降低函数调用消耗的时间。如 if (i > 0) dfs(...)
- *  3. 修改 TrieNode 中的 isWord 参数，将其更换为 String 类型的 word,
- *  用于直接记录 以当前字符作为结尾的单词 word.从而完全替代我们每次 DFS 时需要传递的字符串 str.
- *  4. 不使用 Set 来进行去重，因为 Trie树 本身就具备去重的功能。
- *  具体实现为：在将一个单词 add 到结果中后，将当前结点的 word 参数置为 null.
- *  这样使得下一次再次查找到该单词时会因为 该节点的word为null 而认为该单词并不在词典中，从而达到去重的目的。
- *  
+ * 1. 移除 Trie 这个类，我们不需要每次 DFS 都从 root 节点开始。
+ * 2. 每次进行 DFS 之前，判断条件的合理性，降低函数调用消耗的时间。如 if (i > 0) dfs(...)
+ * 3. 修改 TrieNode 中的 isWord 参数，将其更换为 String 类型的 word,
+ * 用于直接记录 以当前字符作为结尾的单词 word.从而完全替代我们每次 DFS 时需要传递的字符串 str.
+ * 4. 不使用 Set 来进行去重，因为 Trie树 本身就具备去重的功能。
+ * 具体实现为：在将一个单词 add 到结果中后，将当前结点的 word 参数置为 null.
+ * 这样使得下一次再次查找到该单词时会因为 该节点的word为null 而认为该单词并不在词典中，从而达到去重的目的。
+ * <p>
  * Note:
  * 第二点虽然改了之后会省不少时间，但是与自己的习惯写法不同。
  * 考虑了下就不把这个代码放上来了，想看的可以参见：
- *  https://leetcode.com/problems/word-search-ii/discuss/59780/Java-15ms-Easiest-Solution-(100.00)
+ * https://leetcode.com/problems/word-search-ii/discuss/59780/Java-15ms-Easiest-Solution-(100.00)
  */
 public class Solution {
     List<String> rst = new ArrayList<>();
@@ -202,7 +204,7 @@ public class Solution {
         TrieNode root = buildTrie(words);
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                dfs (board, i, j, root);
+                dfs(board, i, j, root);
             }
         }
 

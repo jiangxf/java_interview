@@ -1,14 +1,14 @@
 M
 
-LinkedList并没有反过来，那么自己反：   
-   方向相反。巧用stack.
+        LinkedList并没有反过来，那么自己反：
+        方向相反。巧用stack.
 
-做加法都一样：   
-   1. carrier
-   2. carrier = (rst + carrier) / 10
-   3. rst = (rst + carrier) % 10
+        做加法都一样：
+        1.carrier
+        2.carrier=(rst+carrier)/10
+        3.rst=(rst+carrier)%10
 
-```
+        ```
 /*
 You have two numbers represented by a linked list, where each node contains a single digit. 
 The digits are stored in forward order, such that the 1's digit is at the head of the list. 
@@ -38,68 +38,68 @@ O(n)
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;      
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class Solution {
     /**
      * @param l1: the first list
      * @param l2: the second list
-     * @return: the sum list of l1 and l2 
+     * @return: the sum list of l1 and l2
      */
     public ListNode addLists2(ListNode l1, ListNode l2) {
-    	if (l1 == null && l2 == null) {
-    		return null;
-    	} else if (l1 == null || l2 == null) {
-    		return l1 == null ? l2 : l1;
-    	}
+        if (l1 == null && l2 == null) {
+            return null;
+        } else if (l1 == null || l2 == null) {
+            return l1 == null ? l2 : l1;
+        }
 
-    	Stack<ListNode> result = new Stack<ListNode>();
-    	Stack<ListNode> s1 = new Stack<ListNode>();
-    	Stack<ListNode> s2 = new Stack<ListNode>();
+        Stack<ListNode> result = new Stack<ListNode>();
+        Stack<ListNode> s1 = new Stack<ListNode>();
+        Stack<ListNode> s2 = new Stack<ListNode>();
 
-    	while (l1 != null) {
-    		s1.push(l1);
-    		l1 = l1.next;
-    	}
+        while (l1 != null) {
+            s1.push(l1);
+            l1 = l1.next;
+        }
 
-    	while (l2 != null) {
-    		s2.push(l2);
-    		l2 = l2.next;
-    	}
+        while (l2 != null) {
+            s2.push(l2);
+            l2 = l2.next;
+        }
 
-    	int carrier = 0;
-    	while(!s1.isEmpty() || !s2.isEmpty()){
-    		int sum = 0;
-    		if (!s1.isEmpty() && !s2.isEmpty()) {
-    			sum += s1.pop().val + s2.pop().val;
-    		} else if (!s1.isEmpty()) {
-    			sum += s1.pop().val;
-    		} else {
-    			sum += s2.pop().val;
-    		}
-    		result.push(new ListNode((sum + carrier) % 10));//2, 1, 9
-    		carrier = (sum + carrier) / 10; // 12/10 = 1; 11/10 = 1; (8+1)/ 10 = 0
-    	}
-    	if (carrier == 1) {
-    		result.push(new ListNode(carrier));
-    	}
+        int carrier = 0;
+        while (!s1.isEmpty() || !s2.isEmpty()) {
+            int sum = 0;
+            if (!s1.isEmpty() && !s2.isEmpty()) {
+                sum += s1.pop().val + s2.pop().val;
+            } else if (!s1.isEmpty()) {
+                sum += s1.pop().val;
+            } else {
+                sum += s2.pop().val;
+            }
+            result.push(new ListNode((sum + carrier) % 10));//2, 1, 9
+            carrier = (sum + carrier) / 10; // 12/10 = 1; 11/10 = 1; (8+1)/ 10 = 0
+        }
+        if (carrier == 1) {
+            result.push(new ListNode(carrier));
+        }
 
-    	//return results:
-    	ListNode node = new ListNode(0);
-    	ListNode dummy = node;
-    	while (!result.isEmpty()) {//219
-    		node.next = result.pop();
-    		node = node.next;
-    	}
+        //return results:
+        ListNode node = new ListNode(0);
+        ListNode dummy = node;
+        while (!result.isEmpty()) {//219
+            node.next = result.pop();
+            node = node.next;
+        }
 
-    	return dummy.next;
-    }  
+        return dummy.next;
+    }
 }
 
 ```

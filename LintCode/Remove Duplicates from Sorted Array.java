@@ -1,13 +1,13 @@
 Remove Duplicate from Array 不同于remove from linked list.
 
-LinkedList里面我们是最好不要动node.val的，直接把node去掉。
-而array我们很难直接把node去掉，又不能用新array，那么就要：
+        LinkedList里面我们是最好不要动node.val的，直接把node去掉。
+        而array我们很难直接把node去掉，又不能用新array，那么就要：
 
-把不重复的element一个个放到最前面。
+        把不重复的element一个个放到最前面。
 
-* 有个反向思维：remove duplicate,实际上也是找unique elements, and insert into original array
+        *有个反向思维：remove duplicate,实际上也是找unique elements,and insert into original array
 
-```
+        ```
 /*31% Accepted
 Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
 
@@ -39,7 +39,7 @@ public class Solution {
         if (A == null || A.length == 0) {
             return 0;
         }
-        
+
         int size = 0;
         for (int i = 0; i < A.length; i++) {
             if (A[i] != A[size]) {

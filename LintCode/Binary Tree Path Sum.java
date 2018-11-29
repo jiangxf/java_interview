@@ -1,6 +1,6 @@
 典型的 深度优先搜索（DFS） 题目
-参考 Combination Sum II 分析即可。
-同时，若不知道如何书写 / 分析 DFS 程序可以参考 Subset.java
+        参考 Combination Sum II 分析即可。
+        同时，若不知道如何书写/分析 DFS 程序可以参考 Subset.java
 
 /*
 Description
@@ -29,17 +29,17 @@ Binary Tree Binary Tree Traversal
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
 public class Solution {
     /**
-     * @param root the root of binary tree
+     * @param root   the root of binary tree
      * @param target an integer
      * @return all valid paths
      */
@@ -48,19 +48,19 @@ public class Solution {
         if (root == null) {
             return rst;
         }
-        
+
         dfs(rst, new ArrayList<Integer>(), root, target);
         return rst;
     }
-    
+
     private void dfs(List<List<Integer>> rst,
-                        ArrayList<Integer> list,
-                        TreeNode t, 
-                        int remainTarget) {
+                     ArrayList<Integer> list,
+                     TreeNode t,
+                     int remainTarget) {
         if (t == null) {
             return;
         }
-        
+
         list.add(t.val);
         if (t.left == null && t.right == null && t.val == remainTarget) {
             rst.add(new ArrayList<Integer>(list));

@@ -20,7 +20,7 @@ String Hash Table
  * Two strings are anagrams if and only if their sorted strings are equal.
  * So we can maintain a map ans : {String -> List<String>} where each key K is a sorted string,
  * and each value is the list of strings from the initial input that when sorted, are equal to K.
- *
+ * <p>
  * Complexity Analysis
  * Time Complexity: O(NKlog(K))
  * where N is the length of strs, and K is the maximum length of a string in strs.
@@ -70,7 +70,7 @@ public class Solution {
  * We use these counts as the basis for our hash map.
  * The String of count array is the key, and the list<String> store the anagrams.
  * For example, abbccc will be (1, 2, 3, 0, 0, ..., 0), where there are 26 entries total.
- *
+ * <p>
  * Complexity Analysis
  * Time Complexity: O(N*K), where N is the length of strs, and K is the maximum length of a string in strs.
  * Counting each string is linear in the size of the string, and we count every string.
@@ -89,7 +89,7 @@ public class Solution {
 
         HashMap<String, ArrayList<String>> map = new HashMap<>();
         for (String word : strs) {
-            String key =  countCharacter(word);
+            String key = countCharacter(word);
             // Use the new method "computeIfAbsent" and Lambda Expression in JDK1.8
             map.computeIfAbsent(key, x -> new ArrayList<>()).add(word);
         }
@@ -102,7 +102,7 @@ public class Solution {
 
         return rst;
     }
-    
+
     public String countCharacter(String str) {
         int[] map = new int[26];
         for (char c : str.toCharArray()) {

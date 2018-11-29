@@ -25,19 +25,19 @@ Use [2,2,0] once, remaining [0,1,1].
  * 采用暴力的方法，所有的方案都试一遍即可。
  * 对于每一个模式可能的使用次数为：0 ~ min(order[i] / pattern[j][i])
  * 因此这是一个类似求 Combination Sum 的过程。
- *
+ * <p>
  * 因为我们没有进优化，本题计算量又比较大（对象为数组，每次需要 O(n) 的空间和时间），所以直接爆了。
  * 但是我们知道一个模式最多只能被使用 min(order[i] / pattern[j][i]) 次，
  * 因此可以利用这个条件进行剪枝操作，具体实现参见 Approach 2.
- *
+ * <p>
  * Combination Sum：
- *  https://github.com/cherryljr/LintCode/blob/master/Combination%20Sum.java
+ * https://github.com/cherryljr/LintCode/blob/master/Combination%20Sum.java
  */
 public class Solution {
     private int minSum = Integer.MAX_VALUE;
 
     /**
-     * @param order: The order
+     * @param order:   The order
      * @param pattern: The pattern
      * @return: Return the number of items do not meet the demand at least
      */
@@ -94,7 +94,7 @@ public class Solution {
     private int minSum = Integer.MAX_VALUE;
 
     /**
-     * @param order: The order
+     * @param order:   The order
      * @param pattern: The pattern
      * @return: Return the number of items do not meet the demand at least
      */

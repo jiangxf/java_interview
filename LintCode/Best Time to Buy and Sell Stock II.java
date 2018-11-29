@@ -1,9 +1,9 @@
 和Stock I 的区别：可以买卖多次，求总和的最大盈利。
 
-思路：
-本题中买卖次数无限制，所以为了利润最大化我们要找到所有的 波峰 和 波谷。
-故遍历整个数组，只要前后两个数之间的差值为正数，则说明可以获利。
-将 profit 加上二者的差值即可。
+        思路：
+        本题中买卖次数无限制，所以为了利润最大化我们要找到所有的 波峰 和 波谷。
+        故遍历整个数组，只要前后两个数之间的差值为正数，则说明可以获利。
+        将 profit 加上二者的差值即可。
 
 /*
 Say you have an array for which the ith element is the price of a given stock on day i.
@@ -28,7 +28,7 @@ public class Solution {
         if (prices == null || prices.length == 0) {
             return 0;
         }
-        
+
         int profit = 0;
         for (int i = 0; i < prices.length - 1; i++) {
             int diff = prices[i + 1] - prices[i];
@@ -36,7 +36,7 @@ public class Solution {
                 profit += diff;
             }
         }
-        
+
         return profit;
     }
 }

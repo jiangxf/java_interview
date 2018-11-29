@@ -20,22 +20,22 @@ Array Google
 /**
  * Approach: PreSum + Sliding Window
  * Algorithm
- *  Instead of creating a cumulative sum array first, and then traversing over it to determine the required sum,
- *  we can simply traverse over nums just once, and on the go keep on determining the sums possible for the subarrays of length k.
- *  To understand the idea, assume that we already know the sum of elements from index i to index i+k, say it is x.
- *
- *  Now, to determine the sum of elements from the index i+1 to the index i+k+1,
- *  all we need to do is to subtract the element nums[i] from x and to add the element nums[i+k+1] to x.
- *  We can carry out our process based on this idea and determine the maximum possible average.
- *
+ * Instead of creating a cumulative sum array first, and then traversing over it to determine the required sum,
+ * we can simply traverse over nums just once, and on the go keep on determining the sums possible for the subarrays of length k.
+ * To understand the idea, assume that we already know the sum of elements from index i to index i+k, say it is x.
+ * <p>
+ * Now, to determine the sum of elements from the index i+1 to the index i+k+1,
+ * all we need to do is to subtract the element nums[i] from x and to add the element nums[i+k+1] to x.
+ * We can carry out our process based on this idea and determine the maximum possible average.
+ * <p>
  * Complexity Analysis
- *  Time complexity  : O(n). We iterate over the given numsnums array of length n once only.
- *  Space complexity : O(1). Constant extra space is used.
+ * Time complexity  : O(n). We iterate over the given numsnums array of length n once only.
+ * Space complexity : O(1). Constant extra space is used.
  */
 public class Solution {
     /**
      * @param nums: an array
-     * @param k: an integer
+     * @param k:    an integer
      * @return: the maximum average value
      */
     public double findMaxAverage(int[] nums, int k) {

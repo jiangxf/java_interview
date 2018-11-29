@@ -26,14 +26,14 @@ and the [2, 1] has exactly 2 distinct integers: 1 and 2.
 /**
  * Approach: Construction
  * 观察可得：k的最大值为 n-1.此时排列方式为：
- *  1, n, 2, n-1, 3, n-2...
+ * 1, n, 2, n-1, 3, n-2...
  * 因此排列的方法取决于 k 的值，我们只需要按照类似：
- *  l++, r--, l++, r--, l++, l++, l++...
+ * l++, r--, l++, r--, l++, l++, l++...
  * 的顺序排列即可 l 起始值为 1，r 起始值为 n.
  * 思想就是利用 l, r 交错排列的方法产生 k-1 个 distinct integers.
  * 然后加上最后 l++ 之间所产生的距离 1. 总共 k 个.
  * 至于排列的方式，我们可以写出例子，根据 k 的奇偶来进行排列即可。
- *
+ * <p>
  * 参考：
  * https://leetcode.com/problems/beautiful-arrangement-ii/discuss/106948/C++-Java-Clean-Code-4-liner
  */

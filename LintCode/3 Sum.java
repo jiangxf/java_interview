@@ -1,15 +1,15 @@
 思路：
-	首先第一种解法，也是最暴力的解法： DFS		O(2^N)
-		先对numbers进行排序（为了去重）,然后使用DFS对该数组的subset进行遍历，
-	然后将符合条件的添加到results中，但是该方法时间复杂度过高（2^n）,
-	故我们需要考虑更优解。
-	
-	第二种解法：	Two Pointers   O(N^2)
-		依旧相对numbers进行排序（去重所需）,然后使用头尾两个指针从数组头尾分别
-	向中间移动。寻找两个数nums[left], nums[rigth].使其加上原来保存的target值为0
-	这样我们便得到了一组解。
-		实质上是将该问题转换为 2Sum 的问题来解决。找出一个数，然后在后面的部分中找到
-	两个和为 Target - num[i] 的数 (2Sum)。该题中 Target 为 0.即找到两个数和为 -num[i] 的即可。
+        首先第一种解法，也是最暴力的解法： DFS O(2^N)
+        先对numbers进行排序（为了去重）,然后使用DFS对该数组的subset进行遍历，
+        然后将符合条件的添加到results中，但是该方法时间复杂度过高（2^n）,
+        故我们需要考虑更优解。
+
+        第二种解法：    Two Pointers O(N^2)
+        依旧相对numbers进行排序（去重所需）,然后使用头尾两个指针从数组头尾分别
+        向中间移动。寻找两个数nums[left],nums[rigth].使其加上原来保存的target值为0
+        这样我们便得到了一组解。
+        实质上是将该问题转换为 2Sum 的问题来解决。找出一个数，然后在后面的部分中找到
+        两个和为 Target-num[i]的数(2Sum)。该题中 Target 为 0.即找到两个数和为-num[i]的即可。
 		
 /*
 Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? 
@@ -42,14 +42,14 @@ public class Solution {
         if (numbers == null) {
             return results;
         }
-        
+
         Arrays.sort(numbers);
         helper(results, new ArrayList<Integer>(), 0, 0, numbers);
         return results;
     }
-    
+
     private void helper(ArrayList<ArrayList<Integer>> results,
-                        ArrayList<Integer> list, 
+                        ArrayList<Integer> list,
                         int startIndex,
                         int target,
                         int[] numbers) {
@@ -57,7 +57,7 @@ public class Solution {
             results.add(new ArrayList<Integer>(list));
             return;
         }
-        
+
         for (int i = startIndex; i < numbers.length; i++) {
             if (target > 0) {
                 break;
@@ -65,7 +65,7 @@ public class Solution {
             if (i > 0 && i != startIndex && numbers[i - 1] == numbers[i]) {
                 continue;
             }
-            
+
             list.add(numbers[i]);
             helper(results, list, i + 1, target + numbers[i], numbers);
             list.remove(list.size() - 1);
@@ -84,11 +84,11 @@ public class Solution {
      */
     public ArrayList<ArrayList<Integer>> threeSum(int[] nums) {
         ArrayList<ArrayList<Integer>> results = new ArrayList<>();
-        
+
         if (nums == null || nums.length < 3) {
             return results;
         }
-        
+
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 2; i++) {
@@ -99,13 +99,13 @@ public class Solution {
 
             int left = i + 1, right = nums.length - 1;
             int target = -nums[i];
-            
+
             twoSum(nums, left, right, target, results);
         }
-        
+
         return results;
     }
-    
+
     public void twoSum(int[] nums,
                        int left,
                        int right,
@@ -118,7 +118,7 @@ public class Solution {
                 triple.add(nums[left]);
                 triple.add(nums[right]);
                 results.add(triple);
-                
+
                 left++;
                 right--;
                 // skip duplicate pairs with the same left

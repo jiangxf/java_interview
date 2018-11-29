@@ -1,6 +1,6 @@
 分析4个step.
-小心走位。
-```
+        小心走位。
+        ```
 /*
 Matrix Zigzag Traversal
 
@@ -30,11 +30,11 @@ public class Solution {
     /**
      * @param matrix: a matrix of integers
      * @return: an array of integers
-     */ 
+     */
     public int[] printZMatrix(int[][] matrix) {
         int[] rst = null;
         if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) {
-        	return rst;
+            return rst;
         }
         int n = matrix.length;
         int m = matrix[0].length;
@@ -47,26 +47,26 @@ public class Solution {
         rst[ind] = matrix[i][j];
         ind++;
         while (ind < rst.length) {
-        	//Right 1 step, or down
-    		if (j + 1 < m || i + 1 < n) {
-    			if (j + 1 < m) j++;
-    			else if (i + 1 < n) i++;
-    			rst[ind++] = matrix[i][j];
-    		}
-    		//Move left-bottom:
-    		while (j - 1 >= 0 && i + 1 < n) {
-				rst[ind++] = matrix[++i][--j];
-    		}
-        	//Move down, or right
-    		if (j + 1 < m || i + 1 < n) {
-    			if (i + 1 < n) i++;
-    			else if (j + 1 < m) j++;
-    			rst[ind++] = matrix[i][j];
-    		} 
-        	//Move right-up:
-    		while (j + 1 < m && i - 1 >= 0) {
-    			rst[ind++] = matrix[--i][++j];
-    		}
+            //Right 1 step, or down
+            if (j + 1 < m || i + 1 < n) {
+                if (j + 1 < m) j++;
+                else if (i + 1 < n) i++;
+                rst[ind++] = matrix[i][j];
+            }
+            //Move left-bottom:
+            while (j - 1 >= 0 && i + 1 < n) {
+                rst[ind++] = matrix[++i][--j];
+            }
+            //Move down, or right
+            if (j + 1 < m || i + 1 < n) {
+                if (i + 1 < n) i++;
+                else if (j + 1 < m) j++;
+                rst[ind++] = matrix[i][j];
+            }
+            //Move right-up:
+            while (j + 1 < m && i - 1 >= 0) {
+                rst[ind++] = matrix[--i][++j];
+            }
         }//end while
         return rst;
     }

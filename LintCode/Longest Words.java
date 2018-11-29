@@ -34,7 +34,7 @@ Enumeration LintCode Copyright String
  * 遍历字符串数组 dictionary, 利用 maxLen 来记录当前最长的字符串长度。
  * 当发现更长的字符串长度时，直接清空 结果集rst, 然后重新添加即可。
  * 当 word长度 与 结果集中的字符串长度相等时，则将 word 添加到 rst 中。
- *
+ * <p>
  * 时间复杂度: O(n)
  * 空间复杂度: O(1)
  */
@@ -60,7 +60,7 @@ public class Solution {
                 rst.clear();
                 rst.add(word);
                 maxLen = word.length();
-            // If the length is the same, then we just add the word into array list.
+                // If the length is the same, then we just add the word into array list.
             } else if (word.length() == maxLen) {
                 rst.add(word);
             }

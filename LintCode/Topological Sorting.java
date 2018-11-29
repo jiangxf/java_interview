@@ -35,16 +35,36 @@ LintCode Copyright Geeks for Geeks Depth First Search Topological Sort Breadth F
  * 它常被用于 Build System 等场合，比如 Java 中有很多个包，
  * 每个包都它各自的依赖，比如 C 依赖于 A 和 B，那么在 A,B 被建立之前，C 是无法被创建的。
  * 那 IDE 如何知道这件事呢？这就使用到了 拓扑排序了。
- *
+ * <p>
  * 这里提供的是基于 HashMap 来实现的模板，适用范围更广，相应的运行效率也会比较低。
  * 通常情况下，我们可以使用 List/Array 来替代实现。
- *（本题中因为信息由 DirectedGraphNode 类给出，所以使用 HashMap 会更好写）
+ * （本题中因为信息由 DirectedGraphNode 类给出，所以使用 HashMap 会更好写）
  * 基于 List/Array 的拓扑排序模板：
- *  https://github.com/cherryljr/LintCode/blob/master/Course%20Schedule%20II.java
- *
+ * https://github.com/cherryljr/LintCode/blob/master/Course%20Schedule%20II.java
+ * <p>
  * 参考资料：
  * https://www.youtube.com/watch?v=ddTC4Zovtbc
  * https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/
+ * <p>
+ * Approach 1: BFS
+ * 首先我们知道 有向图 的每个节点具有 出度 和 入度 两个值。
+ * 而为了实现 拓扑排序 我们需要使用到 入度，这个值。
+ * 当一个节点 拥有 1个 入度，代表其拥有一个依赖，也就意味着：在它的依赖完成之前，它无法被完成。（应该排在后面）
+ * <p>
+ * 具体做法为：
+ * 1. 首先我们可以遍历整个图的 边。
+ * 将各个节点的 入度 计算出来，并保存在 HashMap 中。
+ * 2. 然后我们遍历整个图的 节点。将 入度为0 的节点加入到 queue 和 rst 中。
+ * （最开始情况下 入度为0 的节点代表一开始就没有任何依赖，可以最先被完成）
+ * 3. 然后我们利用 queue 进行 BFS，
+ * 每当从队列中 poll 一个元素出来，我们就从图中移除 它 和 它对应的边。
+ * 代表它已经完成，这就意味着以它为 入度 的节点的入度将会减少，并且有可能为 0.
+ * 在遍历过程中，当一个节点的 入度为0 就意味着它的依赖已经被全部完成了，那么它就可以被完成，
+ * 所以将它 add 到 queue 和 rst 中。
+ * <p>
+ * 时间复杂度：
+ * 我们总共需要遍历 3 次图（计算入度 + 得到入度为0的点 + BFS）
+ * 因此总体时间复杂度为：O(n)
  */
 
 /**
@@ -52,7 +72,7 @@ LintCode Copyright Geeks for Geeks Depth First Search Topological Sort Breadth F
  * 首先我们知道 有向图 的每个节点具有 出度 和 入度 两个值。
  * 而为了实现 拓扑排序 我们需要使用到 入度，这个值。
  * 当一个节点 拥有 1个 入度，代表其拥有一个依赖，也就意味着：在它的依赖完成之前，它无法被完成。（应该排在后面）
- * 
+ *
  * 具体做法为：
  *  1. 首先我们可以遍历整个图的 边。
  *  将各个节点的 入度 计算出来，并保存在 HashMap 中。
@@ -63,7 +83,7 @@ LintCode Copyright Geeks for Geeks Depth First Search Topological Sort Breadth F
  *  代表它已经完成，这就意味着以它为 入度 的节点的入度将会减少，并且有可能为 0.
  *  在遍历过程中，当一个节点的 入度为0 就意味着它的依赖已经被全部完成了，那么它就可以被完成，
  *  所以将它 add 到 queue 和 rst 中。
- * 
+ *
  * 时间复杂度：
  * 我们总共需要遍历 3 次图（计算入度 + 得到入度为0的点 + BFS）
  * 因此总体时间复杂度为：O(n)

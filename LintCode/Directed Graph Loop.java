@@ -32,7 +32,7 @@ Google
 public class Solution {
     /**
      * @param start: The start points set
-     * @param end: The end points set
+     * @param end:   The end points set
      * @return: Return if the graph is cyclic
      */
     public boolean isCyclicGraph(int[] start, int[] end) {
@@ -105,10 +105,10 @@ public class Solution {
 /**
  * Approach 2: Topological Sorting (Based on BFS)
  * 本题实质上考察的是 拓扑排序 的性质：
- *  拓扑排序 只能被应用于对 有线无环图 进行排序。
+ * 拓扑排序 只能被应用于对 有线无环图 进行排序。
  * 因此我们可以利用这一点对该 有向图 进行拓扑排序，
  * 如果无法正常完成，则说明该图 带环。
- *
+ * <p>
  * 这里使用了 BFS 的写法，当然我们还可以使用 DFS 的做法。
  * 具体可以参考拓扑排序详解：
  * https://github.com/cherryljr/LintCode/blob/master/Topological%20Sorting.java
@@ -121,7 +121,7 @@ public class Solution {
      */
     public boolean isCyclicGraph(int[] start, int[] end) {
         // 与 Approach 1 中相同，首先我们需要获取所有节点的最大值
-    	// 这样我们才知道需要开多大的空间
+        // 这样我们才知道需要开多大的空间
         int max = 0;
         for (int i = 0; i < start.length; i++) {
             max = Math.max(max, start[i]);

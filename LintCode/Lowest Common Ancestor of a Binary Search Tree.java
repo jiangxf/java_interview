@@ -29,46 +29,46 @@ When one of the target is root, make sure parent = root, and return root at the 
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || p == null || q == null) {
-        	return null;
+            return null;
         }
         ArrayList<TreeNode> l1 = new ArrayList<TreeNode>();
-     	ArrayList<TreeNode> l2 = new ArrayList<TreeNode>();
-     	binarySearch(root, p, l1);
-     	binarySearch(root, q, l2);
+        ArrayList<TreeNode> l2 = new ArrayList<TreeNode>();
+        binarySearch(root, p, l1);
+        binarySearch(root, q, l2);
 
-     	TreeNode parent = root;
-     	int size = l1.size() > l2.size() ? l2.size() : l1.size();
-     	for (int i = 0; i < size; i++) {
-     		if (l1.get(i).val == l2.get(i).val) {
-     			parent = l1.get(i);
-     		} else {
-     			return parent;
-     		}
-     	}
-     	return parent;
+        TreeNode parent = root;
+        int size = l1.size() > l2.size() ? l2.size() : l1.size();
+        for (int i = 0; i < size; i++) {
+            if (l1.get(i).val == l2.get(i).val) {
+                parent = l1.get(i);
+            } else {
+                return parent;
+            }
+        }
+        return parent;
     }
 
 
     public void binarySearch(TreeNode root, TreeNode target, ArrayList<TreeNode> list) {
-    	TreeNode node = root;
-    	while (node != null) {
-    		list.add(node);
-    		if (node.val == target.val) {
-    			return;
-    		} else if (node.val < target.val) {
-    			node = node.right;
-    		} else {
-    			node = node.left;
-    		}
-    	}//END while
+        TreeNode node = root;
+        while (node != null) {
+            list.add(node);
+            if (node.val == target.val) {
+                return;
+            } else if (node.val < target.val) {
+                node = node.right;
+            } else {
+                node = node.left;
+            }
+        }//END while
     }
 }

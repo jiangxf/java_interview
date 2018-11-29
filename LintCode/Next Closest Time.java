@@ -23,7 +23,7 @@ The next closest time choosing from digits 2, 3, 5, 9, is 22:22. It may be assum
  * 因为一天的时间总共有 1440 分钟，而该题中最小的计时单位就是 分钟。
  * 因此我们可以采用暴力遍历的方法，每次在原来的基础上 加一分钟。
  * 如果组成的时间能够被表示并且合法，那么这就是我们需要的答案。
- * 
+ * <p>
  * 最差情况下时间复杂度为：O(1440) => O(1)
  */
 public class Solution {
@@ -64,7 +64,7 @@ public class Solution {
  * 本质上来说我们可以将其看做是一个简化版的 Permutation.
  * Permutation中每个数字只能用一次，而本题中每个数字可以被无限次取。
  * 因此我们可以省略掉 visited[] 来记录每个数字。
- *
+ * <p>
  * 由此可见，本题总体上还是较为简单的，核心函数就在与 dfs() 与 getDiff() 上。
  * 考察点更加偏向工程方向而不是算法方面。（如果求 Previous Closest Time 代码要做什么修改呢？）
  * 因为本次还涉及到了 时间上的转换 时间差计算 字符串与整数的转换 以及 字符串的格式化。
@@ -84,7 +84,7 @@ public class Solution {
         // 获得开始的时间，以分钟数计量
         int beginTime = getMinutes(hour, minute);
         // 获得可用的数字
-        int[] times  = new int[4];
+        int[] times = new int[4];
         times[0] = time.charAt(0) - '0';
         times[1] = time.charAt(1) - '0';
         times[2] = time.charAt(3) - '0';

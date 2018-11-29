@@ -26,13 +26,13 @@ LintCode Copyright Heap Priority Queue
  * 前半段，作为 maxHeap,关注点是 PriorityQueue 的峰点，也就是实际上的 median.
  * 后半段，作为 minHeap,实现是Java中默认的 PriorityQueue。开头是最小的。
  * 这边用到了一个小小的 trick:
- *  maxHeap.size() 始终与 minHeap.size() 相等，或者更大 1.
- *  这样我们需要的 median 元素就是 maxHeap.peek().
- *  分析如下：
- *  题目定义 median = A[(n-1)/2],也就是说：
- *  当有 偶数 个元素时，此时 maxHeap.size() 与 minHeap.size() 相等，返回靠前的那个元素，即 median = maxHeap.peek()
- *  当有 奇数 个元素时，此时 maxHeap.size() 比 minHeap.size() 大一，返回中间的那个元素，即 median = maxHeap.peek()
- *  
+ * maxHeap.size() 始终与 minHeap.size() 相等，或者更大 1.
+ * 这样我们需要的 median 元素就是 maxHeap.peek().
+ * 分析如下：
+ * 题目定义 median = A[(n-1)/2],也就是说：
+ * 当有 偶数 个元素时，此时 maxHeap.size() 与 minHeap.size() 相等，返回靠前的那个元素，即 median = maxHeap.peek()
+ * 当有 奇数 个元素时，此时 maxHeap.size() 比 minHeap.size() 大一，返回中间的那个元素，即 median = maxHeap.peek()
+ * <p>
  * 添加元素的时候，当要添加的元素 大于 中间值median，则 add 到 minHeap 中，否则 add 到 maxHeap 中。
  * 完成添加操作后，因为两个 heap 的 size 发生了变换，
  * 所以还需要判断是否要进行 调整，使其保持在一个我们需要的平衡状态。
@@ -96,36 +96,34 @@ public class Solution {
     public int[] medianII(int[] nums) {
         int cnt = nums.length;
         int[] ans = new int[cnt];
-        
+
         for (int i = 0; i < cnt; ++i) {
             addNumber(nums[i]);
             ans[i] = getMedian();
         }
-        
+
         return ans;
     }
-    
+
     private void addNumber(int value) {
         maxHeap.offer(value);
-        
+
         if (numOfElements % 2 == 0) {
             if (minHeap.isEmpty()) {
                 numOfElements++;
                 return;
-            }
-            else if (maxHeap.peek() > minHeap.peek()) {
+            } else if (maxHeap.peek() > minHeap.peek()) {
                 Integer maxHeapRoot = maxHeap.poll();
                 Integer minHeapRoot = minHeap.poll();
                 maxHeap.offer(minHeapRoot);
                 minHeap.offer(maxHeapRoot);
             }
-        }
-        else {
+        } else {
             minHeap.offer(maxHeap.poll());
         }
         numOfElements++;
     }
-    
+
     private int getMedian() {
         return maxHeap.peek();
     }

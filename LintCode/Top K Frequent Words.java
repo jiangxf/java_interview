@@ -1,13 +1,13 @@
 M
 
-方法1：Brutle force用HashMap存frequency, 用ArrayList存lists of words。最后返回从尾部向前数的k个。   
-   注意排序时Collection.sort()的cost是O(nLogk)
+        方法1：Brutle force用HashMap存frequency,用ArrayList存lists of words。最后返回从尾部向前数的k个。
+        注意排序时Collection.sort()的cost是O(nLogk)
 
 
-方法2: Trie && MinHeap屌炸天   
-   http://www.geeksforgeeks.org/find-the-k-most-frequent-words-from-a-file/
+        方法2:Trie&&MinHeap屌炸天
+        http://www.geeksforgeeks.org/find-the-k-most-frequent-words-from-a-file/
 
-```
+        ```
 /*
 Given a list of words and an integer k, return the top k frequent words in the list.
 
@@ -48,44 +48,44 @@ Hash Table Heap Priority Queue
 public class Solution {
     public String[] topKFrequentWords(String[] words, int k) {
         String[] rst = new String[k];
-    	if (words == null || words.length == 0 || k <= 0) {
-    		return rst;
-    	}
-    
-    	HashMap<String, Integer> map = new HashMap<String, Integer>();
-    	ArrayList<ArrayList<String>> lists = new ArrayList<ArrayList<String>>();
-    	for (int i = 0; i <= words.length; i++) {
-    		lists.add(new ArrayList<String>());
-    	}
-    	//Fill map
-    	for (int i = 0; i < words.length; i++) {
-    		if (!map.containsKey(words[i])) {
-    			map.put(words[i], 0);
-    		}
-    		map.put(words[i], map.get(words[i]) + 1);
-    	}
-    	//Fill ArrayList
-    	for (Map.Entry<String, Integer> entry : map.entrySet()) {
-    		int freqIndex = entry.getValue();
-    		lists.get(freqIndex).add(entry.getKey());
-    	}
+        if (words == null || words.length == 0 || k <= 0) {
+            return rst;
+        }
 
-    	int count = 0;
-    	for (int i = lists.size() - 1; i >= 0; i--) {
-    		ArrayList<String> list = lists.get(i);
-    		Collections.sort(list);
-    		for (int j = 0; j < list.size(); j++) {
-    			if (count < k) {
-	    			rst[count] = list.get(j);
-	    			count++;
-    			} 
-    			if (count >= k) {
-    				return rst;
-    			}
-    		}
-    	}
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        ArrayList<ArrayList<String>> lists = new ArrayList<ArrayList<String>>();
+        for (int i = 0; i <= words.length; i++) {
+            lists.add(new ArrayList<String>());
+        }
+        //Fill map
+        for (int i = 0; i < words.length; i++) {
+            if (!map.containsKey(words[i])) {
+                map.put(words[i], 0);
+            }
+            map.put(words[i], map.get(words[i]) + 1);
+        }
+        //Fill ArrayList
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            int freqIndex = entry.getValue();
+            lists.get(freqIndex).add(entry.getKey());
+        }
 
-    	return rst;
+        int count = 0;
+        for (int i = lists.size() - 1; i >= 0; i--) {
+            ArrayList<String> list = lists.get(i);
+            Collections.sort(list);
+            for (int j = 0; j < list.size(); j++) {
+                if (count < k) {
+                    rst[count] = list.get(j);
+                    count++;
+                }
+                if (count >= k) {
+                    return rst;
+                }
+            }
+        }
+
+        return rst;
     }
 }
 ```

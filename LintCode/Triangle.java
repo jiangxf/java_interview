@@ -1,11 +1,11 @@
-¶¯Ì¬¹æ»®(DP)µÄ¾­µäÈëÃÅÎÊÌâ
-Traverse / DFS  O(2^N)  =>  Divide and Conquer  O(2^N)  =>  Ê¹ÓÃ¼ÇÒä»¯ËÑË÷½øÐÐÓÅ»¯ O(N^2)  =>  ¶¯Ì¬¹æ»®£¨×Ôµ×ÏòÉÏ / ×Ô¶¥ÏòÏÂ£©
-Í¨¹ýÒÔÉÏµÄ¹ý³ÌÎÒÃÇ¿ÉÒÔÈÏÊ¶µ½DPÊµÖÊÉÏ¾ÍÊÇ½â¾öÖØ¸´¼ÆËãµÄËÑË÷Ëã·¨¡£
-Ëü¿ÉÒÔÍ¨¹ý¼ÇÒä»¯ËÑË÷ºÍloopÀ´ÊµÏÖ¡£
-±¾Ìâ¸ø³öÁË3ÖÐ½â·¨£º
-	1. Divide and Conquer optimized by Memorize Search(Ê¹ÓÃÒ»¸ö¶þÎ¬Êý×éÀ´´æ´¢ÒÑ¾­¼ÆËã¹ýµÄÖµ£¬±ÜÃâÖØ¸´¼ÆËã)
-	2. Dynamic Programming ×Ôµ×ÏòÉÏ
-	3. Dynamic Programming ×Ô¶¥ÏòÏÂ
+ï¿½ï¿½Ì¬ï¿½æ»®(DP)ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        Traverse/DFS O(2^N)=>Divide and Conquer O(2^N)=>Ê¹ï¿½Ã¼ï¿½ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å»ï¿½ O(N^2)=>  ï¿½ï¿½Ì¬ï¿½æ»®ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ / ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Â£ï¿½
+        Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÄ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê¶ï¿½ï¿½DPÊµï¿½ï¿½ï¿½Ï¾ï¿½ï¿½Ç½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ä»¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½loopï¿½ï¿½Êµï¿½Ö¡ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3ï¿½Ð½â·¨ï¿½ï¿½
+        1.Divide and Conquer optimized by Memorize Search(Ê¹ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ´¢ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½)
+        2.Dynamic Programming ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½
+        3.Dynamic Programming ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
 
 /*
 
@@ -55,7 +55,7 @@ public class Solution {
         int rightSum = search(x + 1, y + 1);
         //	Merge
         minSum[x][y] = Math.min(leftSum, rightSum) + triangle[x][y];
-        
+
         return minSum[x][y];
     }
 
@@ -66,11 +66,11 @@ public class Solution {
         if (triangle[0] == null || triangle[0].length == 0) {
             return -1;
         }
-        
+
         this.n = triangle.length;
         this.triangle = triangle;
         this.minSum = new int[n][n];
-				
+
         //	Initial the minSum
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -80,7 +80,7 @@ public class Solution {
 
         return search(0, 0);
     }
-} 
+}
 
 //	Version 2: Bottom-Up
 
@@ -96,23 +96,23 @@ public class Solution {
         if (triangle[0] == null || triangle[0].length == 0) {
             return -1;
         }
-        
+
         // state: f[x][y] = minimum path value from x,y to bottom
         int n = triangle.length;
         int[][] f = new int[n][n];
-        
+
         // initialize 
         for (int i = 0; i < n; i++) {
             f[n - 1][i] = triangle[n - 1][i];
         }
-        
+
         // bottom up
         for (int i = n - 2; i >= 0; i--) {
             for (int j = 0; j <= i; j++) {
                 f[i][j] = Math.min(f[i + 1][j], f[i + 1][j + 1]) + triangle[i][j];
             }
         }
-        
+
         // answer
         return f[0][0];
     }
@@ -131,28 +131,28 @@ public class Solution {
         if (triangle[0] == null || triangle[0].length == 0) {
             return -1;
         }
-        
+
         // state: f[x][y] = minimum path value from 0,0 to x,y
         int n = triangle.length;
         int[][] f = new int[n][n];
-        
+
         // initialize 
-        // ×¢Òâ£º×Ô¶¥ÏòÏÂÊ±Èç¹û¶¯Ì¬¹æ»®ÊÇ¶þÎ¬µÄÊý×é£¬¾ÍÐèÒª°Ñf[i][0]ºÍf[0][i]¶¼½øÐÐ³õÊ¼»¯
-        // ¼´½«¾ØÕóµÄ±ßÔµ½øÐÐÒ»´Î³õÊ¼»¯£¬ÒòÎªÎÒÃÇ»ù±¾¶¼ÊÇÒªÓÃµ½ÕâÐ©ÖµµÄ¡£
-        // ¶øÕâÀïÎªÈý½ÇÐÎ£¬¹ÊÎÒÃÇÐèÒª³õÊ¼»¯µÄÎª¾ØÕóµÄ¶Ô½ÇÏß£¬¼´f[i][i]
+        // ×¢ï¿½â£ºï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½æ»®ï¿½Ç¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½f[i][0]ï¿½ï¿½f[0][i]ï¿½ï¿½ï¿½ï¿½ï¿½Ð³ï¿½Ê¼ï¿½ï¿½
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ôµï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ç»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ãµï¿½ï¿½ï¿½Ð©Öµï¿½Ä¡ï¿½
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Î£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ä¶Ô½ï¿½ï¿½ß£ï¿½ï¿½ï¿½f[i][i]
         f[0][0] = triangle[0][0];
         for (int i = 1; i < n; i++) {
             f[i][0] = f[i - 1][0] + triangle[i][0];
             f[i][i] = f[i - 1][i - 1] + triangle[i][i];
         }
-        
+
         // top down
         for (int i = 1; i < n; i++) {
             for (int j = 1; j < i; j++) {
                 f[i][j] = Math.min(f[i - 1][j], f[i - 1][j - 1]) + triangle[i][j];
             }
         }
-        
+
         // answer
         int best = f[n - 1][0];
         for (int i = 1; i < n; i++) {

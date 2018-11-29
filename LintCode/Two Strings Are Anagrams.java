@@ -1,12 +1,13 @@
 E
 
-方法1:char ascii 用count[256]   
-坑：不要想象这个是个26letter lowercase. may not be true.
+        方法1:char ascii 用count[256]
+        坑：不要想象这个是个26letter lowercase.may not be true.
 
-方法2: 若是其他字符encoding, 而不只是utf16-encoding (java char)?   
-那么就继续用string去做
+        方法2:若是其他字符encoding,而不只是utf16-encoding(java char)?
+        那么就继续用string去做
 
-```
+        ```
+
 /*
 Write a method anagram(s,t) to decide if two strings are anagrams or not.
 
@@ -81,20 +82,20 @@ public class Solution {
             String tt = t.substring(i, i + 1);
             if (!map.containsKey(ss)) {
                 map.put(ss, 0);
-            } 
+            }
             map.put(ss, map.get(ss) + 1);
             if (!map.containsKey(tt)) {
                 map.put(tt, 0);
             }
             map.put(tt, map.get(tt) - 1);
         }
-        
+
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             if (entry.getValue() != 0) {
                 return false;
             }
         }
-        
+
         return true;
     }
 }

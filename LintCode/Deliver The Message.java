@@ -34,7 +34,7 @@ Netflix
  */
 public class Solution {
     /**
-     * @param t: the time of each employee to pass a meeage
+     * @param t:           the time of each employee to pass a meeage
      * @param subordinate: the subordinate of each employee
      * @return: the time of the last staff recieve the message
      */
@@ -78,29 +78,29 @@ public class Solution {
  * 因为都是求 rank[i] 与其 rank[father] 之间的差值，所以我们可以用相同的代码来解决。
  * 分数调查：
  * https://github.com/cherryljr/NowCoder/blob/master/%E5%88%86%E6%95%B0%E8%B0%83%E6%9F%A5.java
- *
+ * <p>
  * 这里对 带权并查集权 方面的做法做个总结：
  * 首先关于定义方面，通常可以有两种用法：
- *  1. rank[i] 代表其下面含有多少个节点，即它所能够管理的信息。
- *  最经典的应用就是：用于维持 Union Find 的平衡性，使其尽量保持在一个较低的树高。
- *  那么因为其 rank[i] 含义是：i节点下面有 XXX 的这类信息。
- *  因此在 union 的时候，改变的都是 父节点 的信息。
- *  比如将 b 区域放到 a 区域的管理之下时，我们就会将 rank[aFather] += rank[bFather].
- *  代表将 bFather 管理的点数现在也归为 aFather 管理，因此 rank[aFather] 增加
- *  这类问题在 路径压缩 的时候，通常是不需要对 rank 经常处理的，因为其权值只有在 union 的时候才会发生变换。
- *  即我们会在 union 的时候对父节点的权值进行变换处理。
- *  2. rank[i] 代表 当前节点i 与 父亲节点 之间的关系（如差值等）。
- *  典型应用就是：本题 与 分数调查。
- *  同样因为其 rank[i] 含义是：i节点与其管理者父节点之间的关系。
- *  因此在 union 的时候，改变的都是 子节点 的信息，即被 union 的那个节点的信息（而父亲节点是作为一个标准，不会进行变换）。
- *  那么子节点的 rank值 具体做怎样的变换，还需要我们对题意进行分析后进行适当的操作。
- *  值得注意的是：
- *  在路径压缩的时候，我们同样需要对 rank 值进行处理，因为我们需要将被压缩路径上的 权值 加到子节点上面去。
- *  这类问题的特点是我们通常可以将 最大管理者的rank 看作为0.因为它的 rank 是不需要变换的.
+ * 1. rank[i] 代表其下面含有多少个节点，即它所能够管理的信息。
+ * 最经典的应用就是：用于维持 Union Find 的平衡性，使其尽量保持在一个较低的树高。
+ * 那么因为其 rank[i] 含义是：i节点下面有 XXX 的这类信息。
+ * 因此在 union 的时候，改变的都是 父节点 的信息。
+ * 比如将 b 区域放到 a 区域的管理之下时，我们就会将 rank[aFather] += rank[bFather].
+ * 代表将 bFather 管理的点数现在也归为 aFather 管理，因此 rank[aFather] 增加
+ * 这类问题在 路径压缩 的时候，通常是不需要对 rank 经常处理的，因为其权值只有在 union 的时候才会发生变换。
+ * 即我们会在 union 的时候对父节点的权值进行变换处理。
+ * 2. rank[i] 代表 当前节点i 与 父亲节点 之间的关系（如差值等）。
+ * 典型应用就是：本题 与 分数调查。
+ * 同样因为其 rank[i] 含义是：i节点与其管理者父节点之间的关系。
+ * 因此在 union 的时候，改变的都是 子节点 的信息，即被 union 的那个节点的信息（而父亲节点是作为一个标准，不会进行变换）。
+ * 那么子节点的 rank值 具体做怎样的变换，还需要我们对题意进行分析后进行适当的操作。
+ * 值得注意的是：
+ * 在路径压缩的时候，我们同样需要对 rank 值进行处理，因为我们需要将被压缩路径上的 权值 加到子节点上面去。
+ * 这类问题的特点是我们通常可以将 最大管理者的rank 看作为0.因为它的 rank 是不需要变换的.
  */
 public class Solution {
     /**
-     * @param t: the time of each employee to pass a meeage
+     * @param t:           the time of each employee to pass a meeage
      * @param subordinate: the subordinate of each employee
      * @return: the time of the last staff recieve the message
      */

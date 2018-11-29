@@ -1,8 +1,8 @@
 大概意思就是把2D list里面的element全部遍历一遍。
-注意啊，一开始理解题意搞错：我以为是必须要排序正确，所以上来就PriorityQueue+HashMap搞得无比复杂。其实，这个跟一个nxn的matrix遍历，是没区别的拉。
-所有来个x,y，把2d list跑一变。
+        注意啊，一开始理解题意搞错：我以为是必须要排序正确，所以上来就PriorityQueue+HashMap搞得无比复杂。其实，这个跟一个nxn的matrix遍历，是没区别的拉。
+        所有来个x,y，把2d list跑一变。
 
-```
+        ```
 /*
 Implement an iterator to flatten a 2d vector.
 
@@ -39,12 +39,13 @@ Use hasNext to validate (x,y)  and move x.
 Use next() to return (x,y) and move it(regardless of correctness, which is determined by hasNext())
 */
 public class Vector2D {
-	private int x;
-	private int y;
-	private List<List<Integer>> list;
+    private int x;
+    private int y;
+    private List<List<Integer>> list;
+
     public Vector2D(List<List<Integer>> vec2d) {
         if (vec2d == null) {
-        	return;
+            return;
         }
         this.x = 0;
         this.y = 0;
@@ -54,10 +55,10 @@ public class Vector2D {
     public int next() {
         int rst = list.get(x).get(y);
         if (y + 1 >= list.get(x).size()) {
-        	y = 0;
-        	x++;
+            y = 0;
+            x++;
         } else {
-        	y++;
+            y++;
         }
         return rst;
     }
@@ -67,14 +68,14 @@ public class Vector2D {
             return false;
         }
         while (x < list.size() && list.get(x).size() == 0) {
-        	x++;
-        	y = 0;
+            x++;
+            y = 0;
         }
         if (x >= list.size()) {
-        	return false;
+            return false;
         }
         if (y >= list.get(x).size()) {
-        	return false;
+            return false;
         }
         return true;
     }

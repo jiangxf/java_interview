@@ -1,13 +1,14 @@
-挺勇猛. 还好网上有个题目是找kth最大。
-用priority queue. 每次把最小的展开，移位。分别x+1,或者y+1。
-因为当下的Min里面x,y都是最小的。所以下一个最小的不是（x+1,y）,就是（x,y+1）。当然，放在PriorityQueue里面的原因就是，很可能跟之前在queue里面的pair产生比较。
-每次就poll（）一个，放新candidate进去就好了。
-注意，这样的做法会用重复，比如例子（7,4）会出现两次。用一个HashSet挡一下。
+挺勇猛.还好网上有个题目是找kth最大。
+        用priority queue.每次把最小的展开，移位。分别x+1,或者y+1。
+        因为当下的Min里面x,y都是最小的。所以下一个最小的不是（x+1,y）,就是（x,y+1）。当然，放在PriorityQueue里面的原因就是，很可能跟之前在queue里面的pair产生比较。
+        每次就poll（）一个，放新candidate进去就好了。
+        注意，这样的做法会用重复，比如例子（7,4）会出现两次。用一个HashSet挡一下。
 
-学会用priorityqueue.
+        学会用priorityqueue.
 
-注意，HashSet的唯一性，用一个"x,y"的string就可以代为解决。
-```
+        注意，HashSet的唯一性，用一个"x,y"的string就可以代为解决。
+        ```
+
 /*
 Given two integer arrays sorted in ascending order and an integer k. Define sum = a + b, where a is an element from the first array and b is an element from the second one. Find the kth smallest sum out of all possible sums.
 
@@ -41,20 +42,11 @@ Heap Priority Queue Sorted Matrix
 	Note: There will be duplicates,so use a hashstet to mark duplicates. Becareful with what we put int hashset. 
 */
 public class Solution {
-	public class Point{
-        int x,y, val;
-        public Point(int x, int y, int val) {
-            this.x = x;
-            this.y = y;
-            this.val = val;
-        }
-    }
-   
     public int kthSmallestSum(int[] A, int[] B, int k) {
         if (A == null || B == null || A.length == 0 || B.length == 0 || k < 0) {
             return -1;
         }
-        PriorityQueue<Point> queue = new PriorityQueue<Point>(2, new Comparator<Point>(){
+        PriorityQueue<Point> queue = new PriorityQueue<Point>(2, new Comparator<Point>() {
             public int compare(Point p1, Point p2) {
                 return p1.val - p2.val;
             }
@@ -88,6 +80,16 @@ public class Solution {
 
         min = queue.poll();
         return min.val;
+    }
+
+    public class Point {
+        int x, y, val;
+
+        public Point(int x, int y, int val) {
+            this.x = x;
+            this.y = y;
+            this.val = val;
+        }
     }
 }
 

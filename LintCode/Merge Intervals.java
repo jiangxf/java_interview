@@ -23,7 +23,7 @@ Sort Array LinkedIn Interval Google Facebook Microsoft Bloomberg Yelp Twitter
  * 出现 interval 区间类问题。一个区间，两个端点，求合并后的区间，想到使用 扫描线 的方法进行解决。
  * 本题用 扫描线 来解决的话，虽然从代码量来说并不是一个最佳的选择，
  * 但是说明了 扫描线 在此类问题上强大的解决能力。
- *
+ * <p>
  * 扫描线详解：
  * https://github.com/cherryljr/LintCode/blob/master/Number%20of%20Airplanes%20in%20the%20Sky.java
  * 与本题类似的问题：
@@ -47,7 +47,7 @@ public class Solution {
      */
     public List<Interval> merge(List<Interval> intervals) {
         List<Point> list = new ArrayList<>();
-        for (Interval interval :intervals) {
+        for (Interval interval : intervals) {
             list.add(new Point(interval.start, 1));
             list.add(new Point(interval.end, -1));
         }

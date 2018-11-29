@@ -31,7 +31,7 @@ Amazon
  * Approach: Bit Operation and String
  * 采用进制转换的方法，计算出 n 的二进制字符串，
  * 然后利用 reverse 方法将其逆序后比较即可。
- * 
+ * <p>
  * 进制转换方法可以参见：
  * https://github.com/cherryljr/NowCoder/blob/master/%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2.java
  */

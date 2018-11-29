@@ -1,17 +1,17 @@
-12.06.2015 recap:
-注意：不要乱改input s. recursive call 需要用原始的input s.
+12.06.2015recap:
+        注意：不要乱改input s.recursive call 需要用原始的input s.
 
-这个题目李特是屌炸天的。
-我飞了九牛二虎之力（路子对），但是代码写的七荤八素，好长好长好长好长的。
-结果正解，三四行就搞定了。真是心有不甘啊。
-想法如下：
-保证p1能胜利，就必须保持所有p2的move都不能赢。
-同时，p1只要在可走的Move里面，有一个move可以赢就足够了。
-（题目里面用一个for loop + 只要 满足条件就return true来表达 OR的意思：p1不同的路子，赢一种就行了）
-p1: player1
-p2: player2
+        这个题目李特是屌炸天的。
+        我飞了九牛二虎之力（路子对），但是代码写的七荤八素，好长好长好长好长的。
+        结果正解，三四行就搞定了。真是心有不甘啊。
+        想法如下：
+        保证p1能胜利，就必须保持所有p2的move都不能赢。
+        同时，p1只要在可走的Move里面，有一个move可以赢就足够了。
+        （题目里面用一个for loop+只要 满足条件就return true来表达 OR的意思：p1不同的路子，赢一种就行了）
+        p1:player1
+        p2:player2
 
-```
+        ```
 /*
 You are playing the following Flip Game with your friend: 
 Given a string that contains only these two characters: + and -, 
@@ -35,14 +35,14 @@ Similar Problems: (E) Nim Game, (E) Flip Game
 */
 
 public class Solution {
-  public static boolean canWin(String s) {
+    public static boolean canWin(String s) {
         if (s == null || s.length() <= 1) {
             return false;
         }
         String str = new String(s);
         while (str.indexOf("++") != -1) {
             int index = str.indexOf("++");
-            if(!canWin(s.substring(0, index) + "--" + s.substring(index + 2))) {
+            if (!canWin(s.substring(0, index) + "--" + s.substring(index + 2))) {
                 return true;
             }
             str = str.substring(0, index) + "-" + str.substring(index + 1);
@@ -63,15 +63,15 @@ For loop and the if statement works as 'OR': just need one of the p1's movement 
 */
 
 public class Solution {
-  public static boolean canWin(String s) {
+    public static boolean canWin(String s) {
         if (s == null || s.length() <= 1) {
             return false;
         }
         String str = new String(s);
         for (int i = str.indexOf("++"); i >= 0 && i < str.length() - 1; i = str.indexOf("++")) {
-           if (!canWin( s.substring(0, i) + "--" + s.substring(i + 2))) {//Just pick one way of p1's move
-               return true;
-           }
+            if (!canWin(s.substring(0, i) + "--" + s.substring(i + 2))) {//Just pick one way of p1's move
+                return true;
+            }
             str = str.substring(0, i) + "-" + str.substring(i + 1);//Help to move certain spot.
         }
         return false;
@@ -90,7 +90,7 @@ However, a bit of code redundancy, does not feel good about this.
 Fails on "+++++++++"
 */
 public class Solution {
-  public static boolean canWin(String s) {
+    public static boolean canWin(String s) {
         if (s == null || s.length() <= 1) {
             return false;
         }
@@ -106,27 +106,27 @@ public class Solution {
         return rst;
 
     }
+
     public static boolean checkP1Win(String str, int x, boolean isP1) {
-        String s = str.substring(0,x) + "--" + str.substring(x + 2);
+        String s = str.substring(0, x) + "--" + str.substring(x + 2);
         if (s.indexOf("++") == -1) {
             return isP1;
-        } 
-	    for (int i = s.indexOf("++"); i >= 0 && i < s.length() - 1; i = s.indexOf("++")) {
-	        if (checkP1Win(s, i, !isP1)) {
-	            return true;
-	        }
-	        s = s.substring(0, i) + "-" + s.substring(i + 1);
-	    } 
-	    return false;
+        }
+        for (int i = s.indexOf("++"); i >= 0 && i < s.length() - 1; i = s.indexOf("++")) {
+            if (checkP1Win(s, i, !isP1)) {
+                return true;
+            }
+            s = s.substring(0, i) + "-" + s.substring(i + 1);
+        }
+        return false;
     }
 
 
 }
 
 
-
 public class Solution {
-  public static boolean canWin(String s) {
+    public static boolean canWin(String s) {
         if (s == null || s.length() <= 1) {
             return false;
         }
@@ -142,30 +142,31 @@ public class Solution {
         return rst;
 
     }
+
     public static boolean checkP1Win(String str, int x, boolean isP1) {
-        String s = str.substring(0,x) + "--" + str.substring(x + 2);
+        String s = str.substring(0, x) + "--" + str.substring(x + 2);
         if (s.indexOf("++") == -1) {
             return isP1;
-        } 
+        }
         if (isP1) {
-        	String temp = s;
-		    for (int i = temp.indexOf("++"); i >= 0 && i < temp.length() - 1; i = temp.indexOf("++")) {
-		        if (checkP1Win(s, i, !isP1)) {
-		            return true;
-		        }
-		        temp = temp.substring(0, i) + "-" + temp.substring(i + 1);
-		    } 
-		    return false;
-	    } else {
-	    	String temp = s;
-	    	for (int i = temp.indexOf("++"); i >= 0 && i < temp.length() - 1; i = temp.indexOf("++")) {
-		        if (!checkP1Win(s, i, !isP1)) {
-		            return false;
-		        }
-		        temp = temp.substring(0, i) + "-" + temp.substring(i + 1);
-		    } 
-		    return true;
-	    }
+            String temp = s;
+            for (int i = temp.indexOf("++"); i >= 0 && i < temp.length() - 1; i = temp.indexOf("++")) {
+                if (checkP1Win(s, i, !isP1)) {
+                    return true;
+                }
+                temp = temp.substring(0, i) + "-" + temp.substring(i + 1);
+            }
+            return false;
+        } else {
+            String temp = s;
+            for (int i = temp.indexOf("++"); i >= 0 && i < temp.length() - 1; i = temp.indexOf("++")) {
+                if (!checkP1Win(s, i, !isP1)) {
+                    return false;
+                }
+                temp = temp.substring(0, i) + "-" + temp.substring(i + 1);
+            }
+            return true;
+        }
     }
 }
 ```

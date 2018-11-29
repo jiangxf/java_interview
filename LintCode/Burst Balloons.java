@@ -1,12 +1,12 @@
 其实会做之后挺好想的一个DP。
-dp[i][j] =  balloons i~j 之间的sum. 然后找哪个点开始burst? 设为x。
-For loop 所有的点作为x， 去burst。
-每次burst都切成了三份：左边可以recusive 求左边剩下的部分的最大值 + 中间3项相乘 + 右边递归下去求最大值。
+        dp[i][j]=balloons i~j 之间的sum.然后找哪个点开始burst?设为x。
+        For loop 所有的点作为x， 去burst。
+        每次burst都切成了三份：左边可以recusive 求左边剩下的部分的最大值+中间3项相乘+右边递归下去求最大值。
 
 
-这个是momorization, 而不纯是DP
-因为recursive了，其实还是搜索，但是memorize了求过的值，节省了Processing
-```
+        这个是momorization,而不纯是DP
+        因为recursive了，其实还是搜索，但是memorize了求过的值，节省了Processing
+        ```
 /*
 Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. 
 You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] * nums[i] * nums[right] coins. 
@@ -58,11 +58,12 @@ Divide and Conquer Dynamic Programming
 
 
 public class Solution {
-	int[][] dp;
-	int[] values;
+    int[][] dp;
+    int[] values;
+
     public int maxCoins(int[] nums) {
         if (nums == null || nums.length == 0) {
-        	return 0;
+            return 0;
         }
         int n = nums.length;
         dp = new int[n + 2][n + 2];
@@ -71,20 +72,20 @@ public class Solution {
         values = new int[n + 2];
         values[0] = values[n + 1] = 1;
         for (int i = 1; i < n + 1; i++) {
-        	values[i] = nums[i - 1];
+            values[i] = nums[i - 1];
         }
-       
+
         return DP(1, n);
     }
 
-    public int DP(int i, int j){
-    	if (dp[i][j] > 0) {//momorization
-    		return dp[i][j];
-    	}
-    	for (int x = i; x <= j; x++) {
-    		dp[i][j] = Math.max(dp[i][j], DP(i, x - 1) + values[i-1]*values[x]*values[j+1] + DP(x + 1, j));
-    	}
-    	return dp[i][j];
+    public int DP(int i, int j) {
+        if (dp[i][j] > 0) {//momorization
+            return dp[i][j];
+        }
+        for (int x = i; x <= j; x++) {
+            dp[i][j] = Math.max(dp[i][j], DP(i, x - 1) + values[i - 1] * values[x] * values[j + 1] + DP(x + 1, j));
+        }
+        return dp[i][j];
     }
 }
 

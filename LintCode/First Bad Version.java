@@ -1,6 +1,6 @@
 Binary Search的典型应用之一
-Binary Search常常是寻找first position或者是last position,
-本题为寻找first position,故第一反应为试用二分法进行查找。
+        Binary Search常常是寻找first position或者是last position,
+        本题为寻找first position,故第一反应为试用二分法进行查找。
 
 /*
 The code base version is an integer start from 1 to n. 
@@ -34,11 +34,11 @@ Binary Search LintCode Copyright Facebook
 
 /**
  * public class SVNRepo {
- *     public static boolean isBadVersion(int k);
+ * public static boolean isBadVersion(int k);
  * }
- * you can use SVNRepo.isBadVersion(k) to judge whether 
+ * you can use SVNRepo.isBadVersion(k) to judge whether
  * the kth code version is bad or not.
-*/
+ */
 class Solution {
     /**
      * @param n: An integers.
@@ -47,7 +47,7 @@ class Solution {
     public int findFirstBadVersion(int n) {
         int start = 0;
         int end = n;
-        
+
         while (start < end) {
             int mid = start + (end - start) / 2;
             if (!SVNRepo.isBadVersion(mid)) {
@@ -56,7 +56,7 @@ class Solution {
                 end = mid;
             }
         }
-        
+
         return start;
     }
 }

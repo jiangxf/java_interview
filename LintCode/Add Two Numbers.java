@@ -1,13 +1,13 @@
 E
 
-LinkedList都已经反转好了，直接做。
+        LinkedList都已经反转好了，直接做。
 
-遍历两个l1,l2把carry-on处理好，每次生成一个新node，最后检查carry-on。
+        遍历两个l1,l2把carry-on处理好，每次生成一个新node，最后检查carry-on。
 
-跟Add Binary的理解方式一模一样。
+        跟Add Binary的理解方式一模一样。
 
 
-```
+        ```
 /*
 You have two numbers represented by a linked list, 
 where each node contains a single digit. 
@@ -30,19 +30,19 @@ Cracking The Coding Interview Linked List High Precision
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;      
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class Solution {
     /**
      * @param l1: the first list
      * @param l2: the second list
-     * @return: the sum list of l1 and l2 
+     * @return: the sum list of l1 and l2
      */
     public ListNode addLists(ListNode l1, ListNode l2) {
         ListNode rst = new ListNode(0);

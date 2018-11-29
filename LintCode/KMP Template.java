@@ -1,14 +1,14 @@
 /**
  * 详细解析可以参考我的Blog:
  * http://www.cnblogs.com/cherryljr/p/6519748.html
- *
+ * <p>
  * 一个小问题：
- *  为什么 模式字符串p 在跳跃移动的时候直接将 j 指针移动到了 next[j] 位置呢？
- *  有没有可能存在 在 0~next[j] 使得整个字符串匹配的答案呢？
- *  答案是不可能的，具体证明可以使用 反证法。
- *  假设存在的话，我们就可以在 字符串p 中找到一个更长的 相同前后缀，
- *  这与 next[] 的定义是互相违背的，即除非你 next[] 计算错误，否则不可能发生这种情况。
- * 
+ * 为什么 模式字符串p 在跳跃移动的时候直接将 j 指针移动到了 next[j] 位置呢？
+ * 有没有可能存在 在 0~next[j] 使得整个字符串匹配的答案呢？
+ * 答案是不可能的，具体证明可以使用 反证法。
+ * 假设存在的话，我们就可以在 字符串p 中找到一个更长的 相同前后缀，
+ * 这与 next[] 的定义是互相违背的，即除非你 next[] 计算错误，否则不可能发生这种情况。
+ * <p>
  * 相关练习：
  * https://github.com/cherryljr/LeetCode/blob/master/Repeated%20String%20Match.java
  * https://github.com/cherryljr/LeetCode/blob/master/Repeated%20Substring%20Pattern.java

@@ -26,10 +26,10 @@ Binary Search Array Sorted Array
 */
 
 public class Solution {
-    /** 
-     *@param A : an integer sorted array
-     *@param target :  an integer to be inserted
-     *return : a list of length 2, [index1, index2]
+    /**
+     * @param A      : an integer sorted array
+     * @param target :  an integer to be inserted
+     *               return : a list of length 2, [index1, index2]
      */
     public int[] searchRange(int[] A, int target) {
         // write your code here
@@ -39,11 +39,11 @@ public class Solution {
             rst[1] = -1;
             return rst;
         }
-        
+
         //  search for left bound
         int start = 0;
         int end = A.length - 1;
-        while (start + 1 < end)  {
+        while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (A[mid] == target) {
                 end = mid;
@@ -59,10 +59,10 @@ public class Solution {
         } else if (A[end] == target) {
             rst[0] = end;
         } else {
-            rst[0] = rst[1]  = -1;
+            rst[0] = rst[1] = -1;
             return rst;
         }
-        
+
         //  search for right bound
         start = 0;
         end = A.length - 1;
@@ -85,7 +85,7 @@ public class Solution {
             rst[0] = rst[1] = -1;
             return rst;
         }
-        
+
         return rst;
     }
 }

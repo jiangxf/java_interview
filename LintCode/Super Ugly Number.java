@@ -22,15 +22,15 @@ Given n = 6, primes = [2, 7, 13, 19] return 13
  * 由于我们是要得到从小到大的结果，所以我们可以维护一个 idx 数组，来记录对应质数下一个需要被乘的已有数的index,
  * 即此处的 idx[] 相当于 Ugly Number II 中的 i2, i3, i5 这三个数的作用。
  * 我们取最小的结果当做下个数，对于那个最小的结果，需要增加 idx 数组中那个质数对应的index,表明下一次用下个已有的数来乘对应的质数。
- *
+ * <p>
  * Note: 对于已有序列中的数，乘不同质数得到的结果会可能存在重复，
  * 比如题目中例子2, 7与7, 2就重复了，解决方法很简单，就是只要是等于最小的结果，就增加对应 idx 数组中的元素。
- *
+ * <p>
  * 时间复杂度：O(nk)
  */
 public class Solution {
     /**
-     * @param n: a positive integer
+     * @param n:      a positive integer
      * @param primes: the given prime list
      * @return: the nth super ugly number
      */
@@ -65,7 +65,7 @@ public class Solution {
  */
 public class Solution {
     /**
-     * @param n: a positive integer
+     * @param n:      a positive integer
      * @param primes: the given prime list
      * @return: the nth super ugly number
      */

@@ -23,12 +23,12 @@ All numbers are positive, but the submatrix cannot be empty, so we take the smal
  * 典型的 SubMatrix 求子矩阵和问题。
  * 首先求出 sum[][]，然后利用 Kadane's Algorithm 求最小子数组和的方法做就可以了。
  * 还有一道求 最大子矩阵和 的问题。做法基本相同，在 Kadane's 的地方改下就行。
- *
+ * <p>
  * 时间复杂度：O(n^3)
  * 空间复杂度：O(n^2) 可以优化成 O(n)，但是这种比较水的题直接用模板过不好吗...
- *
+ * <p>
  * 详细解析可以参考 Maximum Submatrix：
- *  https://github.com/cherryljr/LintCode/blob/master/Maximum%20Submatrix.java
+ * https://github.com/cherryljr/LintCode/blob/master/Maximum%20Submatrix.java
  */
 public class Solution {
     /**

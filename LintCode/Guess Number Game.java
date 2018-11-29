@@ -1,5 +1,5 @@
-该题是典型的 二分法 的题目。
-与 Search Insert Position 几乎相同。根据该思路编写程序即可。
+锟斤拷锟斤拷锟角碉拷锟酵碉拷 锟斤拷锟街凤拷 锟斤拷锟斤拷目锟斤拷
+        锟斤拷 Search Insert Position 锟斤拷锟斤拷锟斤拷同锟斤拷锟斤拷锟捷革拷思路锟斤拷写锟斤拷锟津即可★拷
 
 /*
 Description
@@ -30,24 +30,23 @@ public class Solution extends GuessGame {
     public int guessNumber(int n) {
         int left = 1;
         int right = n;
-        
+
         while (left + 1 < right) {
             int mid = left + (right - left) / 2;
             int res = guess(mid);
-            
+
             if (res == 0) {
                 return mid;
-            }
-            else if (res == -1) {
+            } else if (res == -1) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
             }
         }
-        
+
         if (guess(left) == 0) {
             return left;
-        } 
+        }
         return right;
     }
 }

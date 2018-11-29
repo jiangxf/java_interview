@@ -22,11 +22,11 @@ Return {A,B,D}, {C,E}. Since there are two connected component which is {A,B,D},
  * 这道题目描述得不好，其实就是给你一张图，求图的各个联通块。
  * 输出时各个联通块内的节点按照字符顺序进行排序。
  * 显然是对于 图遍历算法 的一个考察，这里使用 宽度优先搜索 即可轻松解决。
- *
+ * <p>
  * 当然本题还能通过 Union Find 方法来解决，但是 并查集 写法还是相对麻烦一些的。
  * 并且 时空复杂度 还会稍微高一些。因此这边就不采用该方法了。
  * 时间复杂度: BFS O(n) + 联通区排序 O(nlogn)
- * 
+ * <p>
  * 对 Union Find 有兴趣的可以去看下该题的 Follow Up:
  * Find the Weak Connected Component in the Directed Graph:
  * 参考资料:

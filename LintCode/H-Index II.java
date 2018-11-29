@@ -25,13 +25,13 @@ Note: If there are several possible values for h, the maximum one is taken as th
  * 我们使用 citations[mid](当前的引用数) 与 n - mid(大于等于当前引用数的文章)
  * 二者的大小关系来作为二分的依据。则结果 H-index 就是 n - left.
  * 因此我们可以发现，需要二分求解的是 下界。
- *  1. 当 citations[mid] >= n - mid 时，说明当前 H-index 至少为 n-mid
- *  因此我们需要缩小右边界 right 到 mid,即相当于left有了更小的范围，n-left 会更大。
- *  2. 当 citations[mid] < n - mid 时，说明当前 n-mid 篇文章并不满足，
- *  H-index比当前值更小，因此需要取 left = mid + 1
+ * 1. 当 citations[mid] >= n - mid 时，说明当前 H-index 至少为 n-mid
+ * 因此我们需要缩小右边界 right 到 mid,即相当于left有了更小的范围，n-left 会更大。
+ * 2. 当 citations[mid] < n - mid 时，说明当前 n-mid 篇文章并不满足，
+ * H-index比当前值更小，因此需要取 left = mid + 1
  * 其实上述分析了这些看上去可能比较抽象，推荐大家直接写个例子分析就好了。
  * 会比直接分析快上不少，也更加简单。
- * 
+ * <p>
  * 时间复杂度：O(logn)
  */
 class Solution {

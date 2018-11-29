@@ -21,30 +21,30 @@ Array Two Pointers Facebook
  * https://github.com/cherryljr/LeetCode/blob/master/Sliding%20Window%20Template.java
  * Of course, this question could be solved by more concise code, so we don't need to use the template.
  * But the main idea is the same.
- *
+ * <p>
  * Algorithm
  * Initialize left pointer to 0 and sum to 0
  * Iterate over the nums:
- *  Add nums[right] to sum
- *  While sum is greater than or equal to s:
- *      1. Update rst=min(rst,right−left+1), where right−left+1 is the size of current subarray
- *      2. It means that the first index can safely be incremented,
- *      since, the minimum subarray starting with this index with sum≥s has been achieved
- *      3. nums[left] from sum and increment left
- *
+ * Add nums[right] to sum
+ * While sum is greater than or equal to s:
+ * 1. Update rst=min(rst,right−left+1), where right−left+1 is the size of current subarray
+ * 2. It means that the first index can safely be incremented,
+ * since, the minimum subarray starting with this index with sum≥s has been achieved
+ * 3. nums[left] from sum and increment left
+ * <p>
  * Complexity analysis
- *  Time complexity: O(n). Single iteration of O(n).
- *  Each element can be visited at most twice, once by the right pointer(i) and (at most)once by the left pointer.
- *  Space complexity: O(1) extra space.
- *  Only constant space required for left, right, sum and rst.
- *
+ * Time complexity: O(n). Single iteration of O(n).
+ * Each element can be visited at most twice, once by the right pointer(i) and (at most)once by the left pointer.
+ * Space complexity: O(1) extra space.
+ * Only constant space required for left, right, sum and rst.
+ * <p>
  * Reference:
  * https://leetcode.com/articles/minimum-size-subarray-sum/#
  */
 public class Solution {
     /**
      * @param nums: an array of integers
-     * @param s: An integer
+     * @param s:    An integer
      * @return: an integer representing the minimum size of subarray
      */
     public int minimumSize(int[] nums, int s) {

@@ -28,19 +28,19 @@ Sort Array Two Pointers Facebook
  * 实际上就是 荷兰国旗问题。
  * 属于经过优化的 快速排序 的 partition 方法。
  * （将数组由原来的分成 2 个部分，改成分为 3 个部分。分别为：<pivot; =pivot; >pivot）
- *
+ * <p>
  * 具体做法:
  * 选定 pivot 为 white,大小为1.
  * 定义 小于pivot部分的数组(red)的右边界 less 和 大于pivot部分数组(blue)的左边界 more.
  * 然后利用指针 left 从 left 开始向 right 进行遍历。(直接利用了 left 的空间，省些空间哈）
- *  当 nums[left] = 0 时，说明为 red, 应将该元素放在 小于pivot部分 中，
- *  因此将 小于pivot部分的 下一个位置 与 nums[left] 进行交换（小于pivot部分的数组扩大） 即 swap(nums[++less], nums[left++])
- *  当 nums[left] = 1 时，说明为 white, 应将该元素放在 等于pivot部分 中，故 left 继续向后移动 (left++)
- *  当 nums[left] = 2 时，说明为 blue, 应将该元素放在 大于pivot部分 中，
- *  因此将 大于pivot部分的 前一个位置 与 nums[left] 进行交换（大于pivot部分的数组扩大）故 swap(nums[--more], nums[left])
- *  注意：交换后 nums[left] 位置上的数大小并不能确定(可能为 0,1,2),故需要再次进行判断，不能进行 left++ 的操作.
- *  直至 left 与 more 相遇，说明已经遍历到大于pivot部分数组的边界了，则结束遍历。
- *
+ * 当 nums[left] = 0 时，说明为 red, 应将该元素放在 小于pivot部分 中，
+ * 因此将 小于pivot部分的 下一个位置 与 nums[left] 进行交换（小于pivot部分的数组扩大） 即 swap(nums[++less], nums[left++])
+ * 当 nums[left] = 1 时，说明为 white, 应将该元素放在 等于pivot部分 中，故 left 继续向后移动 (left++)
+ * 当 nums[left] = 2 时，说明为 blue, 应将该元素放在 大于pivot部分 中，
+ * 因此将 大于pivot部分的 前一个位置 与 nums[left] 进行交换（大于pivot部分的数组扩大）故 swap(nums[--more], nums[left])
+ * 注意：交换后 nums[left] 位置上的数大小并不能确定(可能为 0,1,2),故需要再次进行判断，不能进行 left++ 的操作.
+ * 直至 left 与 more 相遇，说明已经遍历到大于pivot部分数组的边界了，则结束遍历。
+ * <p>
  * 算法时间复杂度为 O(N)； 时间复杂度为 O(1)
  */
 public class Solution {
@@ -79,6 +79,6 @@ public class Solution {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
-    } 
+    }
 }
 

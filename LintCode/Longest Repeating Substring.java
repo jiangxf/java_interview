@@ -24,12 +24,12 @@ Netflix
 
 /**
  * 前言：对于我而言，这是一道非常好的题目...虽然它在Contest上给我贡献了两个Bug...
- * 
+ * <p>
  * Approach 1: HashMap (Memory Limit Exceeded)
  * 就最直观暴力的方法就是：枚举所有可能的子串，并记录相应的出现次数。
  * 然后选出出现次数 不小于k次 的子串，在里面选择长度最长的子串即可。
  * 时间复杂度：O(n^2)
- *
+ * <p>
  * 就时间复杂度而言，这道题目还是能过的，但是这道题目我们还需要考虑一下 空间复杂度。
  * 如果我们直接将各个 subString 存到了哈希表中，对于大数据将会直接导致内存爆炸。
  * 但是，我们并不需要获得具体最长子串，而是只需要其长度即可。
@@ -40,7 +40,7 @@ Netflix
 public class Solution {
     /**
      * @param str: The input string
-     * @param k: The repeated times
+     * @param k:   The repeated times
      * @return: The answer
      */
     public int longestRepeatingSubsequenceII(String str, int k) {
@@ -79,7 +79,7 @@ public class Solution {
  * 本题中我们是采用暴力遍历的方法获得所有可能的子串，所以当前子串基本都是在前一个子串的基础上拼接上一个字符得到。
  * 那么对于拼接字符串，我们肯定要使用 StringBuilder 啊。
  * 因此该解法中采用了 StringBuilder 一次拼接一个字符的方式来替代原本所使用的 subString() 方法。
- *
+ * <p>
  * 再次提交，果然不会爆内存了...但是！答案错误了...
  * 这个 Case 是一个非常长的字符串...我们的答案比 Expected Answer 大了点。
  * 针对这个现象，我们很容易就能推测出原因：hashValue 发生了重复，即原本两个不相同的字符串却得到了相同的 hashValue.
@@ -92,7 +92,7 @@ public class Solution {
 public class Solution {
     /**
      * @param str: The input string
-     * @param k: The repeated times
+     * @param k:   The repeated times
      * @return: The answer
      */
     public int longestRepeatingSubsequenceII(String str, int k) {
@@ -134,7 +134,7 @@ public class Solution {
      * the string, and {@code ^} indicates exponentiation.
      * (The hash value of the empty string is zero.)
      *
-     * @return  a hash code value for this object.
+     * @return a hash code value for this object.
      */
     public int hashCode() {
         int h = hash;
@@ -160,7 +160,7 @@ public class Solution {
 
     /**
      * @param str: The input string
-     * @param k: The repeated times
+     * @param k:   The repeated times
      * @return: The answer
      */
     public int longestRepeatingSubsequenceII(String str, int k) {
@@ -169,22 +169,22 @@ public class Solution {
         }
 
         Map<Long, Integer> map = new HashMap<>();
-        for(int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             long hashValue = 0;
-            for(int j = i; j < str.length(); j++) {
+            for (int j = i; j < str.length(); j++) {
                 // 对于 hashValue 的计算，因为我们是采用在上一个字符串结尾附加得到当前字符串的
                 // 所以 hashValue 可以在上一个基础上直接进行计算（参考源码）
-                hashValue = ((SEED * hashValue + str.charAt(j) - 'a' + 1 ) % MOD);
+                hashValue = ((SEED * hashValue + str.charAt(j) - 'a' + 1) % MOD);
                 map.put(hashValue, map.getOrDefault(hashValue, 0) + 1);
             }
         }
 
         int maxLen = 0;
-        for(int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             long hashValue = 0;
-            for(int j = i; j < str.length(); j++) {
-                hashValue = ((SEED * hashValue + str.charAt(j) - 'a' + 1 ) % MOD);
-                if(map.get(hashValue) >= k) {
+            for (int j = i; j < str.length(); j++) {
+                hashValue = ((SEED * hashValue + str.charAt(j) - 'a' + 1) % MOD);
+                if (map.get(hashValue) >= k) {
                     maxLen = Math.max(maxLen, j - i + 1);
                 }
             }

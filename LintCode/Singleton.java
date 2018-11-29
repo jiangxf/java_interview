@@ -27,20 +27,21 @@ http://www.cnblogs.com/EdwardLiu/p/4443230.html
 
 
 class Solution {
-	public static volatile Solution solution = null;
+    public static volatile Solution solution = null;
+
     /**
      * @return: The same instance of this class every time
      */
     public static Solution getInstance() {
         if (solution == null) {
             synchronized (Solution.class) {
-                 // Double check
-                 if (solution == null) {
-                     solution = new Solution();
-                 }
-             }
-         }
-         return solution;
+                // Double check
+                if (solution == null) {
+                    solution = new Solution();
+                }
+            }
+        }
+        return solution;
     }
 };
 
@@ -50,6 +51,7 @@ class Solution {
      * @return: The same instance of this class every time
      */
     public static Solution instance = null;
+
     public static Solution getInstance() {
         if (instance == null) {
             instance = new Solution();

@@ -16,12 +16,12 @@ Linked List Uber Zenefits Google
  * Approach 1: HashMap + DoubleLinkedList
  * 这类题目纯粹考察的是我们的 Coding 能力。
  * 只需要分析好这个数据结构需要实现的 逻辑功能，并处理好各种情况下的 Case,就能够解决题目。
- *
+ * <p>
  * 为了实现 LRU，首先我们需要准备一个 HashMap 来存储 key 与对应的信息 value。
  * 其次，各个节点具有优先级（最新被调用的优先级最高），并且我们需要 频繁地 对其进行修改。
  * 那么最合适的毫无疑问就是 链表了。并且我们还需要在队列的两端都能够进行操作，
  * 因此我们需要设计一个 双向链表。具备 head, tail 指针，数据从 尾部 插入（tail节点优先级最高）
- *
+ * <p>
  * 接下来我们来考虑，HashMap 和 链表的节点 中应该存放哪些信息。
  * 对与 HashMap 而言，key毫无疑问就是我们插入的 key 了，但是 value 就直接是对应的 value 吗？
  * 并不是，因为对于 链表 而言，查询一个 key 需要花费 O(n) 的时间代价，
@@ -31,17 +31,18 @@ Linked List Uber Zenefits Google
  * 放入 key 的原因是考虑到了 removeHead() 这个函数，当 LRU 的大小到达 CAPACITY 时，
  * 如果继续插入元素，我们将移除 优先级最低 的节点，也就是我们的 head 节点。
  * 这个时候如果 Node 中含有 key 这个信息的话，我们可以直接通过 Node 获得 key，从而对 map 也进行相应的 remove 操作。
- *
+ * <p>
  * 具体实现请参考代码以及注释。
  */
 public class LRUCache {
+    public final int CAPACITY;
     private Map<Integer, Node> map;
     private DoubleLinkedList list;
-    public final int CAPACITY;
 
     /*
      * @param capacity: An integer
-     */public LRUCache(int capacity) {
+     */
+    public LRUCache(int capacity) {
         // do intialization if necessary
         this.map = new HashMap<>();
         this.list = new DoubleLinkedList();
@@ -174,7 +175,7 @@ public class LRUCache {
 /**
  * Approach 2: Using LinkedHashMap
  * This is the laziest implementation using Java’s LinkedHashMap.
- *
+ * <p>
  * Several points to mention:
  * In the constructor, the third boolean parameter specifies the ordering mode.
  * If we set it to true, it will be in access order.
@@ -184,8 +185,8 @@ public class LRUCache {
  * (https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html#removeEldestEntry-java.util.Map.Entry-)
  */
 public class LRUCache {
-    private LinkedHashMap<Integer, Integer> map;
     private final int CAPACITY;
+    private LinkedHashMap<Integer, Integer> map;
 
     /*
      * @param capacity: An integer
@@ -194,7 +195,7 @@ public class LRUCache {
         // do intialization if necessary
         this.CAPACITY = capacity;
         // The map will be in access order
-        map = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true){
+        map = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
             protected boolean removeEldestEntry(Map.Entry eldest) {
                 return size() > CAPACITY;
             }
@@ -224,6 +225,18 @@ public class LRUCache {
  * LRU Cache Template (Using Generics)
  */
 public class LRU {
+
+    public static void main(String[] args) {
+        LRUCache<String, Integer> testCache = new LRUCache<>(3);
+        testCache.set("A", 1);
+        testCache.set("B", 2);
+        testCache.set("C", 3);
+        System.out.println(testCache.get("B"));
+        System.out.println(testCache.get("A"));
+        testCache.set("D", 4);
+        System.out.println(testCache.get("D"));
+        System.out.println(testCache.get("C"));
+    }
 
     public static class Node<K, V> {
         public K key;
@@ -300,9 +313,9 @@ public class LRU {
     }
 
     public static class LRUCache<K, V> {
+        private final int CAPACITY;
         private HashMap<K, Node<K, V>> map;
         private DoubleLinkedList<K, V> list;
-        private final int CAPACITY;
 
         public LRUCache(int capacity) {
             // do intialization
@@ -343,18 +356,6 @@ public class LRU {
             map.remove(removedNode.key);
         }
 
-    }
-
-    public static void main(String[] args) {
-        LRUCache<String, Integer> testCache = new LRUCache<>(3);
-        testCache.set("A", 1);
-        testCache.set("B", 2);
-        testCache.set("C", 3);
-        System.out.println(testCache.get("B"));
-        System.out.println(testCache.get("A"));
-        testCache.set("D", 4);
-        System.out.println(testCache.get("D"));
-        System.out.println(testCache.get("C"));
     }
 
 }

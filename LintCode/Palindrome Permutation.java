@@ -1,5 +1,5 @@
 注意，条件里面没说是否全是lower case letter
-```
+        ```
 /*
 Given a string, determine if a permutation of the string could form a palindrome.
 
@@ -40,7 +40,7 @@ public class Solution {
                 map.put(str, map.get(str) + 1);
             }
         }//ENd for
-        int countOdd = 0; 
+        int countOdd = 0;
         for (HashMap.Entry<String, Integer> entry : map.entrySet()) {
             if (entry.getValue() % 2 == 1) {
                 countOdd++;
@@ -52,8 +52,6 @@ public class Solution {
         return true;
     }
 }
-
-
 
 
 /*
@@ -82,7 +80,7 @@ public class Solution {
                 return false;
             }
         }
-        
+
         return true;
     }
 }

@@ -24,42 +24,42 @@ Note: becase we don't have space at end of the char[], so we will ignore last wo
 */
 public class Solution {
     public void reverseWords(char[] s) {
-    	if (s == null || s.length == 0) {
-    		return;
-    	}
-    	int len = s.length;
-    	//reverse whole
-    	for (int i = 0; i < len / 2; i++) {
-    		char temp = s[i];
-    		s[i] = s[len - 1 - i];
-    		s[len - 1 - i] = temp;
-    	}
+        if (s == null || s.length == 0) {
+            return;
+        }
+        int len = s.length;
+        //reverse whole
+        for (int i = 0; i < len / 2; i++) {
+            char temp = s[i];
+            s[i] = s[len - 1 - i];
+            s[len - 1 - i] = temp;
+        }
 
-    	//reverse partial
-    	int start = 0;
-    	int mid = 0;
-    	int end = 0;
-    	for (int i = 0; i < len; i++) {
-    		if (s[i] == ' ') {
-    			mid = start + (end - start) / 2;
-    			for (int j = start; j <= mid; j++) {
-    				char temp = s[j];
-    				s[j] = s[end - (j - start)];
-    				s[end - (j - start)] = temp;
-    			}
-    			start = i + 1;
-    		} else {
-    			end = i;
-    		}
-    	}
+        //reverse partial
+        int start = 0;
+        int mid = 0;
+        int end = 0;
+        for (int i = 0; i < len; i++) {
+            if (s[i] == ' ') {
+                mid = start + (end - start) / 2;
+                for (int j = start; j <= mid; j++) {
+                    char temp = s[j];
+                    s[j] = s[end - (j - start)];
+                    s[end - (j - start)] = temp;
+                }
+                start = i + 1;
+            } else {
+                end = i;
+            }
+        }
 
-    	//Process last word
-    	mid = start + (end - start) / 2;
-    	for (int j = start; j <= mid; j++) {
-			char temp = s[j];
-			s[j] = s[end - (j - start)];
-			s[end - (j - start)] = temp;
-		}
-    	
+        //Process last word
+        mid = start + (end - start) / 2;
+        for (int j = start; j <= mid; j++) {
+            char temp = s[j];
+            s[j] = s[end - (j - start)];
+            s[end - (j - start)] = temp;
+        }
+
     }
 }

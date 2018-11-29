@@ -83,7 +83,7 @@ public class Solution {
 
 /**
  * Approach 2: Binary Search (Only Once)
- * We can Convert into a 1D array firstly, 
+ * We can Convert into a 1D array firstly,
  * Then use BinarySearch only once.
  */
 public class Solution {

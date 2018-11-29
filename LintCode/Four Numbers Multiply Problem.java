@@ -36,7 +36,7 @@ The solutions that meet the conditions are:
  * 而目标就是在剩下的数字中找到剩下的两个数，使得总共的乘积 <= k.
  * 为了加快对剩下两个元素的查找，我们可以先对数组进行排序，
  * 然后就可以利用 Two Pointers 的做法找出符合要求的区间，然后直接加上区间长度即可
- *
+ * <p>
  * 时间复杂度：O(n^3)
  * 虽然时间复杂度为 O(n^3) 但是处理过程中利用了 Two Pointers 跳过了大量的计算。
  * 因此实际花费的时间远远没有这么多。
@@ -55,7 +55,7 @@ public class Solution {
         // 枚举第一个元素和第二个元素的位置
         for (int first = 0; first <= n - 4; first++) {
             for (int second = first + 1; second <= n - 3; second++) {
-                long product = (long)a[first] * a[second];
+                long product = (long) a[first] * a[second];
                 if (product > k) {
                     continue;
                 }
@@ -83,17 +83,17 @@ public class Solution {
  * 思想相同，依然是先枚举两个数，将他们进行相乘，然后用 need = k / product.
  * 去枚举剩下的可能数值。因为需要枚举，所以就算只有两个数的话，也需要用掉 O(n^2) 的时间。
  * 因此我们想能否在 O(logn) 的时间内去获得剩下的那两个数值信息。
- * 
- * 因为涉及到了范围查询与值的修改，又想在 O(logn) 时间内办到的话，我们自然能够想到使用 
+ * <p>
+ * 因为涉及到了范围查询与值的修改，又想在 O(logn) 时间内办到的话，我们自然能够想到使用
  * Segment Tree 或者 Binary Index Tree 来实现，线段树代码量较大，因此我们选择了易于实现的 BIT.
- * 
+ * <p>
  * 具体做法：
- *  枚举 第三个元素 和 第四个元素 的位置，并计算出乘积，并以此来建立 BIT.
- *  BITree[i] 表示当前乘积小于等于 i 的乘积个数的值(这里的乘积指的是 第三个元素 和 第四个元素 的乘积)
- *  然后枚举 第一个元素 和 第二个元素 的位置，根据需要的 needProduct = k / (a[first] * a[second])
- *  去 BIT 中查询对应的结果，然后加上即可。
- *  该做法需要我们逆着顺序去推，即利用 3rd*4th 去建树，然后去推 1st*2nd.这样思路会更顺一些.
- *  
+ * 枚举 第三个元素 和 第四个元素 的位置，并计算出乘积，并以此来建立 BIT.
+ * BITree[i] 表示当前乘积小于等于 i 的乘积个数的值(这里的乘积指的是 第三个元素 和 第四个元素 的乘积)
+ * 然后枚举 第一个元素 和 第二个元素 的位置，根据需要的 needProduct = k / (a[first] * a[second])
+ * 去 BIT 中查询对应的结果，然后加上即可。
+ * 该做法需要我们逆着顺序去推，即利用 3rd*4th 去建树，然后去推 1st*2nd.这样思路会更顺一些.
+ * <p>
  * 时间复杂度：O(n^2*logn)
  */
 public class Solution {
@@ -111,9 +111,9 @@ public class Solution {
             int third = second + 1;
             // Build the BIT
             for (int fourth = third + 1; fourth < n; fourth++) {
-                long product = (long)a[third] * a[fourth];
+                long product = (long) a[third] * a[fourth];
                 if (product <= k) {
-                    update(BITree, (int)product);
+                    update(BITree, (int) product);
                 }
             }
 
@@ -145,7 +145,7 @@ public class Solution {
  * 我们可以采用 折半枚举 + 二分查找 的方法来解决问题。
  * 通过这个方法可以进一步把时间复杂度优化到：O(n^2) 级别。
  * 参考：
- *  https://www.jiuzhang.com/solution/four-numbers-multiply-problem/
+ * https://www.jiuzhang.com/solution/four-numbers-multiply-problem/
  */
 public class Solution {
     private static final int MAX = 1000001;

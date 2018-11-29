@@ -27,7 +27,7 @@ Sweep line Interval Facebook
  * 我们只需要用一个 preCount 和 preIndex 来记录 count 的前一个状态即可。
  * 当 preCount = 2（两个人同时上线） 并且 count = 1 时（有一个人下线）
  * 就说明我们找到了一段 两个人同时在线 的区间即：[preIndex, currIndex]
- *
+ * <p>
  * 对于 扫描线 不清楚的可以参考：
  * https://github.com/cherryljr/LintCode/blob/master/Number%20of%20Airplanes%20in%20the%20Sky.java
  */

@@ -23,9 +23,9 @@ Array Dynamic Programming Enumeration
  * Approach 1: Traverse Array Twice
  * 简单明了，分别 从左到右 和 从右到左 遍历一遍数组.
  * 分别求得两种方式遍历的出的 最长连续递增子序列。最后取较大值即可。
- *  1. 对于 从左向右 遍历的方式，如果发现下一个数比当前数要大则 length + 1, 否则置为1.
- *  2. 对于 从右向左 遍历的方式，如果发现上一个数比当前数要大则 length + 1, 否则置为1.
- *  3. 取两次遍历得到的较大值即可.
+ * 1. 对于 从左向右 遍历的方式，如果发现下一个数比当前数要大则 length + 1, 否则置为1.
+ * 2. 对于 从右向左 遍历的方式，如果发现上一个数比当前数要大则 length + 1, 否则置为1.
+ * 3. 取两次遍历得到的较大值即可.
  */
 public class Solution {
     public int longestIncreasingContinuousSubsequence(int[] A) {

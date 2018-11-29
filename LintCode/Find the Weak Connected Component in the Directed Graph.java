@@ -25,7 +25,7 @@ Return {A,B,D}, {C,E,F}. Since there are two connected component which are {A,B,
  * 这道题目中的 graph 是 有向图. 所以观察例子：
  * 我们可以看到通过 BFS， C 可以访问到 E，但是 E 是无法访问到 F 的.
  * 但是题目要求的是 弱联通 区，所以 E 是可以通过 weak connection 访问到 F 的，即：答案应该是 C,E,F 一块才对。
- *
+ * <p>
  * 为了解决这个问题，本题使用了 并查集(Union Find) 这个数据结构。
  * 该数据结构通常被应用于：集合合并 与 判断点是否在在同一个集合中 这些情况中。
  * 本题中，我们可以用 Union Find 将各个节点 Union 起来形成一个个 弱连通区。
@@ -34,10 +34,10 @@ Return {A,B,D}, {C,E,F}. Since there are two connected component which are {A,B,
  * 然后对该 List 进行排序即可。
  * (Union 和 Find 操作都可以进行优化，具体优化请参见代码注释)
  * 时间复杂度：将所有节点 Union 起来 O(n) + 联通区排序 O(nlogn)
- *
+ * <p>
  * 数组 版本的模板可以参见：
  * https://github.com/cherryljr/LintCode/blob/master/Graph%20Valid%20Tree.java
- *
+ * <p>
  * 参考资料：
  * http://blog.csdn.net/dm_vincent/article/details/7655764
  * http://blog.csdn.net/dm_vincent/article/details/7769159
@@ -97,7 +97,7 @@ public class Solution {
 }
 
 // Union Find Template (HashMap)
-class UnionFind{
+class UnionFind {
     // HashMap maintaining key - > value (child -> parent) relationship
     HashMap<Integer, Integer> parent;
     // HashMap maintaining key -> value (node -> node's rank) relationship

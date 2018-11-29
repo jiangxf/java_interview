@@ -53,7 +53,7 @@ public class Solution {
                     rst[i] = nums[odd++];
             }
         }
-        
+
         return rst;
     }
 }

@@ -1,6 +1,6 @@
 M
 
-```
+        ```
 /*
 You are given an n x n 2D matrix representing an image.
 
@@ -25,7 +25,7 @@ public class Solution {
         }
         int n = matrix.length;
         //Flip UP/DOWN
-        for (int i = 0; i < n / 2; i++){
+        for (int i = 0; i < n / 2; i++) {
             for (int j = 0; j < n; j++) {
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[n - 1 - i][j];//(n-1) is end index, then, matrix[(n-1) - i] means the Symmetry element opposed item matrix[i]
@@ -70,7 +70,7 @@ public class Solution {
             return;
         }
         int n = matrix.length;
-        for (int i = 0; i < n / 2; i++){
+        for (int i = 0; i < n / 2; i++) {
             for (int j = 0; j < Math.ceil(n / 2.0); j++) {
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[n - 1 - j][i];

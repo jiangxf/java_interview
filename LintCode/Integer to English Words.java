@@ -30,6 +30,7 @@ zero
 public class Solution {
     public String[] v1 = {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
     public String[] v2 = {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
+
     public String numberToWords(int num) {
         if (num < 0) {
             return "";
@@ -39,13 +40,13 @@ public class Solution {
         }
         String rst = "";
         for (int i = 0; i < 4; i++) {
-            int partial = num  - (num / 1000) * 1000;
+            int partial = num - (num / 1000) * 1000;
             if (partial > 0) {
                 rst = helper(partial, i) + " " + rst;
             }
             num /= 1000;
         }
-        while (rst.charAt(rst.length() - 1) == ' ')  {
+        while (rst.charAt(rst.length() - 1) == ' ') {
             rst = rst.substring(0, rst.length() - 1);
         }
         return rst;
@@ -67,20 +68,20 @@ public class Solution {
             str += v2[numTens] + " ";
             str += v1[numDigit] + " ";
         }
-        
-        while (str.charAt(str.length() - 1) == ' ')  {
+
+        while (str.charAt(str.length() - 1) == ' ') {
             str = str.substring(0, str.length() - 1);
         }
-        
+
         //depending on i:
         switch (i) {
-            case 1 : 
+            case 1:
                 str += " Thousand";
                 break;
-            case 2 :
+            case 2:
                 str += " Million";
                 break;
-            case 3 :
+            case 3:
                 str += " Billion";
                 break;
         }

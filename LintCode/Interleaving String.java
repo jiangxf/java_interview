@@ -1,17 +1,17 @@
-Treu or False, ÊäÈëµÄ×Ö·û´®Ë³Ðò²»¿Éµ÷ => Two Sequnce DP
-¸ÃÌâËäÈ»ÓÐÈý¸ö²ÎÊý£¬µ«ÊÇs3Êµ¼ÊÉÏÊÇ²»»á¸Ä±äµÄ£¬ËùÒÔ»¹ÊÇÒ»¸öTwo Sequence DP
-State:
-	f[i][j]: ±íÊ¾s1µÄÇ°i¸ö×Ö·ûÓës2µÄÇ°j¸ö×Ö·ûÄÜ·ñ×é³És3µÄÇ°i+j¸ö×Ö·û
-Initialize:
-	s3È«ÓÉs1×é³É
-	f[i][0] = true // µ± s1.charAt(i - 1) == s3.charAt(i - 1) && result[i - 1][0] ³ÉÁ¢Ê±
-	s3È«ÓÉs2×é³É
-	f[0][j] = true // µ± s2.charAt(j - 1) == s3.charAt(j - 1) && result[0][j - 1] ³ÉÁ¢Ê±
-Function:
-	s1µÄµÚi¸ö×Ö·ûÓës3µÄµÚi+j¸ö×Ö·ûÏàµÈ£¬²¢ÇÒf[i-1][j]ÎªtrueÊ± => f[i][j] = true
-  s2µÄµÚj¸ö×Ö·ûÓës3µÄµÚi+j¸ö×Ö·ûÏàµÈ£¬²¢ÇÒf[i][j-1]ÎªtrueÊ± => f[i][j] = true
-Answer:
-	f[s1.length()][s2.length()]
+Treu or False, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ë³ï¿½ò²»¿Éµï¿½ =>Two Sequnce DP
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½s3Êµï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Ä±ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Two Sequence DP
+        State:
+        f[i][j]: ï¿½ï¿½Ê¾s1ï¿½ï¿½Ç°iï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½s2ï¿½ï¿½Ç°jï¿½ï¿½ï¿½Ö·ï¿½ï¿½Ü·ï¿½ï¿½ï¿½ï¿½s3ï¿½ï¿½Ç°i+jï¿½ï¿½ï¿½Ö·ï¿½
+        Initialize:
+        s3È«ï¿½ï¿½s1ï¿½ï¿½ï¿½
+        f[i][0]=true // ï¿½ï¿½ s1.charAt(i - 1) == s3.charAt(i - 1) && result[i - 1][0] ï¿½ï¿½ï¿½ï¿½Ê±
+        s3È«ï¿½ï¿½s2ï¿½ï¿½ï¿½
+        f[0][j]=true // ï¿½ï¿½ s2.charAt(j - 1) == s3.charAt(j - 1) && result[0][j - 1] ï¿½ï¿½ï¿½ï¿½Ê±
+        Function:
+        s1ï¿½Äµï¿½iï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½s3ï¿½Äµï¿½i+jï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½f[i-1][j]ÎªtrueÊ±=>f[i][j]=true
+        s2ï¿½Äµï¿½jï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½s3ï¿½Äµï¿½i+jï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½f[i][j-1]ÎªtrueÊ±=>f[i][j]=true
+        Answer:
+        f[s1.length()][s2.length()]
 	
 /*
 Given three strings: s1, s2, s3, determine whether s3 is formed by the interleaving of s1 and s2.
@@ -41,6 +41,7 @@ this is all because we are trying to get DP[i][j], which are 1 index more than l
 public class Solution {
     /**
      * Determine whether s3 is formed by interleaving of s1 and s2.
+     *
      * @param s1, s2, s3: As description.
      * @return: true or false.
      */
@@ -49,10 +50,10 @@ public class Solution {
         if (s1.length() + s2.length() != s3.length()) {
             return false;
         }
-        
+
         // State 
         boolean[][] result = new boolean[s1.length() + 1][s2.length() + 1];
-        
+
         // Initialize
         result[0][0] = true;
         for (int i = 1; i <= s1.length(); i++) {
@@ -65,17 +66,17 @@ public class Solution {
                 result[0][j] = true;
             }
         }
-        
+
         // Funciton
         for (int i = 1; i <= s1.length(); i++) {
             for (int j = 1; j <= s2.length(); j++) {
                 if ((s1.charAt(i - 1) == s3.charAt(i + j - 1) && result[i - 1][j]) ||
-                   (s2.charAt(j - 1) == s3.charAt(i + j - 1) && result[i][j - 1])) {
-                    result[i][j] = true;   
+                        (s2.charAt(j - 1) == s3.charAt(i + j - 1) && result[i][j - 1])) {
+                    result[i][j] = true;
                 }
             }
         }
-        
+
         // Answer
         return result[s1.length()][s2.length()];
     }

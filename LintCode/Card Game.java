@@ -39,16 +39,16 @@ public class Solution {
     long[][][] mem;
 
     /**
-     * @param n: The number of cards
+     * @param n:           The number of cards
      * @param totalProfit: The totalProfit
-     * @param totalCost: The totalCost
-     * @param a: The profit of cards
-     * @param b: The cost of cards
+     * @param totalCost:   The totalCost
+     * @param a:           The profit of cards
+     * @param b:           The cost of cards
      * @return: Return the number of legal plan
      */
     public int numOfPlan(int n, int totalProfit, int totalCost, int[] a, int[] b) {
         mem = new long[n][totalProfit + 2][totalCost + 1];
-        return (int)dfs(n, totalProfit, totalCost, a, b, 0, 0, 0);
+        return (int) dfs(n, totalProfit, totalCost, a, b, 0, 0, 0);
     }
 
     private long dfs(int n, int totalProfit, int totalCost, int[] a, int[] b, int index, int currP, int currC) {
@@ -86,11 +86,11 @@ public class Solution {
     public static final int MOD = 1000000007;
 
     /**
-     * @param n: The number of cards
+     * @param n:           The number of cards
      * @param totalProfit: The totalProfit
-     * @param totalCost: The totalCost
-     * @param a: The profit of cards
-     * @param b: The cost of cards
+     * @param totalCost:   The totalCost
+     * @param a:           The profit of cards
+     * @param b:           The cost of cards
      * @return: Return the number of legal plan
      */
     public int numOfPlan(int n, int totalProfit, int totalCost, int[] a, int[] b) {
@@ -118,15 +118,15 @@ public class Solution {
         for (int j = 0; j < totalCost; j++) {
             sum = (sum + dp[n][totalProfit + 1][j]) % MOD;
         }
-        return (int)sum;
+        return (int) sum;
     }
 }
 
 /**
  * Approach 3: DP (Space Optimized)
  * 当前状态仅仅依赖于上一行的状态，因此可以进行空间复杂度的优化。
- * 优化方法类似 01背包问题 
- * 
+ * 优化方法类似 01背包问题
+ * <p>
  * 时间复杂度：O(n^3)
  * 空间复杂度：O(n^2)
  */
@@ -134,11 +134,11 @@ public class Solution {
     public static final int MOD = 1000000007;
 
     /**
-     * @param n: The number of cards
+     * @param n:           The number of cards
      * @param totalProfit: The totalProfit
-     * @param totalCost: The totalCost
-     * @param a: The profit of cards
-     * @param b: The cost of cards
+     * @param totalCost:   The totalCost
+     * @param a:           The profit of cards
+     * @param b:           The cost of cards
      * @return: Return the number of legal plan
      */
     public int numOfPlan(int n, int totalProfit, int totalCost, int[] a, int[] b) {
@@ -159,6 +159,6 @@ public class Solution {
         for (int j = 0; j < totalCost; j++) {
             sum = (sum + dp[totalProfit + 1][j]) % MOD;
         }
-        return (int)sum;
+        return (int) sum;
     }
 }

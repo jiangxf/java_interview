@@ -1,8 +1,7 @@
-
-不难，但是要考虑好如何handle ""。
-因为平时都把“” 当做Null对待，这里就犯浑了。
-这题，要把Null特别mark一下为‘NULL’，而特别处理 “” empty string.
-```
+不难，但是要考虑好如何handle""。
+        因为平时都把“” 当做Null对待，这里就犯浑了。
+        这题，要把Null特别mark一下为‘NULL’，而特别处理 “” empty string.
+        ```
 /*
 Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings.
 
@@ -46,7 +45,7 @@ Note: "" empty string is also a string case, so don't treat that as null. Call n
 Note2: As long as the list is not empty, though some string might be just "", make sure to encode it as 'LINE' just to remind in decoder: treat it as a ""
 */
 public class Codec {
-     // Encodes a list of strings to a single string.
+    // Encodes a list of strings to a single string.
     public static String encode(List<String> strs) {
         if (strs == null || strs.size() == 0) {
             return "NULL";
@@ -56,11 +55,11 @@ public class Codec {
             char[] arr = str.toCharArray();
             for (int i = 0; i < arr.length; i++) {
                 if (arr[i] >= 100) {
-                    sb.append("" + (int)arr[i]);
+                    sb.append("" + (int) arr[i]);
                 } else if (arr[i] >= 10) {
-                    sb.append("0" + (int)arr[i]);
+                    sb.append("0" + (int) arr[i]);
                 } else {
-                    sb.append("00" + (int)arr[i]);
+                    sb.append("00" + (int) arr[i]);
                 }
             }
             sb.append("LINE");
@@ -85,15 +84,15 @@ public class Codec {
             int i = 0;
             while (i + 3 <= str.length()) {
                 int letter = Integer.parseInt(str.substring(i, i + 3));
-                sb.append((char)letter);
-                i+=3;
+                sb.append((char) letter);
+                i += 3;
             }
             rst.add(sb.toString());
 
             s = s.substring(index + 4);
             index = s.indexOf("LINE");
         }
-        
+
         return rst;
     }
 }

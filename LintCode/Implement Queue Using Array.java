@@ -19,11 +19,11 @@ Tags
  * Approach: Using Array
  * 采用 数组 模拟队列。
  * 因为队列是对两个端口进行操作的，所以我们需要：
- *  用一个 first 指针来跟踪队列的头，队列移除元素的时候，在 first 端进行操作；
- *  用一个 last 指针来跟踪队列的尾，队列添加元素/求peek元素的时候，在 end 端进行操作。
- *  同时我们还需要用一个 size 来维护队列的大小，也方便于 first指针 和 end指针 移动到边界时的处理。
- *  （当然 size 这个空间可以被节省掉，但是为了代码有更好的可读性，我们选择了使用它）
- *  
+ * 用一个 first 指针来跟踪队列的头，队列移除元素的时候，在 first 端进行操作；
+ * 用一个 last 指针来跟踪队列的尾，队列添加元素/求peek元素的时候，在 end 端进行操作。
+ * 同时我们还需要用一个 size 来维护队列的大小，也方便于 first指针 和 end指针 移动到边界时的处理。
+ * （当然 size 这个空间可以被节省掉，但是为了代码有更好的可读性，我们选择了使用它）
+ * <p>
  * 参考资料：
  * https://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/
  */

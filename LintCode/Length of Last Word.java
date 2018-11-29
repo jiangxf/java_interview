@@ -20,7 +20,6 @@ Note: Java split: have to add '\\' in order to pass the key word.
 */
 
 
-
 public class Solution {
     /**
      * @param s A string
@@ -28,11 +27,11 @@ public class Solution {
      */
     public int lengthOfLastWord(String s) {
         if (s == null || s.length() == 0) {
-        	return 0;
+            return 0;
         }
         String[] arr = s.split("\\ ");
         String lastWord = arr[arr.length - 1];
 
-       	return lastWord.length();
+        return lastWord.length();
     }
 }

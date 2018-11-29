@@ -1,18 +1,18 @@
 H
 
-首先要分两半解决，断点是'.': str.split("\\.");
+        首先要分两半解决，断点是'.':str.split("\\.");
 
-Integer那一半好弄，whie loop里： num%2, num/2。
+        Integer那一半好弄，whie loop里： num%2,num/2。
 
-Decimal那边复杂点.
-   bit == 1的数学条件：当下num * 2 >= 1。 更新: num = num * 2 - 1;
-   bit == 0的数学条件： num * 2 < 1. 更新: num = num * 2
+        Decimal那边复杂点.
+        bit==1的数学条件：当下num*2>=1。 更新:num=num*2-1;
+        bit==0的数学条件： num*2< 1.更新:num=num*2
 
-注意：num是 double, 小数在 （num = num * 2 -1）的公式下可能无限循环. 因此check: num重复性，以及binary code < 32 bit.
+        注意：num是 double,小数在 （num=num*2-1）的公式下可能无限循环.因此check:num重复性，以及binary code< 32bit.
 
-(所以题目也才有了32BIT的要求！)
+        (所以题目也才有了32BIT的要求！)
 
-```
+        ```
 /*
 Given a (decimal - e.g. 3.72) number that is passed in as a string, 
 return the binary representation that is passed in as a string. 
@@ -84,6 +84,7 @@ public class Solution {
         }
         return rst;
     }
+
     // A little bit math, but implemtable.
     public String parseDecimal(String n) {
         if (n.length() == 0 || n.equals("0")) {

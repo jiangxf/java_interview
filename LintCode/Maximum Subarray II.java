@@ -1,13 +1,13 @@
 Ë¼Â·:
-	ÒòÎª Á½¸öSubarray Ò»¶¨²»ÖØµşËùÒÔ±Ø¶¨´æÔÚÒ»Ìõ·Ö¸îÏß·Ö¿ªÕâÁ½¸ö Subarray
-	ËùÒÔ,×îºóµÄ²¿·ÖÀï£º
-  max = Integer.MIN_VALUE;
-        for(int i = 0; i < size - 1; i++){
-            max = Math.max(max, left[i] + right[i + 1]);
+        ï¿½ï¿½Îª ï¿½ï¿½ï¿½ï¿½Subarray Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½Ô±Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ß·Ö¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Subarray
+        ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï£º
+        max=Integer.MIN_VALUE;
+        for(int i=0;i<size -1;i++){
+        max=Math.max(max,left[i]+right[i+1]);
         }
         return max;
-	Òò´ËÃ¶¾ÙÕâÌõ·Ö¸îÏßµÄÎ»ÖÃ
-	È»ºó left[] ºÍ right[] Àï·Ö±ğ´æµÄÊÇ£¬Ä³¸öÎ»ÖÃÍù×óµÄ maximum subarray ºÍÍùÓÒµÄ maximum subarray
+        ï¿½ï¿½ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ßµï¿½Î»ï¿½ï¿½
+        È»ï¿½ï¿½ left[] ï¿½ï¿½ right[] ï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½Ç£ï¿½Ä³ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ maximum subarray ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ maximum subarray
 
 /*
 Description
@@ -37,36 +37,36 @@ public class Solution {
         if (nums == null || nums.size() == 0) {
             return 0;
         }
-        
+
         int size = nums.size();
         int[] left = new int[size];
         int[] right = new int[size];
-       
+
         int sum = 0;
         int minSum = 0;
         int max = Integer.MIN_VALUE;
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             sum += nums.get(i);
             max = Math.max(max, sum - minSum);
             minSum = Math.min(sum, minSum);
             left[i] = max;
         }
-        
+
         sum = 0;
         minSum = 0;
         max = Integer.MIN_VALUE;
-        for(int i = size - 1; i >= 0; i--){
+        for (int i = size - 1; i >= 0; i--) {
             sum += nums.get(i);
             max = Math.max(max, sum - minSum);
             minSum = Math.min(sum, minSum);
             right[i] = max;
         }
-        
+
         max = Integer.MIN_VALUE;
-        for(int i = 0; i < size - 1; i++){
+        for (int i = 0; i < size - 1; i++) {
             max = Math.max(max, left[i] + right[i + 1]);
         }
-        
+
         return max;
     }
 }

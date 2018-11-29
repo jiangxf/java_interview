@@ -7,31 +7,31 @@
 
 public class Solution {
 
-	public static String findFirstDuplicatedWord(String str) {
-		if (str == null || str.length() == 0) {
-			return str;
-		}
+    public static String findFirstDuplicatedWord(String str) {
+        if (str == null || str.length() == 0) {
+            return str;
+        }
 
-		String[] arr = str.split("\\s+");
-		ArrayList<String> list = new ArrayList<String>();
-		for (int i = 0; i < arr.length; i++) {
-			if (list.contains(arr[i])) {
-				return arr[i];
-			} 
-			list.add(arr[i]);
-		}
+        String[] arr = str.split("\\s+");
+        ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i < arr.length; i++) {
+            if (list.contains(arr[i])) {
+                return arr[i];
+            }
+            list.add(arr[i]);
+        }
 
-		return "";
-	}
+        return "";
+    }
 
-	public static void main(String[] args) {
-		System.out.println("START");
+    public static void main(String[] args) {
+        System.out.println("START");
 
-		String str = "a is a sample program ok a";// is a a is
+        String str = "a is a sample program ok a";// is a a is
 
-		String rst = findFirstDuplicatedWord(str);
+        String rst = findFirstDuplicatedWord(str);
 
-		System.out.println(rst);
-	}
+        System.out.println(rst);
+    }
 
 }

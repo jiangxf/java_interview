@@ -29,52 +29,50 @@ Be careful with queue size when trying to do for loop on it. Use a pre-fixed siz
 //Solution1: nested for loop
 public class Solution {
     public int ladderLength(String start, String end, Set<String> dict) {
-    	if (start == null || end == null || dict == null || start.length() != end.length()) {
-    		return 0;
-    	}
-    	Queue<String> q = new LinkedList<String>();
-    	HashSet<String> set = new HashSet<String>();
-    	int level = 1;
-    	int len = Integer.MAX_VALUE;
-    	q.offer(start);
-    	set.add(start);
-    	while(!q.isEmpty()) {//BFS
-    		int size = q.size();//Fix size
-    		level++;
-    		for (int k = 0; k < size; k++) {//LOOP through existing queue: for this specific level
-	    		String str = q.poll();
-	    		for (int i = 0; i < str.length(); i++) {//Alternate each letter position
-	    			for (int j = 0; j < 26; j++) {//Alter 26 letters
-	    				String newStr;
-	    				if (i == 0 && str.length() == 1) {
-	    				    newStr = "" + (char)('a' + j);
-	    				}
-	    				else if (i == str.length() - 1) {
-	    					newStr = str.substring(0, i) + (char)('a' + j);
-	    				} else {
-	 						newStr = str.substring(0, i) + (char)('a' + j) + str.substring(i + 1);
-	    				}
-	    				if (!set.contains(newStr) && dict.contains(newStr)) {
-	    					if (newStr.equals(end)) {//Found end
-	    						len = Math.min(len, level);
-	    					} else {
-	    						set.add(newStr);
-	    						q.offer(newStr);
-	    					}
-	    				}
-	    			}//END FOR J
-	    		}//END FOR I
-	    	}//END FOR K
-    	}//END WHILE
-    	return len;
+        if (start == null || end == null || dict == null || start.length() != end.length()) {
+            return 0;
+        }
+        Queue<String> q = new LinkedList<String>();
+        HashSet<String> set = new HashSet<String>();
+        int level = 1;
+        int len = Integer.MAX_VALUE;
+        q.offer(start);
+        set.add(start);
+        while (!q.isEmpty()) {//BFS
+            int size = q.size();//Fix size
+            level++;
+            for (int k = 0; k < size; k++) {//LOOP through existing queue: for this specific level
+                String str = q.poll();
+                for (int i = 0; i < str.length(); i++) {//Alternate each letter position
+                    for (int j = 0; j < 26; j++) {//Alter 26 letters
+                        String newStr;
+                        if (i == 0 && str.length() == 1) {
+                            newStr = "" + (char) ('a' + j);
+                        } else if (i == str.length() - 1) {
+                            newStr = str.substring(0, i) + (char) ('a' + j);
+                        } else {
+                            newStr = str.substring(0, i) + (char) ('a' + j) + str.substring(i + 1);
+                        }
+                        if (!set.contains(newStr) && dict.contains(newStr)) {
+                            if (newStr.equals(end)) {//Found end
+                                len = Math.min(len, level);
+                            } else {
+                                set.add(newStr);
+                                q.offer(newStr);
+                            }
+                        }
+                    }//END FOR J
+                }//END FOR I
+            }//END FOR K
+        }//END WHILE
+        return len;
     }
 }
 
 
-
 //Solution2: separate methods, and hope to make Word Ladder II problem easier
 public class Solution {
-	private Queue<String> q = new LinkedList<String>();
+    private Queue<String> q = new LinkedList<String>();
     private HashSet<String> set = new HashSet<String>();
     private Set<String> dict;
     private String end;
@@ -82,45 +80,44 @@ public class Solution {
     private int len = Integer.MAX_VALUE;
 
     public int ladderLength(String start, String end, Set<String> dict) {
-    	if (start == null || end == null || dict == null || start.length() != end.length()) {
-    		return 0;
-    	}
-    	this.dict = dict;
-    	this.end = end;
-    	q.offer(start);
-    	set.add(start);
-    	while(!q.isEmpty()) {//BFS
-    		int size = q.size();//Fix size
-    		level++;
-    		for (int k = 0; k < size; k++) {//LOOP through existing queue: for this specific level
-	    		String str = q.poll();
-	    		validateMutations(str);
-	    	}//END FOR K
-    	}//END WHILE
-    	return len;
+        if (start == null || end == null || dict == null || start.length() != end.length()) {
+            return 0;
+        }
+        this.dict = dict;
+        this.end = end;
+        q.offer(start);
+        set.add(start);
+        while (!q.isEmpty()) {//BFS
+            int size = q.size();//Fix size
+            level++;
+            for (int k = 0; k < size; k++) {//LOOP through existing queue: for this specific level
+                String str = q.poll();
+                validateMutations(str);
+            }//END FOR K
+        }//END WHILE
+        return len;
     }
 
     public void validateMutations(String str) {
-    	for (int i = 0; i < str.length(); i++) {//Alternate each letter position
-			for (int j = 0; j < 26; j++) {//Alter 26 letters
-				String newStr;
-				if (i == 0 && str.length() == 1) {
-				    newStr = "" + (char)('a' + j);
-				}
-				else if (i == str.length() - 1) {
-					newStr = str.substring(0, i) + (char)('a' + j);
-				} else {
-						newStr = str.substring(0, i) + (char)('a' + j) + str.substring(i + 1);
-				}
-				if (!set.contains(newStr) && dict.contains(newStr)) {
-					if (newStr.equals(end)) {//Found end
-						len = Math.min(len, level);
-					} else {
-						set.add(newStr);
-						q.offer(newStr);
-					}
-				}
-			}//END FOR J
-		}//END FOR I
+        for (int i = 0; i < str.length(); i++) {//Alternate each letter position
+            for (int j = 0; j < 26; j++) {//Alter 26 letters
+                String newStr;
+                if (i == 0 && str.length() == 1) {
+                    newStr = "" + (char) ('a' + j);
+                } else if (i == str.length() - 1) {
+                    newStr = str.substring(0, i) + (char) ('a' + j);
+                } else {
+                    newStr = str.substring(0, i) + (char) ('a' + j) + str.substring(i + 1);
+                }
+                if (!set.contains(newStr) && dict.contains(newStr)) {
+                    if (newStr.equals(end)) {//Found end
+                        len = Math.min(len, level);
+                    } else {
+                        set.add(newStr);
+                        q.offer(newStr);
+                    }
+                }
+            }//END FOR J
+        }//END FOR I
     }
 }

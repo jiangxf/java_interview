@@ -19,14 +19,14 @@ In this array, the earliest consecutive concatenated substrings with a sum of 12
 /**
  * Approach: Prefix Sum + HashMap
  * 与 Maximum Size Subarray Sum Equals k 基本一样，加了点小条件罢了。
- *
+ * <p>
  * 详细解析可以参考：
- *  https://github.com/cherryljr/LintCode/blob/master/Maximum%20Size%20Subarray%20Sum%20Equals%20k.java
+ * https://github.com/cherryljr/LintCode/blob/master/Maximum%20Size%20Subarray%20Sum%20Equals%20k.java
  */
 public class Solution {
     /**
      * @param arr: The array
-     * @param k: the sum
+     * @param k:   the sum
      * @return: The length of the array
      */
     public int searchSubarray(int[] arr, int k) {

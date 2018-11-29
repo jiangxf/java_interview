@@ -1,5 +1,5 @@
 The Solution is the same as Next Permutation in LeetCode:
-https://github.com/cherryljr/LeetCode/blob/master/Next%20Permutation.java
+        https://github.com/cherryljr/LeetCode/blob/master/Next%20Permutation.java
 
 /*
 Description
@@ -30,7 +30,7 @@ public class Solution {
         while (index >= 0 && nums.get(index) <= nums.get(index + 1)) {
             index--;
         }
-        
+
         // replace the number nums[index] with the number a[smaller] which is just smaller than itself 
         if (index >= 0) {
             int smaller = nums.size() - 1;
@@ -41,10 +41,10 @@ public class Solution {
         }
         // reverse the numbers following a[index] to get the next smallest lexicographic permutation
         reverse(nums, index + 1);
-        
+
         return nums;
     }
-    
+
     private void reverse(List<Integer> nums, int start) {
         int i = start, j = nums.size() - 1;
         while (i < j) {
@@ -53,7 +53,7 @@ public class Solution {
             j--;
         }
     }
-    
+
     private void swap(List<Integer> nums, int i, int j) {
         int temp = nums.get(i);
         nums.set(i, nums.get(j));

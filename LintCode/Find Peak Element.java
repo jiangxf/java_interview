@@ -1,5 +1,5 @@
-Binary Search 
-提示：时间复杂度要求为O(logN)
+Binary Search
+        提示：时间复杂度要求为O(logN)
 
 /*There is an integer array which has the following features:
 
@@ -39,23 +39,23 @@ class Solution {
      */
     public int findPeak(int[] A) {
         int start = 1;
-        int end = A.length - 1; 
+        int end = A.length - 1;
         if (A[0] > A[1]) {
-		return 0;
-	}
-	if (A[end - 1] > A[end - 2]) {
-		return end - 1;
-	}
-        
-        while(start < end) {
+            return 0;
+        }
+        if (A[end - 1] > A[end - 2]) {
+            return end - 1;
+        }
+
+        while (start < end) {
             int mid = (start + end) / 2;
-            if(A[mid] < A[mid + 1]) {
+            if (A[mid] < A[mid + 1]) {
                 start = mid + 1;
             } else {
                 end = mid;
             }
         }
-        
+
         return start;
     }
 }

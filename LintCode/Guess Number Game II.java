@@ -1,16 +1,16 @@
 State:
-Definition of dp[i][j]: minimum number of money to guarantee win for subproblem [i, j].
+        Definition of dp[i][j]:minimum number of money to guarantee win for subproblem[i,j].
 
-Corner case: dp[i][i] = 0 (because the only element must be correct)
+        Corner case:dp[i][i]=0(because the only element must be correct)
 
-Function:
-we can choose k (i <= k <= j) as our guess, and pay price k. After our guess, the problem is divided into two subproblems.
-Notice we do not need to pay the money for both subproblems. We only need to pay the worst case. 
-(because the system will tell us which side we should go) to guarantee win. 
-So dp[i][j] = min (i <= k <= j) { k + max(dp[i][k-1], dp[k+1][j]) }
+        Function:
+        we can choose k(i<=k<=j)as our guess,and pay price k.After our guess,the problem is divided into two subproblems.
+        Notice we do not need to pay the money for both subproblems.We only need to pay the worst case.
+        (because the system will tell us which side we should go)to guarantee win.
+        So dp[i][j]=min(i<=k<=j){k+max(dp[i][k-1],dp[k+1][j])}
 
-Answer:
-dp[1][n]
+        Answer:
+        dp[1][n]
 
 /*
 Description
@@ -28,8 +28,8 @@ Third round: You guess 9, I tell you that it's lower. You pay $9.
 Game over. 8 is the number I picked.
 You end up paying $5 + $7 + $9 = $21.
 
-Given a particular n ¡Ý 1, find out how much money you need to have to guarantee a win.
-So when n = £à10, return16`
+Given a particular n ï¿½ï¿½ 1, find out how much money you need to have to guarantee a win.
+So when n = ï¿½ï¿½10, return16`
 
 Tags 
 Dynamic Programming
@@ -44,10 +44,10 @@ public class Solution {
         if (n == 1) {
             return 0;
         }
-        
+
         // State
         int[][] dp = new int[n + 1][n + 1];
-        
+
         // Initialize & Function
         for (int len = 1; len < n; len++) {
             for (int i = 0; i + len <= n; i++) {
@@ -55,12 +55,12 @@ public class Solution {
                 dp[i][j] = Integer.MAX_VALUE;
                 for (int k = i; k <= j; k++) {
                     dp[i][j] = Math.min(dp[i][j],
-                                        k + Math.max(k - 1 >= i ? dp[i][k - 1] : 0,
-                                                     j >= k + 1 ? dp[k + 1][j] : 0));
+                            k + Math.max(k - 1 >= i ? dp[i][k - 1] : 0,
+                                    j >= k + 1 ? dp[k + 1][j] : 0));
                 }
             }
         }
-        
+
         // Answer
         return dp[1][n];
     }

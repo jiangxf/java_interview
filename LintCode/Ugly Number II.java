@@ -18,11 +18,11 @@ O(n log n) or O(n) time.
  * 直接计算出所有 Integer.MAX_VALUE 以内所有的丑数，然后保存下来，再排序一次即可。
  * 而由题意可知，丑数可被表示为： num = 2^k1 * 3^k2 * 5^k3 (k1, k2, k3 可为 0)
  * 这样我们枚举所有的情况即可。
- *
+ * <p>
  * 因为使用的是 static list,所有只会被建立一次，
  * 这样我们只需要全部查询一次即可，之后每次需要时直接取就行了。
  * 相当于建立了一个 Cache，而这也就是我们常说的 单例模式。
- *
+ * <p>
  * 时间复杂度：O(nlogn + T) T指测试样例个数
  */
 public class Solution {
@@ -41,7 +41,7 @@ public class Solution {
                 for (long b = a; b < Integer.MAX_VALUE; b *= 3) {
                     // c = 2^k1 * 3^k2 * 5^k3 (k1, k2, k3 可为 0)
                     for (long c = b; c < Integer.MAX_VALUE; c *= 5) {
-                        nums.add((int)c);
+                        nums.add((int) c);
                     }
                 }
             }
@@ -57,14 +57,14 @@ public class Solution {
  * 因为一个丑数可以被因数分解为： num = 2^k1 * 3^k2 * 5^k3
  * 所以我们可以一步步枚举 k1, k2, k3，并选出当前最小的数加入到 nums 中
  * 依次进行下去。同样这里也使用到了 static 来避免重复计算。（对 T 个 case 进行优化）
- *
+ * <p>
  * 时间复杂度：O(n + T)
- * 
+ * <p>
  * Fellow Up:
- *  Super Ugly Number:
- *  https://github.com/cherryljr/LintCode/blob/master/Super%20Ugly%20Number.java
+ * Super Ugly Number:
+ * https://github.com/cherryljr/LintCode/blob/master/Super%20Ugly%20Number.java
  * 参考资料：
- *  http://zxi.mytechroad.com/blog/math/leetcode-264-ugly-number-ii/
+ * http://zxi.mytechroad.com/blog/math/leetcode-264-ugly-number-ii/
  */
 public class Solution {
     private static List<Integer> nums;

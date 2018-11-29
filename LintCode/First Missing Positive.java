@@ -24,36 +24,34 @@ Watch out for redundant number: ask if the list has duplicated elements
 
 
 public class Solution {
-    /**    
+    /**
      * @param A: an array of integers
      * @return: an integer
      */
     public int firstMissingPositive(int[] A) {
-    	if (A == null || A.length == 0) {
-    		return 1;
-    	}
-    	Arrays.sort(A);
-    	int count = -1;
-    	for (int i = 0; i < A.length; i++) {
-    		if (A[i] > 0) {
-    			if (count < 0) {//process 1st positive element
-	    			count = A[i];
-	    			if (count != 1) {
-	    				return 1;
-	    			}
-    			} 
-    			else if (A[i] == A[i - 1]) {//watch out for duplicates
-    				count--;
-    			}
-				else if(A[i] != count) {//if not match, kick out
-					return count;
-				}	
-    			count++;
-    		}
-    	}
-    	if (count < 0) {//if all negative, return 1
-    		return 1;
-    	}
-    	return count;
+        if (A == null || A.length == 0) {
+            return 1;
+        }
+        Arrays.sort(A);
+        int count = -1;
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] > 0) {
+                if (count < 0) {//process 1st positive element
+                    count = A[i];
+                    if (count != 1) {
+                        return 1;
+                    }
+                } else if (A[i] == A[i - 1]) {//watch out for duplicates
+                    count--;
+                } else if (A[i] != count) {//if not match, kick out
+                    return count;
+                }
+                count++;
+            }
+        }
+        if (count < 0) {//if all negative, return 1
+            return 1;
+        }
+        return count;
     }
 }

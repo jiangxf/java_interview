@@ -30,32 +30,32 @@ public class Solution {
      * @return: The true length of new string
      */
     public int replaceBlank(char[] string, int length) {
-    	// Write your code here
-      if (string == null || string.length == 0) {
-    		return 0;
-    	}
-    	
-    	int count = 0;
-    	
-    	for (char c : string) {
-    		if (c == ' ') {
-    			count += 2;
-    		}
-    	}
-    	
-    	int lastIndex = length + count - 1;
-    	
-    	//from back to front:
-    	for (int i = length - 1; i >= 0; i--) {
-    		if (string[i] == ' ') {
-				string[lastIndex--] = '0';
-				string[lastIndex--] = '2';
-				string[lastIndex--] = '%';
-    		} else {
-    			string[lastIndex--] = string[i];
-    		}
-    	}
-    	
-    	return length + count;
+        // Write your code here
+        if (string == null || string.length == 0) {
+            return 0;
+        }
+
+        int count = 0;
+
+        for (char c : string) {
+            if (c == ' ') {
+                count += 2;
+            }
+        }
+
+        int lastIndex = length + count - 1;
+
+        //from back to front:
+        for (int i = length - 1; i >= 0; i--) {
+            if (string[i] == ' ') {
+                string[lastIndex--] = '0';
+                string[lastIndex--] = '2';
+                string[lastIndex--] = '%';
+            } else {
+                string[lastIndex--] = string[i];
+            }
+        }
+
+        return length + count;
     }
 }

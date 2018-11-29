@@ -30,7 +30,7 @@ Array LintCode Copyright Interval
  * 不过最好跟面试官明确一下时间坐标的可能范围。
  * 比如，是否会出现跨天的时间段，[18, 6]，也就是18:00PM - 6:00AM +1，如果有这种情况，则需要考虑进行适当的处理。
  * 不过根据OJ给出的test cases，只会出现 end>start 的情况，并且不受24小时的时间限制，因此使用HashMap更为合适）
- * 
+ * <p>
  * PS.听说在更新了 test case 之后内存爆了... So sad...
  */
 
@@ -103,27 +103,6 @@ public class Solution {
  * 关于扫描线的进一步总结可以参考（ACM难度级别）：http://openinx.github.io/2013/01/01/plane-sweep-thinking/
  */
 public class Solution {
-    class TimePoint implements Comparable<TimePoint> {
-        int time;
-        // 用于标志飞机 起飞/降落；如果是起飞为1，降落则为-1
-        int flag;
-
-        TimePoint(int time, int flag) {
-            this.time = time;
-            this.flag = flag;
-        }
-
-        @Override
-        public int compareTo(TimePoint point) {
-            if (this.time == point.time) {
-                // 如果同一个时间点上有 起飞/降落 操作，先降落
-                return this.flag - point.flag;
-            } else {
-                return this.time - point.time;
-            }
-        }
-    }
-
     /*
      * @param airplanes: An interval array
      * @return: Count of airplanes are in the sky.
@@ -148,5 +127,26 @@ public class Solution {
             max = Math.max(max, sum);
         }
         return max;
+    }
+
+    class TimePoint implements Comparable<TimePoint> {
+        int time;
+        // 用于标志飞机 起飞/降落；如果是起飞为1，降落则为-1
+        int flag;
+
+        TimePoint(int time, int flag) {
+            this.time = time;
+            this.flag = flag;
+        }
+
+        @Override
+        public int compareTo(TimePoint point) {
+            if (this.time == point.time) {
+                // 如果同一个时间点上有 起飞/降落 操作，先降落
+                return this.flag - point.flag;
+            } else {
+                return this.time - point.time;
+            }
+        }
     }
 }

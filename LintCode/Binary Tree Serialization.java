@@ -26,8 +26,16 @@ Binary Tree Uber Yahoo Microsoft
  * But we can design our own algorithm to serialize a binary tree to a string and
  * guarantee that it could be deserialize.
  * So we support two algorithms here.
- *  1. Level Order Traversal / BFS
- *  2. PreOrder Traversal
+ * 1. Level Order Traversal / BFS
+ * 2. PreOrder Traversal
+ * <p>
+ * Approach 1: Level Order Traversal (Using Queue)
+ * For serializaiton, it just like binary tree level order traversal.
+ * We can write it just like it.(or BFS Template).
+ * https://github.com/cherryljr/LintCode/blob/master/BFS%20Template.java
+ * We use "#" to denote null node and split node with " ", and use a StringBuilder to store the traversal result.
+ * For deserialization, we use a Queue to store the level-order traversal and since we have "#" as null node,
+ * so we know exactly how to where to end building subtress.
  */
 
 /**
@@ -39,8 +47,8 @@ Binary Tree Uber Yahoo Microsoft
  * For deserialization, we use a Queue to store the level-order traversal and since we have "#" as null node,
  * so we know exactly how to where to end building subtress.
  */
- 
- /**
+
+/**
  * Definition of TreeNode:
  * public class TreeNode {
  *     public int val;
@@ -161,7 +169,7 @@ public class Solution {
         } else {
             sb.append(node.val + " ");
             buildString(node.left, sb);
-            buildString(node.right,sb);
+            buildString(node.right, sb);
         }
     }
 
@@ -186,8 +194,7 @@ public class Solution {
         String val = nodes.remove();
         if (val.equals("#")) {
             return null;
-        }
-        else {
+        } else {
             TreeNode node = new TreeNode(Integer.parseInt(val));
             node.left = buildTree(nodes);
             node.right = buildTree(nodes);

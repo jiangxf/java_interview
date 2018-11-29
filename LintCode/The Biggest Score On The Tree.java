@@ -28,24 +28,24 @@ Airbnb
  * Approach: Tree DP
  * 树形DP的考察，值得注意的是树的 边 是带权值的。
  * 但是并不会增加太多的难度，我们只需要建立一个 Edge 将信息存储在里面即可。
- *
+ * <p>
  * 根据分析，当前节点的 最高收益 是等于：
- *  最高的子节点收益 + 当前节点的收益 - 该路径所产生的花费
+ * 最高的子节点收益 + 当前节点的收益 - 该路径所产生的花费
  * 因此我们只需要收集 子节点的信息 然后处理即可。
  * 对于如何搜集 子节点的信息，我们可以采取 递归调用 的方式。其实也就是 Divide and Conquer 的做法
- *
+ * <p>
  * 关于 树形DP 大家可以进一步参考：
  * https://github.com/cherryljr/NowCoder/blob/master/Anniversary%20party.java
- *
+ * <p>
  * 这道题目还可以利用 DFS 来进行解决，比较简单，就不写了。
  * 不会的可以参考：
  * http://www.jiuzhang.com/solution/the-biggest-score-on-the-tree/#tag-highlight
  */
 class Solution {
     /**
-     * @param x: The vertex of edge
-     * @param y: The another vertex of edge
-     * @param cost: The cost of edge
+     * @param x:      The vertex of edge
+     * @param y:      The another vertex of edge
+     * @param cost:   The cost of edge
      * @param profit: The profit of vertex
      * @return: Return the max score
      */

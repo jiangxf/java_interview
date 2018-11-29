@@ -35,78 +35,77 @@ Note, at this point, we confirm target exist in source. Now we just test against
  srouce string and can also be used as head of the result string (with shorter length), in this case leftBount++, countinue.
 7. After the abobe 6.A, 6.B check, break out of the loop and cut out a minWindow and return.
 */
-import java.util.*;
 
 public class Solution {
+    public static void main(String[] args) {
+        Solution test = new Solution();
+        String rst = test.minWindow("abcd", "ac");
+        System.out.println("resutl is : " + rst);
+    }
+
     /**
      * @param source: A string
      * @param target: A string
      * @return: A string denote the minimum window
-     *          Return "" if there is no such a string
+     * Return "" if there is no such a string
      */
     public String minWindow(String source, String target) {
-    	if (source == null || source.length() == 0) {
-    		return source;
-    	}
-    	if (target == null || target.length() == 0) {
-    		return "";
-    	}
-    	//Count Characters in target
-    	HashMap<Character, Integer> tCounter = new HashMap<Character, Integer>();
-    	for (int i = 0; i < target.length(); i++) {
-    		Character c = target.charAt(i);
-    		if (!tCounter.containsKey(c)) {
-    			tCounter.put(c, 1);
-    		} else {
-    			tCounter.put(c, tCounter.get(c) + 1);
-    		}
-    	}
+        if (source == null || source.length() == 0) {
+            return source;
+        }
+        if (target == null || target.length() == 0) {
+            return "";
+        }
+        //Count Characters in target
+        HashMap<Character, Integer> tCounter = new HashMap<Character, Integer>();
+        for (int i = 0; i < target.length(); i++) {
+            Character c = target.charAt(i);
+            if (!tCounter.containsKey(c)) {
+                tCounter.put(c, 1);
+            } else {
+                tCounter.put(c, tCounter.get(c) + 1);
+            }
+        }
 
-		HashMap<Character, Integer> minWindowCounter = new HashMap<Character, Integer>();
-		int count = 0;
-		String rst = "";
-		for (int i = 0; i < source.length(); i++) {
-			Character c = source.charAt(i);
-			if (!tCounter.containsKey(c)) {
-				continue;
-			}
+        HashMap<Character, Integer> minWindowCounter = new HashMap<Character, Integer>();
+        int count = 0;
+        String rst = "";
+        for (int i = 0; i < source.length(); i++) {
+            Character c = source.charAt(i);
+            if (!tCounter.containsKey(c)) {
+                continue;
+            }
 
-			if (minWindowCounter.containsKey(c)) {
-				minWindowCounter.put(c, minWindowCounter.get(c) + 1);
-			} else {
-				minWindowCounter.put(c, 1);
-			}
-					
-			if (minWindowCounter.get(c) <= tCounter.get(c)) {
-				count++;
-			}
+            if (minWindowCounter.containsKey(c)) {
+                minWindowCounter.put(c, minWindowCounter.get(c) + 1);
+            } else {
+                minWindowCounter.put(c, 1);
+            }
 
-			//Once the target exists in soruce: count  = target.length(), find the result
-			if (count == target.length()) {
-				int leftBound = 0;
-				while (leftBound < source.length()) {
-					Character cs = source.charAt(leftBound);
-					if (!minWindowCounter.containsKey(cs)) {//Not part of window
-						leftBound++;
-						continue;
-					}
-					if (minWindowCounter.get(cs) > tCounter.get(cs)) {//Can find shorter window
-						minWindowCounter.put(cs, minWindowCounter.get(cs) - 1);
-						leftBound++;
-						continue;
-					}
-					break;
-				}
-				rst = source.substring(leftBound, i + 1);
-				return rst;
-			}
-		}
-		return rst;
-    }
+            if (minWindowCounter.get(c) <= tCounter.get(c)) {
+                count++;
+            }
 
-    public static void main(String[] args) {
-    	Solution test = new Solution();
-    	String rst = test.minWindow("abcd", "ac");
-    	System.out.println("resutl is : " + rst);
+            //Once the target exists in soruce: count  = target.length(), find the result
+            if (count == target.length()) {
+                int leftBound = 0;
+                while (leftBound < source.length()) {
+                    Character cs = source.charAt(leftBound);
+                    if (!minWindowCounter.containsKey(cs)) {//Not part of window
+                        leftBound++;
+                        continue;
+                    }
+                    if (minWindowCounter.get(cs) > tCounter.get(cs)) {//Can find shorter window
+                        minWindowCounter.put(cs, minWindowCounter.get(cs) - 1);
+                        leftBound++;
+                        continue;
+                    }
+                    break;
+                }
+                rst = source.substring(leftBound, i + 1);
+                return rst;
+            }
+        }
+        return rst;
     }
 }

@@ -16,15 +16,15 @@ O(log(x))
 /**
  * 因为精确度只要求到 整形, 故本题是个很简单的 二分查找法的题目.
  * 基本上按照 Binary Search Template 编写即可。在这里就不扯太多了。
- *
+ * <p>
  * 但是之所以编写该题有两个原因。
- *  1. 如果对精确度有进一步要求呢？
- *  这个时候需要用到的高效算法便是 牛顿迭代法。 算法第四版 P13 有笔记
- *  不清楚的朋友们可以移步：https://www.zhihu.com/question/20690553
- *  这里对它的数学原理进行了很好的分析
- *  2. 瞻仰一下卡神的 Magic Number
- *  该段源码被应用于 《雷神之锤3》
- *  Click here for detials: https://en.wikipedia.org/wiki/Fast_inverse_square_root
+ * 1. 如果对精确度有进一步要求呢？
+ * 这个时候需要用到的高效算法便是 牛顿迭代法。 算法第四版 P13 有笔记
+ * 不清楚的朋友们可以移步：https://www.zhihu.com/question/20690553
+ * 这里对它的数学原理进行了很好的分析
+ * 2. 瞻仰一下卡神的 Magic Number
+ * 该段源码被应用于 《雷神之锤3》
+ * Click here for detials: https://en.wikipedia.org/wiki/Fast_inverse_square_root
  */
 
 // Binary Search (upper bound)
@@ -48,7 +48,7 @@ public class Solution {
                 end = mid - 1;
             }
         }
-        return (int)end;
+        return (int) end;
     }
 }
 
@@ -66,29 +66,29 @@ class Solution {
 
         double err = 1e-12;     // 精度设置
         double t = x;
-        while (Math.abs(t - x/t) > err * t) {
+        while (Math.abs(t - x / t) > err * t) {
             t = (x / t + t) / 2.0;
         }
 
-        return (int)t;
+        return (int) t;
     }
 }
 
 
-// Magic Number 0x5f3759df !!!  So Amazing
+    // Magic Number 0x5f3759df !!!  So Amazing
 // 雷神之锤3 源码    
-float Q_rsqrt(float number) {
-    long i;
-    float x2, y;
+    float Q_rsqrt(float number) {
+        long i;
+        float x2, y;
 const float threehalfs = 1.5F;
 
-    x2 = number * 0.5F;
-    y  = number;
-    i  = * ( long * ) &y;                       // evil floating point bit level hacking
-    i  = 0x5f3759df - ( i >> 1 );               // what the fuck?
-    y  = * ( float * ) &i;
-    y  = y * ( threehalfs - ( x2 * y * y ) );   // 1st iteration
-    //  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
+        x2 = number * 0.5F;
+        y = number;
+        i = *( long * ) &y;                       // evil floating point bit level hacking
+        i = 0x5f3759df - (i >> 1);               // what the fuck?
+        y = *( float * ) &i;
+        y = y * (threehalfs - (x2 * y * y));   // 1st iteration
+        //  y  = y * ( threehalfs - ( x2 * y * y ) );   // 2nd iteration, this can be removed
 
-    return y;
-}
+        return y;
+    }

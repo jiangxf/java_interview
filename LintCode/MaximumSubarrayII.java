@@ -1,8 +1,9 @@
 新的解法还是用到了prefix sum.
-注意：右边算prefix sum， 看上去好像是什么postfix sum? 其实不是。其实都和prefix一样。
-我们需要的那部分prefix sum，其实就是一段数字的总和。
-所以从右边累计上来的。也是一样可以的。
-```
+        注意：右边算prefix sum， 看上去好像是什么postfix sum?其实不是。其实都和prefix一样。
+        我们需要的那部分prefix sum，其实就是一段数字的总和。
+        所以从右边累计上来的。也是一样可以的。
+        ```
+
 /*
 Given an array of integers, find two non-overlapping subarrays which have the largest sum.
 
@@ -70,9 +71,6 @@ public class Solution {
 }
 
 
-
-
-
 /*
 
 Thinking process:
@@ -115,7 +113,7 @@ public class Solution {
                 maxSum = frontSum[i];
             }
         }
-        
+
         //Init endSum
         endSum[endSum.length - 1] = nums.get(nums.size() - 1);
         for (int i = endSum.length - 2; i >= 0; i--) {

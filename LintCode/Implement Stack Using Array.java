@@ -21,7 +21,7 @@ Tags
  * 我们只需要用一个 size 指针始终跟踪栈顶元素即可。
  * 因为所有的操作都发生在 数组的尾部(栈顶)。
  * 因此 size 还能代表数组的大小。
- *
+ * <p>
  * 参考资料：
  * https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
  */

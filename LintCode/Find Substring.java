@@ -22,13 +22,13 @@ Characters are not repeated, and substrings of length k have "a", "b".”c”.
  * Approach 1: Traverse
  * 从 i 开始遍历之后的 k 个字符，如果 k 个字符中均无重复字符，则找到了一个符合条件的 subString.
  * 将有效的 subString 记录到结果中即可。因为需要对结果进行去重，所以使用一个 Set 来存储结果即可。
- *
+ * <p>
  * 时间复杂度为：O(n*k)
  */
 public class Solution {
     /**
      * @param str: The string
-     * @param k: The length of the substring
+     * @param k:   The length of the substring
      * @return: The answer
      */
     public int findSubstring(String str, int k) {
@@ -71,7 +71,7 @@ public class Solution {
  * Approach 2: Sliding Window
  * 维护一个大小为 k 的滑动窗口。窗口内使用 Set 来记录各个字符是否出现过。
  * 如果该字符出现过，就会使得该窗口无效，因此向右滑动窗口直至窗口重新有效。
- *
+ * <p>
  * 时间复杂度为：O(n)
  */
 public class Solution {
@@ -84,7 +84,7 @@ public class Solution {
         if (str == null || str.length() < k) {
             return 0;
         }
-        
+
         Set<String> stringSet = new HashSet<>();
         Map<Character, Integer> map = new HashMap<>();
         char[] chars = str.toCharArray();

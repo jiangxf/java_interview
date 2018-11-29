@@ -19,22 +19,22 @@ LeetCode: https://leetcode.com/problems/word-break-ii/description/
  * Approach: Recursion + Memory Search
  * 这道题目属于 Word Break 的 Fellow Up.
  * 区别主要在于以下两点：
- *  1. 需要具体的分割方案
- *  2. 需要所有的方案，因此找到一个成立的解法后不能直接退出，要遍历所有的方案。
- *
+ * 1. 需要具体的分割方案
+ * 2. 需要所有的方案，因此找到一个成立的解法后不能直接退出，要遍历所有的方案。
+ * <p>
  * 清楚了以上两点之后，在了解 Word Break 的基础上，这道题目基本也就迎刃而解了。
  * 我们依然去枚举所有的分割点 i 的位置。并记录以此产生的字符串 s 的分割结果。
  * 并将该分割点所能产生的结果记录下来。（详见代码注释）
- *
+ * <p>
  * 这里偷懒直接贴了我在 LeetCode 上的解答。
  * 另一方面是 LeetCode 上使用 List<String> 作为输入，需要转成 Set<String> 来进行加速。
  * 而 LintCode 却直接使用了 Set.这里提醒一下大家。
- *
+ * <p>
  * 关于 wordDict 和 s 二者大小出现严重不平衡的大数据情况时，我们可以参考这里的讨论：
- *  https://leetcode.com/problems/word-break-ii/discuss/44167/My-concise-JAVA-solution-based-on-memorized-DFS
- *
+ * https://leetcode.com/problems/word-break-ii/discuss/44167/My-concise-JAVA-solution-based-on-memorized-DFS
+ * <p>
  * Word Break:
- *  https://github.com/cherryljr/LintCode/blob/master/Word%20Break.java 
+ * https://github.com/cherryljr/LintCode/blob/master/Word%20Break.java
  */
 class Solution {
     public List<String> wordBreak(String s, List<String> wordDict) {

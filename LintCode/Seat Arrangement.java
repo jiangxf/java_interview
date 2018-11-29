@@ -81,7 +81,7 @@ public class Solution {
 
     /**
      * @param peopleId 客人的编号，正数表示需要一个座位，负数表示离开
-     * @param n 总共的座位数
+     * @param n        总共的座位数
      * @return 最后选定的座位位置
      */
     private int seat(int peopleId, int n) {

@@ -18,7 +18,7 @@ Return
  * 使用 HashMap 记录分类即可。
  * 注意：虽然可以直接对单词进行排序，但是这将会耗费 O(nlogn) 的时间
  * 在单词长度较大的时候，是很不划算的，因此我们可以直接使用一个数组来记录即可。
- *
+ * <p>
  * 这道题目在 LeetCode 上面也有，详细解析可以参考：
  * https://github.com/cherryljr/LeetCode/blob/master/Group%20Anagrams.java
  */

@@ -26,26 +26,26 @@ public class Solution {
      * @return: nothing
      */
     public void partitionArray(int[] nums) {
-    	if (nums == null || nums.length == 0){
-    		return;
-    	}
-    	int nextOddPt = -1;
-    	int firstEvenPt = -1;
-    	for (int i = 0; i < nums.length; i++) {
-    		if (nums[i] % 2 == 1) {
-    			nextOddPt = i;
-    		} else {
-    			if (firstEvenPt == -1) {
-    				firstEvenPt = i;
-    			}
-    		}
-    		if (nextOddPt > firstEvenPt && firstEvenPt != -1) {
-    			int temp = nums[nextOddPt];
-    			nums[nextOddPt] = nums[firstEvenPt];
-    			nums[firstEvenPt] = temp;
-    			i = firstEvenPt - 1;
-    			firstEvenPt = -1;
-    		}
-    	}
+        if (nums == null || nums.length == 0) {
+            return;
+        }
+        int nextOddPt = -1;
+        int firstEvenPt = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 1) {
+                nextOddPt = i;
+            } else {
+                if (firstEvenPt == -1) {
+                    firstEvenPt = i;
+                }
+            }
+            if (nextOddPt > firstEvenPt && firstEvenPt != -1) {
+                int temp = nums[nextOddPt];
+                nums[nextOddPt] = nums[firstEvenPt];
+                nums[firstEvenPt] = temp;
+                i = firstEvenPt - 1;
+                firstEvenPt = -1;
+            }
+        }
     }
 }

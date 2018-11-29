@@ -1,10 +1,10 @@
-一幕了然. DFS把tree给过了.
-用ArrayList存item比较方便，记得每次backtrack的时候把末尾的item去掉
-```
-list.remove(list.size() - 1);
-```
+一幕了然.DFS把tree给过了.
+        用ArrayList存item比较方便，记得每次backtrack的时候把末尾的item去掉
+        ```
+        list.remove(list.size()-1);
+        ```
 
-```
+        ```
 /*
 Given a binary tree, return all root-to-leaf paths.
 
@@ -23,10 +23,10 @@ All root-to-leaf paths are:
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 public class Solution {
@@ -34,14 +34,15 @@ public class Solution {
         List<String> rst = new ArrayList<String>();
         if (root == null) {
             return rst;
-        }   
+        }
         ArrayList<String> list = new ArrayList<String>();
         DFS(root, list, rst);
         return rst;
     }
+
     public void DFS(TreeNode node, ArrayList<String> list, List<String> rst) {
-        list.add(node.val+"");
-        if(node.left == null && node.right == null) {
+        list.add(node.val + "");
+        if (node.left == null && node.right == null) {
             String str = "";
             for (String s : list) {
                 str += s + "->";

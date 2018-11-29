@@ -1,27 +1,27 @@
-DP ÎÊÌâ¡£
+DP ï¿½ï¿½ï¿½â¡£
 
-State:
-	max[i]:±íÊ¾Ç°i¸öÊýµÄ×î´óÁ¬Ðø×ÓÐòÁÐÖ®ºÍ
-	min[i]:±íÊ¾Ç°i¸öÊýµÄ×îÐ¡Á¬Ðø×ÓÐòÁÐÖ®ºÍ
-Function:
-	¡ïÒòÎªÉæ¼°µ½¸ºÊýµÄÎÊÌâ¡£ËùÒÔÐèÒª·Ö¿ªÌÖÂÛ£º
-	µ± nums[i] ÊÇÕýÊýÊ±£ºmax[i] = Math.max(max[i], max[i - 1] * nums[i]);
-											 min[i] = Math.min(min[i], min[i - 1] * nums[i]);
-	µ± nums[i] ÊÇ¸ºÊýÊ±£ºmax[i] = Math.max(max[i], min[i - 1] * nums[i - 1]);
-                			 min[i] = Math.min(min[i], max[i - 1] * nums[i - 1]); 
-Intitialize:
-	max[0] = min[0] = 1;
-	rst = nums[0];
+        State:
+        max[i]:ï¿½ï¿½Ê¾Ç°iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½
+        min[i]:ï¿½ï¿½Ê¾Ç°iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½
+        Function:
+        ï¿½ï¿½ï¿½ï¿½Îªï¿½æ¼°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ö¿ï¿½ï¿½ï¿½ï¿½Û£ï¿½
+        ï¿½ï¿½ nums[i] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½max[i]=Math.max(max[i],max[i-1]*nums[i]);
+        min[i]=Math.min(min[i],min[i-1]*nums[i]);
+        ï¿½ï¿½ nums[i] ï¿½Ç¸ï¿½ï¿½ï¿½Ê±ï¿½ï¿½max[i]=Math.max(max[i],min[i-1]*nums[i-1]);
+        min[i]=Math.min(min[i],max[i-1]*nums[i-1]);
+        Intitialize:
+        max[0]=min[0]=1;
+        rst=nums[0];
 
-µ«ÊÇÍ¨¹ý¹Û²ìÎÒÃÇ·¢ÏÖ£¬¸ÃÌâµÄ DP ÖÐ£¬µ±Ç°×´Ì¬½ö½öÖ»ÓëÉÏÒ»¸ö×´Ì¬ÓÐ¹Ø£¬ÓëÆäËû×´Ì¬Ã»ÓÐ¹ØÏµ¡£
-ËùÒÔÎÒÃÇÖ»ÐèÒªÓÃÒ»¸ö±äÁ¿À´±£³ÖÉÏÒ»¸ö×´Ì¬¼´¿É¡£
-ÕâÑùÎÒÃÇ±ã¿ÉÒÔ°Ñ O(N) µÄ¶îÍâ¿Õ¼äÓÅ»¯µ½ O(1) µÄ¶îÍâ¿Õ¼ä¡£
+        ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½Û²ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ DP ï¿½Ð£ï¿½ï¿½ï¿½Ç°×´Ì¬ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½×´Ì¬ï¿½Ð¹Ø£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬Ã»ï¿½Ð¹ï¿½Ïµï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½É¡ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½Ô°ï¿½ O(N) ï¿½Ä¶ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½Å»ï¿½ï¿½ï¿½ O(1) ï¿½Ä¶ï¿½ï¿½ï¿½Õ¼ä¡£
 
-Note£º
-	¸ºÊýÊÇÔÚÇó Max ºÍ Min Ê±·Ç³£ÖµµÃÖØÊÓµÄÒ»¸öÎÊÌâ£¡£¡£¡
-	ÌØ±ðÊÇÔÚÉæ¼°µ½ ³Ë·¨ ºÍ ¾ø¶ÔÖµ ÔËËãÊ±¡£¸ºÊý³£³£°çÑÝ×ÅÊ®·ÖÖØÒªµÄ½ÇÉ«£¡£¡£¡
-	Óë¸ÃÌâÏàÍ¬µÄ»¹ÓÐ£º ºÏ³ªÍÅ ÕâµÀÌâÄ¿£¬Ò²ÊÇÒ»µÀÊäÈëÖÐº¬ÓÐ ¸ºÊý µÄ DP ÎÊÌâ¡£
-	https://github.com/cherryljr/NowCoder/blob/master/%E5%90%88%E5%94%B1%E5%9B%A2.java
+        Noteï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Max ï¿½ï¿½ Min Ê±ï¿½Ç³ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½â£¡ï¿½ï¿½ï¿½ï¿½
+        ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ¼°ï¿½ï¿½ ï¿½Ë·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Öµ ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä½ï¿½É«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Ä»ï¿½ï¿½Ð£ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ò²ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ DP ï¿½ï¿½ï¿½â¡£
+        https://github.com/cherryljr/NowCoder/blob/master/%E5%90%88%E5%94%B1%E5%9B%A2.java
 	
 /*
 Description
@@ -44,13 +44,13 @@ public class Solution {
         if (nums == null || nums.length == 0) {
             return 0;
         }
-        
+
         int len = nums.length;
         int[] max = new int[len + 1];
         int[] min = new int[len + 1];
         int rst = nums[0];
         max[0] = min[0] = 1;
-        
+
         for (int i = 1; i <= len; i++) {
             max[i] = min[i] = nums[i - 1];
             if (nums[i - 1] > 0) {
@@ -60,10 +60,10 @@ public class Solution {
                 max[i] = Math.max(max[i], min[i - 1] * nums[i - 1]);
                 min[i] = Math.min(min[i], max[i - 1] * nums[i - 1]);
             }
-            
+
             rst = Math.max(rst, max[i]);
         }
-        
+
         return rst;
     }
 }
@@ -78,21 +78,21 @@ public class Solution {
         if (nums == null || nums.length == 0) {
             return 0;
         }
-        
+
         // State & Initialize 
         int minPre = nums[0], maxPre = nums[0];
         int max = nums[0], min = nums[0];
         int res = nums[0];
-        
+
         // Function
-        for (int i = 1; i < nums.length; i ++) {
+        for (int i = 1; i < nums.length; i++) {
             max = Math.max(nums[i], Math.max(maxPre * nums[i], minPre * nums[i]));
             min = Math.min(nums[i], Math.min(maxPre * nums[i], minPre * nums[i]));
             res = Math.max(res, max);
             maxPre = max;
             minPre = min;
         }
-        
+
         // Answer
         return res;
     }

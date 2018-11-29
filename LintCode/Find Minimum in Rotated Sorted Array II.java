@@ -48,7 +48,7 @@ public class Solution {
         if (nums == null || nums.length == 0) {
             return -1;
         }
-        
+
         int start = 0;
         int end = nums.length - 1;
         while (start < end) {
@@ -63,7 +63,7 @@ public class Solution {
                 end = mid;
             }
         }
-        
+
         return nums[start];
     }
 }

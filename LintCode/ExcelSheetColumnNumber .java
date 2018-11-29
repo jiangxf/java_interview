@@ -14,6 +14,7 @@ For example:
 
 
 public class Solution {//ABC -> 'A', 'B', 'C'
+
     public int titleToNumber(String s) {//S = AA
         int rst = 0;
         char[] arr = s.toCharArray();

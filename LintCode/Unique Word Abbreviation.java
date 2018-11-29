@@ -38,29 +38,30 @@ Therefore, we need to keep track of what word has been catagrize into pattern. S
 Note: Dealing with char, integer, string. Be careful if char are turnning int integers.
 */
 public class ValidWordAbbr {
-	HashMap<String, ArrayList<String>> map;
+    HashMap<String, ArrayList<String>> map;
+
     public ValidWordAbbr(String[] dict) {
         if (dict == null || dict.length == 0) {
-        	return;
+            return;
         }
         map = new HashMap<String, ArrayList<String>>();
         for (String s : dict) {
-        	String str = "";
-        	if (s.length() <= 2) {
-        		str = s;
-        	} else {
-        		str += s.charAt(0) + (s.length() - 2 + "") + s.charAt(s.length() - 1);
-        	}
-        	if (!map.containsKey(str)) {
-        		ArrayList<String> list = new ArrayList<String>();
- 				list.add(s);
- 				map.put(str, list);
-        	} else {
-        	    if (!map.get(str).contains(s)) {
-        	       	map.get(str).add(s); 
-        	    }
-        	
-        	}
+            String str = "";
+            if (s.length() <= 2) {
+                str = s;
+            } else {
+                str += s.charAt(0) + (s.length() - 2 + "") + s.charAt(s.length() - 1);
+            }
+            if (!map.containsKey(str)) {
+                ArrayList<String> list = new ArrayList<String>();
+                list.add(s);
+                map.put(str, list);
+            } else {
+                if (!map.get(str).contains(s)) {
+                    map.get(str).add(s);
+                }
+
+            }
         }
     }
 
@@ -70,19 +71,16 @@ public class ValidWordAbbr {
         }
         String str = "";
         if (word.length() <= 2) {
-        	str =  word;
+            str = word;
         } else {
-        	str += word.charAt(0) + (word.length() - 2 + "") + word.charAt(word.length() - 1);
+            str += word.charAt(0) + (word.length() - 2 + "") + word.charAt(word.length() - 1);
         }
         if (map.containsKey(str) && map.get(str).size() == 1 && map.get(str).get(0).equals(word)) {
-        	return true;
+            return true;
         }
         return !map.containsKey(str);
     }
 }
-
-
-
 
 
 // Your ValidWordAbbr object will be instantiated and called as such:

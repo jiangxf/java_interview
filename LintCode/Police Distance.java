@@ -42,7 +42,7 @@ public class Solution {
      * @param matrix : the martix
      * @return: the distance of grid to the police
      */
-    public int[][] policeDistance(int[][] matrix ) {
+    public int[][] policeDistance(int[][] matrix) {
         if (matrix == null || matrix.length == 0) {
             return new int[][]{};
         }
@@ -54,10 +54,10 @@ public class Solution {
                 // 如果是 空地 则开始BFS
                 if (matrix[i][j] == 0) {
                     rst[i][j] = bfs(matrix, i, j, rows, cols);
-                // 如果是 障碍物 直接是-1
+                    // 如果是 障碍物 直接是-1
                 } else if (matrix[i][j] == -1) {
                     rst[i][j] = -1;
-                // 如果是 警察位置 则是 0
+                    // 如果是 警察位置 则是 0
                 } else {
                     rst[i][j] = 0;
                 }
@@ -101,7 +101,7 @@ public class Solution {
  * 因此一开始我们就应该把所有 警察的位置 加入到队列中进行 BFS。
  * 即以 警察的位置 作为起点，空地 作为终点。
  * 这个做法相比与 Approach 1 中的 以空地作为起点的做法速度会快上不少。
- * 
+ * <p>
  * Portal：https://github.com/cherryljr/LintCode/blob/master/Portal.java
  */
 public class Solution {
@@ -111,7 +111,7 @@ public class Solution {
      * @param matrix : the martix
      * @return: the distance of grid to the police
      */
-    public int[][] policeDistance(int[][] matrix ) {
+    public int[][] policeDistance(int[][] matrix) {
         if (matrix == null || matrix.length == 0) {
             return new int[][]{};
         }

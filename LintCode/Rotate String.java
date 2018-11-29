@@ -1,7 +1,7 @@
 还是三步rotate.
-有个坑：offset可能很长，那么要%length，才能得到真正需要rotate的部分。
-Note: rotate 一个 full length之后，是string 不变
-```
+        有个坑：offset可能很长，那么要%length，才能得到真正需要rotate的部分。
+        Note:rotate 一个 full length之后，是string 不变
+        ```
 /*
 17% Accepted
 Given a string and an offset, rotate string by offset. (rotate from left to right)
@@ -38,8 +38,8 @@ public class Solution {
         reverse(A, 0, A.length - 1);
         return A;
     }
-    
-    
+
+
     //Helper function: reverse certain range of array
     public void reverse(char[] A, int start, int end) {
         for (int i = start, j = end; i < j; i++, j--) {

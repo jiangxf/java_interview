@@ -1,13 +1,8 @@
 M
 
-检查字符串是否可以组成回文. 用hashmap
+        检查字符串是否可以组成回文.用hashmap
 
-```
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+        ```
 
 /*
 Summer has reached a casino in Las Vegas and she wanted to gamble in the slot machines, Casino manager has given her some chances to play (T) ,where T is the no of different slot machines; each one has it's own unique combination of letters and numbers blinking in the panel(N).
@@ -74,7 +69,7 @@ public class Solution {
             }
         }
     }
-    
+
     public static boolean checkPalindrome(String s) {
         if (s == null || s.length() == 0) {
             return false;
@@ -96,7 +91,7 @@ public class Solution {
         }
         return true;
     }
-    
-    
+
+
 }
 ```

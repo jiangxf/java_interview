@@ -20,7 +20,7 @@ In this array, 3 and 5 have odd number of times, so it is invalid and return -1.
  * Approach 1: HashMap
  * 非常直观的做法，直接使用 HashMap 记录每个数的出现次数。
  * 然后再遍历一遍找出有几个出现次数为奇数的数即可。
- *
+ * <p>
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
  */
@@ -53,7 +53,7 @@ public class Solution {
  * 首先求出全部元素的异或和。
  * 然后再遍历一遍数组，查看有几个元素与 XOR 相同。
  * 如果出现次数为 奇数 则返回 XOR，否则返回 -1.
- * 
+ * <p>
  * 时间复杂度：O(n)
  * 空间复杂度：O(1)
  */

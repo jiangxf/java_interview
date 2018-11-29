@@ -26,7 +26,7 @@ Dynamic Programming Array
  * Initialize:	由题可得起点为左上角，并且这是一个二维数组，可得由起点到矩阵左上侧边缘各点的路径均只有一条故：
  * dp[0][0] = 1; dp[i][0] = 1; dp[0][i] = 1
  * Answer:	右下角为终点故为 dp[m][n].
- * 
+ * <p>
  * 时间复杂度：O(mn); 空间复杂度：O(mn)
  */
 class Solution {
@@ -60,7 +60,7 @@ class Solution {
  * 因此只需要借助 滚动数组 来存储两行的的结果就够用了（虽然还有会那么一点点的浪费，但是已经节省了非常大的空间了）
  * 至于 滚动数组 如何实现？利用数组下标进行 取余 操作即可。
  * 整体代码几乎没有修改的地方，并且十分便于理解。
- *
+ * <p>
  * 时间复杂度：O(mn); 空间复杂度：O(n)
  */
 class Solution {
@@ -76,31 +76,31 @@ class Solution {
         // Function
         for (int i = 1; i < m; i++) {
             for (int j = 1; j < n; j++) {
-                dp[i & 1][j] = dp[(i-1) & 1][j] + dp[i & 1][j - 1];
+                dp[i & 1][j] = dp[(i - 1) & 1][j] + dp[i & 1][j - 1];
             }
         }
 
         // Answer
-        return dp[(m-1) & 1][n - 1];
+        return dp[(m - 1) & 1][n - 1];
     }
 }
 
 /**
  * Approach 3: Using Combination Formula
  * Besides DP method, it also has a very smart method -- using combination formula.
- * 
+ * <p>
  * First of all you should understand that we need to do n + m - 2 movements :
  * m - 1 down, n - 1 right, because we start from cell (1, 1).
  * Secondly, the path it is the sequence of movements( go down / go right),
  * therefore we can say that two paths are different
  * when there is i-th (1 .. m + n - 2) movement in path1 differ i-th movement in path2.
- * 
+ * <p>
  * So, how we can build paths.
  * Let's choose (n - 1) movements(number of steps to the right) from (m + n - 2),
  * and rest (m - 1) is (number of steps down).
- * 
+ * <p>
  * I think now it is obvious that count of different paths are all combinations (n - 1) movements from (m + n-2).
- * 
+ * <p>
  * Time Complexity: O(n); Space Complexity: O(1)
  */
 class Solution {
@@ -113,10 +113,10 @@ class Solution {
         // reduce the numerator and denominator and get
         // C = ( (n - k + 1) * (n - k + 2) * ... * n ) / k!
         for (int i = 1; i <= k; i++) {
-            res *= (double)(N - k + i) / (double)i;
+            res *= (double) (N - k + i) / (double) i;
         }
 
-        return (int)Math.round(res);
+        return (int) Math.round(res);
     }
 }
 

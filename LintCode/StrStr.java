@@ -35,23 +35,23 @@ Check position i+j of source and position j of target. If not match, break out.
 If j matches target.length(), means target is fully embedded in source. 
 return start point of target in source: i
 */
-public int strStr(String source, String target) {
+public int strStr(String source,String target){
         //Check Null
-        if(source == null || target == null){
-            return -1;
+        if(source==null||target==null){
+        return-1;
         }
         //Two Pointer check for target
         int i,j;
-        for (i = 0; i < source.length() - target.length() + 1; i++){
-            for (j = 0; j < target.length(); j++){
-                if (source.charAt(i+j) != target.charAt(j)){
-                    break; 
-                } 
-            }
-            if( j == target.length()){
-                return i;
-            }
+        for(i=0;i<source.length()-target.length()+1;i++){
+        for(j=0;j<target.length();j++){
+        if(source.charAt(i+j)!=target.charAt(j)){
+        break;
+        }
+        }
+        if(j==target.length()){
+        return i;
+        }
         }
         //'target' not found:
-        return -1;
-}
+        return-1;
+        }

@@ -44,11 +44,11 @@ class Solution {
             return finKth(A, 0, B, 0, len / 2 + 1);
         } else {
             return (
-                finKth(A, 0, B, 0, len / 2) + finKth(A, 0, B, 0, len / 2 + 1)
-                ) / 2.0;
+                    finKth(A, 0, B, 0, len / 2) + finKth(A, 0, B, 0, len / 2 + 1)
+            ) / 2.0;
         }
     }
-    
+
     private double finKth(int[] A, int indA, int[] B, int indB, int k) {
         if (indA >= A.length) {
             return B[indB + k - 1];
@@ -59,19 +59,19 @@ class Solution {
         if (k == 1) {
             return Math.min(A[indA], B[indB]);
         }
-        
-        int A_key = indA + k / 2 - 1 < A.length 
-                    ? A[indA + k / 2 - 1]
-                    : Integer.MAX_VALUE;
+
+        int A_key = indA + k / 2 - 1 < A.length
+                ? A[indA + k / 2 - 1]
+                : Integer.MAX_VALUE;
         int B_key = indB + k / 2 - 1 < B.length
-                    ? B[indB + k / 2 - 1]
-                    : Integer.MAX_VALUE;
+                ? B[indB + k / 2 - 1]
+                : Integer.MAX_VALUE;
         if (A_key > B_key) {
             return finKth(A, indA, B, indB + k / 2, k - k / 2);
         } else {
             return finKth(A, indA + k / 2, B, indB, k - k / 2);
         }
-        
+
     }
 }
 

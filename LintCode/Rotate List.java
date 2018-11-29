@@ -1,4 +1,3 @@
-
 /* Given a list, rotate the list to the right by k places, where k is non-negative.
 
 Example
@@ -14,21 +13,22 @@ Then 2 pointers start moving together. When 1st pointer reaches the end, then 2n
 Let 2nd pointer be head, and move original head to tail of the list
 
 */
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class Solution {
     /**
      * @param head: the List
-     * @param k: rotate to the right k places
+     * @param k:    rotate to the right k places
      * @return: the list after rotation
      */
     public ListNode rotateRight(ListNode head, int k) {
@@ -38,7 +38,7 @@ public class Solution {
         //Check length
         int length = 0;
         ListNode dummy = head;
-        while(dummy != null) {
+        while (dummy != null) {
             dummy = dummy.next;
             length++;
         }

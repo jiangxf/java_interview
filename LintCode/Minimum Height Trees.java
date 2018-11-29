@@ -69,10 +69,10 @@ public class Solution {
         if (n == 1) {
             rst.add(0);
             return rst;
-        }else if (n == 0 || edges == null || edges.length == 0 || edges.length != n - 1) {
+        } else if (n == 0 || edges == null || edges.length == 0 || edges.length != n - 1) {
             return rst;
         }
-        
+
         //populate map
         boolean[] nodes = new boolean[n];
         HashMap<Integer, ArrayList<Integer>> map = new HashMap<Integer, ArrayList<Integer>>();
@@ -80,15 +80,15 @@ public class Solution {
             map.put(i, new ArrayList<Integer>());
             nodes[i] = true;
         }
-        for (int i = 0; i < edges.length;  i++) {        
+        for (int i = 0; i < edges.length; i++) {
             if (!map.get(edges[i][0]).contains(edges[i][1])) {
                 map.get(edges[i][0]).add(edges[i][1]);
-            }   
+            }
             if (!map.get(edges[i][1]).contains(edges[i][0])) {
                 map.get(edges[i][1]).add(edges[i][0]);
-            }  
-        } 
-        
+            }
+        }
+
         //Remove list with leng == 1
         Queue<Integer> queue = new LinkedList<Integer>();
         while (n > 2) {
@@ -104,10 +104,10 @@ public class Solution {
                 int from = map.get(key).get(0);
                 map.get(from).remove(key);
                 map.get(key).remove(0);
-                
+
             }
         }
-        
+
         //Put remaining into rst
         for (int i = 0; i < nodes.length; i++) {
             if (nodes[i]) {
@@ -115,7 +115,7 @@ public class Solution {
             }
 
         }
-        
+
         return rst;
     }
 }

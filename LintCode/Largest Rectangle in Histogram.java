@@ -1,32 +1,32 @@
-½âÌâË¼Â·£º
-1.Ã¶¾Ù·¨£¬±éÀúËùÓÐ¾ØÐÎµÄÃæ»ý£¬·µ»Ø×î´óÖµ 
-	Ê×ÏÈÀûÓÃÁ½¸ö¸öfor loop,´Ó×óµ½ÓÒ±éÀúÒÔµÚi¸ö×÷ÎªÆäÊµµÚj¸ö×÷Îª½áÊøµÄ¾ØÐÎµÄ³¤¡£
-	È»ºóÔÚÊ¹ÓÃÒ»¸öfor loop£¬±éÀú´Ói ~ j ÖÐ×îµÍµÄ¾ØÐÎµÄ¸ß¶ÈÊÇ¶àÉÙ£¬´Ó¶ø¼ÆËã³ö¾ØÕóµÄÃæ»ý¡£
-	Ëã·¨¸´ÔÓ¶ÈÎª O(N^3)
+ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½
+        1.Ã¶ï¿½Ù·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¾ï¿½ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½for loop,ï¿½ï¿½ï¿½ï¿½ï¿½Ò±ï¿½ï¿½ï¿½ï¿½Ôµï¿½iï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Êµï¿½ï¿½jï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ÎµÄ³ï¿½ï¿½ï¿½
+        È»ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ò»ï¿½ï¿½for loopï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½i~j ï¿½ï¿½ï¿½ï¿½ÍµÄ¾ï¿½ï¿½ÎµÄ¸ß¶ï¿½ï¿½Ç¶ï¿½ï¿½Ù£ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ã·¨ï¿½ï¿½ï¿½Ó¶ï¿½Îª O(N^3)
 
-2.ÔÚµÚÒ»ÖÖ·½·¨ÉÏ¿ÉÒÔ½øÒ»²½ÓÅ»¯£¬ÒòÎªj·¶Î§ÊÇ´Ó 1 ~ n µÄ£¬ËùÒÔÔÚ±éÀúµÄ¹ý³ÌÖÐÎÒÃÇ¿ÉÒÔÀûÓÃÒ»¸ö
-	²ÎÊýminHeightÀ´´æ´¢×îµÍµÄ¾ØÐÎ¸ß¶È£¬´Ó¶øÊ¡È¥Ò»¸öforÑ­»·¡£
-	Ëã·¨¸´ÔÓ¶ÈÎª O(N^2)	
+        2.ï¿½Úµï¿½Ò»ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½Ô½ï¿½Ò»ï¿½ï¿½ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½Îªjï¿½ï¿½Î§ï¿½Ç´ï¿½ 1~n ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½minHeightï¿½ï¿½ï¿½æ´¢ï¿½ï¿½ÍµÄ¾ï¿½ï¿½Î¸ß¶È£ï¿½ï¿½Ó¶ï¿½Ê¡È¥Ò»ï¿½ï¿½forÑ­ï¿½ï¿½ï¿½ï¿½
+        ï¿½ã·¨ï¿½ï¿½ï¿½Ó¶ï¿½Îª O(N^2)
 
-3.ÀûÓÃÕ»ÊµÏÖµÄ½ÏÎªÇÉÃîµÄËã·¨
-	¶ÔÓÚÔÚÒ»¸öÊý×éÖÐ£¬ÕÒÒ»¸öÊý ×ó±ß / ÓÒ±ß µÚÒ»¸ö±ÈËü Ð¡ / ´ó µÄÔªËØ£¬¿ÉÒÔÊ¹ÓÃÕ»Õâ¸öÊý¾Ý½á¹¹À´½â¾ö¡£
-Ê¹Õ»µÝÔö / µÝ¼õ. Ã¿Ò»´Î±È½Ï¶¼ÊÇÒ»¸öÔªËØ½øÕ»»òÕß³öÕ»£¬¹Ê×Ü¹²ÎªO(N)´Î½øÕ»ºÍO(N)´Î³öÕ»¡£
-Òò´ËÊ±¼ä¸´ÔÓ¶È½öÎªO(N).ÊÇÒ»¸ö·Ç³£ÇÉÃîµØËã·¨£¬ÖµµÃÑ§Ï°¡£
-	ÀûÓÃfor loop±éÀúÊý×é£¬Ã¿µ± nums[i] Ð¡ÓÚ / ´óÓÚ Õ»¶¥ÔªËØÊ±£¬Ôò½«Õ»¶¥ÔªËØ pop ³öÀ´£¬Ö±µ½ num[i] Ð¡ÓÚ / ´óÓÚ
-Õ»¶¥ÔªËØ¡£
-	¹Ê¸ÃÌâ½â·¨µÄÊµÖÊ¾ÍÊÇ£º·Ö±ðÕÒµ½×ó±ßºÍÓÒ±ßµÚÒ»¸ö Ð¡ÓÚ ¸ÃÊýµÄÔªËØ£¬ÄÇÃ´ÕâÁ½¸öÔªËØÖÐ¼äµÄÇø¼ä±ãÊÇ³¤·½ÐÎµÄ³¤¡£
-	ÕâÑùÎÒÃÇ±ã¿ÉÒÔµÃµ½ÒÔ¸ÃÔªËØÎª¿íµÄ×î´óµÄ³¤·½ÐÎÃæ»ý¡£
-	Òò´Ë£¬ÎÒÃÇÐèÒªÏÈ pop ³ö¸ÃÔªËØ£¬ÕâÑùÕ»¶¥±ãÊÇ×ó±ßµÚÒ»¸ö Ð¡ÓÚ ¸ÃÔªËØµÄÖµÁË¡£¶øÓÒ±ßµÚÒ»¸ö Ð¡ÓÚ ¸ÃÖµµÄÔªËØ±ãÊÇ±éÀúµ½µÄ nums[i]
+        3.ï¿½ï¿½ï¿½ï¿½Õ»Êµï¿½ÖµÄ½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ / ï¿½Ò±ï¿½ ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ð¡/ ï¿½ï¿½ ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½á¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        Ê¹Õ»ï¿½ï¿½ï¿½ï¿½ / ï¿½Ý¼ï¿½.Ã¿Ò»ï¿½Î±È½Ï¶ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½Ø½ï¿½Õ»ï¿½ï¿½ï¿½ß³ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½Ü¹ï¿½ÎªO(N)ï¿½Î½ï¿½Õ»ï¿½ï¿½O(N)ï¿½Î³ï¿½Õ»ï¿½ï¿½
+        ï¿½ï¿½ï¿½Ê±ï¿½ä¸´ï¿½Ó¶È½ï¿½ÎªO(N).ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½Öµï¿½ï¿½Ñ§Ï°ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½for loopï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬Ã¿ï¿½ï¿½ nums[i]Ð¡ï¿½ï¿½ / ï¿½ï¿½ï¿½ï¿½ Õ»ï¿½ï¿½Ôªï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½Ôªï¿½ï¿½ pop ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½ num[i]Ð¡ï¿½ï¿½ / ï¿½ï¿½ï¿½ï¿½
+        Õ»ï¿½ï¿½Ôªï¿½Ø¡ï¿½
+        ï¿½Ê¸ï¿½ï¿½ï¿½â·¨ï¿½ï¿½Êµï¿½Ê¾ï¿½ï¿½Ç£ï¿½ï¿½Ö±ï¿½ï¿½Òµï¿½ï¿½ï¿½ßºï¿½ï¿½Ò±ßµï¿½Ò»ï¿½ï¿½ Ð¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½ï¿½ÎµÄ³ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½ÔµÃµï¿½ï¿½Ô¸ï¿½Ôªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ pop ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßµï¿½Ò»ï¿½ï¿½ Ð¡ï¿½ï¿½ ï¿½ï¿½Ôªï¿½Øµï¿½Öµï¿½Ë¡ï¿½ï¿½ï¿½ï¿½Ò±ßµï¿½Ò»ï¿½ï¿½ Ð¡ï¿½ï¿½ ï¿½ï¿½Öµï¿½ï¿½Ôªï¿½Ø±ï¿½ï¿½Ç±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ nums[i]
 
 /*
 Description
 Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
 
-histogram £ºhttp://www.lintcode.com/en/problem/largest-rectangle-in-histogram/
+histogram ï¿½ï¿½http://www.lintcode.com/en/problem/largest-rectangle-in-histogram/
 
 Above is a histogram where width of each bar is 1, given height = [2,1,5,6,2,3].
 
-histogram £ºhttp://www.lintcode.com/en/problem/largest-rectangle-in-histogram/
+histogram ï¿½ï¿½http://www.lintcode.com/en/problem/largest-rectangle-in-histogram/
 
 The largest rectangle is shown in the shaded area, which has area = 10 unit.
 
@@ -49,24 +49,24 @@ public class Solution {
         if (height == null || height.length == 0) {
             return 0;
         }
-        
+
         Stack<Integer> stack = new Stack<Integer>();
         int maxArea = 0;
-        
+
         for (int i = 0; i <= height.length; i++) {
-        	// ÌâÖÐËùÓÐÔªËØ¾ùÎª·Ç¸ºÊý£¬¹Ê×îºóÒ»¸öÔªËØ push -1 Ê¹µÃ½«stackÖÐËùÓÐÔªËØpop³öÀ´ 
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¾ï¿½Îªï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½ push -1 Ê¹ï¿½Ã½ï¿½stackï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½popï¿½ï¿½ï¿½ï¿½
             int cur = (i == height.length) ? -1 : height[i];
-            
-            // ±ØÐëÏÈÅÐ¶Ïstack·Ç¿Õ£¬È»ºó²ÅÄÜ½øÐÐpeek()²Ù×÷
+
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½stackï¿½Ç¿Õ£ï¿½È»ï¿½ï¿½ï¿½ï¿½Ü½ï¿½ï¿½ï¿½peek()ï¿½ï¿½ï¿½ï¿½
             while (!stack.isEmpty() && cur < height[stack.peek()]) {
             	/* 
-          		  ×¢Òâ h ºÍ w µÄÈ¡ÖµË³Ðò²»ÄÜµ÷»»£¬ÒòÎªpop²Ù×÷»áµ¼ÖÂpeek()·¢Éú±ä»» 
-          	    µ«ÊÇÓÐÈË²»½û»áÏë£¬ËäÈ»»áÊ¹µÃË³Ðò·¢Éú¸Ä±ä£¬ÄÇÎÒÔÚ w È¡ÖµÊ±ÉÙ¼õ1²»¾ÍºÃÁËÂð£¿
-          	    ´ð°¸ÈÔÈ»ÊÇ´íÎóµÄ¡£ÒòÎªÓÐÒ»²½·Ç³£¹Ø¼üµÄ²½ÖèÔÚÓÚÅÐ¶Ï stack ÊÇ·ñÎª¿Õ£¬
-          	    ÈôÎª¿Õ£¬Ôò i ¼´Îª³¤·½ÐÎµÄ¿í¡£¾Ù¸öÀý×Ó:[5, 4, 2, 1].
-          	    µ±for loopÑ­»·µ½ 2 Ê±£¬Èç¹ûÎÒÃÇÏÈÈ¥ w£¬»áÒòÎª 4 Ã»ÓÐ±» pop ³öÈ¥Ê¹µÃ stack ÈÔÈ»²»Îª¿Õ
-          	    ËùÒÔµÃµ½µÄ w = 2 - 1 = 1. ÕâÑù¾Í»áÊ¹µÃ w µÄ³¤¶ÈÉÙËãÁËÒ»¸ö 1.
-          	    ¹ÊÎÒÃÇÐèÒª³¹µ×Àí½âËã·¨£¬ÏÈpopµÃµ½¸ß¶È£¬È»ºóÔÙÀ´ÅÐ¶ÏstackÀ´È¡¿í¶È.
+          		  ×¢ï¿½ï¿½ h ï¿½ï¿½ w ï¿½ï¿½È¡ÖµË³ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªpopï¿½ï¿½ï¿½ï¿½ï¿½áµ¼ï¿½ï¿½peek()ï¿½ï¿½ï¿½ï¿½ï¿½ä»» 
+          	    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½È»ï¿½ï¿½Ê¹ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ w È¡ÖµÊ±ï¿½Ù¼ï¿½1ï¿½ï¿½ï¿½Íºï¿½ï¿½ï¿½ï¿½ï¿½
+          	    ï¿½ï¿½ï¿½ï¿½È»ï¿½Ç´ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½Îªï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç³ï¿½ï¿½Ø¼ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ stack ï¿½Ç·ï¿½Îªï¿½Õ£ï¿½
+          	    ï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½ i ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ÎµÄ¿ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½ï¿½ï¿½:[5, 4, 2, 1].
+          	    ï¿½ï¿½for loopÑ­ï¿½ï¿½ï¿½ï¿½ 2 Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª 4 Ã»ï¿½Ð±ï¿½ pop ï¿½ï¿½È¥Ê¹ï¿½ï¿½ stack ï¿½ï¿½È»ï¿½ï¿½Îªï¿½ï¿½
+          	    ï¿½ï¿½ï¿½ÔµÃµï¿½ï¿½ï¿½ w = 2 - 1 = 1. ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½Ê¹ï¿½ï¿½ w ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ 1.
+          	    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨ï¿½ï¿½ï¿½ï¿½popï¿½Ãµï¿½ï¿½ß¶È£ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½stackï¿½ï¿½È¡ï¿½ï¿½ï¿½.
             	*/
                 int h = height[stack.pop()];
                 int w = stack.isEmpty() ? i : (i - stack.peek() - 1);
@@ -74,7 +74,7 @@ public class Solution {
             }
             stack.push(i);
         }
-        
+
         return maxArea;
     }
 }

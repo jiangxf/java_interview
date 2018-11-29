@@ -50,19 +50,19 @@ class Solution {
         if (nums == null) {
             return null;
         }
-        
+
         if (nums.length == 0) {
             rst.add(new ArrayList<Integer>());
             return rst;
         }
-        
+
         helper(rst, new ArrayList<Integer>(), nums);
-        
+
         return rst;
     }
-    
+
     private void helper(List<List<Integer>> rst,
-                        List<Integer> list, 
+                        List<Integer> list,
                         int[] nums) {
         // results.add(subset); 将符合条件的答案加入到results中，并return
         if (list.size() == nums.length) {
@@ -70,12 +70,12 @@ class Solution {
             // 此处可以直接return来节省时间
             return;
         }
-        
+
         for (int i = 0; i < nums.length; i++) {
             // 该题为求 permutaions，故每次都是从 0 开始进行 dfs
             // 所以当遇到已经加入(contains)的元素时需要跳过。
             // 这里要和 求subsets 区分开。（把过程当作一棵树的遍历，便可以理解）
-            if (list.contains(nums[i]))  {
+            if (list.contains(nums[i])) {
                 continue;
             }
             list.add(nums[i]);
@@ -105,11 +105,11 @@ public class Solution {
             rst.add(new ArrayList<Integer>());
             return rst;
         }
-        
+
         permute(rst, nums, 0);
         return rst;
     }
-    
+
     private void permute(List<List<Integer>> rst, int[] nums, int start) {
         if (start == nums.length) {
             List<Integer> list = new ArrayList<>();
@@ -127,7 +127,7 @@ public class Solution {
             swap(nums, start, i);   // Backtracking
         }
     }
-    
+
     private void swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];
@@ -152,9 +152,9 @@ class Solution {
      */
     public List<List<Integer>> permute(int[] nums) {
         ArrayList<List<Integer>> permutations
-             = new ArrayList<List<Integer>>();
+                = new ArrayList<List<Integer>>();
         if (nums == null) {
-            
+
             return permutations;
         }
 
@@ -162,15 +162,15 @@ class Solution {
             permutations.add(new ArrayList<Integer>());
             return permutations;
         }
-        
+
         int n = nums.length;
         ArrayList<Integer> stack = new ArrayList<Integer>();
-        
+
         stack.add(-1);
         while (stack.size() != 0) {
             Integer last = stack.get(stack.size() - 1);
             stack.remove(stack.size() - 1);
-            
+
             // increase the last number
             int next = -1;
             for (int i = last + 1; i < n; i++) {
@@ -182,7 +182,7 @@ class Solution {
             if (next == -1) {
                 continue;
             }
-            
+
             // generate the next permutation
             stack.add(next);
             for (int i = 0; i < n; i++) {
@@ -190,7 +190,7 @@ class Solution {
                     stack.add(i);
                 }
             }
-            
+
             // copy to permutations set
             ArrayList<Integer> permutation = new ArrayList<Integer>();
             for (int i = 0; i < n; i++) {
@@ -198,7 +198,7 @@ class Solution {
             }
             permutations.add(permutation);
         }
-        
+
         return permutations;
     }
 }

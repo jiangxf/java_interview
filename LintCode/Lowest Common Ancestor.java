@@ -1,7 +1,7 @@
-三种情况：   
-1. A,B都找到，那么这个level的node就是其中一层的parent。其实，最先recursively return到的那个，就是最底的LCA parent.   
-2. A 或者 B 被找到，那就还没有公共parent,return 非null得那个。   
-3. A B 都null, 那就说明没有找到, return null
+三种情况：
+        1.A,B都找到，那么这个level的node就是其中一层的parent。其实，最先recursively return到的那个，就是最底的LCA parent.
+        2.A 或者 B 被找到，那就还没有公共parent,return 非null得那个。
+        3.A B 都null,那就说明没有找到,return null
 
 
 /*
@@ -56,20 +56,20 @@ public class Solution {
     // 如果只碰到B，就返回B
     // 如果都没有，就返回null
     private TreeNode hepler(TreeNode root, TreeNode A, TreeNode B) {
-    	  //	根据定义，当root == 是A或B其中任意一个时，说明其为LCA。如为null，则同样返回nulls
+        //	根据定义，当root == 是A或B其中任意一个时，说明其为LCA。如为null，则同样返回nulls
         if (root == null || root == A || root == B) {
             return root;
         }
-        
+
         // Divide
         TreeNode left = lowestCommonAncestor(root.left, A, B);
         TreeNode right = lowestCommonAncestor(root.right, A, B);
-        
+
         // Conquer
         // A,B就在root左右子树中，即root就是LCA
         if (left != null && right != null) {
             return root;
-        } 
+        }
         // A,B在左子树中
         if (left != null) {
             return left;
@@ -80,7 +80,7 @@ public class Solution {
         }
         return null;
     }
-    
+
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode A, TreeNode B) {
         // write your code here
         if (A == null || B == null) {

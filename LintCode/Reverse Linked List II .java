@@ -1,9 +1,9 @@
 因为head无法确定，若使用if语句，会导致使用过多的if语句。
-故这里使用Dummy Node解决问题
+        故这里使用Dummy Node解决问题
 
-遍历到M前，
-存一下那个点，
-从M开始， for loop， reverse [m~n]。 然后把三段链接在一起。
+        遍历到M前，
+        存一下那个点，
+        从M开始， for loop， reverse[m~n]。 然后把三段链接在一起。
 
 /*
 28% Accepted
@@ -35,8 +35,8 @@ Note, when doing reverse, always:
 /**
  * Definition for ListNode
  * public class ListNode {
- *     int val;
- *     ListNode next;
+ * int val;
+ * ListNode next;
  * }
  */
 public class Solution {
@@ -44,18 +44,18 @@ public class Solution {
         if (m >= n || head == null) {
             return head;
         }
-        
+
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         head = dummy;
-        
+
         for (int i = 1; i < m; i++) {
             if (head == null) {
                 return null;
             }
             head = head.next;
         }
-        
+
         ListNode premNode = head;
         ListNode mNode = head.next;
         ListNode nNode = mNode, postnNode = mNode.next;
@@ -71,7 +71,7 @@ public class Solution {
         //	Connect three sections: [0 ~ m-1], [m ~ n], [n+1 ~ size]
         mNode.next = postnNode;
         premNode.next = nNode;
-        
+
         return dummy.next;
     }
 }

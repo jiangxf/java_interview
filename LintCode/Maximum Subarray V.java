@@ -21,7 +21,7 @@ Array Subarray
  * 那样的话，我们可以用过 preSum + Kadane's Algorithm 来解决。
  * 方法与 Maximum Average Subarray II 中的处理方式相同
  * https://github.com/cherryljr/LintCode/blob/master/Maximum%20Average%20Subarray%20II.java
- *
+ * <p>
  * 那么修改后的题目我们应该怎么做呢？
  * 首先，我们仍然先计算出前缀和数组 preSum[]
  * 那么任意一段子数组和就是 preSum[i] - preSum[j]
@@ -30,7 +30,7 @@ Array Subarray
  * 因为 i 固定且 preSum[i] 已知，所以为了最大化，我们要找出[i - k2 + 1, i - k1 + 1] 区间内的最小值。
  * 所以我们可以使用 单调队列 来求出一个区间的最小值。
  * 即我们需要维护一个 单调递增的 双端队列。
- *
+ * <p>
  * 如何维护一个 单调队列 可以参考：
  * https://github.com/cherryljr/LeetCode/blob/master/Sliding%20Window%20Maximum.java
  * https://github.com/cherryljr/NowCoder/blob/master/%E6%9C%80%E5%A4%A7%E5%80%BC%E5%87%8F%E5%8E%BB%E6%9C%80%E5%B0%8F%E5%80%BC%E5%B0%8F%E4%BA%8E%E7%AD%89%E4%BA%8Ek%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E6%95%B0%E9%87%8F.java
@@ -38,8 +38,8 @@ Array Subarray
 public class Solution {
     /**
      * @param nums: an array of integers
-     * @param k1: An integer
-     * @param k2: An integer
+     * @param k1:   An integer
+     * @param k2:   An integer
      * @return: the largest sum
      */
     public int maxSubarray5(int[] nums, int k1, int k2) {

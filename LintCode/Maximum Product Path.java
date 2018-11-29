@@ -25,23 +25,12 @@ Maximum product path: 1->2->3.
  * 这点在例子里体现了，但是描述里压根没讲。
  * 做法直接 DFS 暴力做...
  * 利用 Map 建立二叉树即可...
- *
+ * <p>
  * 不想多说，差评！！！
  */
 class Solution {
     private static final int MOD = 1000000007;
     int max = Integer.MIN_VALUE;
-
-    class TreeNode {
-        int val;
-        TreeNode left, right;
-
-        public TreeNode(int val) {
-            this.val = val;
-            this.left = null;
-            this.right = null;
-        }
-    }
 
     /**
      * @param x: The end points of edges set
@@ -49,7 +38,7 @@ class Solution {
      * @param d: The weight of points set
      * @return: Return the maximum product
      */
-    public int getProduct(int[] x, int[] y, int[] d) { 
+    public int getProduct(int[] x, int[] y, int[] d) {
         Map<Integer, TreeNode> tree = new HashMap<>();
         for (int i = 0; i < d.length; i++) {
             tree.put(i + 1, new TreeNode(d[i]));
@@ -73,12 +62,23 @@ class Solution {
         if (root == null) {
             return;
         }
-        int rst = (int)(((long)product * root.val + MOD) % MOD);
+        int rst = (int) (((long) product * root.val + MOD) % MOD);
         if (root.left == null && root.right == null) {
             max = Math.max(max, rst);
             return;
         }
         dfs(root.left, rst);
         dfs(root.right, rst);
+    }
+
+    class TreeNode {
+        int val;
+        TreeNode left, right;
+
+        public TreeNode(int val) {
+            this.val = val;
+            this.left = null;
+            this.right = null;
+        }
     }
 }

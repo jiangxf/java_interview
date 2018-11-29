@@ -34,7 +34,7 @@ public class Solution {
                 // The current sum equals mul plus the ten's digit from the last mul 
                 // (pos[p2], or you can find from the draft directly, they are in the same column)
                 int sum = mul + pos[p2];
-                
+
                 pos[p1] += sum / 10;
                 pos[p2] = sum % 10;
             }

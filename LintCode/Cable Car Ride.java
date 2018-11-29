@@ -42,7 +42,7 @@ Depth First Search
  * Approach: BFS
  * 虽然这道题目 Tag 是 DFS，但是这道题目使用 BFS 毫无疑问要比 DFS 优美不少
  * 基础的 BFS 应用，不多说啥，直接看代码吧
- * 
+ * <p>
  * DFS版本可以自行改写...这里就不写了
  */
 public class Solution {
@@ -55,7 +55,7 @@ public class Solution {
             return 0;
         }
 
-        int rows = height.length,  cols = height[0].length;
+        int rows = height.length, cols = height[0].length;
         int maxStep = 1;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {

@@ -1,10 +1,10 @@
 一般的binary search.
-两种解法：
-	1. 找到第一个 >= target的数, return position.
-	2. 找到最后一个 < target的数， return position + 1.
-在理解上更为推荐第一种方法.
-在结尾判断该return 哪个position。(两种解法，先后问题)
-```
+        两种解法：
+        1.找到第一个>=target的数,return position.
+        2.找到最后一个<target的数， return position+1.
+        在理解上更为推荐第一种方法.
+        在结尾判断该return 哪个position。(两种解法，先后问题)
+        ```
 /*
 28% Accepted
 Given a sorted array and a target value, return the index if the target is found. 
@@ -29,7 +29,7 @@ public class Solution {
             return 0;
         }
         int start = 0, end = A.length - 1;
-        
+
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (A[mid] == target) {
@@ -40,7 +40,7 @@ public class Solution {
                 end = mid;
             }
         }
-        
+
         if (A[start] >= target) {
             return start;
         } else if (A[end] >= target) {
@@ -61,7 +61,7 @@ public class Solution {
         int start = 0;
         int end = A.length - 1;
         int mid;
-        
+
         if (target < A[0]) {
             return 0;
         }
@@ -76,7 +76,7 @@ public class Solution {
                 end = mid;
             }
         }
-        
+
         if (A[end] == target) {
             return end;
         }

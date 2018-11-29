@@ -1,16 +1,16 @@
-µÚÒ»·´Ó¦ÎªÏÈÅÅÐò£¬È»ºó²éÑ¯¼´¿É¡£µ«ÊÇ½ö½öÊÇÅÅÐò¾ÍÐèÒª»¨·Ñ O(NlogN) µÄÊ±¼ä¸´ÔÓ¶È¡£
-¹Ê¿¼ÂÇÆäËû·½·¨¡£ÌâÄ¿ÒªÇóÎª O(N) µÄÊ±¼ä¸´ÔÓ¶È£¬Ò²¾ÍÊÇËµ¶ÔÓÚÃ¿Ò»¸öÔªËØµÄ²Ù×÷¶¼ÊÇ 
-O(1) µÄ£¬²¢ÇÒ¸øµÄÔªËØÊÇÂÒÐòµÄ£¬¸ù¾ÝÕâÁ½¸öÌØµãÎÒÃÇÏëµ½ÁË×î·ûºÏÌõ¼þµÄ HashMap.
-ÒòÎªÆäÌØµã¾ÍÊÇËùÓÐ²Ù×÷¾ùÎª O(1), ²¢ÇÒÃ»ÓÐË³Ðò¡£
+ï¿½ï¿½Ò»ï¿½ï¿½Ó¦Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½É¡ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ O(NlogN) ï¿½ï¿½Ê±ï¿½ä¸´ï¿½Ó¶È¡ï¿½
+        ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Òªï¿½ï¿½Îª O(N) ï¿½ï¿½Ê±ï¿½ä¸´ï¿½Ó¶È£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½Ã¿Ò»ï¿½ï¿½Ôªï¿½ØµÄ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        O(1) ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ò¸ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ëµ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ HashMap.
+        ï¿½ï¿½Îªï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½Îª O(1), ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ë³ï¿½ï¿½
 
-Ïëµ½Ê¹ÓÃ HashMap Ö®ºó£¬ÎÒÃÇÐèÒª¿¼ÂÇËüµÄkey, valueÓ¦¸Ã´æ´¢Ê²Ã´¡£keyºÁÎÞÒÉÎÊÓ¦¸Ã¾ÍÊÇ
-¸÷¸öÔªËØÁË£¬ÄÇÃ´valueÄØ£¿ÒòÎªÒªÇó O(N) µÄÊ±¼ä¸´ÔÓ¶È£¬ËùÒÔÎÒÃÇÃ¿¸öÔªËØÖ»ÄÜ²éÑ¯Ò»´Î£¬
-Õâ¾ÍÒâÎ¶×ÅÎÒÃÇÐèÒªÈ¥³ýÄÇÐ©ÖØ¸´µÄ²éÑ¯²Ù×÷¡£¹Ê value ÖµÎª boolean, ±íÊ¾µ±Ç°ÔªËØÊÇ·ñ
-ÒÑ¾­±»²éÑ¯¹ýÁË¡£
-  
-½ÓÏÂÀ´ÎÒÃÇÖ»ÐèÒª²éÑ¯ num-- ºÍ num++ ÊÇ·ñ´æÔÚÔÚ HashMap ÖÐ¼´¿É£¬Èô´æÔÚÔò±íÊ¾Á¬Ðø£¬
-¼ÆÊýÆ÷+1, Í¬Ê±°Ñnum-- ºÍ num++ µÄ value ÖÃÎªtrue. ÕâÑùµÚ¶þ´Î²éÑ¯Ê±£¬Èô·¢ÏÖÆävalue
-ÎªtrueÔòÖ±½ÓÌø¹ý¸ÃÔªËØ¡£×îºóÎÒÃÇ·µ»ØÕû¸ö¹ý³ÌÖÐ×î´óµÄ³¤¶È¼´¿É¡£
+        ï¿½ëµ½Ê¹ï¿½ï¿½ HashMap Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key,valueÓ¦ï¿½Ã´æ´¢Ê²Ã´ï¿½ï¿½keyï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã¾ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½Ã´valueï¿½Ø£ï¿½ï¿½ï¿½ÎªÒªï¿½ï¿½ O(N) ï¿½ï¿½Ê±ï¿½ä¸´ï¿½Ó¶È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½Ôªï¿½ï¿½Ö»ï¿½Ü²ï¿½Ñ¯Ò»ï¿½Î£ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½Î¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÈ¥ï¿½ï¿½ï¿½ï¿½Ð©ï¿½Ø¸ï¿½ï¿½Ä²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ value ÖµÎª boolean, ï¿½ï¿½Ê¾ï¿½ï¿½Ç°Ôªï¿½ï¿½ï¿½Ç·ï¿½
+        ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½Ë¡ï¿½
+
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½Ñ¯ num-- ï¿½ï¿½ num++ ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ HashMap ï¿½Ð¼ï¿½ï¿½É£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½+1, Í¬Ê±ï¿½ï¿½num-- ï¿½ï¿½ num++ ï¿½ï¿½ value ï¿½ï¿½Îªtrue. ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½Î²ï¿½Ñ¯Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½value
+        Îªtrueï¿½ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½È¼ï¿½ï¿½É¡ï¿½
 
 /*
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
@@ -39,16 +39,16 @@ public class Solution {
         if (num == null || num.length == 0) {
             return 0;
         }
-        
+
         int maxL = 1;
         HashMap<Integer, Boolean> history = new HashMap<Integer, Boolean>();
-        
+
         for (int i : num) {
             history.put(i, false);
         }
-        
+
         for (int i : num) {
-        	// if the element has been checked skip it
+            // if the element has been checked skip it
             if (history.get(i)) {
                 continue;
             }
@@ -67,7 +67,7 @@ public class Solution {
             }
             maxL = Math.max(maxL, total);
         }
-        
+
         return maxL;
     }
 }

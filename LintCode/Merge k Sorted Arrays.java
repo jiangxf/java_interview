@@ -25,26 +25,17 @@ Heap Priority Queue
  * Approach: PriorityQueue
  * Since we can't know the node's next element, as creating the PriorityQueue minHeap, let's create a Node{val, x, y}
  * Then it's very similar to merge k sorted lists.
- *
+ * <p>
  * 具体做法：
  * 利用整体数组的 前k小 来初始化 PriorityQueue(minHeap).
  * 然后依次从 PriorityQueue 中 poll 出当前的最小值，然后 add 到 rst 中。
  * 并检查当前被 poll 出来的元素所属的排序数组中是否还存在下一个元素（利用 Node 中的位置信息 x,y）
  * 存在的话就将其 add 到 PriorityQueue 中。一直重复下去，直到 PriorityQueue 为空。
- * 
+ * <p>
  * 变形题：
  * https://github.com/cherryljr/LintCode/blob/master/K%20Spaced%20Array%20Sorting.java
  */
 public class Solution {
-    class Node {
-        int val, x, y;
-        public Node(int val, int x, int y) {
-            this.val = val;
-            this.x = x;
-            this.y = y;
-        }
-    }
-
     /**
      * @param arrays: k sorted integer arrays
      * @return: a sorted array
@@ -56,7 +47,7 @@ public class Solution {
 
         PriorityQueue<Node> minHeap = new PriorityQueue<>((a, b) -> a.val - b.val);
         // Initialize the PriorityQueue and Calculate the all size of arrays
-        int total = 0;	
+        int total = 0;
         for (int i = 0; i < arrays.length; i++) {
             // Similar to merge k sorted lists, check the array is empty or not
             if (arrays[i].length != 0) {
@@ -77,5 +68,15 @@ public class Solution {
         }
 
         return rst;
+    }
+
+    class Node {
+        int val, x, y;
+
+        public Node(int val, int x, int y) {
+            this.val = val;
+            this.x = x;
+            this.y = y;
+        }
     }
 }

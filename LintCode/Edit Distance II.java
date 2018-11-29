@@ -15,7 +15,7 @@ String Uber Twitter Snapchat Facebook
  * 看到本题的题目 Edit Distance II, 以为是 Edit Distance 的 Follow Up.
  * 会让人以为仍然使用 DP 来进行解决，最后看 edit 的次数是否为 1.
  * 然而只需要稍微考虑一下，本题实际上通过进行 遍历 和 equalsTo 方法就能解决了。
- *
+ * <p>
  * 具体做法：
  * 对比两个字符串对应位置上的字符。如果遇到不同的时候，
  * 这时我们看两个字符串的长度关系，
@@ -40,10 +40,10 @@ public class Solution {
                 // 如果字符串长度相等，比较当前位置 之后 的字串是否相同
                 if (s.length() == t.length()) {
                     return s.substring(i + 1).equals(t.substring(i + 1));
-                // 如果 s 的长度更短，比较 s从当前位置开始 的子串 和 t从下一个位置开始 的子串是否相同    
+                    // 如果 s 的长度更短，比较 s从当前位置开始 的子串 和 t从下一个位置开始 的子串是否相同
                 } else if (s.length() < t.length()) {
                     return s.substring(i).equals(t.substring(i + 1));
-                // 反之，比较 s从下一个位置开始 的子串，和 t从当前位置开始 的子串是否相同       
+                    // 反之，比较 s从下一个位置开始 的子串，和 t从当前位置开始 的子串是否相同
                 } else {
                     return s.substring(i + 1).equals(t.substring(i));
                 }

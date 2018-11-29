@@ -1,13 +1,13 @@
-µäÐÍ»®·ÖÀà¶¯Ì¬¹æ»®, Óë Best Time to Buy and Sell Stock IV ¼¸ºõÏàÍ¬
+ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½ï¿½à¶¯Ì¬ï¿½æ»®, ï¿½ï¿½ Best Time to Buy and Sell Stock IV ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬
 
-State:
-	localMax[i][j] ±íÊ¾Ç°i¸öÊý£¬È¡j¸ö×ÓÊý×é£¬°üº¬µÚi¸öÊýµÄMaximum Sum
-	globalMax[i][j] ±íÊ¾Ç°i¸öÊý£¬È¡j¸ö×ÓÊý×é£¬¿ÉÒÔ²»°üº¬µÚi¸öÊýµÄMaximum Sum
-Function:
-	localMax[i][j] = max(localMax[i - 1][j] + nums[i - 1], globalMax[i - 1][j - 1] + nums[i - 1])
-	globalMax[i][j] = max(globalMax[i - 1][j], localMax[i][j])
-Answer:
-	globalMax[nums.length][k]
+        State:
+        localMax[i][j] ï¿½ï¿½Ê¾Ç°iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Maximum Sum
+        globalMax[i][j] ï¿½ï¿½Ê¾Ç°iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡jï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Maximum Sum
+        Function:
+        localMax[i][j]=max(localMax[i-1][j]+nums[i-1],globalMax[i-1][j-1]+nums[i-1])
+        globalMax[i][j]=max(globalMax[i-1][j],localMax[i][j])
+        Answer:
+        globalMax[nums.length][k]
 
 /*
 Description
@@ -25,41 +25,41 @@ Tags
 LintCode Copyright Subarray Array Dynamic Programming
 */
 
-public class Solution {  
-    /** 
-     * @param nums: A list of integers 
-     * @param k: An integer denote to find k non-overlapping subarrays 
-     * @return: An integer denote the sum of max k non-overlapping subarrays 
-     */  
-    public int maxSubArray(int[] nums, int k) {  
-        if(k > nums.length) {
-        	return 0;
-        }  
-        
+public class Solution {
+    /**
+     * @param nums: A list of integers
+     * @param k:    An integer denote to find k non-overlapping subarrays
+     * @return: An integer denote the sum of max k non-overlapping subarrays
+     */
+    public int maxSubArray(int[] nums, int k) {
+        if (k > nums.length) {
+            return 0;
+        }
+
         // State
-        int[][] local = new int[nums.length + 1][k + 1];  
-        int[][] global = new int[nums.length + 1][k + 1];  
-        
+        int[][] local = new int[nums.length + 1][k + 1];
+        int[][] global = new int[nums.length + 1][k + 1];
+
         // if k=0 => local/global colomn 0 = 0  
         // if nums.length=0 => local/global row 0 = 0 
         // Initialize & Function 
-        for(int i = 1; i <= nums.length; i++) {  
-            local[i][0] = Integer.MIN_VALUE;  
-            for(int j = 1; j <= k; j++) {  
-                if(j > i) {	//¾ØÕóÖÐµÄÖµ²»ÄÜÄ¬ÈÏÎª0£¬·ñÔòÓ°Ïì½á¹û  
-                    local[i][j] = Integer.MIN_VALUE;  
-                    global[i][j] = Integer.MIN_VALUE;  
-                    continue;  
-                }  
-                local[i][j] = Math.max(local[i - 1][j], global[i - 1][j - 1])  + nums[i - 1];  
-                if(i == j)  
-                    global[i][j] = local[i][j];  
-                else  
-                    global[i][j] = Math.max(global[i - 1][j], local[i][j]);  
-            }  
-        }  
-        
+        for (int i = 1; i <= nums.length; i++) {
+            local[i][0] = Integer.MIN_VALUE;
+            for (int j = 1; j <= k; j++) {
+                if (j > i) {    //ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Öµï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½
+                    local[i][j] = Integer.MIN_VALUE;
+                    global[i][j] = Integer.MIN_VALUE;
+                    continue;
+                }
+                local[i][j] = Math.max(local[i - 1][j], global[i - 1][j - 1]) + nums[i - 1];
+                if (i == j)
+                    global[i][j] = local[i][j];
+                else
+                    global[i][j] = Math.max(global[i - 1][j], local[i][j]);
+            }
+        }
+
         // Answer  
-        return global[nums.length][k];  
-    }  
+        return global[nums.length][k];
+    }
 }  

@@ -17,7 +17,7 @@ Sort Subarray
  * 涉及到 Subarray Sum 问题，首先联想到的就是要使用 Prefix Sum 来解决问题。
  * 该题是在 Subarray Sum 基础上的扩展 / Maximum Size Subarray Sum Equals k 的变形。
  * https://github.com/cherryljr/LintCode/blob/master/Maximum%20Size%20Subarray%20Sum%20Equals%20k.java
- *
+ * <p>
  * 思路：
  * 在 Subarray Sum 中，我们通过了 sum[0~a] = sum[0~b] = x 得到了 sum(a ~ b] = 0.
  * 而本题需要的是与 0 最相近的。故同样借助 Prefix Sum,只不过我们需要的是将各个 Prefix Sum
@@ -25,25 +25,15 @@ Sort Subarray
  * 因此我们这里不再使用 HashMap 而是使用了 Array 来实现。
  * 但是因为 Array 无法像 HashMap 储存一个对应的键值对，所以我们需要新建一个类 Point 来储存它们。
  * （当然使用简单的二维数组也可以，这边是为了使得代码更加容易理解）
- * 
+ * <p>
  * 做法：
- *  1. 新建 Point 类，包含 preSum 和 index。
- *  2. 遍历整个数组，算出每个位置上的 preSum 以及对应的 index 并保存到 map 中。
- *  3. 对所有得到的 preSum，依据 preSum 的大小进行 Sort (O(nlogn))
- *  4. 遍历得到的 map 数组，通过 map[i].preSum - map[i-1].preSum 来比较得到最接近 0 的 Subarray
- *  5. 最后对 index 进行一次 sort 便可以得到最后答案。
+ * 1. 新建 Point 类，包含 preSum 和 index。
+ * 2. 遍历整个数组，算出每个位置上的 preSum 以及对应的 index 并保存到 map 中。
+ * 3. 对所有得到的 preSum，依据 preSum 的大小进行 Sort (O(nlogn))
+ * 4. 遍历得到的 map 数组，通过 map[i].preSum - map[i-1].preSum 来比较得到最接近 0 的 Subarray
+ * 5. 最后对 index 进行一次 sort 便可以得到最后答案。
  */
 public class Solution {
-
-    class Point {
-        int preSum;
-        int index;
-
-        Point(int preSum, int index) {
-            this.preSum = preSum;
-            this.index = index;
-        }
-    }
 
     /*
      * @param nums: A list of integers
@@ -81,5 +71,15 @@ public class Solution {
         }
 
         return rst;
+    }
+
+    class Point {
+        int preSum;
+        int index;
+
+        Point(int preSum, int index) {
+            this.preSum = preSum;
+            this.index = index;
+        }
     }
 }

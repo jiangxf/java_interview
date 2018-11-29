@@ -37,7 +37,7 @@ A simple way: save it as a long during calculation. Then return a (int).
 
 class Solution {
     /**
-     * @param key: A String you should hash
+     * @param key:       A String you should hash
      * @param HASH_SIZE: An integer
      * @return an integer
      */
@@ -46,11 +46,11 @@ class Solution {
             return 0;
         }
         long hashRst = 0;
-        for (int i = 0; i < key.length ; i++) {
-            hashRst = hashRst * 33 + (int)(key[i]);
+        for (int i = 0; i < key.length; i++) {
+            hashRst = hashRst * 33 + (int) (key[i]);
             hashRst = hashRst % HASH_SIZE;
         }
-        return (int)hashRst;
+        return (int) hashRst;
     }
 };
 

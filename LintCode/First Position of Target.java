@@ -15,13 +15,13 @@ Binary Search Array
 /**
  * Approach: Binary Search
  * 使用 二分法 的模板即可轻松解决
- *
+ * <p>
  * Binary Search Template:
  * https://github.com/cherryljr/NowCoder/blob/master/%E6%95%B0%E5%AD%97%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0.java
  */
 public class Solution {
     /**
-     * @param nums: The integer array.
+     * @param nums:   The integer array.
      * @param target: Target to find.
      * @return: The first position of target. Position starts from 0.
      */

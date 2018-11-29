@@ -1,17 +1,17 @@
-DFS╣д╬╜╣ДлБд©║ё
-N╩й╨СнйлБ╣д╫А╧Ш╠ьх╩тзц©пп╨мц©апиоспгр╫Жспр╩╦Ж╩й╨С║ё
-╧йуБй╣жйио╬мйгр╩╦ЖееапнйлБ║ё
-кЫртнрцгюШсцакр╩╦Ж╢Сп║н╙N╣дйЩвИю╢╢Ф╢╒ц©пп╩й╨С╣дн╩жцё╛ё╗йЩвИоб╠Й╠Мй╬rowё╛ж╣╠Мй╬columnё╘
-х╩╨Сеп╤опб╪схК╣д╩й╨Сйг╥Я╩А╧╔╩В╣╫фДкШ╣д╩й╨С║ё
-╣╠╦цйЩвИ╠╩лНбЗё╛к╣цВур╣╫акр╩жж╫Б╥╗║ё╠Ц╫╚фД╪с╣╫resultжп║ё
+DFSО©╫д╬О©╫О©╫О©╫О©╫О©╫д©О©╫О©╫
+        NО©╫й╨О©╫О©╫О©╫О©╫О©╫д╫О©╫О©╫О©╫О©╫х╩О©╫О©╫ц©О©╫п╨О©╫ц©О©╫О©╫О©╫О©╫О©╫О©╫О©╫р╫О©╫О©╫О©╫р╩О©╫О©╫О©╫й╨О©╫
+        О©╫О©╫О©╫О©╫й╣О©╫О©╫О©╫о╬О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫Б║ё
+        О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫п║н╙NО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫Ф╢╒ц©О©╫п╩й╨О©╫О©╫н╩О©╫цёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫б╠О©╫О©╫й╬rowО©╫О©╫ж╣О©╫О©╫й╬columnО©╫О©╫
+        х╩О©╫О©╫О©╫п╤О©╫О©╫б╪О©╫О©╫О©╫д╩й╨О©╫О©╫г╥О©╫А╧╔О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╩й╨О©╫
+        О©╫О©╫О©╫О©╫О©╫О©╫О©╫И╠╩О©╫О©╫О©╫О©╫О©╫О©╫к╣О©╫О©╫О©╫р╣О©╫О©╫О©╫р╩О©╫ж╫Б╥╗О©╫О©╫О©╫Ц╫╚О©╫О©╫с╣О©╫resultО©╫п║О©╫
 
-а╫╦Ж╩й╨С©ирт╧╔╩В╣╫╤т╥╫╣дхЩжжгИ©ЖхГ╨неп╤оё╨
-	1. ╩Ях║ц©пп╩й╨С╣дн╩жцё╛х╥╠ёц©апж╩спр╩╦Ж╩й╨С
-	2. юШсца╫╦Ж╣Ц╣д╨АвщвЬ╠Й╣д╨мйг╥ЯоЮ╣хю╢еп╤оуБа╫╣Цйг╥Ятзм╛р╩п╠оъио -- п╠бйн╙ 1
-	3. юШсца╫╦Ж╣Ц╣д╨АвщвЬ╠Й╣д╡Нйг╥ЯоЮ╣хю╢еп╤оуБа╫╣Цйг╥Ятзм╛р╩п╠оъио -- п╠бйн╙ -1
+        О©╫О©╫О©╫О©╫О©╫й╨О©╫О©╫О©╫т╧О©╫О©╫О©╫О©╫О©╫О©╫т╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╤оёО©╫
+        1. О©╫О©╫х║ц©О©╫п╩й╨О©╫О©╫н╩О©╫цёО©╫х╥О©╫О©╫ц©О©╫О©╫ж╩О©╫О©╫р╩О©╫О©╫О©╫й╨О©╫
+        2. О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╨О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╨О©╫О©╫г╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫г╥О©╫О©╫О©╫м╛р╩п╠О©╫О©╫О©╫О©╫ --п╠О©╫О©╫н╙ 1
+        3. О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╨О©╫О©╫О©╫О©╫О©╫О©╫О©╫д╡О©╫О©╫г╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫г╥О©╫О©╫О©╫м╛р╩п╠О©╫О©╫О©╫О©╫ --п╠О©╫О©╫н╙-1
 /*
 Description:
-The n-queens puzzle is the problem of placing n queens on an n║аn chessboard such that no two queens attack each other.
+The n-queens puzzle is the problem of placing n queens on an nО©╫О©╫n chessboard such that no two queens attack each other.
 Given an integer n, return all distinct solutions to the n-queens puzzle.
 Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' 
 both indicate a queen and an empty space respectively.
@@ -41,6 +41,7 @@ Can you do it without recursion?
 class Solution {
     /**
      * Get all distinct N-Queen solutions
+     *
      * @param n: The number of queens
      * @return: All distinct solutions
      * For example, A string '...Q' shows a queen on forth position
@@ -50,11 +51,11 @@ class Solution {
         if (n <= 0) {
             return results;
         }
-        
+
         search(results, new ArrayList<Integer>(), n);
         return results;
     }
-    
+
     /*
      * results store all of the chessboards
      * cols store the column indices for each row
@@ -66,7 +67,7 @@ class Solution {
             results.add(drawChessboard(cols));
             return;
         }
-        
+
         for (int colIndex = 0; colIndex < n; colIndex++) {
             if (!isValid(cols, colIndex)) {
                 continue;
@@ -76,7 +77,7 @@ class Solution {
             cols.remove(cols.size() - 1);
         }
     }
-    
+
     private ArrayList<String> drawChessboard(ArrayList<Integer> cols) {
         ArrayList<String> chessboard = new ArrayList<>();
         for (int i = 0; i < cols.size(); i++) {
@@ -88,18 +89,18 @@ class Solution {
         }
         return chessboard;
     }
-    
+
     private boolean isValid(ArrayList<Integer> cols, int column) {
         int row = cols.size();
         for (int rowIndex = 0; rowIndex < cols.size(); rowIndex++) {
             if (cols.get(rowIndex) == column) {
                 return false;
             }
-            //	п╠бйн╙ 1 -- 45╤х
+            //	п╠О©╫О©╫н╙ 1 -- 45О©╫О©╫
             if (rowIndex + cols.get(rowIndex) == row + column) {
                 return false;
             }
-            //	п╠бйн╙ -1 -- 135╤х
+            //	п╠О©╫О©╫н╙ -1 -- 135О©╫О©╫
             if (rowIndex - cols.get(rowIndex) == row - column) {
                 return false;
             }

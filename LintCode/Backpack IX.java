@@ -29,29 +29,29 @@ Backpack Dynamic Programming
  * 对此我们首先需要计算一个收不到 offer 概率的情况。
  * 然后将 dp[] 初始化为 1.
  * 因为每个大学只申请一次，因此之后的就跟 01背包情况一样了。
- *
+ * <p>
  * 01背包问题分析：
- *  数组和为sum的方法数：
- *  https://github.com/cherryljr/NowCoder/blob/master/%E6%95%B0%E7%BB%84%E5%92%8C%E4%B8%BAsum%E7%9A%84%E6%96%B9%E6%B3%95%E6%95%B0.java
+ * 数组和为sum的方法数：
+ * https://github.com/cherryljr/NowCoder/blob/master/%E6%95%B0%E7%BB%84%E5%92%8C%E4%B8%BAsum%E7%9A%84%E6%96%B9%E6%B3%95%E6%95%B0.java
  */
 public class Solution {
     /**
-     * @param n: Your money
-     * @param prices: Cost of each university application
+     * @param n:           Your money
+     * @param prices:      Cost of each university application
      * @param probability: Probability of getting the University's offer
      * @return: the  highest probability
      */
     public double backpackIX(int n, int[] prices, double[] probability) {
-    	if (probability == null || probability.length == 0) {
-    		return 0.0;
-    	}
+        if (probability == null || probability.length == 0) {
+            return 0.0;
+        }
 
         double[] dp = new double[n + 1];
         Arrays.fill(dp, 1.0);
         for (int i = 0; i < probability.length; i++) {
-            probability[i] = 1- probability[i];
+            probability[i] = 1 - probability[i];
         }
-        
+
         for (int i = 0; i < probability.length; i++) {
             // Gurantee the money is enough to pay pricees[i] fee
             for (int j = n; j >= prices[i]; j--) {

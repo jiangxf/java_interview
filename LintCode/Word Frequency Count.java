@@ -21,16 +21,16 @@ Explanation:
  * Approach: HashMap
  * 使用 HashMap 统计各个单词的词频（统计的时候利用 excludeSet 过滤即可）
  * 注意点：
- *  1. 所有非英文字母的字符都是分割符号，所以需要一个个字符进行遍历才行。
- *  处理方式和 简单计算器 中的遍历方式相同。
- *  2. 结果需要全部转换成小写
- *  
+ * 1. 所有非英文字母的字符都是分割符号，所以需要一个个字符进行遍历才行。
+ * 处理方式和 简单计算器 中的遍历方式相同。
+ * 2. 结果需要全部转换成小写
+ * <p>
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
  */
 public class Solution {
     /**
-     * @param s: The string s
+     * @param s:           The string s
      * @param excludeList: The excludeList
      * @return: Return the most frequent words
      */

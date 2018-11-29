@@ -1,7 +1,7 @@
-Óë Maximum Subarray II / Best Time to Buy and Sell Stock III ½â·¨ÏàÍ¬
-½øÐÐ Forward-Backward Traversal µÃµ½ÐèÒªµÄÖµ¡££¨¸Ã·½·¨Ïà±ÈÓÚÃ¶¾Ù·¨¿ÉÒÔ½µµÍÊ±¼ä¸´ÔÓ¶È£©
-ÒòÎª´ð°¸ÊÇ |sum(A) - sum(B)| µÄ×î´óÖµ¡£
-¹ÊÎÒÃÇÐèÒª¿¼ÂÇÁ½ÖÖÇé¿ö £º max(sum(A)) - min(sum(B)) ºÍ max(sum(B)) - min(sum(A))
+ï¿½ï¿½ Maximum Subarray II/Best Time to Buy and Sell Stock III ï¿½â·¨ï¿½ï¿½Í¬
+        ï¿½ï¿½ï¿½ï¿½ Forward-Backward Traversal ï¿½Ãµï¿½ï¿½ï¿½Òªï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¶ï¿½Ù·ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ï¿½ï¿½Ê±ï¿½ä¸´ï¿½Ó¶È£ï¿½
+        ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ |sum(A)-sum(B)| ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ max(sum(A))-min(sum(B)) ï¿½ï¿½ max(sum(B))-min(sum(A))
 
 /*
 Description
@@ -26,7 +26,7 @@ public class Solution {
     /**
      * @param nums: A list of integers
      * @return: An integer indicate the value of maximum difference between two
-     *          Subarrays
+     * Subarrays
      */
     public int maxDiffSubArrays(int[] nums) {
         int size = nums.length;
@@ -35,17 +35,17 @@ public class Solution {
         int[] right_max = new int[size];
         int[] right_min = new int[size];
         int[] copy = new int[size];
-        
+
         /*Get negative copy*/
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             copy[i] = -1 * nums[i];
         }
-        
+
         int max = Integer.MIN_VALUE;
         int sum = 0;
         int minSum = 0;
         /*Forward: get max subarray*/
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             sum += nums[i];
             max = Math.max(max, sum - minSum);
             minSum = Math.min(sum, minSum);
@@ -55,37 +55,37 @@ public class Solution {
         max = Integer.MIN_VALUE;
         sum = 0;
         minSum = 0;
-        for(int i = size - 1; i >= 0; i--){
+        for (int i = size - 1; i >= 0; i--) {
             sum += nums[i];
             max = Math.max(max, sum - minSum);
             minSum = Math.min(sum, minSum);
             right_max[i] = max;
         }
-        
+
         /*Forward: get min subarray*/
         max = Integer.MIN_VALUE;
         sum = 0;
         minSum = 0;
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             sum += copy[i];
             max = Math.max(max, sum - minSum);
             minSum = Math.min(sum, minSum);
             left_min[i] = -1 * max;
         }
-        
+
         /*Backward: get min subarray*/
         max = Integer.MIN_VALUE;
         sum = 0;
         minSum = 0;
-        for(int i = size - 1; i >= 0; i--){
+        for (int i = size - 1; i >= 0; i--) {
             sum += copy[i];
             max = Math.max(max, sum - minSum);
             minSum = Math.min(sum, minSum);
             right_min[i] = -1 * max;
         }
-        
+
         int diff = 0;
-        for(int i = 0; i < size - 1; i++){
+        for (int i = 0; i < size - 1; i++) {
             diff = Math.max(diff, Math.abs(left_max[i] - right_min[i + 1]));
             diff = Math.max(diff, Math.abs(left_min[i] - right_max[i + 1]));
         }

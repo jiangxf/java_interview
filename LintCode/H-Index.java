@@ -18,12 +18,12 @@ Note: If there are several possible values for h, the maximum one is taken as th
  */
 
 /**
- * Approach 1: Sort 
+ * Approach 1: Sort
  * 直接使用快速排序进行排序，然后根据 H index 的规定进行比较即可。
  * 因为已经排序好了，所以可以直接利用 二分查找 来进行加速。
  * 具体分析可以参考：
  * H-Index II: https://github.com/cherryljr/LintCode/blob/master/H-Index%20II.java
- * 
+ * <p>
  * 时间复杂度：O(nlogn)
  * 空间复杂度：O(1)
  */
@@ -53,10 +53,10 @@ class Solution {
  * 桶排序后，从后向前遍历求 postSum, 当其值大于 i 说明：
  * 引用次数大于 i 的文章数目 >= i.
  * 之所以从后向前遍历，是因为我们要求的是最大的值。
- *
+ * <p>
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
- *
+ * <p>
  * 参考：https://leetcode.com/problems/h-index/discuss/70768/Java-bucket-sort-O(n)-solution-with-detail-explanation?page=2
  */
 class Solution {

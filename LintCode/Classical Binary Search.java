@@ -1,11 +1,11 @@
-E 
+E
 
-   while: start + 1 < end
-   mid = start + (end - start) / 2;
-   末尾double check start, end.
+        while:start+1<end
+   mid=start+(end-start)/2;
+           末尾double check start,end.
 
 
-```
+           ```
 /*
 Find any position of a target number in a sorted array. 
 Return -1 if target does not exist.
@@ -32,7 +32,7 @@ start,mid,end
 */
 public class Solution {
     /**
-     * @param A an integer array sorted in ascending order
+     * @param A      an integer array sorted in ascending order
      * @param target an integer
      * @return an integer
      */
@@ -43,7 +43,7 @@ public class Solution {
         int start = 0;
         int end = A.length - 1;
         int mid;
-        while(start + 1 < end) {
+        while (start + 1 < end) {
             mid = start + (end - start) / 2;
             if (target == A[mid]) {
                 return mid;

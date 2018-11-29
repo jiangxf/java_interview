@@ -20,14 +20,14 @@ Be careful with the case '[])' where stack could be empty, but we still try to p
 */
 public class Solution {
     public boolean isValid(String s) {
-        if (s == null || s.equals("()") || s.equals("{}") ||s.equals("[]")) {
+        if (s == null || s.equals("()") || s.equals("{}") || s.equals("[]")) {
             return true;
         }
         char[] arr = s.toCharArray();
         Stack<Character> stack = new Stack<Character>();
         stack.push(arr[0]);
         for (int i = 1; i < s.length(); i++) {
-            if ("({[".indexOf(arr[i]+"") != -1) {
+            if ("({[".indexOf(arr[i] + "") != -1) {
                 stack.push(arr[i]);
                 continue;
             }
@@ -59,7 +59,7 @@ Incorrect: for some cases.
 */
 public class Solution {
     public boolean isValid(String s) {
-        if (s == null || s.equals("()") || s.equals("{}") ||s.equals("[]")) {
+        if (s == null || s.equals("()") || s.equals("{}") || s.equals("[]")) {
             return true;
         }
         if (s.length() % 2 == 1) {
@@ -68,17 +68,25 @@ public class Solution {
         char c = s.charAt(0);
         int index = 0;
         switch (c) {
-            case '(' : index = s.indexOf(')'); break;
-            case '{' : index = s.indexOf('}'); break;
-            case '[' : index = s.indexOf(']'); break;
-            default: index = -1; break;     
+            case '(':
+                index = s.indexOf(')');
+                break;
+            case '{':
+                index = s.indexOf('}');
+                break;
+            case '[':
+                index = s.indexOf(']');
+                break;
+            default:
+                index = -1;
+                break;
         }
 
         if (index == -1) {
             return false;
         }
 
-        boolean middle =  isValid(s.substring(1, index));
+        boolean middle = isValid(s.substring(1, index));
         boolean after = (index == s.length() - 1) ? true : isValid(s.substring(index));
 
         return middle && after;
@@ -96,18 +104,30 @@ However didnt consider :"([)]". failed
 public class Solution {
     public boolean isValid(String s) {
         if (s == null) {
-        	return true;
+            return true;
         }
         int[] count = new int[3];
         for (char c : s.toCharArray()) {
-        	switch (c) {
-        		case '(' : count[0]++; break;
-				case ')' : count[0]--; break;
-				case '{' : count[1]++; break;
-				case '}' : count[1]--; break;
-				case '[' : count[2]++; break;
-        		case ']' : count[2]--; break;		
-        	}
+            switch (c) {
+                case '(':
+                    count[0]++;
+                    break;
+                case ')':
+                    count[0]--;
+                    break;
+                case '{':
+                    count[1]++;
+                    break;
+                case '}':
+                    count[1]--;
+                    break;
+                case '[':
+                    count[2]++;
+                    break;
+                case ']':
+                    count[2]--;
+                    break;
+            }
         }
         return (count[0] + count[1] + count[2]) == 0;
     }

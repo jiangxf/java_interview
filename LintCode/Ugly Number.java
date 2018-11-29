@@ -16,7 +16,7 @@ Given num = 14 return false
  * 丑数的定义为 只包含质因子 2, 3, 5 的正整数。
  * 因此我们只需要将判断的数不断不断地除以 2， 3， 5
  * （如果余数为 0 的话），然后判断结果是否能被整除即可。
- *
+ * <p>
  * 时间复杂度：O(log2(N) + logn3(N) + log5(N))
  */
 public class Solution {
@@ -31,7 +31,7 @@ public class Solution {
             return false;
         }
         for (int factor : factors) {
-            while (num % factor == 0)  {
+            while (num % factor == 0) {
                 num /= factor;
             }
         }

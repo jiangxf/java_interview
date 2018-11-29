@@ -19,11 +19,11 @@ Facebook Priority Queue Divide and Conquer Heap Uber Google Twitter LinkedIn Air
 /**
  * Approach 1: Divide and Conquer
  * 使用 分治 的思想，利用 mergeTwoLists 这个方法逐渐将两个 sorted list 合并起来。
- *
+ * <p>
  * 这个题目可以有好几个衍生：
  * 比如，如果k很大，一个机器上放不下所有的k list怎么办？
  * 比如，如果Merge起来的很长，一个机器上放不下怎么办？
- *
+ * <p>
  * More Approaches and Detail Explanations:
  * https://leetcode.com/articles/merge-k-sorted-list/
  */
@@ -38,7 +38,7 @@ Facebook Priority Queue Divide and Conquer Heap Uber Google Twitter LinkedIn Air
  *         this.next = null;
  *     }
  * }
- */ 
+ */
 public class Solution {
     /**
      * @param lists: a list of ListNode

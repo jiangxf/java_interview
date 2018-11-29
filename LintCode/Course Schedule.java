@@ -29,16 +29,16 @@ You may assume that there are no duplicate edges in the input prerequisites.
  * 当存在环时，说明有课程互相依赖，如题中的 Example 2.
  * 此时无法选择到全部课程。
  * 而有向图的判断使用 拓扑排序 即可。
- *
+ * <p>
  * 因为我们已经明确知道课程 label 的范围在 0~n-1 中。
  * 所以可以直接利用 数组 和 List 替代原本模板中 HashMap 的实现。
  * 即使用 邻接矩阵 和 数组 替代 HashMap 来建立 graph 和 indegreeMap.
  * 该做法可以大幅提升运行效率。（HashMap的常数项还是不小的，并且我还使用了 lambda expression）
  * 同时因为我们并不需要拓普排序后的具体结果，所以不需要一个list来存储它们，只需要使用一个 count 用于计数即可。
  * 效果为从 94ms 提升到了 10ms
- *
+ * <p>
  * Directed Graph Loop:
- *  https://github.com/cherryljr/LintCode/blob/master/Directed%20Graph%20Loop.java
+ * https://github.com/cherryljr/LintCode/blob/master/Directed%20Graph%20Loop.java
  */
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {

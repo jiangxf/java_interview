@@ -24,7 +24,7 @@ The longest scene is "abcab".
  * Approach 1: Sweep Line
  * 与 区间归并(Merge Intervals) 这道题目十分类似
  * https://github.com/cherryljr/LintCode/blob/master/Merge%20Intervals.java
- *
+ * <p>
  * 扫描线详解：
  * https://github.com/cherryljr/LintCode/blob/master/Number%20of%20Airplanes%20in%20the%20Sky.java
  */
@@ -161,7 +161,7 @@ public class Solution {
         int maxLen = intervals.get(0).end - intervals.get(0).start + 1;
         for (Interval curr : intervals) {
             if (pre.end < curr.start) {
-                pre =curr;
+                pre = curr;
             } else {
                 pre.end = Math.max(pre.end, curr.end);
             }

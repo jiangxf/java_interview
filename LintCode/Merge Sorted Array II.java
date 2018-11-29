@@ -30,12 +30,12 @@ class Solution {
         if (A == null || B == null) {
             return A == null ? B : A;
         }
-        
+
         int indA = A.length - 1;
         int indB = B.length - 1;
         int[] rst = new int[A.length + B.length];
         int indR = rst.length - 1;
-        
+
         while (indA >= 0 && indB >= 0) {
             if (A[indA] > B[indB]) {
                 rst[indR--] = A[indA--];
@@ -49,7 +49,7 @@ class Solution {
         while (indB >= 0) {
             rst[indR--] = B[indB--];
         }
-        
+
         return rst;
     }
 }

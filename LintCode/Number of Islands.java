@@ -40,34 +40,35 @@ return mark - 1, because we set a initial mark == 1, which eases the marking pro
 */
 
 public class Solution {
-	public int[][] matrix;
-	public int mark = 1;
-    public int numIslands(char[][] grid) {
-		if (grid == null || grid.length == 0 || grid[0].length == 0) {
-     		return 0;
-     	}  
-     	matrix = new int[grid.length][grid[0].length];
+    public int[][] matrix;
+    public int mark = 1;
 
-     	for(int i = 0; i < grid.length; i++) {
-     		for (int j = 0; j < grid[0].length; j++) {
-     			mark = mark(i, j, grid)? (mark + 1) : mark;
-     		}
-     	}
-     	return mark - 1;
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0 || grid[0].length == 0) {
+            return 0;
+        }
+        matrix = new int[grid.length][grid[0].length];
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                mark = mark(i, j, grid) ? (mark + 1) : mark;
+            }
+        }
+        return mark - 1;
     }
 
     public boolean mark(int i, int j, char[][] grid) {
-    	if (i >= 0 && i < grid.length && j >= 0 && j < grid[0].length) {
-    		if (matrix[i][j] == 0 && grid[i][j] == '1') {
-    			matrix[i][j] = mark;
-    			mark(i - 1, j, grid);
-    			mark(i + 1, j, grid);
-    			mark(i, j - 1, grid);
-    			mark(i, j + 1, grid);
-    			return true;
-    		}
-    	}
-    	return false;
+        if (i >= 0 && i < grid.length && j >= 0 && j < grid[0].length) {
+            if (matrix[i][j] == 0 && grid[i][j] == '1') {
+                matrix[i][j] = mark;
+                mark(i - 1, j, grid);
+                mark(i + 1, j, grid);
+                mark(i, j - 1, grid);
+                mark(i, j + 1, grid);
+                return true;
+            }
+        }
+        return false;
     }
 }
 

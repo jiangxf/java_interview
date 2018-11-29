@@ -16,19 +16,19 @@ Use dummy node at beginning.
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;      
- *     }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) {
+ * val = x;
+ * next = null;
+ * }
  * }
  */
 public class Solution {
     /**
      * @param l1: the first list
      * @param l2: the second list
-     * @return: the sum list of l1 and l2 
+     * @return: the sum list of l1 and l2
      */
     public ListNode addLists(ListNode l1, ListNode l2) {
         ListNode rst = new ListNode(0);

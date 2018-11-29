@@ -1,21 +1,21 @@
 解法1：Sequence Dynamic Programming
-Yes / No 问题，并且数组不能够交换位置 =>  Sequence DP
+        Yes/No 问题，并且数组不能够交换位置=>Sequence DP
 
-State:
-	f[i]表示能否从起点跳到第i个位置 true or false
-Function:
-	f[i] = ( f[j]为true,即第j个位置是肯定可以被跳到的 & j < i & j能够跳到i, 即f[j] + j >= i )
-Initialize: 
-	f[0] = true
-Answer:
-	f[n - 1]是否为true
-	
-解法2： Greedy
-At each index, check how far we can jump, store this farest-can-jump position in variable ‘farest’. 
-							 Take max of current farest and (index + A[index]), store is in farest
-At each index, compare if ‘farest’ is greater than the end of array, if so, found solution, return true.
-At each index, also check if ‘farest == current index’, that means the farest we can move is to current index and we cannot move forward.
-							 Then return false.
+        State:
+        f[i]表示能否从起点跳到第i个位置 true or false
+        Function:
+        f[i]=(f[j]为true,即第j个位置是肯定可以被跳到的&j<i &j能够跳到i,即f[j]+j>=i)
+        Initialize:
+        f[0]=true
+        Answer:
+        f[n-1]是否为true
+
+        解法2： Greedy
+        At each index,check how far we can jump,store this farest-can-jump position in variable ‘farest’.
+        Take max of current farest and(index+A[index]),store is in farest
+        At each index,compare if ‘farest’ is greater than the end of array,if so,found solution,return true.
+        At each index,also check if ‘farest==current index’,that means the farest we can move is to current index and we cannot move forward.
+        Then return false.
 
 /*
 Given an array of non-negative integers, you are initially positioned at the first index of the array.
@@ -54,10 +54,10 @@ public class Solution {
     public boolean canJump(int[] A) {
         //	State
         boolean[] can = new boolean[A.length];
-        
+
         //  Initialize
         can[0] = true;
-        
+
         //  Function
         for (int i = 1; i < A.length; i++) {
             for (int j = 0; j < i; j++) {
@@ -67,7 +67,7 @@ public class Solution {
                 }
             }
         }
-        
+
         //  Answer
         return can[A.length - 1];
     }

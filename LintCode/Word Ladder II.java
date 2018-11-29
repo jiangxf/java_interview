@@ -42,13 +42,13 @@ BFS: queue, while loop
 DFS: recursion, with a structure to go deeper, remember to add/remove element when passing alone
 */
 public class Solution {
-    
+
     public List<List<String>> findLadders(String start, String end, Set<String> dict) {
         List<List<String>> rst = new ArrayList<List<String>>();
         Map<String, ArrayList<String>> pastMap = new HashMap<String, ArrayList<String>>();
         Map<String, Integer> distance = new HashMap<String, Integer>();
         Queue<String> queue = new LinkedList<String>();
-        
+
         //Initiate the variables
         dict.add(start);
         dict.add(end);
@@ -67,11 +67,12 @@ public class Solution {
 
         return rst;
     }
+
     //BFS to populate map and distance:
     //Distance: distance from each str in dict, to the starting point.
     //Map: all possible ways to mutate into each str in dict.
     public void BFS(String start, String end, Map<String, Integer> distance, Map<String, ArrayList<String>> pastMap, Set<String> dict, Queue<String> queue) {
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             String str = queue.poll();
             List<String> list = expand(str, dict);
 
@@ -84,6 +85,7 @@ public class Solution {
             }
         }
     }
+
     //DFS on the map, where map is the all possible ways to mutate into a particular str. Backtracking from end to start
     public void DFS(String start, String str, Map<String, Integer> distance, Map<String, ArrayList<String>> pastMap, ArrayList<String> path, List<List<String>> rst) {
         path.add(str);
@@ -100,13 +102,14 @@ public class Solution {
         }
         path.remove(path.size() - 1);
     }
+
     //Populate all possible mutations for particular str, skipping the case that mutates back to itself.
     public ArrayList<String> expand(String str, Set<String> dict) {
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < str.length(); i++) {//Alternate each letter position
             for (int j = 0; j < 26; j++) {//Alter 26 letters
-                if (str.charAt(i) != (char)('a' + j)) {
-                    String newStr = str.substring(0, i) + (char)('a' + j) + str.substring(i + 1);
+                if (str.charAt(i) != (char) ('a' + j)) {
+                    String newStr = str.substring(0, i) + (char) ('a' + j) + str.substring(i + 1);
                     if (dict.contains(newStr)) {
                         list.add(newStr);
                     }
@@ -118,7 +121,6 @@ public class Solution {
 }
 
 
-
 //Attempt1: probably works, however:
 //Testing against input: "qa", "sq", ["si","go","se","cm","so","ph","mt","db","mb","sb","kr","ln","tm","le","av","sm","ar","ci","ca","br","ti","ba","to","ra","fa","yo","ow","sn","ya","cr","po","fe","ho","ma","re","or","rn","au","ur","rh","sr","tc","lt","lo","as","fr","nb","yb","if","pb","ge","th","pm","rb","sh","co","ga","li","ha","hz","no","bi","di","hi","qa","pi","os","uh","wm","an","me","mo","na","la","st","er","sc","ne","mn","mi","am","ex","pt","io","be","fm","ta","tb","ni","mr","pa","he","lr","sq","ye"]
 //0. Could be backtrackList exceed memory limit.
@@ -126,8 +128,8 @@ public class Solution {
 //2. If use StringBuffer strCheck to check if particular sequence exist, then exceed time limit.
 //It looks like we'd use DFS for final results.
 public class Solution {
-	private Queue<String> q = new LinkedList<String>();
-	private Queue<ArrayList<String>> backtrackList = new LinkedList<ArrayList<String>>();
+    private Queue<String> q = new LinkedList<String>();
+    private Queue<ArrayList<String>> backtrackList = new LinkedList<ArrayList<String>>();
     private Set<String> dict;
     private String end;
     private int level = 1;
@@ -136,61 +138,60 @@ public class Solution {
 
     public List<List<String>> findLadders(String start, String end, Set<String> dict) {
         if (start == null || end == null || dict == null || start.length() != end.length()) {
-    		return rst;
-    	}
-    	this.dict = dict;
-    	this.end = end;
-    	ArrayList<String> head = new ArrayList<String>();
-    	head.add(start);
-    	q.offer(start);
-    	backtrackList.offer(head);
-    	while(!q.isEmpty()) {//BFS
-    		int size = q.size();//Fix size
-    		level++;
-    		for (int k = 0; k < size; k++) {//LOOP through existing queue: for this specific level
-	    		String str = q.poll();
-	    		ArrayList<String> list = backtrackList.poll();
-	    		validateMutations(str, list);
-	    	}//END FOR K
-    	}//END WHILE
+            return rst;
+        }
+        this.dict = dict;
+        this.end = end;
+        ArrayList<String> head = new ArrayList<String>();
+        head.add(start);
+        q.offer(start);
+        backtrackList.offer(head);
+        while (!q.isEmpty()) {//BFS
+            int size = q.size();//Fix size
+            level++;
+            for (int k = 0; k < size; k++) {//LOOP through existing queue: for this specific level
+                String str = q.poll();
+                ArrayList<String> list = backtrackList.poll();
+                validateMutations(str, list);
+            }//END FOR K
+        }//END WHILE
 
-    	List<List<String>> minRst = new ArrayList<List<String>>();
-    	for (int i = 0; i < rst.size(); i++) {
-    		if (rst.get(i).size() == len) {
-    			minRst.add(rst.get(i));
-    		}
-    	}
-    	return minRst;
+        List<List<String>> minRst = new ArrayList<List<String>>();
+        for (int i = 0; i < rst.size(); i++) {
+            if (rst.get(i).size() == len) {
+                minRst.add(rst.get(i));
+            }
+        }
+        return minRst;
     }
 
 
     public void validateMutations(String str, ArrayList<String> list) {
-    	if (list.size() > len) {//No need to digger further if list is already greater than min length
-    		return;
-    	}
-    	for (int i = 0; i < str.length(); i++) {//Alternate each letter position
-			for (int j = 0; j < 26; j++) {//Alter 26 letters
-                if (str.charAt(i) == (char)('a' + j)) {
+        if (list.size() > len) {//No need to digger further if list is already greater than min length
+            return;
+        }
+        for (int i = 0; i < str.length(); i++) {//Alternate each letter position
+            for (int j = 0; j < 26; j++) {//Alter 26 letters
+                if (str.charAt(i) == (char) ('a' + j)) {
                     continue;
                 }
-				String newStr = str.substring(0, i) + (char)('a' + j) + str.substring(i + 1);
+                String newStr = str.substring(0, i) + (char) ('a' + j) + str.substring(i + 1);
 
-				ArrayList<String> temp = (ArrayList<String>)list.clone();
-				temp.add(newStr);
-				if (dict.contains(newStr)) {
-					if (newStr.equals(end)) {//Found end
-						len = Math.min(len, level);
-						rst.add(temp);
-					} else {
-						q.offer(newStr);
-						backtrackList.offer(temp);
-					}
-				}
-			}//END FOR J
-		}//END FOR I
+                ArrayList<String> temp = (ArrayList<String>) list.clone();
+                temp.add(newStr);
+                if (dict.contains(newStr)) {
+                    if (newStr.equals(end)) {//Found end
+                        len = Math.min(len, level);
+                        rst.add(temp);
+                    } else {
+                        q.offer(newStr);
+                        backtrackList.offer(temp);
+                    }
+                }
+            }//END FOR J
+        }//END FOR I
     }
 }
-
 
 
 //Solution from NineChapter, commented:

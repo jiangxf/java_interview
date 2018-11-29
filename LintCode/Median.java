@@ -44,28 +44,28 @@ public class Solution {
             return 0;
         }
         if (nums.length % 2 == 0) {
-            return helper(nums, 0, nums.length - 1, nums.length/2 - 1);
+            return helper(nums, 0, nums.length - 1, nums.length / 2 - 1);
         } else {
-            return helper(nums, 0, nums.length - 1, nums.length/2);
+            return helper(nums, 0, nums.length - 1, nums.length / 2);
         }
     }
-    
-    public void swap(int[] nums, int x, int y){
+
+    public void swap(int[] nums, int x, int y) {
         int temp = nums[x];
         nums[x] = nums[y];
         nums[y] = temp;
     }
-    
+
     public int helper(int[] nums, int start, int end, int mid) {
         int pivot = end;
         int num = nums[pivot];
         int low = start;
         int high = end;
         while (low < high) {
-            while(low < high && nums[low] < num) {
+            while (low < high && nums[low] < num) {
                 low++;
             }
-            while(low < high && nums[high] >= num) {
+            while (low < high && nums[high] >= num) {
                 high--;
             }
             swap(nums, low, high);

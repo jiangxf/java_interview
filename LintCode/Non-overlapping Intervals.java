@@ -25,19 +25,19 @@ Explanation: You don't need to remove any of the intervals since they're already
 /**
  * Approach: Greedy
  * 区间类问题，看到时第一反应不外乎就是两种做法：
- *  1. 扫描线，在这道题目的话用途为类似求最多需要多少个会议室。
- *  看样子并不能派上用场。
- *  2. 贪心排序。用途为类似求最多可以安排多少场会议。
- *  属于需要求解的问题的补集。
+ * 1. 扫描线，在这道题目的话用途为类似求最多需要多少个会议室。
+ * 看样子并不能派上用场。
+ * 2. 贪心排序。用途为类似求最多可以安排多少场会议。
+ * 属于需要求解的问题的补集。
  * 因此这里选用第二种方法，直接对区间安装结束点进行排序。
  * 然后统计最多有几个不重复的区间，那么答案就是:
- *  最少需要移除的区间个数 = 总区间个数 - 最多的不重复区间个数
- *
+ * 最少需要移除的区间个数 = 总区间个数 - 最多的不重复区间个数
+ * <p>
  * 时间复杂度：O(nlogn)
- *
+ * <p>
  * 类似问题：
  * 最多的会议场数：
- *  https://github.com/cherryljr/NowCoder/blob/master/%E6%9C%80%E5%A4%9A%E7%9A%84%E4%BC%9A%E8%AE%AE%E5%9C%BA%E6%95%B0.java
+ * https://github.com/cherryljr/NowCoder/blob/master/%E6%9C%80%E5%A4%9A%E7%9A%84%E4%BC%9A%E8%AE%AE%E5%9C%BA%E6%95%B0.java
  */
 
 /**

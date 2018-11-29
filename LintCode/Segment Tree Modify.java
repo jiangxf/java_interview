@@ -45,7 +45,7 @@ LintCode Copyright Binary Tree Segment Tree
  * 我们从 root 出发，判断 index 会落在左子树还是右子树，然后继续递归，这样就可以很容易从根节点走到叶子节点，
  * 然后更新叶子节点的值，递归返回前不断更新每个节点的最大值即可。
  * （注意单点修改将导致父节点们的 value 也发生变换，所以需要递归返回节点值去更新线段树上的值）。
- *
+ * <p>
  * 因为线段树的高度为log(n),所以更新序列中一个节点的时间复杂度为log(n)。
  * 详细分析与示例：
  * http://www.jiuzhang.com/tutorial/segment-tree/89
@@ -69,7 +69,7 @@ public class Solution {
      * @param root: The root of segment tree.
      * @param index: index.
      * @param value: value
-     * @return: 
+     * @return:
      */
     public void modify(SegmentTreeNode root, int index, int value) {
         // 处理超出范围的请求（异常处理）
@@ -82,19 +82,19 @@ public class Solution {
             root.max = value;
             return;
         }
-        
+
         // 分治
         int mid = root.start + (root.end - root.start) / 2;
         // 需要修改的节点在左子树中
         if (index <= mid) {
             // 递归操作
             modify(root.left, index, value);
-        // 需要修改的节点在右子树中
+            // 需要修改的节点在右子树中
         } else {
             // 递归操作
             modify(root.right, index, value);
         }
-        
+
         // 注意：单点修改完后会影响父节点们的 sum 值，
         // 因此需要从叶子节点向上返回到根节点, 去更新线段树上的值
         root.max = Math.max(root.left.max, root.right.max);

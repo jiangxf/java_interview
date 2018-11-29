@@ -25,16 +25,16 @@ Binary Search Subarray Google
  * but choosing a larger number as the next approximation.
  * But, if the initial guess is wrong, and the initial maximum average value(guessed) isn't possible,
  * we need to try with a smaller number as the next approximate.
- *
+ * <p>
  * Now, instead of doing the guesses randomly, we can make use of Binary Search.
  * With min and max as the initial numbers to begin with, we can find out the mid of these two numbers given by (min+max)/2.
  * Now, we need to find if a subarray with length greater than or equal to k is possible with an average sum greater than this mid value.
  * To determine if this is possible in a single scan, let's look at an observation.
  * Suppose, there exist j elements, a1, a2, a3..., aj
  * ​​in a subarray within nums such that their average is greater than mid. In this case, we can say that
- *      (a1+a2+a3...+aj)/j ≥ mid or
- *      (a1+a2+a3...+aj) ≥ j*mid or
- *      (a1−mid)+(a2−mid)+(a3−mid)...+(aj−mid) ≥ 0  (our code using this method)
+ * (a1+a2+a3...+aj)/j ≥ mid or
+ * (a1+a2+a3...+aj) ≥ j*mid or
+ * (a1−mid)+(a2−mid)+(a3−mid)...+(aj−mid) ≥ 0  (our code using this method)
  * Thus, we can see that if after subtracting the mid number from the elements of a subarray with more than k−1 elements,
  * within nums, (Here we use Kadane's Algorithm)
  * if the sum of elements of this reduced subarray is greater than 0, we can achieve an average value greater than mid.
@@ -42,12 +42,12 @@ Binary Search Subarray Google
  * Otherwise, if this reduced sum is lesser than 0 for all subarrays with greater than or equal to k elements,
  * we can't achieve mid as the average.
  * Thus, we need to set mid as the new maximum element and continue the process.
- *
+ * <p>
  * Every time after checking the possibility with a new mid value, at the end, we need to settle at some value as the average.
  * But, we can observe that eventually, we'll reach a point, where we'll keep moving near some same value with very small changes.
  * In order to keep our precision in control, we limit this process to 1e-6 precision,
  * by making use of error and continuing the process till error becomes lesser than 0.000001 .
- *
+ * <p>
  * Get more detail about Kadane's Algorithm here:
  * https://github.com/cherryljr/LintCode/blob/master/Maximum%20Subarray.java
  * Good Explanation here:
@@ -68,8 +68,8 @@ public class Solution {
         double min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
         // get the minimum and maximum element of this array, so we can do binary search based on them.
         for (int i = 0; i < len; i++) {
-            min = Math.min(min, (double)nums[i]);
-            max = Math.max(max, (double)nums[i]);
+            min = Math.min(min, (double) nums[i]);
+            max = Math.max(max, (double) nums[i]);
         }
 
         double[] preSum = new double[len + 1];

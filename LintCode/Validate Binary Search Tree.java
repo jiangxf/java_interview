@@ -26,7 +26,7 @@ Divide and Conquer Recursion Binary Search Tree Binary Tree
  * The same question in LeetCode.
  * You can get detail explanations here:
  * https://github.com/cherryljr/LeetCode/blob/master/Validate%20Binary%20Search%20Tree.java
- * 
+ * <p>
  * Learn one iterative inorder traversal, apply it to multiple tree questions:
  * https://leetcode.com/problems/validate-binary-search-tree/discuss/32112/Learn-one-iterative-inorder-traversal-apply-it-to-multiple-tree-questions-(Java-Solution)
  */

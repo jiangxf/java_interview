@@ -30,12 +30,12 @@ We need a helper function to calculate the minimum.
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
 public class Solution {
@@ -50,7 +50,7 @@ public class Solution {
         }
         return getMin(root);
     }
-    
+
     public int getMin(TreeNode root) {
         if (root == null) {
             return Integer.MAX_VALUE;

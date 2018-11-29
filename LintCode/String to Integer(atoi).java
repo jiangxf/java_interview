@@ -1,10 +1,10 @@
 E
 
-方法1: 问清情况，一点一点把case都涉及到。
+        方法1:问清情况，一点一点把case都涉及到。
 
-方法2: 用regular expression。if (!str.matches("[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)")).  猛了一点
+        方法2:用regular expression。if(!str.matches("[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)")).猛了一点
 
-```
+        ```
 /*
 Implement function atoi to convert a string to an integer.
 
@@ -40,10 +40,10 @@ If no valid conversion could be performed, a zero value is returned. If the corr
 */
 public class Solution {
     public int myAtoi(String str) {
-        
+
         if (str == null) {
             return 0;
-        } 
+        }
         str = str.trim();
         if (str.length() == 0) {
             return 0;
@@ -71,7 +71,7 @@ public class Solution {
         if (largeNum > Integer.MAX_VALUE || largeNum < Integer.MIN_VALUE) {
             return largeNum > 0 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
         }
-        return Integer.parseInt(rst);   
+        return Integer.parseInt(rst);
     }
 }
 
@@ -103,7 +103,7 @@ public class Solution {
         if (str == null || str.length() == 0) {
             return 0;
         }
-        str = str.replaceAll("\\s","");
+        str = str.replaceAll("\\s", "");
         if (!str.matches("[+-]?(?:\\d+(?:\\.\\d*)?|\\.\\d+)")) {
             return 0;
         }
@@ -113,7 +113,7 @@ public class Solution {
         } else if (rst < Integer.MIN_VALUE) {
             return Integer.MIN_VALUE;
         } else {
-            return (int)rst;
+            return (int) rst;
         }
     }
 }

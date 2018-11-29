@@ -26,7 +26,7 @@ Although 5 and 0 have 3 common friends, 4 and 0 only have 2 common friends, but 
 public class Solution {
     /**
      * @param friends: people's friends
-     * @param user: the user's id
+     * @param user:    the user's id
      * @return: the person who most likely to know
      */
     public int recommendFriends(int[][] friends, int user) {

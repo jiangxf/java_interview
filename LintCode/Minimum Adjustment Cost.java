@@ -1,15 +1,15 @@
-¸ÃÌâ±³°üÎÊÌâ²¢²»ÊÇºÜÃ÷ÏÔ£¬Ã»ÓÐÁËÇóºÍ¶¯×÷¡£
-µ«ÊÇÓÉÐ¡×´Ì¬Çó´ó×´Ì¬£¬¼´ÎÒÃÇ±ØÐëÒªµÃÖªÁËf[i-1][j]²ÅÄÜÖªµÀf[i][j],¹ÊÏëµ½Ê¹ÓÃ¶¯Ì¬¹æ»®µÄ·½·¨
+ï¿½ï¿½ï¿½â±³ï¿½ï¿½ï¿½ï¿½ï¿½â²¢ï¿½ï¿½ï¿½Çºï¿½ï¿½ï¿½ï¿½Ô£ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¶ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡×´Ì¬ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½Òªï¿½ï¿½Öªï¿½ï¿½f[i-1][j]ï¿½ï¿½ï¿½ï¿½Öªï¿½ï¿½f[i][j],ï¿½ï¿½ï¿½ëµ½Ê¹ï¿½Ã¶ï¿½Ì¬ï¿½æ»®ï¿½Ä·ï¿½ï¿½ï¿½
 
-State:
-	f[i][j] ±íÊ¾¶ÔÇ°i¸öÊý½øÐÐµ÷Õû£¬°ÑµÚi¸öÊýµ÷ÕûÎªj£¬×îÐ¡´ú¼ÛÊÇ¶àÉÙ
-Function:
-	f[i][j] = Math.min(f[i][j], f[i - 1][j] + Math.abs(A[i] - k))
-Intialize:
-	ÎÒÃÇÐèÒªÈ¡µÄÊÇ×îÐ¡Öµ£¬¹ÊÏÈ½«Êý×éËùÓÐµÄÖµ³õÊ¼»¯ÎªÎÞÇî´ó¡£
-	È»ºóÔÙ½«f[0][i] = 0,ÒòÎª¶ÔÓÚÇ°0¸öÊý£¬²»¹ÜÔõÃ´µ÷Õû£¬´ú¼Û¶¼ÊÇ0
-Answer:
-	Math.min(f[A.size()][0...100])
+        State:
+        f[i][j] ï¿½ï¿½Ê¾ï¿½ï¿½Ç°iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñµï¿½iï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªjï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½ï¿½ï¿½
+        Function:
+        f[i][j]=Math.min(f[i][j],f[i-1][j]+Math.abs(A[i]-k))
+        Intialize:
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÈ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Öµï¿½ï¿½ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Öµï¿½ï¿½Ê¼ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½
+        È»ï¿½ï¿½ï¿½Ù½ï¿½f[0][i]=0,ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ç°0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û¶ï¿½ï¿½ï¿½0
+        Answer:
+        Math.min(f[A.size()][0.. .100])
 
 /*
 
@@ -33,17 +33,17 @@ Backpack LintCode Copyright Dynamic Programming
 
 public class Solution {
     /**
-     * @param A: An integer array.
+     * @param A:      An integer array.
      * @param target: An integer.
      */
     public int MinAdjustmentCost(ArrayList<Integer> A, int target) {
         if (A == null || A.size() == 0) {
             return 0;
         }
-        
+
         // State
         int[][] f = new int[A.size() + 1][101];
-        
+
         // Initialize
         for (int i = 0; i <= A.size(); i++) {
             for (int j = 0; j <= 100; j++) {
@@ -53,15 +53,15 @@ public class Solution {
         for (int j = 0; j <= 100; j++) {
             f[0][j] = 0;
         }
-        
+
         // Function
         for (int i = 1; i <= A.size(); i++) {
             for (int j = 0; j <= 100; j++) {
                 if (f[i - 1][j] != Integer.MAX_VALUE) {
                     for (int k = 0; k <= 100; k++) {
                         if (Math.abs(j - k) <= target) {
-                            f[i][k] = Math.min(f[i][k], 
-                                      f[i - 1][j] + Math.abs(A.get(i - 1) - k));
+                            f[i][k] = Math.min(f[i][k],
+                                    f[i - 1][j] + Math.abs(A.get(i - 1) - k));
                         }
                     }
                 }
@@ -73,6 +73,6 @@ public class Solution {
         for (int i = 0; i <= 100; ++i)
             if (f[A.size()][i] < ans)
                 ans = f[A.size()][i];
-        return ans; 
+        return ans;
     }
 }

@@ -23,23 +23,23 @@ binary move it: in fact, moving the two border, 1 position at a time
 
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
-    	int[] rst = new int[2];
+        int[] rst = new int[2];
         if (nums == null || nums.length <= 1) {
-        	return rst;
+            return rst;
         }
         int start = 0;
         int end = nums.length - 1;
-        while(start < end) {
-        	long sum = (long)(nums[start] + nums[end]);
-        	if (target == sum) {
-        		rst[0] = start + 1;
-        		rst[1] = end + 1;
-        		break;
-        	} else if (target > sum) {
-        		start++;
-        	} else {
-        		end--;
-        	}
+        while (start < end) {
+            long sum = (long) (nums[start] + nums[end]);
+            if (target == sum) {
+                rst[0] = start + 1;
+                rst[1] = end + 1;
+                break;
+            } else if (target > sum) {
+                start++;
+            } else {
+                end--;
+            }
         }//END while
         return rst;
     }

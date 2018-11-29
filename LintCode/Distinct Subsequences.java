@@ -1,19 +1,19 @@
-╦цлБ╫Б╥╗╡н©╪ё╨
-http://blog.csdn.net/fightforyourdream/article/details/17346385?reload#comments
-р╙юМ╫БфДк╪б╥ё╛╩╜╠М╥жнЖспжЗсз╫Б╬Ж╦цнйлБ
+О©╫О©╫О©╫О©╫Б╥╗О©╫н©О©╫О©╫О©╫
+        http://blog.csdn.net/fightforyourdream/article/details/17346385?reload#comments
+        р╙О©╫О©╫О©╫О©╫О©╫к╪б╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫з╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
 
-State:
-	f[i][j]╠Мй╬сиS╣дг╟i╦Жвж╥ШвИЁи╣дпРап╣двспРапжпT╣дг╟j╦Жвж╥ШвИЁи╣дпРапЁЖож╣д╦ЖйЩ
-Initialize:
-	f[0][0] = 1; // T╨мS╤╪йг©у╢╝.
-	f[1 ... S.length() - 1][0] = 1; // Tйг©у╢╝ё╛Sж╩спр╩жжвспРапф╔еД║ё
-	f[0][1 ... T.length() - 1] = 0; // Sйг©у╢╝ё╛T╡╩йг©у╢╝ё╛Sц╩спвспРапф╔еД║ё
-Function:
-	f[i][j] = f[i - 1][j]
-	f[i][j] = f[i - 1][j] + f[i - 1][j - 1]   //  S[i - 1] == T[j - 1]
-	╥╤н╖ё╨1 <= i <= S.length(), 1 <= j <= T.length()
-Answer:
-	f[S.length()][T.length()]
+        State:
+        f[i][j]О©╫О©╫й╬О©╫О©╫SО©╫О©╫г╟iО©╫О©╫О©╫ж╥О©╫О©╫О©╫и╣О©╫О©╫О©╫О©╫п╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫TО©╫О©╫г╟jО©╫О©╫О©╫ж╥О©╫О©╫О©╫и╣О©╫О©╫О©╫О©╫пЁО©╫О©╫ж╣д╦О©╫О©╫О©╫
+        Initialize:
+        f[0][0]=1; // TО©╫О©╫SО©╫О©╫О©╫г©у╢О©╫.
+        f[1 ...S.length()-1][0]=1; // TО©╫г©у╢О©╫О©╫О©╫Sж╩О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ф╔О©╫Д║ё
+        f[0][1 ...T.length()-1]=0; // SО©╫г©у╢О©╫О©╫О©╫TО©╫О©╫О©╫г©у╢О©╫О©╫О©╫Sц╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ф╔О©╫Д║ё
+        Function:
+        f[i][j]=f[i-1][j]
+        f[i][j]=f[i-1][j]+f[i-1][j-1]   //  S[i - 1] == T[j - 1]
+        О©╫О©╫н╖О©╫О©╫1<=i<=S.length(),1<=j<=T.length()
+        Answer:
+        f[S.length()][T.length()]
 	
 /*
 Given a string S and a string T, count the number of distinct subsequences of T in S.
@@ -39,15 +39,15 @@ public class Solution {
         if (S == null || T == null) {
             return 0;
         }
-        
+
         // State
         int[][] nums = new int[S.length() + 1][T.length() + 1];
-        
+
         // Initialize
         for (int i = 0; i <= S.length(); i++) {
             nums[i][0] = 1;
         }
-        
+
         // Function
         for (int i = 1; i <= S.length(); i++) {
             for (int j = 1; j <= T.length(); j++) {
@@ -57,7 +57,7 @@ public class Solution {
                 }
             }
         }
-        
+
         // Answer
         return nums[S.length()][T.length()];
     }

@@ -20,7 +20,7 @@ Explanation:
  * Approach: Sliding Window
  * 当 str.charAt(i) == str.charAt(i+1) 的时候，窗口右边界开始滑动。
  * 当其不成立的时候，检查窗口大小是否大于 2 即可。
- *
+ * <p>
  * 时间复杂度：O(n)
  */
 public class Solution {

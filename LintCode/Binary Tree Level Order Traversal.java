@@ -31,15 +31,15 @@ Queue Binary Tree Breadth First Search Binary Tree Traversal Uber LinkedIn Faceb
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
- 
+
 //	version 1: BFS Use One Queue (Best way)	与BFS模板的程序代码相同
 //	参见BFS Template.java 里面有对于BFS算法的详细解析与注意点说明
 public class Solution {
@@ -50,14 +50,14 @@ public class Solution {
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
         // write your code here
         ArrayList<ArrayList<Integer>> rst = new ArrayList();
-                
+
         if (root == null) {
             return rst;
         }
-        
+
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
-        
+
         while (!queue.isEmpty()) {
             int size = queue.size();
             ArrayList<Integer> level = new ArrayList<Integer>();
@@ -73,7 +73,7 @@ public class Solution {
             }
             rst.add(level);
         }
-        
+
         return rst;
     }
 }
@@ -86,11 +86,11 @@ public class Solution {
      */
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
         ArrayList<ArrayList<Integer>> results = new ArrayList<ArrayList<Integer>>();
-        
+
         if (root == null) {
             return results;
         }
-        
+
         int maxLevel = 0;
         while (true) {
             ArrayList<Integer> level = new ArrayList<Integer>();
@@ -98,14 +98,14 @@ public class Solution {
             if (level.size() == 0) {
                 break;
             }
-            
+
             results.add(level);
             maxLevel++;
         }
-        
+
         return results;
     }
-    
+
     private void dfs(TreeNode root,
                      ArrayList<Integer> level,
                      int curtLevel,
@@ -113,12 +113,12 @@ public class Solution {
         if (root == null || curtLevel > maxLevel) {
             return;
         }
-        
+
         if (curtLevel == maxLevel) {
             level.add(root.val);
             return;
         }
-        
+
         dfs(root.left, level, curtLevel + 1, maxLevel);
         dfs(root.right, level, curtLevel + 1, maxLevel);
     }
@@ -136,7 +136,7 @@ public class Solution {
         if (root == null) {
             return result;
         }
-        
+
         ArrayList<TreeNode> Q1 = new ArrayList<TreeNode>();
         ArrayList<TreeNode> Q2 = new ArrayList<TreeNode>();
 
@@ -154,16 +154,16 @@ public class Solution {
                     Q2.add(node.right);
                 }
             }
-            
+
             // swap q1 and q2
             ArrayList<TreeNode> temp = Q1;
             Q1 = Q2;
             Q2 = temp;
-            
+
             // add to result
             result.add(level);
         }
-        
+
         return result;
     }
 }
@@ -179,11 +179,11 @@ public class Solution {
         if (root == null) {
             return result;
         }
-        
+
         Queue<TreeNode> Q = new LinkedList<TreeNode>();
         Q.offer(root);
         Q.offer(null); // dummy node
-        
+
         ArrayList<Integer> level = new ArrayList<Integer>();
         while (!Q.isEmpty()) {
             TreeNode node = Q.poll();
@@ -196,7 +196,7 @@ public class Solution {
                 Q.offer(null); // add a new dummy node
                 continue;
             }
-            
+
             level.add(node.val);
             if (node.left != null) {
                 Q.offer(node.left);
@@ -205,7 +205,7 @@ public class Solution {
                 Q.offer(node.right);
             }
         }
-        
+
         return result;
     }
 }

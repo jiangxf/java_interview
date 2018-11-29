@@ -1,8 +1,8 @@
 这个题有个奇葩的地方，每个node还有一个parent。 所以可以自底向上.
-普通做法：2 lists。
-自底向上。利用parent往root方向返回。   
+        普通做法：2lists。
+        自底向上。利用parent往root方向返回。
 
-```
+        ```
 /*
 Lowest Common Ancestor II
 
@@ -44,7 +44,7 @@ LintCode Copyright Binary Tree
 
 public class Solution {
     public ParentTreeNode lowestCommonAncestorII(ParentTreeNode root,
-                                    ParentTreeNode A,ParentTreeNode B) {
+                                                 ParentTreeNode A, ParentTreeNode B) {
         if (root == null || (A == null && B == null)) {
             return null;
         } else if (A == null || B == null) {

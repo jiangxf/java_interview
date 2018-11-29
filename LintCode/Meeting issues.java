@@ -40,8 +40,8 @@ The number of meeting available from the top 5 points of time is easily availabl
 public class Solution {
     /**
      * @param meeting: The meetings
-     * @param pause: The pause time of meetings
-     * @param query: The query
+     * @param pause:   The pause time of meetings
+     * @param query:   The query
      * @return: Return the answer of each query
      */
     public int[] getQuery(int[][] meeting, int[][] pause, int[] query) {

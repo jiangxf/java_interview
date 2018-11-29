@@ -29,28 +29,28 @@ Start from i = 0 ~ gas.length, and use a second pointer move to track how far we
 
 public class Solution {
     /**
-     * @param gas: an array of integers
+     * @param gas:  an array of integers
      * @param cost: an array of integers
      * @return: an integer
      */
     public int canCompleteCircuit(int[] gas, int[] cost) {
-    	if (gas == null || cost == null || gas.length == 0 || cost.length == 0) {
-    		return -1;
-    	}
-    	int start = 0;
-    	int remain = 0;
-    	int total = 0;
-    	for (int i = 0; i < gas.length; i++) {
-    		remain += gas[i] - cost[i];
-    		if (remain < 0) {
-    			remain = 0;
-    			start = i + 1;
-    		} 
-    		total += gas[i] - cost[i];
-    	}
-    	if (total < 0) {
-    		return -1;
-    	}
-    	return start;
+        if (gas == null || cost == null || gas.length == 0 || cost.length == 0) {
+            return -1;
+        }
+        int start = 0;
+        int remain = 0;
+        int total = 0;
+        for (int i = 0; i < gas.length; i++) {
+            remain += gas[i] - cost[i];
+            if (remain < 0) {
+                remain = 0;
+                start = i + 1;
+            }
+            total += gas[i] - cost[i];
+        }
+        if (total < 0) {
+            return -1;
+        }
+        return start;
     }
 }

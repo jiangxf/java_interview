@@ -30,33 +30,33 @@ Tree Search Breadth First Search Queue Binary Tree
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
- 
+
 public class Solution {
     /**
      * @param root: The root of binary tree.
-     * @return: A list of lists of integer include 
-     *          the zigzag level order traversal of its nodes' values 
+     * @return: A list of lists of integer include
+     * the zigzag level order traversal of its nodes' values
      */
     public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
         // write your code here
         ArrayList<ArrayList<Integer>> rst = new ArrayList<>();
-        
+
         if (root == null) {
             return rst;
         }
-        
+
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
         int count = 1;
-        
+
         while (!queue.isEmpty()) {
             ArrayList<Integer> level = new ArrayList<Integer>();
             int size = queue.size();
@@ -65,7 +65,7 @@ public class Solution {
                 level.add(node.val);
                 if (node.left != null) {
                     queue.offer(node.left);
-                }    
+                }
                 if (node.right != null) {
                     queue.offer(node.right);
                 }
@@ -74,10 +74,10 @@ public class Solution {
                 Collections.reverse(level);
             }
             count++;
-            
+
             rst.add(level);
         }
-        
+
         return rst;
     }
 }
@@ -88,21 +88,21 @@ public class Solution {
 public class Solution {
     /**
      * @param root: The root of binary tree.
-     * @return: A list of lists of integer include 
-     *          the zigzag level order traversal of its nodes' values 
+     * @return: A list of lists of integer include
+     * the zigzag level order traversal of its nodes' values
      */
     public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
         // write your code here
         ArrayList<ArrayList<Integer>> rst = new ArrayList<>();
-        
+
         if (root == null) {
             return rst;
         }
-        
+
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
         int count = 1;
-        
+
         while (!queue.isEmpty()) {
             ArrayList<Integer> level = new ArrayList<Integer>();
             int size = queue.size();
@@ -115,7 +115,7 @@ public class Solution {
                 }
                 if (node.left != null) {
                     queue.offer(node.left);
-                }    
+                }
                 if (node.right != null) {
                     queue.offer(node.right);
                 }
@@ -123,7 +123,7 @@ public class Solution {
             count++;
             rst.add(level);
         }
-        
+
         return rst;
     }
 }
@@ -131,7 +131,7 @@ public class Solution {
 
 //	version3: Use two stack
 
- /*
+/*
 Thought:
 1. realize: queue is no longer can be used. draw a example map to see why.
 Instead, use 2 stacks.
@@ -139,28 +139,28 @@ Because we can only take the top of stack, and we are constantly adding to the t
 One is the current one, will be empty every time when we finish the level. 
 The other one is nextLevel, which holds next level’s nodes temporarily.
 2. Use a boolean to track if which level it’s running at.
- */
+*/
 public class Solution {
     /**
      * @param root: The root of binary tree.
-     * @return: A list of lists of integer include 
-     *          the zigzag level order traversal of its nodes' values 
+     * @return: A list of lists of integer include
+     * the zigzag level order traversal of its nodes' values
      */
     public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) {
             return result;
         }
-        
+
         Stack<TreeNode> currentLevel = new Stack<TreeNode>();
         Stack<TreeNode> nextLevel = new Stack<TreeNode>();
-        
+
         currentLevel.push(root);
         boolean regularOrder = false;
-        
+
         while (!currentLevel.empty()) {
             ArrayList<Integer> list = new ArrayList<Integer>();
-            
+
             while (!currentLevel.empty()) {
                 TreeNode temp = currentLevel.pop();
                 list.add(temp.val);
@@ -180,7 +180,7 @@ public class Solution {
         }
         return result;
     }
-    
+
     public void addLevel(Stack<TreeNode> level, TreeNode node) {
         if (node != null) {
             level.push(node);

@@ -1,7 +1,7 @@
 一般的O(n3)肯定不行。在此基础上优化。
-发现j,k满足条件时候，(k - j)就是所有 sum <target的情况了。
-而一旦>target, 又因为j不能后退，只能k--，那么问题就被锁定了. 这样可以做到O(n2)
-```
+        发现j,k满足条件时候，(k-j)就是所有 sum<target的情况了。
+        而一旦>target,又因为j不能后退，只能k--，那么问题就被锁定了.这样可以做到O(n2)
+        ```
 /*
 Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 <= i < j < k < n that satisfy the condition nums[i] + nums[j] + nums[k] < target.
 
@@ -36,21 +36,21 @@ Don't forget to sort, otherwise the sequence/order is unpredictable
 public class Solution {
     public int threeSumSmaller(int[] nums, int target) {
         if (nums == null || nums.length <= 2) {
-        	return 0;
+            return 0;
         }
         Arrays.sort(nums);
         int rst = 0;
         for (int i = 0; i < nums.length - 2; i++) {
-        	int j = i + 1; 
-        	int k = nums.length - 1;
-        	while (j < k) {
-        		if (nums[i] + nums[j] + nums[k] >= target) {
-        			k--;
-        		} else {
-        			rst += (k - j);
-        			j++;
-        		}
-        	}
+            int j = i + 1;
+            int k = nums.length - 1;
+            while (j < k) {
+                if (nums[i] + nums[j] + nums[k] >= target) {
+                    k--;
+                } else {
+                    rst += (k - j);
+                    j++;
+                }
+            }
         }//END for
         return rst;
     }

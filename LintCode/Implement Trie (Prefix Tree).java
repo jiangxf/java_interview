@@ -1,11 +1,11 @@
 Trie自己不多用到。
-如果是遇到一个一个字查询的题，可以考虑一下。
-构建TrieNode的时候要注意：如何找孩子？如果是个map的话，其实就挺好走位的。
-而且，每个node里面的 char 或者string有时候用处不大，
-可以为空。但是有些题目，比如在结尾要return一些什么String，就可以在end string那边存一个真的String。
+        如果是遇到一个一个字查询的题，可以考虑一下。
+        构建TrieNode的时候要注意：如何找孩子？如果是个map的话，其实就挺好走位的。
+        而且，每个node里面的 char 或者string有时候用处不大，
+        可以为空。但是有些题目，比如在结尾要return一些什么String，就可以在end string那边存一个真的String。
 
 
-```
+        ```
 /*
 Implement a trie with insert, search, and startsWith methods.
 
@@ -30,14 +30,16 @@ Also, search and startWith is quite similar, remember that.
 */
 
 class TrieNode {
-	char c;
-	boolean isEnd = false;
-	HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
+    char c;
+    boolean isEnd = false;
+    HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
+
     // Initialize your data structure here.
     public TrieNode() {
     }
+
     public TrieNode(char c) {
-    	this.c = c;
+        this.c = c;
     }
 }
 
@@ -53,16 +55,16 @@ public class Trie {
         TrieNode node = root;
         HashMap<Character, TrieNode> children = node.children;
         for (int i = 0; i < word.length(); i++) {
-        	char c = word.charAt(i);
-        	if (!children.containsKey(c)) {
-        		TrieNode newNode = new TrieNode(c);
-        		children.put(c, newNode);
-        	}
-        	node = children.get(c);
-        	children = node.children;
-        	if (i == word.length() - 1) {
-        		node.isEnd = true;
-        	}
+            char c = word.charAt(i);
+            if (!children.containsKey(c)) {
+                TrieNode newNode = new TrieNode(c);
+                children.put(c, newNode);
+            }
+            node = children.get(c);
+            children = node.children;
+            if (i == word.length() - 1) {
+                node.isEnd = true;
+            }
         }
     }
 
@@ -71,16 +73,16 @@ public class Trie {
         TrieNode node = root;
         HashMap<Character, TrieNode> children = node.children;
         for (int i = 0; i < word.length(); i++) {
-        	char c = word.charAt(i);
-        	if (!children.containsKey(c)) {
-        		return false;
-        	} else {
-        		node = children.get(c);
-        		children = node.children;
-        	}
-			if (i == word.length() - 1) {
-        		return node.isEnd;
-        	}
+            char c = word.charAt(i);
+            if (!children.containsKey(c)) {
+                return false;
+            } else {
+                node = children.get(c);
+                children = node.children;
+            }
+            if (i == word.length() - 1) {
+                return node.isEnd;
+            }
         }
         return false;
     }
@@ -91,12 +93,12 @@ public class Trie {
         TrieNode node = root;
         HashMap<Character, TrieNode> children = node.children;
         for (char c : prefix.toCharArray()) {
-        	if (!children.containsKey(c)) {
-        		return false;
-        	} else {
-        		node = children.get(c);
-        		children = node.children;
-        	}
+            if (!children.containsKey(c)) {
+                return false;
+            } else {
+                node = children.get(c);
+                children = node.children;
+            }
         }
         return true;
     }

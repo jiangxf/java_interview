@@ -1,11 +1,11 @@
 E
 
-方法一:土办法没技术，把binary换成数字，加起来，再换成binary。如果input很大，那么很可能int,long都hold不住。不保险。
+        方法一:土办法没技术，把binary换成数字，加起来，再换成binary。如果input很大，那么很可能int,long都hold不住。不保险。
 
-方法二:一般方法，string化为charArray,然后逐位加起，最后记得处理多余的一个carry on
+        方法二:一般方法，string化为charArray,然后逐位加起，最后记得处理多余的一个carry on
 
 
-```
+        ```
 /*
 Add Binary
 
@@ -45,9 +45,9 @@ public class Solution {
         }
         int decimalA = Integer.parseInt(a, 2);
         int decimalB = Integer.parseInt(b, 2);
-        
+
         int sum = decimalA + decimalB;
-        
+
         return Integer.toBinaryString(sum);
     }
 }
@@ -72,16 +72,16 @@ public class Solution {
         int nextCarry = 0;
         int diff = longArr.length - shortArr.length;
         for (int i = longArr.length - 1; i >= 0; i--) {
-            shortVal = (i - diff) >= 0 ? shortArr[i - diff] - '0': 0;
+            shortVal = (i - diff) >= 0 ? shortArr[i - diff] - '0' : 0;
             nextCarry = (longArr[i] - '0' + shortVal + carry) / 2;
-            longArr[i] =(char)((longArr[i] - '0' + shortVal + carry) % 2 + '0');
+            longArr[i] = (char) ((longArr[i] - '0' + shortVal + carry) % 2 + '0');
             carry = nextCarry;
         }
 
         if (carry != 0) {
             return "1" + new String(longArr);
         }
-        
+
         return new String(longArr);
     }
 }

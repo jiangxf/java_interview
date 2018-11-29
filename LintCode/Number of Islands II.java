@@ -25,7 +25,7 @@ Union Find Google
  * The same as Number of Islands II in LeetCode.
  * You can get detail explanations here:
  * https://github.com/cherryljr/LeetCode/blob/master/Number%20of%20Islands%20II.java
- *
+ * <p>
  * Union Find Template:
  * https://github.com/cherryljr/LintCode/blob/master/Find%20the%20Weak%20Connected%20Component%20in%20the%20Directed%20Graph.java
  */

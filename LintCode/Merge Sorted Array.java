@@ -1,7 +1,7 @@
-A够长，那么可以从A的尾部开始加新元素。     
-注意，从尾部，是大数字优先的。   
+A够长，那么可以从A的尾部开始加新元素。
+        注意，从尾部，是大数字优先的。
 
-```
+        ```
 /*
 Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 
@@ -22,13 +22,13 @@ Thinking process:
 */
 class Solution {
     /**
-     * @param A: sorted integer array A which has m elements, 
+     * @param A: sorted integer array A which has m elements,
      *           but size of A is m+n
      * @param B: sorted integer array B which has n elements
      * @return: void
      */
     public void mergeSortedArray(int[] A, int m, int[] B, int n) {
-        int i = m-1, j = n-1, index = m + n - 1;
+        int i = m - 1, j = n - 1, index = m + n - 1;
         while (i >= 0 && j >= 0) {
             if (A[i] > B[j]) {
                 A[index--] = A[i--];
@@ -36,7 +36,7 @@ class Solution {
                 A[index--] = B[j--];
             }
         }
-        
+
         //	将数组中剩下还未没添加的元素添加到结果中
         while (i >= 0) {
             A[index--] = A[i--];

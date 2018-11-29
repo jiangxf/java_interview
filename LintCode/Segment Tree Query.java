@@ -33,7 +33,7 @@ LintCode Copyright Binary Tree Segment Tree
 /**
  * 线段树的区间查询：
  * 线段树的区间查询操作就是将当前区间分解为较小的子区间,然后由子区间的最大值就可以快速得到需要查询区间的最大值。
- *
+ * <p>
  * 因为任意长度的线段，最多被拆分成logn条线段树上存在的线段，所以查询的时间复杂度为O(logn)
  * 详细分析与示例：
  * http://www.jiuzhang.com/tutorial/segment-tree/88
@@ -64,21 +64,21 @@ public class Solution {
         if (start <= root.start && end >= root.end) {
             return root.max;
         }
-        
+
         // 给结果赋初值
         int rst = Integer.MIN_VALUE;
         // 将当前节点区间分割为左右2个区间的分割线(分治)
         int mid = root.start + (root.end - root.start) / 2;
-        
+
         // 如果查询区间和左边节点区间有交集, 则寻找查询区间在左边区间上的最大值
-        if (mid >= start) {   
+        if (mid >= start) {
             rst = Math.max(rst, query(root.left, start, end));
         }
         // 如果查询区间和右边节点区间有交集, 则寻找查询区间在右边区间上的最大值
-        if (mid + 1 <= end) { 
+        if (mid + 1 <= end) {
             rst = Math.max(rst, query(root.right, start, end));
         }
-        
+
         return rst;
     }
 } 

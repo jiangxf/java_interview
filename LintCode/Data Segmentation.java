@@ -52,7 +52,7 @@ class Solution {
                 }
                 sb.append(temp + " ");
                 i--;    // i 记得回退一个位置
-            } else if (chars[i] == ' '){
+            } else if (chars[i] == ' ') {
                 // 跳过空格
                 continue;
             } else {

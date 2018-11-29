@@ -21,18 +21,18 @@ Divide and Conquer Dynamic Programming Recursion
  * 这里所说的路径和是指：从任意结点开始到任意结点结束的结点值之和，而且要注意的是结点的值也可能为负数 。
  * 思路：
  * 整棵树的最大路径总共有四种情况：
- *  1. 根节点
- *  2. 左子树的最大路径和
- *  3. 右子树的最大路径和
- *  4. 左子树最大路径和 + 根节点 + 右子树最大路径和
- *
+ * 1. 根节点
+ * 2. 左子树的最大路径和
+ * 3. 右子树的最大路径和
+ * 4. 左子树最大路径和 + 根节点 + 右子树最大路径和
+ * <p>
  * 我们可以先将问题简化为：从一个根节点到任一点的最大路径。同时我们发现第四种情况其又是由三部分组成。
  * 所以我们程序中需要记录两个数据：
  * 一个是从根节点到任意点的最大路径和singlePath;
  * 一个是从任意点到任意点的最大路径和maxPath.
  * 在singlePath的基础上，再加入根节点我们便可以得到跨越根节点的第四种情况情况.使得问题得以解决.
  * 因为使用分治法，需要返回类型。而本程序中需要返回两个数，故我们自己定了一个ResultType类来储存数据。
- *
+ * <p>
  * Divide: 左右子树
  * Conquer: 先处理singlePath,然后利用singlePath的结果来处理maxPath.
  */
@@ -58,18 +58,6 @@ public class Solution {
         return result.maxPath;
     }
 
-    // 在一次递归过程中，我们需要返回两个数据。但是Java中没有指针，因此为了获得我们想要的 maxPath,
-    // 我们只能自己创建一个 ResultType 类来满足需求，以同时包含递归过程需要用到的：singlePath 与最终结果 maxPath.
-    private class ResultType {
-        // singlePath: 从root往下走到任意点的最大路径，这条路径可以不包含任何点
-        // maxPath: 从树中任意到任意点的最大路径，这条路径至少包含一个点
-        int singlePath, maxPath;
-        ResultType(int singlePath, int maxPath) {
-            this.singlePath = singlePath;
-            this.maxPath = maxPath;
-        }
-    }
-
     private ResultType helper(TreeNode root) {
         //	对异常情况的处理
         if (root == null) {
@@ -93,6 +81,19 @@ public class Solution {
         maxPath = Math.max(maxPath, left.singlePath + right.singlePath + root.val);
 
         return new ResultType(singlePath, maxPath);
+    }
+
+    // 在一次递归过程中，我们需要返回两个数据。但是Java中没有指针，因此为了获得我们想要的 maxPath,
+    // 我们只能自己创建一个 ResultType 类来满足需求，以同时包含递归过程需要用到的：singlePath 与最终结果 maxPath.
+    private class ResultType {
+        // singlePath: 从root往下走到任意点的最大路径，这条路径可以不包含任何点
+        // maxPath: 从树中任意到任意点的最大路径，这条路径至少包含一个点
+        int singlePath, maxPath;
+
+        ResultType(int singlePath, int maxPath) {
+            this.singlePath = singlePath;
+            this.maxPath = maxPath;
+        }
     }
 }
 

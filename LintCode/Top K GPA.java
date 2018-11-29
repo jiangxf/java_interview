@@ -20,13 +20,13 @@ Return:
  * 而 QuickSelect 过程中的 partition 是不稳定的，
  * 因此我们只能通过 QuickSelect 来获得第 kth 的元素，
  * 然后再按照原本的数据顺序进行比较即可。
- *
+ * <p>
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
- *
+ * <p>
  * 参考资料：
  * https://github.com/cherryljr/LintCode/blob/master/Kth%20Largest%20Element.java
- *  https://github.com/cherryljr/LintCode/blob/master/Sort%20Colors.java
+ * https://github.com/cherryljr/LintCode/blob/master/Sort%20Colors.java
  */
 public class Solution {
     /**

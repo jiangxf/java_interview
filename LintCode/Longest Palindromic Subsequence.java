@@ -13,11 +13,11 @@ One possible longest palindromic subsequence is "bbbb".
  * 可以从 递归 的方向去思考。
  * Base Case 为只有一个字符时，其本身为回文串，长度为 1.
  * 然后可以以此为基础向外一层层扩出去。
- *
+ * <p>
  * 时间复杂度：O(n^2)
  * 空间复杂度：O(n^2)
- *  空间复杂度可以利用滚动数组进行优化，参考：
- *  https://www.youtube.com/watch?v=OZX1nqaQ_9M&t=365s
+ * 空间复杂度可以利用滚动数组进行优化，参考：
+ * https://www.youtube.com/watch?v=OZX1nqaQ_9M&t=365s
  */
 public class Solution {
     /**

@@ -1,8 +1,8 @@
-再一次理解错题意. peek() 就是头顶，但是不一定是最大值啊。总是把PEEK想成了最大值，然后用2 STACK做了最大值的cache，练的一手好双stack，可惜错了。
+再一次理解错题意.peek()就是头顶，但是不一定是最大值啊。总是把PEEK想成了最大值，然后用2 STACK做了最大值的cache，练的一手好双stack，可惜错了。
 
-回到原题，其实不难。找一个cache来存next()的值，然后每次next()里面维护这个cache就好。
+        回到原题，其实不难。找一个cache来存next()的值，然后每次next()里面维护这个cache就好。
 
-```
+        ```
 /*
 Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().
 
@@ -39,37 +39,38 @@ Make sure also return the cached peek, and update cache with next() value.
 // Java Iterator interface reference:
 // https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
 class PeekingIterator implements Iterator<Integer> {
-	private int cache;
-	private Iterator<Integer> itt;
-	private boolean notEnd;
-	public PeekingIterator(Iterator<Integer> iterator) {
-	    // initialize any member here.
-	    itt = iterator;
-	    cache = itt.next();
-	    notEnd = iterator.hasNext();
-	}
+    private int cache;
+    private Iterator<Integer> itt;
+    private boolean notEnd;
+
+    public PeekingIterator(Iterator<Integer> iterator) {
+        // initialize any member here.
+        itt = iterator;
+        cache = itt.next();
+        notEnd = iterator.hasNext();
+    }
 
     // Returns the next element in the iteration without advancing the iterator.
-	public Integer peek() {
+    public Integer peek() {
         return cache;
-	}
+    }
 
-	// hasNext() and next() should behave the same as in the Iterator interface.
-	// Override them if needed.
-	@Override
-	public Integer next() {
-		int curr = cache;
-		notEnd = itt.hasNext();
-		if (itt.hasNext()) {
-			cache = itt.next();
-		}
-	    return curr;
-	}
+    // hasNext() and next() should behave the same as in the Iterator interface.
+    // Override them if needed.
+    @Override
+    public Integer next() {
+        int curr = cache;
+        notEnd = itt.hasNext();
+        if (itt.hasNext()) {
+            cache = itt.next();
+        }
+        return curr;
+    }
 
-	@Override
-	public boolean hasNext() {
-	    return notEnd;
-	}
+    @Override
+    public boolean hasNext() {
+        return notEnd;
+    }
 }
 
 
@@ -92,50 +93,51 @@ s2: 6,6,6,9,9				[end 9 gets out first]
 // Java Iterator interface reference:
 // https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
 class PeekingIterator implements Iterator<Integer> {
-	private Stack<Integer> s1;
-	private Stack<Integer> s2;
-	private int size;
-	public PeekingIterator(Iterator<Integer> iterator) {
-	    // initialize any member here.
-	    s1 = new Stack<Integer>();
-	    s2 = new Stack<Integer>();
-	    Stack<Integer> temp = new Stack<Integer>();
-	    size =  0;
-	    int max = Integer.MIN_VALUE;
-	    while(iterator.hasNext()) {
-	    	temp.push(iterator.next());
-	    	size++;
-	    }
-	    while(!temp.empty()) {
-	    	s1.push(temp.peek());
-	    	max = Math.max(max, temp.peek());
-	    	s2.push(max);
-	    	temp.pop();
-	    }
-	}
+    private Stack<Integer> s1;
+    private Stack<Integer> s2;
+    private int size;
+
+    public PeekingIterator(Iterator<Integer> iterator) {
+        // initialize any member here.
+        s1 = new Stack<Integer>();
+        s2 = new Stack<Integer>();
+        Stack<Integer> temp = new Stack<Integer>();
+        size = 0;
+        int max = Integer.MIN_VALUE;
+        while (iterator.hasNext()) {
+            temp.push(iterator.next());
+            size++;
+        }
+        while (!temp.empty()) {
+            s1.push(temp.peek());
+            max = Math.max(max, temp.peek());
+            s2.push(max);
+            temp.pop();
+        }
+    }
 
     // Returns the next element in the iteration without advancing the iterator.
-	public Integer peek() {
-		if (s1.size() > size) {
-			s1.pop();
-			return s2.pop();
-		} else {
-			return s2.peek();
-		}
-	}
+    public Integer peek() {
+        if (s1.size() > size) {
+            s1.pop();
+            return s2.pop();
+        } else {
+            return s2.peek();
+        }
+    }
 
-	// hasNext() and next() should behave the same as in the Iterator interface.
-	// Override them if needed.
-	
-	@Override
-	public Integer next() {
-		size--;
-	    return s1.pop();
-	}
+    // hasNext() and next() should behave the same as in the Iterator interface.
+    // Override them if needed.
 
-	@Override
-	public boolean hasNext() {
-	    return !s1.empty();
-	}
+    @Override
+    public Integer next() {
+        size--;
+        return s1.pop();
+    }
+
+    @Override
+    public boolean hasNext() {
+        return !s1.empty();
+    }
 }
 ```

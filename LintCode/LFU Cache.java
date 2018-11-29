@@ -35,42 +35,42 @@ Amazon Google
  * Approach 1: Two HashMap + DoubleLinkedList
  * 相较于 LRU,我们可以说在实现上 LFU 是它的一个升级版。
  * 首先我们可以来看一下 LFU 的数据结构：
- *      head <---> FreqNode1 <---> FreqNode2 <---> ... <---> FreqNodeN
- *                    |               |                       |
- *                  first           first                   first
- *                    |               |                       |
- *                KeyNodeA        KeyNodeE                KeyNodeG
- *                    |               |                       |
- *                KeyNodeB        KeyNodeF                KeyNodeH
- *                    |               |                       |
- *                KeyNodeC          last                   KeyNodeI
- *                    |                                       |
- *                KeyNodeD                                   last
- *                    |
- *                  last
- *
+ * head <---> FreqNode1 <---> FreqNode2 <---> ... <---> FreqNodeN
+ * |               |                       |
+ * first           first                   first
+ * |               |                       |
+ * KeyNodeA        KeyNodeE                KeyNodeG
+ * |               |                       |
+ * KeyNodeB        KeyNodeF                KeyNodeH
+ * |               |                       |
+ * KeyNodeC          last                   KeyNodeI
+ * |                                       |
+ * KeyNodeD                                   last
+ * |
+ * last
+ * <p>
  * 它是由一条 双向链表 所组成的。而双向链表中各个节点 FreqNode 又是一条 双向链表（实现上是LRU）。
  * 被操作次数相同的节点 KeyNode 挂在同一个 FreqNode 下面。而 KeyNode 双向链表的实现是一个 LRU.
  * 因此由上可得，横向大链表 list 中的各个节点 FreqNode 里面包含的信息有：
- *  1. 头节点 head （与 LRU 实现类似，用于移除 最不经常被使用 的节点）
- *  2. 被操作的次数 freq
- *  3. 所有被操作次数相同的节点所形成的 双向链表 （这里为了代码的简洁，使用了 LinkedHashSet 来替代 LRU Cache 结构）
- *  当需要发生移除最不经常被使用的节点时，如果操作次数相同的 FreqNode 下面挂着几个节点，
- *  那么移除 最早被操作 的节点（即按照 LRU Cache 的判断方法进行移除）
- *
+ * 1. 头节点 head （与 LRU 实现类似，用于移除 最不经常被使用 的节点）
+ * 2. 被操作的次数 freq
+ * 3. 所有被操作次数相同的节点所形成的 双向链表 （这里为了代码的简洁，使用了 LinkedHashSet 来替代 LRU Cache 结构）
+ * 当需要发生移除最不经常被使用的节点时，如果操作次数相同的 FreqNode 下面挂着几个节点，
+ * 那么移除 最早被操作 的节点（即按照 LRU Cache 的判断方法进行移除）
+ * <p>
  * 通过以上分析我们知道了 双向链表中（横向） 所需要包含的信息。接下来我们再来看看 LFU 中需要包含那些信息。
  * LFU 的实现其主要方法与 LRU 相同，仍然是通过 双向链表的增/删/改操作 并配合 HashMap的查找 来降低时间复杂度。
  * 因此我们的 LFU 需要具备一下信息：
- *  1. 容量大小 CAPACITY, 当超过时，会触发 removeOld() 操作
- *  2. keyValueMap. 用于存储各个插入键值对的信息。
- *  3. keyNodeMap. 用于存储插入节点 key 与其对应位于双端链表中哪个节点（FreqNode）位置的信息。
- *  4. list. 双端链表（横向）即上述分析的链表，用于将 FreqNode 连起来，记录操作次数用。
- *  由 head 开始，从左向右，操作次数(freq)递增
- *
+ * 1. 容量大小 CAPACITY, 当超过时，会触发 removeOld() 操作
+ * 2. keyValueMap. 用于存储各个插入键值对的信息。
+ * 3. keyNodeMap. 用于存储插入节点 key 与其对应位于双端链表中哪个节点（FreqNode）位置的信息。
+ * 4. list. 双端链表（横向）即上述分析的链表，用于将 FreqNode 连起来，记录操作次数用。
+ * 由 head 开始，从左向右，操作次数(freq)递增
+ * <p>
  * 接下来的请参考代码以及注释，以方便理解。
- *
+ * <p>
  * 时间复杂度：每个操作均为 O(1)
- *
+ * <p>
  * 如果不了解 LRU Cache 或者是不清楚 LinkedHashSet 用法的可以参考：
  * https://github.com/cherryljr/LintCode/blob/master/LRU%20Cache.java
  */
@@ -184,7 +184,7 @@ public class LFUCache {
 
         // 新建一个节点时，其freq为0，这是因为我们后面还将调用一次 increaseCount() 操作
         public void addToHead(int key) {
-            if (head ==  null) {
+            if (head == null) {
                 head = new FreqNode(0);
                 head.set.add(key);
             } else if (head.freq > 0) {
@@ -243,11 +243,11 @@ public class LFUCache {
  * https://leetcode.com/problems/lfu-cache/discuss/94521/JAVA-O(1)-very-easy-solution-using-3-HashMaps-and-LinkedHashSet
  */
 public class LFUCache {
-    private int min;
     private final int CAPACITY;
     private final HashMap<Integer, Integer> keyToVal;
     private final HashMap<Integer, Integer> keyToCount;
     private final HashMap<Integer, LinkedHashSet<Integer>> countToLRU;
+    private int min;
 
     public LFUCache(int capacity) {
         this.min = -1;

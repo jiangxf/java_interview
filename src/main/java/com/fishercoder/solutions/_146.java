@@ -74,6 +74,7 @@ public class _146 {
             private LRUCache.Node head;
             private LRUCache.Node tail;
             private Map<Integer, LRUCache.Node> map;
+
             public LRUCache(int capacity) {
                 this.capacity = capacity;
                 this.count = 0;// we need a count to keep track of the number of elements in the cache so

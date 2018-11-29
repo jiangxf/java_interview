@@ -29,29 +29,29 @@ check count of each index in the map; they should all be 0
 public class Solution {
     public boolean isAnagram(String s, String t) {
         if (s == null || t == null) {
-        	return s == null && t == null;
+            return s == null && t == null;
         } else if (s.length() != t.length()) {
-        	return false;
+            return false;
         }
 
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         for (int i = 0; i < s.length(); i++) {
-        	if (!map.containsKey(s.charAt(i))) {
-        		map.put(s.charAt(i), 1);
-        	} else {
-        		map.put(s.charAt(i), map.get(s.charAt(i)) + 1);
-        	}
-        	if (!map.containsKey(t.charAt(i))) {
-        		map.put(t.charAt(i), -1);
-        	} else {
-        		map.put(t.charAt(i), map.get(t.charAt(i)) - 1);
-        	}
+            if (!map.containsKey(s.charAt(i))) {
+                map.put(s.charAt(i), 1);
+            } else {
+                map.put(s.charAt(i), map.get(s.charAt(i)) + 1);
+            }
+            if (!map.containsKey(t.charAt(i))) {
+                map.put(t.charAt(i), -1);
+            } else {
+                map.put(t.charAt(i), map.get(t.charAt(i)) - 1);
+            }
         }//END for
-        
+
         for (int i = 0; i < s.length(); i++) {
-        	if (map.get(s.charAt(i)) != 0) {
-        		return false;
-        	}
+            if (map.get(s.charAt(i)) != 0) {
+                return false;
+            }
         }
         return true;
     }

@@ -22,7 +22,7 @@ return -1.
  */
 class Solution {
     /**
-     * @param coins: a list of integer
+     * @param coins:  a list of integer
      * @param amount: a total amount of money amount
      * @return: the fewest number of coins that you need to make up
      */
@@ -37,7 +37,7 @@ class Solution {
                 break;
             }
         }
-        
+
         // Function
         for (int i = 1; i < coins.length; i++) {
             for (int j = coins[i]; j <= amount; j++) {

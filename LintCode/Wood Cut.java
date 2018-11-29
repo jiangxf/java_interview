@@ -30,15 +30,15 @@ Use binary search on the largest item:
 
 
 public class Solution {
-    /** 
-     *@param L: Given n pieces of wood with length L[i]
-     *@param k: An integer
-     *return: The maximum length of the small pieces.
+    /**
+     * @param L: Given n pieces of wood with length L[i]
+     * @param k: An integer
+     *           return: The maximum length of the small pieces.
      */
     public int woodCut(int[] L, int k) {
         if (L == null || L.length == 0 || k < 0) {
             return 0;
-        } 
+        }
         if (L.length == 1) {
             return L[0] / (L[0] / k);
         }
@@ -47,22 +47,22 @@ public class Solution {
         int end = L[L.length - 1];
         int mid = 0;
         int max = 0;
-       // int min = L[0];
+        // int min = L[0];
         while (start + 1 < end) {
             mid = start + (end - start) / 2;
             //if (mid > min) {
             //    end = mid;
-           // } else {
-                int count = 0;
-                for (int i : L) {
-                    count += i / mid;
-                }
-                if (count < k) {
-                    end = mid;
-                } else {
-                    start = mid;
-                    max = mid;
-                }
+            // } else {
+            int count = 0;
+            for (int i : L) {
+                count += i / mid;
+            }
+            if (count < k) {
+                end = mid;
+            } else {
+                start = mid;
+                max = mid;
+            }
             //}
         }//end while
         return max;

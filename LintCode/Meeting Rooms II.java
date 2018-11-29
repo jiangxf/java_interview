@@ -19,11 +19,11 @@ Sort Greedy Facebook Snapchat Interval Heap Google
 /**
  * Definition of Interval:
  * public classs Interval {
- *     int start, end;
- *     Interval(int start, int end) {
- *         this.start = start;
- *         this.end = end;
- *     }
+ * int start, end;
+ * Interval(int start, int end) {
+ * this.start = start;
+ * this.end = end;
+ * }
  * }
  */
 public class Solution {
@@ -33,7 +33,7 @@ public class Solution {
      */
     public int minMeetingRooms(List<Interval> intervals) {
         List<TimePoint> list = new LinkedList<>();
-        for (Interval interval :intervals) {
+        for (Interval interval : intervals) {
             list.add(new TimePoint(interval.start, 1));
             list.add(new TimePoint(interval.end, -1));
         }

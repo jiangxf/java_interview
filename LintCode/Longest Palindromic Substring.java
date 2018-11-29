@@ -62,7 +62,7 @@ public class Solution {
         }
         return sb.toString();
     }
-    
+
     public char[] getManacherString(String str) {
         char[] charArr = str.toCharArray();
         char[] rst = new char[charArr.length * 2 + 1];

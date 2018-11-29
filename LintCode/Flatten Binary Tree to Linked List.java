@@ -29,16 +29,15 @@ Binary Tree Depth First Search
 */
 
 
-
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
 public class Solution {
@@ -47,20 +46,21 @@ public class Solution {
      * @return: nothing
      */
     public TreeNode parentNode = null;
+
     public void flatten(TreeNode root) {
-    	if (root == null) {
-    		return;
-    	}
+        if (root == null) {
+            return;
+        }
 
-    	if (parentNode != null) {
-    		parentNode.left = null;
-    		parentNode.right = root;
-    	}
+        if (parentNode != null) {
+            parentNode.left = null;
+            parentNode.right = root;
+        }
 
-    	parentNode = root;
-    	TreeNode right  = root.right;
-    	flatten(root.left);
-    	flatten(right);
+        parentNode = root;
+        TreeNode right = root.right;
+        flatten(root.left);
+        flatten(right);
     }
 }
 

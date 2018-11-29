@@ -20,9 +20,9 @@ Backtracking Bloomberg Depth First Search
  * 在遍历 str 的时候，考虑从每个 index 到 str 结尾，能有多少种 palindrome?
  * 如果 Index 到达了 字符串的末尾位置+1 说明全部都为回文串，则把该答案加到解集中。
  * for loop :
- *  如果所选不是palindrome， 那就 continue.
- *  若所选的确是palindrome,　加到path里面，DFS去下个level，等遍历到了结尾，这就产生了一种分割成palindrome的串。
- *  每次DFS结尾，要把这一层加的所选 palindrome 删掉，Backtracking。
+ * 如果所选不是palindrome， 那就 continue.
+ * 若所选的确是palindrome,　加到path里面，DFS去下个level，等遍历到了结尾，这就产生了一种分割成palindrome的串。
+ * 每次DFS结尾，要把这一层加的所选 palindrome 删掉，Backtracking。
  */
 public class Solution {
     /*
@@ -75,7 +75,7 @@ public class Solution {
  * 在 Approach 1 中，对于某一个字串是否为回文串的判断，我们每次都要花费 O(n) 的时间复杂度。
  * 因此我们可以通过 时间换空间 的方法，实现计算出 s 中各个字串是否为回文串并保存下来。
  * 这样当我们需要判断的时候，直接查表即可，时间复杂度为 O(1).
- *
+ * <p>
  * 那么如何计算出各个字串是否为回文串呢？如果采用暴力枚举的方法，时间复杂度为 O(n^3).
  * 这显然有点高了（虽然对比于 DFS 是挺好的，但是我们还是希望能够有更快的解法）
  * 我们发现这是一个无后效性的问题，而 s[i...j] 的状态依赖于 s[i+1...j-1]
@@ -86,7 +86,7 @@ public class Solution {
  * 因此我们将他们初始化为 Base Case,然后进行递推即可。(对应矩阵对角线的上一条线)
  * 注：对于 Base Case 这里采用了分析的方法，实际上我们也可以不这么做，直接通过 递推方程
  * 去找我们需要那些状态即可。这里我们初始化好对角线后，发现递推信息不足，因此我们需要再初始化一条线即可。
- * 
+ * <p>
  * 之后的操作与 Approach 1 完全相同
  */
 public class Solution {

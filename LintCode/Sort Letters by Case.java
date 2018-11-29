@@ -20,13 +20,13 @@ Sort LintCode Copyright String Two Pointers
  * 与 Partition Array 完全相同。
  * 关于 Partition 函数的详细解析可以参考：
  * https://github.com/cherryljr/LintCode/blob/master/Sort%20Colors.java
- *
+ * <p>
  * 算法时间复杂度：O(n)； 空间复杂度：O(1)
  */
 public class Solution {
     /**
-     *@param chars: The letter array you should sort by Case
-     *@return: void
+     * @param chars: The letter array you should sort by Case
+     * @return: void
      */
     public void sortLetters(char[] chars) {
         if (chars == null || chars.length < 2) {

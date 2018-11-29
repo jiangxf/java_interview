@@ -18,17 +18,8 @@ The distance from other points to 1 is 5, the distance from other points to 2 is
  */
 
 public class Solution {
-    class Pair {
-        public int first;
-        public int second;
-        public Pair(int first, int second) {
-            this.first = first;
-            this.second = second;
-        }
-    }
     long ans;
     int idx;
-
 
     /**
      * @param x: The end points set of edges
@@ -40,15 +31,15 @@ public class Solution {
         // Write your code here
         int n = x.length + 1;
         List<List<Pair>> g = new ArrayList<List<Pair>>();
-        for(int i = 0; i <= n; i++) {
+        for (int i = 0; i <= n; i++) {
             g.add(new ArrayList<Pair>());
         }
         for (int i = 0; i < x.length; i++) {
             g.get(x[i]).add(new Pair(y[i], d[i]));
             g.get(y[i]).add(new Pair(x[i], d[i]));
         }
-        int [] np = new int[n + 1];
-        long [] dp = new long[n + 1];
+        int[] np = new int[n + 1];
+        long[] dp = new long[n + 1];
         dfs1(1, 0, g, np, dp);
         ans = dp[1];
         idx = 1;
@@ -66,21 +57,32 @@ public class Solution {
             }
             dfs1(y, x, g, np, dp);
             np[x] += np[y];
-            dp[x] += dp[y] + (long)g.get(x).get(i).second * np[y];
+            dp[x] += dp[y] + (long) g.get(x).get(i).second * np[y];
         }
     }
+
     void dfs2(int x, int f, long sum, List<List<Pair>> g, int[] np, long[] dp, int n) {
         for (int i = 0; i < g.get(x).size(); i++) {
             int y = g.get(x).get(i).first;
             if (y == f) {
                 continue;
             }
-            long nextSum = dp[y] + (sum - dp[y] - (long)np[y] * g.get(x).get(i).second) + (long)(n - np[y]) * g.get(x).get(i).second;
+            long nextSum = dp[y] + (sum - dp[y] - (long) np[y] * g.get(x).get(i).second) + (long) (n - np[y]) * g.get(x).get(i).second;
             if (nextSum < ans || (nextSum == ans && x < idx)) {
                 ans = nextSum;
                 idx = y;
             }
             dfs2(y, x, nextSum, g, np, dp, n);
+        }
+    }
+
+    class Pair {
+        public int first;
+        public int second;
+
+        public Pair(int first, int second) {
+            this.first = first;
+            this.second = second;
         }
     }
 

@@ -26,8 +26,8 @@ All cities are the same price, so John can not make money, that is, all ans are 
 Tags
 Segment Tree
  */
- 
- /**
+
+/**
  * Approach 1: Brute Force (Time Limit Exceeded)
  * Traverse the array to get the maximum profit of every city.
  * Time Complexity: O(nk)
@@ -64,7 +64,7 @@ public class Solution {
  * 于是我们需要进一步对题目进行分析，既然 O(nk) 的时间复杂度过不去，那有没有存在 O(klogn) 或者 O(nlogk) 的方法呢？
  * 根据题目的描述：我们可以发现，我们主要的时间全部花费在了 区间[x-k, x+k] 上最小值的查询上面。
  * 那么是否存在降低 区间操作 的时间复杂度的方法呢？ （由 O(k) -> O(logk)）
- *
+ * <p>
  * 答案当然存在，那就是 线段树.
  * 得益于该种数据结构，我们可以在 O(logn) 的时间内得到 区间和/最大值/最小值/差值.
  * PS1. 除了 区间和可以利用 Prefix Sum 快速得到，其他都需要使用 O(n) 的时间。
@@ -72,31 +72,18 @@ public class Solution {
  * PS2. 区间和一旦发生单点修改的操作时, Prefix Sum 也将达到 O(n) 的时间复杂度，
  * 最佳解法为利用 Binary Index Tree. 这里不再细讲，有兴趣的可以移步：
  * https://github.com/cherryljr/LintCode/blob/master/Interval%20Sum%20II.java
- *
+ * <p>
  * 那么本题的解法就可以转换为：
- *  1. 首先构建一棵线段树
- *  2. 利用线段树查询 区间[x-k, x+k] 上的最小值，然后用 A[x] - minValue 得到在城市 x 所能获得的最大利润。
+ * 1. 首先构建一棵线段树
+ * 2. 利用线段树查询 区间[x-k, x+k] 上的最小值，然后用 A[x] - minValue 得到在城市 x 所能获得的最大利润。
  * Time Complexity: O(nlogk)
- *
+ * <p>
  * 本题主要使用到了线段树的 构建 与 查询。详细解释可以参见：
  * 线段树的构建：https://github.com/cherryljr/LintCode/blob/master/Segment%20Tree%20Build%20II.java
  * 线段树的查询：https://github.com/cherryljr/LintCode/blob/master/Segment%20Tree%20Query.java
  * 线段树的单点修改：https://github.com/cherryljr/LintCode/blob/master/Segment%20Tree%20Modify.java
  */
 public class Solution {
-    class SegmentTreeNode {
-        int start, end;
-        int val;
-        SegmentTreeNode left, right;
-
-        SegmentTreeNode(int start, int end, int val) {
-            this.start = start;
-            this.end = end;
-            this.val = val;
-            this.left = this.right = null;
-        }
-    }
-
     /**
      * @param A: The prices [i]
      * @param k:
@@ -155,5 +142,18 @@ public class Solution {
         }
 
         return rst;
+    }
+
+    class SegmentTreeNode {
+        int start, end;
+        int val;
+        SegmentTreeNode left, right;
+
+        SegmentTreeNode(int start, int end, int val) {
+            this.start = start;
+            this.end = end;
+            this.val = val;
+            this.left = this.right = null;
+        }
     }
 }

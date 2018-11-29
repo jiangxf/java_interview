@@ -13,12 +13,12 @@ Return true because "lintcode" can be break as "lint code".
  * 这个解法在 LeetCode 上面是可以过的，但是 LintCode 这边数据集有点大过不去。
  * 主要思路就是：枚举每个划分的位置 i，并使用 Map 记录以此产生的字符串 s 的分割结果，
  * 以便进行记忆化搜索。
- *
+ * <p>
  * 类似的问题：
  * Largest Sum of Averages：
- *  https://github.com/cherryljr/LeetCode/blob/master/Largest%20Sum%20of%20Averages.java
+ * https://github.com/cherryljr/LeetCode/blob/master/Largest%20Sum%20of%20Averages.java
  * Word Break II:
- *  https://github.com/cherryljr/LintCode/blob/master/Word%20Break%20II.java
+ * https://github.com/cherryljr/LintCode/blob/master/Word%20Break%20II.java
  */
 public class Solution {
     /*
@@ -68,12 +68,12 @@ public class Solution {
  * 超时的 Case 是一个长度非常长的 String,但是反观单词字典，里面的单词长度并不长。
  * 出现超时的现象正是由于我们循环的范围不当所导致的。
  * 分析总结如下：
- *  字符串String与单词word是存在着不同点的，那就是它们的长度！
- *  字符串可以非常的长，但是一个单词长度是有限的。它不可能超过词典中最长英文单词的长度。
- *  所以，我们在for loop时，仅仅需要考虑 i - maxLength ~ i 内的范围即可，而不需要考虑 0 ~ i 全部的范围了。
- *
+ * 字符串String与单词word是存在着不同点的，那就是它们的长度！
+ * 字符串可以非常的长，但是一个单词长度是有限的。它不可能超过词典中最长英文单词的长度。
+ * 所以，我们在for loop时，仅仅需要考虑 i - maxLength ~ i 内的范围即可，而不需要考虑 0 ~ i 全部的范围了。
+ * <p>
  * 改进后算法复杂度为：O(NL)
- *  N: 字符串长度     L：最长单词长度
+ * N: 字符串长度     L：最长单词长度
  */
 public class Solution {
     /*

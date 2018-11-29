@@ -37,6 +37,6 @@ Hide Similar Problems (M) Set Matrix Zeroes
 
 public class Solution {
     public void gameOfLife(int[][] board) {
-        
+
     }
 }

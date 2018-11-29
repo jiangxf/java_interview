@@ -1,5 +1,5 @@
 注意本题是允许重复数据的，故我们需要考虑到最坏的情况。
-eg. [1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1]
+        eg.[1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1]
 /*
 Follow up for "Search in Rotated Sorted Array":
 What if duplicates are allowed?
@@ -25,7 +25,7 @@ public class Solution {
     //  如果你觉得，不是每个情况都是最坏情况，你想用二分法解决不是最坏情况的情况，那你就写一个二分吧。
     //  反正面试考的不是你在这个题上会不会用二分法。这个题的考点是你想不想得到最坏情况。
     public boolean search(int[] A, int target) {
-        for (int i = 0; i < A.length; i ++) {
+        for (int i = 0; i < A.length; i++) {
             if (A[i] == target) {
                 return true;
             }
@@ -36,27 +36,27 @@ public class Solution {
 
 //  Binary Search
 public class Solution {
-    /** 
+    /**
      * param A : an integer ratated sorted array and duplicates are allowed
      * param target :  an integer to be search
-     * return : a boolean 
+     * return : a boolean
      */
     public boolean search(int[] A, int target) {
-           // write your code here
+        // write your code here
         if (A.length == 0) {
             return false;
         }
-        
+
         int start = 0;
         int end = A.length - 1;
         int mid;
-        
+
         while (start + 1 < end) {
             mid = start + (end - start) / 2;
             if (A[mid] == target) {//Check central point
                 return true;
             }
-            if (A[start] < A[mid]){//1st section is continous
+            if (A[start] < A[mid]) {//1st section is continous
                 if (A[start] <= target && target <= A[mid]) {//target in 1st section?
                     end = mid;
                 } else {
@@ -70,7 +70,7 @@ public class Solution {
                 }
             }
         }//While
-        
-        return (A[start] == target)  ||  (A[end] == target);
+
+        return (A[start] == target) || (A[end] == target);
     }
 }

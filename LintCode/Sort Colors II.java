@@ -24,19 +24,19 @@ Sort Two Pointers
  * 我们无法通过仅一次遍历便能够得到结果。因此我们考虑使用排序算法。
  * 而排序算法的时间复杂度最少也需要 O(nlogn),但该题已经给出了排序的范围 1~k.
  * 故我们考虑能够通过该信息将复杂度降低到 O(nlogk) 呢？
- *
+ * <p>
  * 于是我们想到了 二分 的思想。
  * 做法与 Sort Colors 几乎相同。只是将每次用于划分数组的 pivot 改成了 colorMid.
  * 而 colorMid 则是每次通过二分的方法进行确定。
  * 当前数组划分完毕后将形成 <colorMid; =colorMid; >colorMid 这三部分的数组。
  * 然后我们再分别对 <colorMid 和 >colorMid 部分递归处理即可。
- *
+ * <p>
  * 算法时间复杂度为 O(nlogk)
  */
 class Solution {
     /**
      * @param colors: A list of integer
-     * @param k: An integer
+     * @param k:      An integer
      * @return: nothing
      */
     public void sortColors2(int[] colors, int k) {
@@ -48,7 +48,7 @@ class Solution {
     }
 
     private void sortColors2Helper(int[] colors,
-                                   int  left,
+                                   int left,
                                    int right,
                                    int colorFrom,
                                    int colorTo) {

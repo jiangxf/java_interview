@@ -1,4 +1,4 @@
-Compared with BFS Template. Just reverse the result then achieve the goal.
+Compared with BFS Template.Just reverse the result then achieve the goal.
 
 /*
 Given a binary tree, return the bottom-up level order traversal of its nodes' values. 
@@ -29,16 +29,16 @@ Queue Binary Tree Binary Tree Traversal Breadth First Search
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
- *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
- *         this.left = this.right = null;
- *     }
+ * public int val;
+ * public TreeNode left, right;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * this.left = this.right = null;
+ * }
  * }
  */
- 
- 
+
+
 public class Solution {
     /**
      * @param root: The root of binary tree.
@@ -46,18 +46,18 @@ public class Solution {
      */
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> rst = new ArrayList<>();
-        
+
         if (root == null) {
             return rst;
         }
-        
+
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
-        
+
         while (!queue.isEmpty()) {
             int size = queue.size();
             ArrayList<Integer> level = new ArrayList<Integer>();
-            for (int i = 0; i < size; i++)  {
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 level.add(node.val);
                 if (node.left != null) {
@@ -69,7 +69,7 @@ public class Solution {
             }
             rst.add(level);
         }
-        
+
         Collections.reverse(rst);
         return rst;
     }

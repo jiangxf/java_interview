@@ -1,6 +1,6 @@
-这个DP有点诡异. 需要斟酌。
-NOT DONE YET
-```
+这个DP有点诡异.需要斟酌。
+        NOT DONE YET
+        ```
 /*
 There is a stone game.At the beginning of the game the player picks n piles of stones in a line.
 
@@ -45,15 +45,15 @@ public class Solution {
         if (A == null || A.length == 0) {
             return 0;
         }
-        
+
         int n = A.length;
-        
+
         // initialize f[i][i]
         int[][] f = new int[n][n];
         for (int i = 0; i < n; i++) {
             f[i][i] = 0;
         }
-        
+
         // preparation for sum[i][j]
         int[][] sum = new int[n][n];
         sum[0][0] = A[0];
@@ -63,7 +63,7 @@ public class Solution {
                 sum[i][j] = sum[i][j - 1] + A[j];
             }
         }
-        
+
         // dp
         // delta is the distance between the start and end
         for (int delta = 1; delta < n; delta++) {
@@ -76,7 +76,7 @@ public class Solution {
                 }
             }
         }
-        
+
         return f[0][n - 1];
     }
 }

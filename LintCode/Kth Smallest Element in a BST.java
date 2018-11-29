@@ -1,8 +1,8 @@
 很容想到Inorder-binary-search-tree Traversal
-Recursive 不难，然后稍微优化一下，确保rst.size() == k 时候，就可以return了。
-Iterative 稍微难想点：先把最左边的add， pop() stack， 加上右边（如果存在）； 下一个轮回，如果又左孩子，又是一顿加。
+        Recursive 不难，然后稍微优化一下，确保rst.size()==k 时候，就可以return了。
+        Iterative 稍微难想点：先把最左边的add， pop()stack， 加上右边（如果存在）； 下一个轮回，如果又左孩子，又是一顿加。
 
-```
+        ```
 /*
 Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
 
@@ -31,13 +31,14 @@ Hide Similar Problems (M) Binary Tree Inorder Traversal
 	Based on binary seach tree, just do a in-order-traversal.
 	Store in rst.
 */
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 
@@ -52,7 +53,7 @@ Hide Similar Problems (M) Binary Tree Inorder Traversal
 		if right == null, now node = null. Will not trigger the left-adding-whilte-loop
 */
 public class Solution {
-	public int kthSmallest(TreeNode root, int k) {
+    public int kthSmallest(TreeNode root, int k) {
         if (root == null || k <= 0) {
             return -1;
         }
@@ -60,9 +61,9 @@ public class Solution {
         Stack<TreeNode> stack = new Stack<TreeNode>();
         stack.push(root);
         TreeNode node = root;
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             //Left first
-            while (node != null && node.left != null) { 
+            while (node != null && node.left != null) {
                 stack.add(node.left);
                 node = node.left;
             }
@@ -76,13 +77,12 @@ public class Solution {
             if (node != null) {
                 stack.push(node);
             }
-         }
+        }
 
-         return -1;
+        return -1;
     }
 
 }
-
 
 
 // Recursive
@@ -91,17 +91,17 @@ public class Solution {
         if (root == null || k <= 0) {
             return -1;
         }
-        
+
         ArrayList<TreeNode> rst = new ArrayList<TreeNode>();
         helper(rst, root, k);
-        
+
         if (rst.size() < k) {
             return -1;
         }
         return rst.get(k - 1).val;
     }
-    
-    
+
+
     public void helper(ArrayList<TreeNode> rst, TreeNode node, int k) {
         if (rst.size() == k) {
             return;
@@ -110,7 +110,7 @@ public class Solution {
             rst.add(node);
             return;
         }
-        
+
         if (node.left != null) {
             helper(rst, node.left, k);
         }

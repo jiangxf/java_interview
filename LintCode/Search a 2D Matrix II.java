@@ -1,8 +1,8 @@
-因为是递增矩阵（行递增 && 列递增）
-故根据给定的性质，从左下角开始向右上角查询：每次有任何情况，只能往一个方向运行。
-每次删掉一行，或者一列
-故算法的时间复杂度为:O(m + n)， 空间复杂度为：O(1)
-```
+因为是递增矩阵（行递增&&列递增）
+        故根据给定的性质，从左下角开始向右上角查询：每次有任何情况，只能往一个方向运行。
+        每次删掉一行，或者一列
+        故算法的时间复杂度为:O(m+n)， 空间复杂度为：O(1)
+        ```
 /*
 Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it.
 
@@ -60,14 +60,14 @@ public class Solution {
         if (matrix[0] == null || matrix[0].length == 0) {
             return 0;
         }
-        
+
         // from bottom left to top right
         int n = matrix.length;
         int m = matrix[0].length;
         int x = n - 1;
         int y = 0;
         int count = 0;
-        
+
         while (x >= 0 && y < m) {
             if (matrix[x][y] < target) {
                 y++;

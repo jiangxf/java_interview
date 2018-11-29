@@ -25,14 +25,14 @@ Two Pointers Sort Array
  * 快速排序的思想，整个程序其实就是快速排序过程中的一次排序罢了。
  * 具体解释可以参考：Sort Colors (荷兰国旗问题)
  * https://github.com/cherryljr/LintCode/blob/master/Sort%20Colors.java
- *
+ * <p>
  * 算法复杂度为：O(N)
  */
 public class Solution {
     /**
-     *@param nums: The integer array you should partition
-     *@param k: As description
-     *return: The index after partition
+     * @param nums: The integer array you should partition
+     * @param k:    As description
+     *              return: The index after partition
      */
     public int partitionArray(int[] nums, int k) {
         if (nums == null || nums.length == 0) {

@@ -35,28 +35,28 @@ Since (1,1) cannot flow to any other grid, it cannot flow out.
 
 /**
  * 以本题为例，这里提供了 两种 BFS 做法的的模板
- *  第一种为：在 出队列 的时候进行 结束条件 判断；
- *  第二种为：在 进队列 的时候进行 结束条件 判断。
+ * 第一种为：在 出队列 的时候进行 结束条件 判断；
+ * 第二种为：在 进队列 的时候进行 结束条件 判断。
  * 其本质就是对 结束条件 的 判断时机 不同罢了。
  * 具体的分析与比较可以看下面的详细说明。
- *
+ * <p>
  * 这里就本题在使用 BFS 过程中没有涉及到的一些注意点进行一个补充说明：
- *  1. BFS 过程中需要使用到 level (step) 信息的话。如：需要走多少步，进行多少次编辑等。
- *  我们需要在一轮 BFS 开始之前首先获得当前 队列的长度size()，这就代表了当前层的大小与其相对应的元素，
- *  然后按照 size 的大小进行处理，之所以这么做是因为 循环中queue.size()是动态的，故必须在for循环之前就取好。
- *  当然了，我们也可以直接将 step 信息封装到每个对象中，并加入队列，但是这将耗费一定的空间。
- *  应用示例可以参考：
- *  Binary Tree Level Order Traversal (easy):
- *      https://github.com/cherryljr/LintCode/blob/master/Binary%20Tree%20Level%20Order%20Traversal.java
- *  Bus Routes (hard):
- *      https://github.com/cherryljr/LeetCode/blob/master/Bus%20Routes.java
- *  2. 依据 BFS 遍历过程中的特性(level by level)，其经常被用于求最短路径。
- *  并且有时候我们会进行反向 BFS 来节省时间。（多终点，需要求每个点到终点的最短路径）
- *  应用示例可以参考：
- *  Police Distance：
- *      https://github.com/cherryljr/LintCode/blob/master/Police%20Distance.java
- *  Portal：
- *      https://github.com/cherryljr/LintCode/blob/master/Portal.java
+ * 1. BFS 过程中需要使用到 level (step) 信息的话。如：需要走多少步，进行多少次编辑等。
+ * 我们需要在一轮 BFS 开始之前首先获得当前 队列的长度size()，这就代表了当前层的大小与其相对应的元素，
+ * 然后按照 size 的大小进行处理，之所以这么做是因为 循环中queue.size()是动态的，故必须在for循环之前就取好。
+ * 当然了，我们也可以直接将 step 信息封装到每个对象中，并加入队列，但是这将耗费一定的空间。
+ * 应用示例可以参考：
+ * Binary Tree Level Order Traversal (easy):
+ * https://github.com/cherryljr/LintCode/blob/master/Binary%20Tree%20Level%20Order%20Traversal.java
+ * Bus Routes (hard):
+ * https://github.com/cherryljr/LeetCode/blob/master/Bus%20Routes.java
+ * 2. 依据 BFS 遍历过程中的特性(level by level)，其经常被用于求最短路径。
+ * 并且有时候我们会进行反向 BFS 来节省时间。（多终点，需要求每个点到终点的最短路径）
+ * 应用示例可以参考：
+ * Police Distance：
+ * https://github.com/cherryljr/LintCode/blob/master/Police%20Distance.java
+ * Portal：
+ * https://github.com/cherryljr/LintCode/blob/master/Portal.java
  */
 
 /**

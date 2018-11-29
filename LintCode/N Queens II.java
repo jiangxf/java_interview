@@ -1,12 +1,12 @@
-Ïà±ÈÓëN Queens¸ü¼Ó¼òµ¥ÁË¡£
-ÒòÎªÖ»ÒªÇó½á¹ûµÄ¸öÊı£¬²¢²»ÒªÇó½«ÆäÁĞ³öÀ´¡£
-¹ÊÏàµ±ÓÚÉÙÁËdrawChessBoard()Õâ¸ö·½·¨¡£
-½âÌâË¼Â·ÓëN QueensÏàÍ¬¡£
-¹ÊÎÒÃÇÓĞÁË½â·¨1£ºÊ¹ÓÃDFS£¬µİ¹é±éÀúµÃµ½½á¹û¡£
+ï¿½ï¿½ï¿½ï¿½ï¿½N Queensï¿½ï¿½ï¿½Ó¼ï¿½ï¿½Ë¡ï¿½
+        ï¿½ï¿½ÎªÖ»Òªï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ğ³ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½àµ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½drawChessBoard()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½Ë¼Â·ï¿½ï¿½N Queensï¿½ï¿½Í¬ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë½â·¨1ï¿½ï¿½Ê¹ï¿½ï¿½DFSï¿½ï¿½ï¿½İ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-Í¬Ê±ÎÒÃÇ·¢ÏÖÕâÌâÖ»ĞèÒª½âµÄ·½°¸¸öÊı£¬²¢²»ĞèÒªÎÒÃÇ½«¾ßÌåµÄ·½°¸ÁĞ³öÀ´£¬
-¹ÊÎÒÃÇ¿ÉÒÔÊ¹ÓÃ¶¯Ì¬¹æ»®À´½â¾ö¸ÃÎÊÌâ¡£
-Òò´ËÎÒÃÇÓĞÁË½â·¨2£ºDP
+        Í¬Ê±ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½Ğ³ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½Ê¹ï¿½Ã¶ï¿½Ì¬ï¿½æ»®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â¡£
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë½â·¨2ï¿½ï¿½DP
 
 /*
 Description:
@@ -22,77 +22,80 @@ For n=4, there are 2 distinct solutions.
 class Solution {
     /**
      * Get all distinct N-Queen solutions
+     *
      * @param n: The number of queens
      * @return: All distinct solutions
      * For example, A string '...Q' shows a queen on forth position
      */
     int result = 0;
-    
+
     public int totalNQueens(int n) {
         //write your code here
         if (n <= 0) {
             return result;
         }
-        
+
         helper(new ArrayList<Integer>(), n);
         return result;
     }
-    
-    private void helper(ArrayList<Integer> list,int n)  {
+
+    private void helper(ArrayList<Integer> list, int n) {
         if (list.size() == n) {
-             result++;
-             return;
+            result++;
+            return;
         }
-        
+
         for (int i = 0; i < n; i++) {
-            if (!isValid(list, i)) { 
+            if (!isValid(list, i)) {
                 continue;
             }
-            
+
             list.add(i);
             helper(list, n);
             list.remove(list.size() - 1);
         }
     }
 
-     private boolean isValid(ArrayList<Integer> cols, int column) {
+    private boolean isValid(ArrayList<Integer> cols, int column) {
         int row = cols.size();
         for (int rowIndex = 0; rowIndex < cols.size(); rowIndex++) {
             if (cols.get(rowIndex) == column) {
                 return false;
             }
-            //	Ğ±ÂÊÎª 1 -- 45¶È
+            //	Ğ±ï¿½ï¿½Îª 1 -- 45ï¿½ï¿½
             if (rowIndex + cols.get(rowIndex) == row + column) {
                 return false;
             }
-            //	Ğ±ÂÊÎª -1 -- 135¶È
+            //	Ğ±ï¿½ï¿½Îª -1 -- 135ï¿½ï¿½
             if (rowIndex - cols.get(rowIndex) == row - column) {
                 return false;
             }
         }
         return true;
     }
-   
+
 }
 
 
 //	Version 2: DP
 public class Solution {
     public static int sum;
+
     public int totalNQueens(int n) {
         sum = 0;
         int[] usedColumns = new int[n];
         placeQueen(usedColumns, 0);
         return sum;
     }
+
     public void placeQueen(int[] usedColumns, int row) {
         int n = usedColumns.length;
-        
+
         if (row == n) {
-            sum ++;
+            sum++;
             return;
         }
-        
+
         for (int i = 0; i < n; i++) {
             if (isValid(usedColumns, row, i)) {
                 usedColumns[row] = i;
@@ -100,12 +103,13 @@ public class Solution {
             }
         }
     }
+
     public boolean isValid(int[] usedColumns, int row, int col) {
         for (int i = 0; i < row; i++) {
             if (usedColumns[i] == col) {
                 return false;
             }
-            if ((row - i) == Math.abs(col-usedColumns[i])) {
+            if ((row - i) == Math.abs(col - usedColumns[i])) {
                 return false;
             }
         }

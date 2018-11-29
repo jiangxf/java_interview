@@ -36,22 +36,22 @@ Dynamic Programming
 /**
  * Approach: DP
  * 求方案个数（无需具体方案内容），且无法进行排序操作 => 动态规划
- *
+ * <p>
  * 题目中的约束条件为：每次旅行的距离不能超过limit 与 距离的费用cost[i]不能大于所持有的经费;
  * 需要求方案个数，则我们可以设 dp[i][j] 代表从 星球0 出发到达 星球i 后拥有 j 个金币的方案数.
- *  首先根据题意对 dp[][] 进行一次初始化，dp[0][m] = 1.
- *  然后，我们可以求解它的状态转移方程：
- *  当骑士在 星球k 上，拥有 资金j 的时候，若 j + cost[i] <= m,
- *  则说明骑士能够从 星球k 旅行到 星球i, 则 dp[i][j] += dp[k][j + cost[i]];
- *  最后，答案便是能够到达 星球n 的所有方案数，即不管话费多少资金，能到星球n即可。
- *  所以：rst = sum(dp[n][0...m])
+ * 首先根据题意对 dp[][] 进行一次初始化，dp[0][m] = 1.
+ * 然后，我们可以求解它的状态转移方程：
+ * 当骑士在 星球k 上，拥有 资金j 的时候，若 j + cost[i] <= m,
+ * 则说明骑士能够从 星球k 旅行到 星球i, 则 dp[i][j] += dp[k][j + cost[i]];
+ * 最后，答案便是能够到达 星球n 的所有方案数，即不管话费多少资金，能到星球n即可。
+ * 所以：rst = sum(dp[n][0...m])
  */
 public class Solution {
     /**
-     * @param n: the max identifier of planet.
-     * @param m: gold coins that Sven has.
+     * @param n:     the max identifier of planet.
+     * @param m:     gold coins that Sven has.
      * @param limit: the max difference.
-     * @param cost: the number of gold coins that reaching the planet j through the portal costs.
+     * @param cost:  the number of gold coins that reaching the planet j through the portal costs.
      * @return: return the number of ways he can reach the planet n through the portal.
      */
     public long getNumberOfWays(int n, int m, int limit, int[] cost) {

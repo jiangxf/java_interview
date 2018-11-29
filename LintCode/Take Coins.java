@@ -22,17 +22,17 @@ Take two coins from the left and one from the right.
  * 即我们关注剩下的元素，因为其只能在左/右取走元素，因此剩下的必定是一段 连续的大小为 list.length-k 的subArray.
  * 我们只需要求得 和最小的这段subArray 即可。
  * 然后用整个数组的和减去这段值，就是我们需要的答案。
- *
+ * <p>
  * 时间复杂度：O(n)
  * 空间复杂度：O(1)
- *
+ * <p>
  * 用到同样方法的问题还有： Window Sum
  * https://github.com/cherryljr/LintCode/blob/master/Window%20Sum.java
  */
 public class Solution {
     /**
      * @param list: The coins
-     * @param k: The k
+     * @param k:    The k
      * @return: The answer
      */
     public int takeCoins(int[] list, int k) {
@@ -66,14 +66,14 @@ public class Solution {
  * 直接枚举左右指针的位置，即枚举出所有可能的方案。
  * 左边取 i 个，则右边就去 k-i 个。求所有方案中的最大值即可。
  * 对此我们需要求出 preSum[] 来加速我们的计算过程。
- *
+ * <p>
  * 时间复杂度：O(n)
  * 空间复杂度：O(n) 需要记录 preSum[]
  */
 public class Solution {
     /**
      * @param list: The coins
-     * @param k: The k
+     * @param k:    The k
      * @return: The answer
      */
     public int takeCoins(int[] list, int k) {

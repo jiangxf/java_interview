@@ -1,8 +1,8 @@
-双Stack：一个正常stack，另一个minStack存当前level下栈的最小值. 这样当原来的stack发生变化后(push or pop),
-我们都能够立即知道当前level下，栈的最小值是多少。
-注意维护minStack的变化
+双Stack：一个正常stack，另一个minStack存当前level下栈的最小值.这样当原来的stack发生变化后(push or pop),
+        我们都能够立即知道当前level下，栈的最小值是多少。
+        注意维护minStack的变化
 
-另外. 如果要maxStack，也是类似做法
+        另外.如果要maxStack，也是类似做法
 
 /*
 Implement a stack with min() function, which will return the smallest number in the stack.
@@ -33,7 +33,7 @@ Note: remember to check if minStack isEmpty(), empty stack does not have peek()
 public class MinStack {
     private Stack<Integer> stack;
     private Stack<Integer> minStack;
-    
+
     public MinStack() {
         // do initialize if necessary
         stack = new Stack<Integer>();

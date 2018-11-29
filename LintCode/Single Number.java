@@ -19,30 +19,30 @@ At the end, we use 0 XOR our target number, the result is actually the target nu
 Very smart trick to use bits.
 In order to compare from index 0 to the end, we need to extract index 0 first as result before for loop. And start for loop at i = 1.
 
-¶ÔÓÚ XOR ÔËËãµÄÀí½â£º
- ¢Ù ÏàÍ¬Îª0£¬²»Í¬Îª1
- ¢Ú ²»½øÎ»µÄ¼Ó·¨(important)
+ï¿½ï¿½ï¿½ï¿½ XOR ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£º
+ ï¿½ï¿½ ï¿½ï¿½Í¬Îª0ï¿½ï¿½ï¿½ï¿½Í¬Îª1
+ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ä¼Ó·ï¿½(important)
  a XOR 0 = a,
  a XOR a = 0.
-ÀûÓÃ¸ÃÔËËã½øĞĞµÖÏû£¬´Ó¶ø´ïµ½Ä¿±ê¡£
+ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¶ï¿½ï¿½ïµ½Ä¿ï¿½ê¡£
 */
 
 public class Solution {
-	/**
-	 *@param A : an integer array
-	 *return : a integer 
-	 */
-	public int singleNumber(int[] A) {
+    /**
+     * @param A : an integer array
+     *          return : a integer
+     */
+    public int singleNumber(int[] A) {
         if (A == null || A.length == 0) {
-           return 0;
+            return 0;
         }
         int rst = A[0];
         for (int i = 1; i < A.length; i++) {
-        	  //	Ò»¸öÊıÓë0Òì»òÈÔÎªÆä±¾Éí
+            //	Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ä±¾ï¿½ï¿½
             rst = rst ^ A[i];
         }
         return rst;
-	}
+    }
 }
 
 

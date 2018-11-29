@@ -1,4 +1,5 @@
-Template 1: Traverse
+Template 1:Traverse
+
 //	通常不返回数值
 //	传入参数，调用
 public class Solution {
@@ -15,7 +16,8 @@ public class Solution {
 }
 
 
-Tempate 2: Divide & Conquer
+Tempate 2:Divide&Conquer
+
 //	有返回值（有可能返回多个参数，如Binary Tree Maximum Path Sum）
 //	先分后治，注意临界值与异常的处理
 public class Solution {
@@ -24,11 +26,11 @@ public class Solution {
         if (root == null) {
             // do something and return;
         }
-        
+
         // Divide
         ResultType left = traversal(root.left);
         ResultType right = traversal(root.right);
-        
+
         // Conquer
         ResultType result = Merge from left and right.
         return result;

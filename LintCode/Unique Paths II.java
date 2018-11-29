@@ -83,7 +83,7 @@ public class Solution {
  * 只有当 obstacleGrid[i][j] == 0 并且 dp[(i-1) & 1][j] != 0 的时候，
  * 才能说明可以从起点到达该点，并且路径方法只有 1 个。
  * 其他方面按照原来的方法处理即可。
- *
+ * <p>
  * 时间复杂度：O(mn); 空间复杂度：O(n)
  */
 public class Solution {
@@ -116,7 +116,7 @@ public class Solution {
             for (int j = 0; j < cols; j++) {
                 // Initialize the first column of dp array
                 if (j == 0) {
-                    if (obstacleGrid[i][j] == 0 && dp[(i-1) & 1][j] != 0) {
+                    if (obstacleGrid[i][j] == 0 && dp[(i - 1) & 1][j] != 0) {
                         dp[i & 1][j] = 1;
                     } else {
                         dp[i & 1][j] = 0;
@@ -125,7 +125,7 @@ public class Solution {
                 }
 
                 if (obstacleGrid[i][j] != 1) {
-                    dp[i & 1][j] = dp[(i-1) & 1][j] + dp[i & 1][j-1];
+                    dp[i & 1][j] = dp[(i - 1) & 1][j] + dp[i & 1][j - 1];
                 } else {
                     dp[i & 1][j] = 0;
                 }
@@ -133,7 +133,7 @@ public class Solution {
         }
 
         //  Answer
-        return dp[(rows-1) & 1][cols - 1];
+        return dp[(rows - 1) & 1][cols - 1];
     }
 }
 
@@ -146,7 +146,7 @@ public class Solution {
  * which is new dp[j] = old dp[j] + dp[j-1]
  * which is current cell = top cell + left cell
  * 至此我们可以发现，其核心仍然是相同的：当前点 = 正上方的点 + 左侧的点
- *
+ * <p>
  * 时间复杂度：O(mn); 空间复杂度：O(n)
  */
 public class Solution {
@@ -163,8 +163,7 @@ public class Solution {
             for (int j = 0; j < cols; j++) {
                 if (row[j] == 1) {
                     dp[j] = 0;
-                }
-                else if (j > 0) {
+                } else if (j > 0) {
                     dp[j] += dp[j - 1];
                 }
             }

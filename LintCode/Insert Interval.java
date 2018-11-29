@@ -11,12 +11,12 @@ Insert (3, 4) into [(1,2), (5,9)], we get [(1,2), (3,4), (5,9)].
 /**
  * Approach: Greedy
  * 属于 Merge Intervals 的变形题，比较简单
- *
+ * <p>
  * 时间复杂度：O(n)
  * 空间复杂度：O(1)
- *
+ * <p>
  * Merge Intervals:
- *  https://github.com/cherryljr/LintCode/blob/master/Merge%20Intervals.java
+ * https://github.com/cherryljr/LintCode/blob/master/Merge%20Intervals.java
  */
 
 /**

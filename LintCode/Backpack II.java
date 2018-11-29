@@ -20,33 +20,33 @@ LintCode Copyright Dynamic Programming Backpack
  * Approach 1: DP
  * 该题与Backpack I有很大程度的相似。
  * 唯一的区别仅仅是State表示的意义不用，但是基本解法思路是相同的。
- *
+ * <p>
  * State:
- *  f[i][j]表示前”i”个数，取出一些能组成容量大小j，值为背包中物品的总价值
+ * f[i][j]表示前”i”个数，取出一些能组成容量大小j，值为背包中物品的总价值
  * Function:
- *  f[i][j] = f[i - 1][j]  （不取第i个数）
- *  f[i][j] = Math.max(f[i - 1][j], f[i - 1][j - A[i - 1]] + V[i - 1])  （取第i个数） // 当 j >= a[i] 时
+ * f[i][j] = f[i - 1][j]  （不取第i个数）
+ * f[i][j] = Math.max(f[i - 1][j], f[i - 1][j - A[i - 1]] + V[i - 1])  （取第i个数） // 当 j >= a[i] 时
  * Initialize:
- *  f[0][i] = 0, f[i][0] = 0
- *  矩阵的第一行/列初始化为 0
+ * f[0][i] = 0, f[i][0] = 0
+ * 矩阵的第一行/列初始化为 0
  * Answer:
- *  f[A.length][1...m]中的最大值
- *
+ * f[A.length][1...m]中的最大值
+ * <p>
  * 关于初始化问题，当遇到给定一个 target，
  * 要求只能是 正好达到 target 的话，我们可以将 f[0][0] 初始化为 需要的值，其他全部初始化为 Integer.MAX_VALUE/MIN_VALUE;
- *  如果我们需要取最小值，则令该方案的值为正无穷大
- *  如果我们需要取最大值，则令该方案的值为负无穷大
+ * 如果我们需要取最小值，则令该方案的值为正无穷大
+ * 如果我们需要取最大值，则令该方案的值为负无穷大
  * 而要求是 <= target 均可的话，在初始化的时候，全部用 0 即可。
  * 即对应的 正好完全装入 和 装入的最大值（不一定要装满）
  * -- 背包九讲
- *
+ * <p>
  * 对于上述讨论到的 初始化 问题，本题属于不一定需要装满的类型。我们可以对比必须 正好达到target 类型的题目来加深印象：
  * https://github.com/cherryljr/NowCoder/blob/master/%E6%8D%A2%E9%92%B1%E7%9A%84%E6%9C%80%E5%B0%91%E8%B4%A7%E5%B8%81%E6%95%B0.java
  */
 public class Solution {
     /**
      * @param m: An integer m denotes the size of a backpack
-     * @param A & V: Given n items with size A[i] and value V[i]
+     * @param A  & V: Given n items with size A[i] and value V[i]
      * @return: The maximum value
      */
     public int backPackII(int m, int[] A, int V[]) {
@@ -85,17 +85,17 @@ public class Solution {
  * 这样才能保证我们在计算 dp[j] 的时候，使用的dp[j-A[i-1]] 是 上一行的数据。
  * 如果 从头向后 计算的话，我们使用的 dp[j-A[i-1]] 就变成了当前行的数据了，
  * 相当于 dp[i][j-A[i-1]]. 就变成了 完全背包问题 了。而这二者是有本质区别的。
- * 
+ * <p>
  * 如果不能理解上述过程，可以先去看看 完全背包问题 详解：
  * https://github.com/cherryljr/NowCoder/blob/master/%E6%8D%A2%E9%9B%B6%E9%92%B1.java
- * 
+ * <p>
  * 上述优化是建立在已经非常熟悉 递推 过程并且具备良好空间感的基础上的。
  * 如果感到吃力，请先把基础学好...
  */
 public class Solution {
     /**
      * @param m: An integer m denotes the size of a backpack
-     * @param A & V: Given n items with size A[i] and value V[i]
+     * @param A  & V: Given n items with size A[i] and value V[i]
      * @return: The maximum value
      */
     public int backPackII(int m, int[] A, int V[]) {
@@ -117,7 +117,7 @@ public class Solution {
             for (int j = m; j >= A[i - 1]; j--) {
                 // 此处的 dp[j] 相当于 dp[i-1][j]
                 // dp[j-A[i-1]] 相当于 dp[i-1][j-A[i-1]]
-                dp[j] = Math.max(dp[j], dp[j - A[i- 1]] + V[i - 1]);
+                dp[j] = Math.max(dp[j], dp[j - A[i - 1]] + V[i - 1]);
             }
         }
 

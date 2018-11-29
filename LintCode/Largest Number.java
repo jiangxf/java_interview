@@ -20,10 +20,11 @@ class CustomComparator implements Comparator<String> {
         return (s2 + s1).compareTo(s1 + s2);
     }
 }
+
 public class Solution {
     /**
-     *@param num: A list of non negative integers
-     *@return: A string
+     * @param num: A list of non negative integers
+     * @return: A string
      */
     public String largestNumber(int[] num) {
         if (num == null || num.length == 0) {
@@ -34,7 +35,7 @@ public class Solution {
             strs[i] = num[i] + "";
         }
         Arrays.sort(strs, new CustomComparator());
-        StringBuffer sb=  new StringBuffer();
+        StringBuffer sb = new StringBuffer();
         for (int i = 0; i < num.length; i++) {
             sb.append(strs[i]);
         }

@@ -1,8 +1,8 @@
-stack 后入先出. 
-Data Structure: ArrayList 
-return/remove ArrayList的末尾项。
+stack 后入先出.
+        Data Structure:ArrayList
+        return/remove ArrayList的末尾项。
 
-```
+        ```
 /*
  Implement Stack
 
@@ -32,30 +32,31 @@ isEmpty: return length
 */
 
 class Stack {
-	private ArrayList<Integer> list = new ArrayList<Integer>();
+    private ArrayList<Integer> list = new ArrayList<Integer>();
+
     // Push a new item into the stack
     public void push(int x) {
-    	list.add(x);
+        list.add(x);
     }
 
     // Pop the top of the stack
     public void pop() {
-    	if (list.size() > 0) {
-    		list.remove(list.size() - 1);
-    	}
+        if (list.size() > 0) {
+            list.remove(list.size() - 1);
+        }
     }
 
     // Return the top of the stack
     public int top() {
-    	if (list.size() > 0) { 
-    		return list.get(list.size() - 1);
-    	}
+        if (list.size() > 0) {
+            return list.get(list.size() - 1);
+        }
         return -1;
     }
 
     // Check the stack is empty or not.
     public boolean isEmpty() {
         return list.size() == 0;
-    }    
+    }
 }
 ```

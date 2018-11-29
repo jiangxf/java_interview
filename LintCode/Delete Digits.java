@@ -25,9 +25,9 @@ remember to remove the prefixing 0's
 
 public class Solution {
     /**
-     *@param A: A positive integer which has N digits, A is a string.
-     *@param k: Remove k digits.
-     *@return: A string
+     * @param A: A positive integer which has N digits, A is a string.
+     * @param k: Remove k digits.
+     * @return: A string
      */
     public String DeleteDigits(String A, int k) {
         if (A == null || A.length() == 0 || k == 0) {
@@ -46,14 +46,12 @@ public class Solution {
         }
         //remote prefixing-0's
         int i = 0;
-        while(i < A.length() && A.charAt(i) == '0') {
+        while (i < A.length() && A.charAt(i) == '0') {
             i++;
         }
         return A.substring(i);
     }
 }
-
-
 
 
 /*
@@ -74,41 +72,41 @@ Note: handle prefix '0' in string
 */
 public class Solution {
     public static String DeleteDigits(String A, int k) {
-    	if (A == null || A.length() == 0 || k < 0) {
-    		return A;
-    	}
-    	int n = A.length() - k;
-    	//System.out.println(A.length() + " " + n);
-    	int[] digits = new int[n];
-    	for (int j = 0; j < n; j++) {
-    		digits[j] = -1;
-    	}
-    	int[] backup = Arrays.copyOf(digits, digits.length);
-    	for (int i = 0; i < A.length(); i++) {
-    		int digit = (int)(A.charAt(i) - '0');
-    		
-    		for (int j = 0; j < n; j++) {
-    			if ((digit < digits[j] || digits[j] < 0) && (A.length() - i) >= (n - j)) {
-    				//System.out.println(j + " " + digit + " | " + (A.length() - i) + " " + (n - j));
-    				if (j == 0) {
-    					digits = Arrays.copyOf(backup, backup.length);
-    				}
-    				digits[j] = digit;
-    				break;
-    			}
-    		}
-    	}
-    	//System.out.println(Arrays.toString(digits));
-    	String rst = "";
-    	for (int j = 0; j < n; j++) {
-    		if (rst.length() == 0 && digits[j] == 0) {
-    			continue;
-    		} else {
-    			rst += digits[j];
-    		}
-    	}
+        if (A == null || A.length() == 0 || k < 0) {
+            return A;
+        }
+        int n = A.length() - k;
+        //System.out.println(A.length() + " " + n);
+        int[] digits = new int[n];
+        for (int j = 0; j < n; j++) {
+            digits[j] = -1;
+        }
+        int[] backup = Arrays.copyOf(digits, digits.length);
+        for (int i = 0; i < A.length(); i++) {
+            int digit = (int) (A.charAt(i) - '0');
 
-    	return rst;
+            for (int j = 0; j < n; j++) {
+                if ((digit < digits[j] || digits[j] < 0) && (A.length() - i) >= (n - j)) {
+                    //System.out.println(j + " " + digit + " | " + (A.length() - i) + " " + (n - j));
+                    if (j == 0) {
+                        digits = Arrays.copyOf(backup, backup.length);
+                    }
+                    digits[j] = digit;
+                    break;
+                }
+            }
+        }
+        //System.out.println(Arrays.toString(digits));
+        String rst = "";
+        for (int j = 0; j < n; j++) {
+            if (rst.length() == 0 && digits[j] == 0) {
+                continue;
+            } else {
+                rst += digits[j];
+            }
+        }
+
+        return rst;
     }
 
 }

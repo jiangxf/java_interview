@@ -1,5 +1,5 @@
 Kadane's Algorithm 
-The same as Maximum Subarray
+        The same as Maximum Subarray
 
 /*
 Description
@@ -25,16 +25,16 @@ public class Solution {
         if (nums == null || nums.size() == 0) {
             return 0;
         }
-        
+
         int min = Integer.MAX_VALUE;
         int sum = 0;
-        
+
         for (int i : nums) {
             sum += i;
             min = Math.min(min, sum);
             sum = Math.min(sum, 0);
         }
-        
+
         return min;
     }
 }
