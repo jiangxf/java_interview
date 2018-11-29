@@ -40,7 +40,7 @@ import java.util.Random;
 
 public class _380 {
     /**
-     * Your _380 object will be instantiated and called as such:
+     * Your _380 object MySolution be instantiated and called as such:
      * _380 obj = new _380();
      * boolean param_1 = obj.insert(val);
      * boolean param_2 = obj.delete(val);

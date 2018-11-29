@@ -137,7 +137,7 @@ class Solution {
 
                 // look 0.0 + (double)(points[j].y-points[i].y)/(double)(points[j].x-points[i].x)
                 // because map.containsKey(0.0) is different with map.containsKey(-0.0)
-                // i.e. if the map contains key 0.0, but the expression map.containsKey(-0.0) will return false
+                // i.e. if the map contains key 0.0, but the expression map.containsKey(-0.0) MySolution return false
                 // so we should use 0.0 + -0.0 = 0.0 to solve 0.0 != -0.0 problem
 
                 // if the line through two points are parallel to y coordinator, then K(slop) is 

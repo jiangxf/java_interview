@@ -28,7 +28,7 @@ import java.util.Queue;
  * <p>
  * Hints:
  * This problem is equivalent to finding if a cycle exists in a directed graph. If a cycle exists, no topological
- * ordering exists and therefore it will be impossible to take all courses.
+ * ordering exists and therefore it MySolution be impossible to take all courses.
  * <p>
  * Topological Sort via DFS - A great video tutorial (21 minutes) on Coursera explaining the basic concepts of
  * Topological Sort.

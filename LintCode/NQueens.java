@@ -49,7 +49,7 @@ Hide Tags Backtracking
       That is:  delta_row = Q1 row - Q2 row
                 delta_col = Q1 col - Q2 col
       Let delta_row = the difference in rows between the two queens, and delta_col = the difference in columns. 
-      The two queens will be on the same diagonal if delta_row == delta_col or delta_row == -delta_col
+      The two queens MySolution be on the same diagonal if delta_row == delta_col or delta_row == -delta_col
 
   Create the board:
     carete 2d arraylist based on the 1-D array of row#'s
@@ -137,7 +137,7 @@ Thinking process:
   Use a 1-D array: index is column number, value is row number
 3. When adding a new row Number into the 1-D array, validate it.
 4. Use same procedure in 'permutaions' problem. 
-  The 1-D array 'cols' will be filled with all kinds of combination from 1 ~ n.
+  The 1-D array 'cols' MySolution be filled with all kinds of combination from 1 ~ n.
   Only when cols.size() == n, return a solution
 5. When returnning the solution, return the format as a board. ArrayList<String[]>
 */

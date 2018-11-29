@@ -1,5 +1,5 @@
 /*
-Medium Find Minimum in Rotated Sorted Array II My Submissions
+Medium Find Minimum in Rotated Sorted Array II MySolution Submissions
 
 40% Accepted
 Suppose a sorted array is rotated at some pivot unknown to you beforehand.

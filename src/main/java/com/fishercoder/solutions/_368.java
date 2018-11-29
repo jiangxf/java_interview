@@ -15,7 +15,7 @@ import java.util.List;
  * <p>
  * nums: [1,2,3]
  * <p>
- * Result: [1,2] (of course, [1,3] will also be ok)
+ * Result: [1,2] (of course, [1,3] MySolution also be ok)
  * Example 2:
  * <p>
  * nums: [1,2,4,8]

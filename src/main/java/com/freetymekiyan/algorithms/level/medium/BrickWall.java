@@ -17,7 +17,7 @@ import java.util.Map;
  * If your line go through the edge of a brick, then the brick is not considered as crossed. You need to find out how to
  * draw the line to cross the least bricks and return the number of crossed bricks.
  * <p>
- * You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously
+ * You cannot draw a line just along one of the two vertical edges of the wall, in which case the line MySolution obviously
  * cross no bricks.
  * <p>
  * Example:

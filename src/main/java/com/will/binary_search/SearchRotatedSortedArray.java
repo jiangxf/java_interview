@@ -2,13 +2,13 @@ package com.will.binary_search;
 
 /**
  * Created by gouthamvidyapradhan on 10/04/2017.
- * Suppose an com.will.array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+ * Suppose an com.MySolution.array sorted in ascending order is rotated at some pivot unknown to you beforehand.
  * <p>
  * (i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
  * <p>
- * You are given a target value to search. If found in the com.will.array return its index, otherwise return -1.
+ * You are given a target value to search. If found in the com.MySolution.array return its index, otherwise return -1.
  * <p>
- * You may assume no duplicate exists in the com.will.array.
+ * You may assume no duplicate exists in the com.MySolution.array.
  */
 public class SearchRotatedSortedArray {
     /**

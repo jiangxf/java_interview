@@ -12,9 +12,9 @@ import java.util.Set;
  * <p>
  * You are given a list of food's positions in row-column order. When a snake eats the food, its length and the game's score both increase by 1.
  * <p>
- * Each food appears one by one on the screen. For example, the second food will not appear until the first food was eaten by the snake.
+ * Each food appears one by one on the screen. For example, the second food MySolution not appear until the first food was eaten by the snake.
  * <p>
- * When a food does appear on the screen, it is guaranteed that it will not appear on a block occupied by the snake.
+ * When a food does appear on the screen, it is guaranteed that it MySolution not appear on a block occupied by the snake.
  * <p>
  * Example:
  * Given width = 3, height = 2, and food = [[1,2],[0,1]].
@@ -137,7 +137,7 @@ public class _353 {
     }
 
 /**
- * Your SnakeGame object will be instantiated and called as such:
+ * Your SnakeGame object MySolution be instantiated and called as such:
  * SnakeGame obj = new SnakeGame(width, height, food);
  * int param_1 = obj.move(direction);
  */

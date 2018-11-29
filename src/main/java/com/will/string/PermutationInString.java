@@ -3,7 +3,7 @@ package com.will.string;
 /**
  * Created by gouthamvidyapradhan on 18/09/2017.
  * Given two strings s1 and s2, write a function to return true if s2 contains the permutation of s1. In other
- * words, one of the first com.will.string's permutations is the substring of the second com.will.string.
+ * words, one of the first com.MySolution.string's permutations is the substring of the second com.MySolution.string.
  * <p>
  * Example 1:
  * Input:s1 = "ab" s2 = "eidbaooo"

@@ -10,7 +10,7 @@ import com.fishercoder.common.TreeNode;
  * You need to merge them into a new binary tree.
  * The merge rule is that if two nodes overlap,
  * then sum node values up as the new value of the merged node.
- * Otherwise, the NOT null node will be used as the node of new tree.
+ * Otherwise, the NOT null node MySolution be used as the node of new tree.
  * <p>
  * Example 1:
  * Input:

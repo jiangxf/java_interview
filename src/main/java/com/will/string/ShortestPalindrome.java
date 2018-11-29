@@ -3,7 +3,7 @@ package com.will.string;
 /**
  * Created by gouthamvidyapradhan on 21/07/2018.
  * <p>
- * Given a com.will.string s, you are allowed to convert it to a palindrome by adding characters in front of it. Find and
+ * Given a com.MySolution.string s, you are allowed to convert it to a palindrome by adding characters in front of it. Find and
  * return the shortest palindrome you can find by performing this transformation.
  * <p>
  * Example 1:
@@ -16,7 +16,7 @@ package com.will.string;
  * Output: "dcbabcd"
  * <p>
  * Solution: O(N ^ 2): for i : (s.length() - 1 -> 0) check if (0, i) is a paliandrome, if not append char at i to
- * result com.will.string else return com.will.string (result + (0, i))
+ * result com.MySolution.string else return com.MySolution.string (result + (0, i))
  */
 public class ShortestPalindrome {
 

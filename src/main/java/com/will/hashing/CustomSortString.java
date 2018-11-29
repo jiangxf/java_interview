@@ -8,9 +8,9 @@ import java.util.Map;
  * S and T are strings composed of lowercase letters. In S, no letter occurs more than once.
  * <p>
  * S was sorted in some custom order previously. We want to permute the characters of T so that they match the order
- * that S was sorted. More specifically, if x occurs before y in S, then x should occur before y in the returned com.will.string.
+ * that S was sorted. More specifically, if x occurs before y in S, then x should occur before y in the returned com.MySolution.string.
  * <p>
- * Return any permutation of T (as a com.will.string) that satisfies this property.
+ * Return any permutation of T (as a com.MySolution.string) that satisfies this property.
  * <p>
  * Example :
  * Input:
@@ -28,7 +28,7 @@ import java.util.Map;
  * T has length at most 200.
  * S and T consist of lowercase letters only.
  * <p>
- * Solution: O(N) count occurrence of each character and write to the output com.will.string
+ * Solution: O(N) count occurrence of each character and write to the output com.MySolution.string
  */
 public class CustomSortString {
 

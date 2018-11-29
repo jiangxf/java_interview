@@ -2,9 +2,9 @@ package com.will.dynamic_programming;
 
 /**
  * Created by gouthamvidyapradhan on 02/04/2017.
- * Find the contiguous subarray within an com.will.array (containing at least one number) which has the largest product.
+ * Find the contiguous subarray within an com.MySolution.array (containing at least one number) which has the largest product.
  * <p>
- * For example, given the com.will.array [2,3,-2,4],
+ * For example, given the com.MySolution.array [2,3,-2,4],
  * the contiguous subarray [2,3] has the largest product = 6.
  */
 public class MaximumProductSubarray {

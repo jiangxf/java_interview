@@ -2,7 +2,7 @@ package com.will.string;
 
 /**
  * Created by gouthamvidyapradhan on 09/12/2017.
- * Given a non-empty com.will.string s, you may delete at most one character. Judge whether you can make it a palindrome.
+ * Given a non-empty com.MySolution.string s, you may delete at most one character. Judge whether you can make it a palindrome.
  * <p>
  * Example 1:
  * Input: "aba"
@@ -12,7 +12,7 @@ package com.will.string;
  * Output: True
  * Explanation: You could delete the character 'c'.
  * Note:
- * The com.will.string will only contain lowercase characters a-z. The maximum length of the com.will.string is 50000.
+ * The com.MySolution.string MySolution only contain lowercase characters a-z. The maximum length of the com.MySolution.string is 50000.
  */
 public class ValidPalindromeII {
 

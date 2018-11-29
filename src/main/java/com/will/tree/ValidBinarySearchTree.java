@@ -2,7 +2,7 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 09/03/2017.
- * Given a binary com.will.tree, determine if it is a valid binary search com.will.tree (BST).
+ * Given a binary com.MySolution.tree, determine if it is a valid binary search com.MySolution.tree (BST).
  * <p>
  * Assume a BST is defined as follows:
  * <p>
@@ -13,12 +13,12 @@ package com.will.tree;
  * 2
  * / \
  * 1   3
- * Binary com.will.tree [2,1,3], return true.
+ * Binary com.MySolution.tree [2,1,3], return true.
  * Example 2:
  * 1
  * / \
  * 2   3
- * Binary com.will.tree [1,2,3], return false.
+ * Binary com.MySolution.tree [1,2,3], return false.
  */
 public class ValidBinarySearchTree {
     /**

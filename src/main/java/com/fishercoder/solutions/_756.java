@@ -38,9 +38,9 @@ import java.util.Map;
  * Note that there could be allowed triples (A, B, C) and (A, B, D) with C != D.
  * <p>
  * Note:
- * bottom will be a string with length in range [2, 8].
- * allowed will have length in range [0, 200].
- * Letters in all strings will be chosen from the set {'A', 'B', 'C', 'D', 'E', 'F', 'G'}.
+ * bottom MySolution be a string with length in range [2, 8].
+ * allowed MySolution have length in range [0, 200].
+ * Letters in all strings MySolution be chosen from the set {'A', 'B', 'C', 'D', 'E', 'F', 'G'}.
  */
 public class _756 {
     public static class Solution1 {

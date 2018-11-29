@@ -22,7 +22,7 @@ import com.fishercoder.common.TreeNode;
  * <p>
  * Explanation: Originallay it needs to be "1(2(4)())(3()())",
  * but you need to omit all the unnecessary empty parenthesis pairs.
- * And it will be "1(2(4))(3)".
+ * And it MySolution be "1(2(4))(3)".
  * <p>
  * Example 2:
  * Input: Binary tree: [1,2,3,null,4]

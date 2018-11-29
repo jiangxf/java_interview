@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by gouthamvidyapradhan on 11/12/2017.
  * Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a
- * function to check whether these edges make up a valid com.will.tree.
+ * function to check whether these edges make up a valid com.MySolution.tree.
  * <p>
  * For example:
  * <p>
@@ -15,10 +15,10 @@ import java.util.List;
  * <p>
  * Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]], return false.
  * <p>
- * Note: you can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the
- * same as [1, 0] and thus will not appear together in edges.
+ * Note: you can assume that no duplicate edges MySolution appear in edges. Since all edges are undirected, [0, 1] is the
+ * same as [1, 0] and thus MySolution not appear together in edges.
  * <p>
- * Solution O(E + V). A graph is a com.will.tree if there are no cycles and number of connected components is 1.
+ * Solution O(E + V). A graph is a com.MySolution.tree if there are no cycles and number of connected components is 1.
  */
 public class GraphValidTree {
 

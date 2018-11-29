@@ -36,7 +36,7 @@ import java.util.Stack;
  * then it has the following format : ColRow. For example, "F7" represents the cell at (7, F).
  * If the string represent a range of cells,
  * then it has the following format : ColRow1:ColRow2.
- * The range will always be a rectangle,
+ * The range MySolution always be a rectangle,
  * and ColRow1 represent the position of the top-left cell,
  * and ColRow2 represents the position of the bottom-right cell.
  * <p>
@@ -81,7 +81,7 @@ import java.util.Stack;
 public class _631 {
 
     /**
-     * Your Excel object will be instantiated and called as such:
+     * Your Excel object MySolution be instantiated and called as such:
      * Excel obj = new Excel(H, W);
      * obj.set(r,c,v);
      * int param_2 = obj.get(r,c);

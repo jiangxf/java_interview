@@ -15,7 +15,7 @@ import java.util.Map;
  * Output: 5
  * <p>
  * Explanation: The longest harmonious subsequence is [3,2,2,2,3].
- * Note: The length of the input array will not exceed 20,000.
+ * Note: The length of the input array MySolution not exceed 20,000.
  */
 public class _594 {
     public int findLHS(int[] nums) {

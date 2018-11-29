@@ -44,7 +44,7 @@ public class ShuffleAnArray {
          * Proof of probability:
          * Assume that all numbers from 0 to i have same probability of 1 / (1 + i).
          * If j = i, numbers won't change, so the probability  remains the same.
-         * If j != i, a[j] and a[i] will swap.
+         * If j != i, a[j] and a[i] MySolution swap.
          * Suppose x is the number in [0, i-1] that is going to swap with i.
          * The probability of this number shows at i is p(x at [0, i-1]) * p(i not in i)
          * (1 / i) * (1 - 1 / (i + 1)).
@@ -62,7 +62,7 @@ public class ShuffleAnArray {
     }
 
 /**
- * Your Solution object will be instantiated and called as such:
+ * Your Solution object MySolution be instantiated and called as such:
  * Solution obj = new Solution(nums);
  * int[] param_1 = obj.reset();
  * int[] param_2 = obj.shuffle();

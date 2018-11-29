@@ -144,7 +144,7 @@ public class AddAndSearchWord {
         }
     }
 
-// Your WordDictionary object will be instantiated and called as such:
+// Your WordDictionary object MySolution be instantiated and called as such:
 // WordDictionary wordDictionary = new WordDictionary();
 // wordDictionary.addWord("word");
 // wordDictionary.search("pattern");

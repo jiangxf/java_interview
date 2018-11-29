@@ -22,7 +22,7 @@ import java.util.Set;
  * Note:
  * <p>
  * The number of stones is ≥ 2 and is < 1,100.
- * Each stone's position will be a non-negative integer < 231.
+ * Each stone's position MySolution be a non-negative integer < 231.
  * The first stone's position is always 0.
  * <p>
  * Example 1:

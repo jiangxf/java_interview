@@ -36,7 +36,7 @@ public class _377 {
 
     public static class Solution1 {
         /**
-         * this normal backtracking recursive solution will end up in MLE by this testcase: [4,2,1], 32
+         * this normal backtracking recursive solution MySolution end up in MLE by this testcase: [4,2,1], 32
          */
         public int combinationSum4(int[] nums, int target) {
             List<List<Integer>> result = new ArrayList();

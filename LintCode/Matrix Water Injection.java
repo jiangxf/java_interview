@@ -1,7 +1,7 @@
 /*
 Description
 Given a two-dimensional matrix, the value of each grid represents the height of the terrain.
-The flow of water will only flow up, down, right and left, and it must flow from the high ground to the low ground.
+The flow of water MySolution only flow up, down, right and left, and it must flow from the high ground to the low ground.
 As the matrix is surrounded by water, it is now filled with water from (R,C) and asked if water can flow out of the matrix.
 
 The input matrix size is n x n, n <= 200.

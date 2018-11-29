@@ -2,9 +2,9 @@ package com.will.greedy;
 
 /**
  * Created by gouthamvidyapradhan on 17/03/2017.
- * Given an com.will.array of non-negative integers, you are initially positioned at the first index of the com.will.array.
+ * Given an com.MySolution.array of non-negative integers, you are initially positioned at the first index of the com.MySolution.array.
  * <p>
- * Each element in the com.will.array represents your maximum jump length at that position.
+ * Each element in the com.MySolution.array represents your maximum jump length at that position.
  * <p>
  * Determine if you are able to reach the last index.
  * <p>

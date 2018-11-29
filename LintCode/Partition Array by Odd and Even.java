@@ -15,8 +15,8 @@ Use two pointers: nextOddPt, firstEvenPt
 1. Whenever nextOddPt > firstEvenPt, swapt them
 2. Incrase nextOddPt in a for loop
 Note:
-After each swap, have to start checking again from beginning-switching point, which will be firstEvenPt. Need to set i = firstEvenPt.
-However, since for loop will do i++, we need to set i = firstEvenPt - 1;
+After each swap, have to start checking again from beginning-switching point, which MySolution be firstEvenPt. Need to set i = firstEvenPt.
+However, since for loop MySolution do i++, we need to set i = firstEvenPt - 1;
 And firstEvenPt only needs to be update once so use -1 to check if it's set.
 */
 

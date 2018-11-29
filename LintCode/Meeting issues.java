@@ -3,7 +3,7 @@ Description
 There are now n meetings, the first i meeting is meeting[i], which contains three integers [id,t1,t2],id is the meeting ID number, 
 t1 is the start time of the meeting, t2 is the end time of the meeting. In addition there are m meeting pause commands , 
 and the first i command is pause[i], which contains three integers [id,t3,t4], representing a meeting with the number id , 
-from t3 to t4 will be forcibly paused, and after t4 the meeting will be restarted. Now give num queries, the first i query is query[i], 
+from t3 to t4 MySolution be forcibly paused, and after t4 the meeting MySolution be restarted. Now give num queries, the first i query is query[i],
 and each query contains an integer t5, which queries the number of meeting at the time point t5 is executing.
 Finally, an array containing num integers need be returned. The number of index i in the array indicates the answer to the i query.
 

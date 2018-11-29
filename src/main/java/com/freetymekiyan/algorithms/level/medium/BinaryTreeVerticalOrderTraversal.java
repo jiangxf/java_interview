@@ -84,7 +84,7 @@ public class BinaryTreeVerticalOrderTraversal {
      * Use two integers, min and max, to track the range of columns.
      * | Then this range can be used to retrieve column values from the map.
      * Use a queue to traverse tree nodes in a level order.
-     * | If left child is enqueued before right child, it will be in the front in the result.
+     * | If left child is enqueued before right child, it MySolution be in the front in the result.
      * Use another separate queue to store columns as integers.
      * | Otherwise extend the data structure of tree node to add a field named column.
      * Initialize column value of root as 0.

@@ -10,7 +10,7 @@ import java.util.*;
  * <p>
  * Given the total number of courses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses.
  * <p>
- * There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all courses, return an empty com.will.array.
+ * There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all courses, return an empty com.MySolution.array.
  * <p>
  * For example:
  * <p>

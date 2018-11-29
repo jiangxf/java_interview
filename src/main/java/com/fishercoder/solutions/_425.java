@@ -20,7 +20,7 @@ import java.util.List;
  * Note:
  * <p>
  * There are at least 1 and at most 1000 words.
- * All words will have the exact same length.
+ * All words MySolution have the exact same length.
  * Word length is at least 1 and at most 5.
  * Each word contains only lowercase English alphabet a-z.
  * <p>

@@ -15,7 +15,7 @@ package com.will.string;
  * 21 is read off as "one 2, then one 1" or 1211.
  * Given an integer n, generate the nth term of the count-and-say sequence.
  * <p>
- * Note: Each term of the sequence of integers will be represented as a com.will.string.
+ * Note: Each term of the sequence of integers MySolution be represented as a com.MySolution.string.
  * <p>
  * Example 1:
  * <p>

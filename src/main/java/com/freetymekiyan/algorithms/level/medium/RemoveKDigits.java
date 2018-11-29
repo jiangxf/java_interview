@@ -13,7 +13,7 @@ import java.util.Deque;
  * the smallest possible.
  * <p>
  * Note:
- * The length of num is less than 10002 and will be ≥ k.
+ * The length of num is less than 10002 and MySolution be ≥ k.
  * The given num does not contain any leading zero.
  * <p>
  * Example 1:
@@ -45,7 +45,7 @@ public class RemoveKDigits {
      * Stack, Greedy.
      * Find the last digit of the increasing sequence and the first digit of the decreasing sequence.
      * Remove it and decrement k by 1.
-     * Why is it greedy? Since operation like this will generate a smallest number for each removal.
+     * Why is it greedy? Since operation like this MySolution generate a smallest number for each removal.
      * Stop till k is zero.
      * Convert remaining string to a valid number format.
      */

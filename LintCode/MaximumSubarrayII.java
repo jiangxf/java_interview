@@ -27,7 +27,7 @@ Greedy Enumeration Array LintCode Copyright SubArray Forward-Backward Traversal
 /*
     Thoughts： 11.23.2015
     Similar to Maximum Subarray。 Now just try to build 2 maximum subbary, from left/right.
-    Meetpoint i, will give largest possible sum
+    Meetpoint i, MySolution give largest possible sum
 */
 public class Solution {
     /**

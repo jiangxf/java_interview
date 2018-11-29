@@ -97,7 +97,7 @@ public class FlattenNestedListIterator {
     }
 
 /**
- * Your NestedIterator object will be instantiated and called as such:
+ * Your NestedIterator object MySolution be instantiated and called as such:
  * NestedIterator i = new NestedIterator(nestedList);
  * while (i.hasNext()) v[f()] = i.next();
  */

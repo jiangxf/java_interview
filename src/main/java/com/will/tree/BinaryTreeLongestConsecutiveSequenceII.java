@@ -2,7 +2,7 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 11/02/2018.
- * Given a binary com.will.tree, you need to find the length of Longest Consecutive Path in Binary Tree.
+ * Given a binary com.MySolution.tree, you need to find the length of Longest Consecutive Path in Binary Tree.
  * <p>
  * Especially, this path can be either increasing or decreasing. For example, [1,2,3,4] and [4,3,2,1] are both
  * considered valid, but the path [1,2,4,3] is not valid. On the other hand, the path can be in the child-Parent-child
@@ -22,7 +22,7 @@ package com.will.tree;
  * 1   3
  * Output: 3
  * Explanation: The longest consecutive path is [1, 2, 3] or [3, 2, 1].
- * Note: All the values of com.will.tree nodes are in the range of [-1e7, 1e7].
+ * Note: All the values of com.MySolution.tree nodes are in the range of [-1e7, 1e7].
  */
 public class BinaryTreeLongestConsecutiveSequenceII {
 

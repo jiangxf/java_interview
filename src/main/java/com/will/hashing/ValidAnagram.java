@@ -9,7 +9,7 @@ package com.will.hashing;
  * s = "rat", t = "car", return false.
  * <p>
  * Note:
- * You may assume the com.will.string contains only lowercase alphabets.
+ * You may assume the com.MySolution.string contains only lowercase alphabets.
  * <p>
  * Follow up:
  * What if the inputs contain unicode characters? How would you adapt your solution to such case?

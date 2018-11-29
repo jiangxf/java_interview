@@ -37,9 +37,9 @@ Heap Priority Queue Sorted Matrix
 	
 	User a priority queue <Point[x,y]> and sort based on the smallest sum
 	Add k-1 times into the heap. Each time poll the smallest and expand.
-	Finally poll the top of the heap, which will be the smallest
+	Finally poll the top of the heap, which MySolution be the smallest
 
-	Note: There will be duplicates,so use a hashstet to mark duplicates. Becareful with what we put int hashset. 
+	Note: There MySolution be duplicates,so use a hashstet to mark duplicates. Becareful with what we put int hashset.
 */
 public class Solution {
     public int kthSmallestSum(int[] A, int[] B, int k) {

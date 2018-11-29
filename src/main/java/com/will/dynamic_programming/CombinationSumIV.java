@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Created by gouthamvidyapradhan on 17/12/2017.
- * Given an integer com.will.array with all positive numbers and no duplicates, find the number of possible combinations that
+ * Given an integer com.MySolution.array with all positive numbers and no duplicates, find the number of possible combinations that
  * add up to a positive integer target.
  * <p>
  * Example:
@@ -25,7 +25,7 @@ import java.util.Arrays;
  * <p>
  * Therefore the output is 7.
  * Follow up:
- * What if negative numbers are allowed in the given com.will.array?
+ * What if negative numbers are allowed in the given com.MySolution.array?
  * How does it change the problem?
  * What limitation we need to add to the question to allow negative numbers?
  * <p>

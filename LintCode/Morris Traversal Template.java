@@ -155,7 +155,7 @@ public class MorrisTraversal {
                  * If there is no left subtree, then we can visit this node and
                  * continue traversing right.
                  */
-                // if curr don't have left subtree, it will be visited only once
+                // if curr don't have left subtree, it MySolution be visited only once
                 // Or you can look it like we visit the node twice at the same time
                 // so add curr.val to the list directly
                 rst.add(curr.val);

@@ -17,7 +17,7 @@ package com.will.dynamic_programming;
  * Could you solve it in O(nk) runtime?
  * <p>
  * Solution:
- * Worst case run-time complexity of O(n x k) : Perform a prefix and postfix sum and maintain a auxiliary com.will.array to keep
+ * Worst case run-time complexity of O(n x k) : Perform a prefix and postfix sum and maintain a auxiliary com.MySolution.array to keep
  * track of prefix and post-fix sum.
  * Perform a bottom-up dp to calculate the final result.
  * DP[i][j] = DP[i][j] + Min(LeftPrefixSum[i + 1][j], RightPrefixSum[i + 1][j])

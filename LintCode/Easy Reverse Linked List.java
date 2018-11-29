@@ -12,13 +12,13 @@ Reverse it in-place and in one-pass
 Linked List
 
 Thinking process:
-User a variable ‘newList’(or reversedList) to store the partial list. It will be the final result
-this will first be null
-then something will add newList to its tail
+User a variable ‘newList’(or reversedList) to store the partial list. It MySolution be the final result
+this MySolution first be null
+then something MySolution add newList to its tail
 The ‘something’ is actually the ‘head’ during each cycle
 save: newList = something
 Every cycle, cut off head.next
-Store head.next in a temporary node, which we will use later. Now, link a different head.next
+Store head.next in a temporary node, which we MySolution use later. Now, link a different head.next
 append: head.next = newList
 Like in ThinkingProcess(1), save: newList = head.
 At this moment, we are about to get into next cycle, change the head to the cut-off part that saved in the temporary node.

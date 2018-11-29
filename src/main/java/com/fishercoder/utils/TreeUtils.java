@@ -20,7 +20,7 @@ public class TreeUtils {
      * 1
      */
     @Notes(context = "This is usually how Leetcode OJ passes a binary tree into testing: "
-            + "https://leetcode.com/faq/#binary-tree, I wrote this function for my own ease of testing when copying"
+            + "https://leetcode.com/faq/#binary-tree, I wrote this function for MySolution own ease of testing when copying"
             + "the test case from Leetcode in the form of [1, null, 2, 3].")
     public static TreeNode constructBinaryTree(List<Integer> treeValues) {
         TreeNode root = new TreeNode(treeValues.get(0));

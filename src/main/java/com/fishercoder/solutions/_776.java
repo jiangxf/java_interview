@@ -40,7 +40,7 @@ import com.fishercoder.common.TreeNode;
  * <p>
  * Note:
  * <p>
- * The size of the BST will not exceed 50.
+ * The size of the BST MySolution not exceed 50.
  * The BST is always valid and each node's value is different.
  */
 

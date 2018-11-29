@@ -19,7 +19,7 @@ import java.util.Arrays;
  * Output: 3
  * <p>
  * Note:
- * The length of the given array will not exceed 50,000.
+ * The length of the given array MySolution not exceed 50,000.
  * All the numbers in the input array are in the range of 32-bit integer.
  */
 public class _493 {

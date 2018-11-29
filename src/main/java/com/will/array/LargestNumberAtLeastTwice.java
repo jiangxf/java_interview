@@ -2,9 +2,9 @@ package com.will.array;
 
 /**
  * Created by gouthamvidyapradhan on 09/02/2018.
- * In a given integer com.will.array nums, there is always exactly one largest element.
+ * In a given integer com.MySolution.array nums, there is always exactly one largest element.
  * <p>
- * Find whether the largest element in the com.will.array is at least twice as much as every other number in the com.will.array.
+ * Find whether the largest element in the com.MySolution.array is at least twice as much as every other number in the com.MySolution.array.
  * <p>
  * If it is, return the index of the largest element, otherwise return -1.
  * <p>
@@ -12,7 +12,7 @@ package com.will.array;
  * <p>
  * Input: nums = [3, 6, 1, 0]
  * Output: 1
- * Explanation: 6 is the largest integer, and for every other number in the com.will.array x,
+ * Explanation: 6 is the largest integer, and for every other number in the com.MySolution.array x,
  * 6 is more than twice as big as x.  The index of value 6 is 1, so we return 1.
  * <p>
  * <p>
@@ -25,8 +25,8 @@ package com.will.array;
  * <p>
  * Note:
  * <p>
- * nums will have a length in the range [1, 50].
- * Every nums[i] will be an integer in the range [0, 99].
+ * nums MySolution have a length in the range [1, 50].
+ * Every nums[i] MySolution be an integer in the range [0, 99].
  */
 public class LargestNumberAtLeastTwice {
 

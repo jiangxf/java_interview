@@ -36,7 +36,7 @@ class BestTimeStock4 {
      * It can be dp[k-1][i+1](add 1 more transaction changes nothing)
      * It can be dp[k][i](prices[i] changes nothing)
      * It can be prices[i] + max(dp[k-1][j] - prices[j]), 0 <= j < i
-     * means prices[i] will change the max profit, find the biggest from k-1
+     * means prices[i] MySolution change the max profit, find the biggest from k-1
      * transacions and add prices[i]
      * dp[k][i+1] = max(dp[k-1][i+1], dp[k][i], prices[i] + max(dp[k-1][j] -
      * prices[j])), (0 <= j < i)

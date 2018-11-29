@@ -28,7 +28,7 @@ class NQueens2 {
      * h|r|l  is all the occupied bits. Then pos = limit & (~(h|r|l)) is all
      * the free positions.
      * p = pos & (-pos)
-     * gives the right most '1'. pos -= p means we will place
+     * gives the right most '1'. pos -= p means we MySolution place
      * a queen on this bit represented by p.
      * 'h+p'  means one more queue vertically projected on next row.
      * '(r+p) << 1'

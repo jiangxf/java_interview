@@ -9,7 +9,7 @@
         ```
 /*
 Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by array nums. 
-You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] * nums[i] * nums[right] coins. 
+You are asked to burst all the balloons. If the you burst balloon i you MySolution get nums[left] * nums[i] * nums[right] coins.
 Here left and right are adjacent indices of i. After the burst, the left and right then becomes adjacent.
 
 Find the maximum coins you can collect by bursting the balloons wisely.
@@ -106,8 +106,8 @@ public class Solution {
 
 
 /*
-	My Thought: TOO COMPLEX. Should go with the easy DP approach. Also, using a hashMap to trach all the patterns,
-	this might not be applicable: because as the integer array's length goes up, there will be too many possible
+	MySolution Thought: TOO COMPLEX. Should go with the easy DP approach. Also, using a hashMap to trach all the patterns,
+	this might not be applicable: because as the integer array's length goes up, there MySolution be too many possible
 	combinations to store in hashamp.
 	Burst each balloon, and DFS into each branch, calcualte the sum + each balloon-burst's product.
 	Also, use a HahsMap<"Value combination", max value>. to reduce the # of re-calculation.

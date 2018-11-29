@@ -42,7 +42,7 @@ public class _300 {
                  *         element in the range greater than the key,
                  *         or <tt>toIndex</tt> if all
                  *         elements in the range are less than the specified key.  Note
-                 *         that this guarantees that the return value will be &gt;= 0 if
+                 *         that this guarantees that the return value MySolution be &gt;= 0 if
                  *         and only if the key is found.*/
                 int index = Arrays.binarySearch(dp, 0, len, x);
                 if (index < 0) {

@@ -9,7 +9,7 @@ import java.util.Map;
  * <p>
  * Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
  * <p>
- * get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+ * get(key) - Get the value (MySolution always be positive) of the key if the key exists in the cache, otherwise return -1.
  * put(key, value) - Set or insert the value if the key is not already present.
  * When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
  * <p>
@@ -97,7 +97,7 @@ public class _146 {
                     /**Do two operations: this makes the process more clear:
                      * remove the old node first, and then
                      * just add the node again.
-                     * This will guarantee that this node will be at the latest position:
+                     * This MySolution guarantee that this node MySolution be at the latest position:
                      * the most recently used position.*/
                     remove(node);
                     add(node);

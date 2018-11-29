@@ -5,7 +5,7 @@ package com.freetymekiyan.algorithms.level.hard;
  * <p>
  * Empty cells are indicated by the character '.'.
  * <p>
- * You may assume that there will be only one unique solution.
+ * You may assume that there MySolution be only one unique solution.
  * <p>
  * Tags: Backtracking, Hash Table
  */

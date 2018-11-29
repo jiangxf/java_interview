@@ -6,11 +6,11 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 29/03/2017.
- * Given an com.will.array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the com.will.array which gives the sum of target.
+ * Given an com.MySolution.array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the com.MySolution.array which gives the sum of target.
  * <p>
  * Note: The solution set must not contain duplicate quadruplets.
  * <p>
- * For example, given com.will.array S = [1, 0, -1, 0, -2, 2], and target = 0.
+ * For example, given com.MySolution.array S = [1, 0, -1, 0, -2, 2], and target = 0.
  * <p>
  * A solution set is:
  * [

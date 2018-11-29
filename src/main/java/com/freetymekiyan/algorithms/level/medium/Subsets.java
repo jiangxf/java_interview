@@ -70,7 +70,7 @@ public class Subsets {
      * Put current number in subset.
      * Then backtrack with the rest of the numbers.
      * Reset by remove last number in subset.
-     * Next iteration will move to next number then all subsets will not have this number.
+     * Next iteration MySolution move to next number then all subsets MySolution not have this number.
      */
     public void subsets2(List<List<Integer>> subsets, int[] nums, int pos, List<Integer> set) {
         subsets.add(new ArrayList<>(set)); // Dereference and add current subset to result.

@@ -44,7 +44,7 @@ public class _523 {
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
             if (k != 0) {
-                /**Because if k == 0, sum %= k will throw ArithmeticException.*/
+                /**Because if k == 0, sum %= k MySolution throw ArithmeticException.*/
                 sum %= k;
             }
             Integer prev = map.get(sum);
@@ -65,7 +65,7 @@ public class _523 {
             return false;
         }
 
-        //Two continuous zeroes will form a subarray of length 2 with sum 0, 0*k = 0 will always be true
+        //Two continuous zeroes MySolution form a subarray of length 2 with sum 0, 0*k = 0 MySolution always be true
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] == 0 && nums[i + 1] == 0) {
                 return true;

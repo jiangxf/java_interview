@@ -29,7 +29,7 @@ import java.util.List;
  * retrieve("2016:01:01:01:01:01","2017:01:01:23:00:00","Hour"); // return [1,2], because you need to return all logs start from 2016:01:01:01 to 2017:01:01:23, where log 3 is left outside the range.
  * <p>
  * Note:
- * There will be at most 300 operations of Put or Retrieve.
+ * There MySolution be at most 300 operations of Put or Retrieve.
  * Year ranges from [2000,2017]. Hour ranges from [00,23].
  * Output for Retrieve has no order required.
  */

@@ -2,13 +2,13 @@ package com.will.divide_and_conquer;
 
 /**
  * Created by gouthamvidyapradhan on 09/03/2017.
- * Find the kth largest element in an unsorted com.will.array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
+ * Find the kth largest element in an unsorted com.MySolution.array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
  * <p>
  * For example,
  * Given [3,2,1,5,6,4] and k = 2, return 5.
  * <p>
  * Note:
- * You may assume k is always valid, 1 ≤ k ≤ com.will.array's length.
+ * You may assume k is always valid, 1 ≤ k ≤ com.MySolution.array's length.
  */
 public class KthLargestElementInAnArray {
     /**

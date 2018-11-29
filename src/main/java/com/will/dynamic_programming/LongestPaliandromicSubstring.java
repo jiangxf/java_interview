@@ -2,7 +2,7 @@ package com.will.dynamic_programming;
 
 /**
  * Created by gouthamvidyapradhan on 24/02/2017.
- * Given a com.will.string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+ * Given a com.MySolution.string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
  * <p>
  * Example:
  * <p>

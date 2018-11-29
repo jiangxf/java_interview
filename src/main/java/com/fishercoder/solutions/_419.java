@@ -20,7 +20,7 @@ package com.fishercoder.solutions;
  * XXXX
  * ...X
  * <p>
- * This is an invalid board that you will not receive - as battleships will always have a cell separating between them.
+ * This is an invalid board that you MySolution not receive - as battleships MySolution always have a cell separating between them.
  * <p>
  * Follow up:
  * Could you do it in one-pass, using only O(1) extra memory and without modifying the value of the board?
@@ -69,7 +69,7 @@ public class _419 {
     }
 
     /**
-     * My original solution, actually modified the input. I just undo it at the end.
+     * MySolution original solution, actually modified the input. I just undo it at the end.
      */
     public int countBattleships(char[][] board) {
         if (board == null || board.length == 0) {

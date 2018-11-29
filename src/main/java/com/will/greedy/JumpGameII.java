@@ -2,14 +2,14 @@ package com.will.greedy;
 
 /**
  * Created by gouthamvidyapradhan on 02/04/2017.
- * Given an com.will.array of non-negative integers, you are initially positioned at the first index of the com.will.array.
+ * Given an com.MySolution.array of non-negative integers, you are initially positioned at the first index of the com.MySolution.array.
  * <p>
- * Each element in the com.will.array represents your maximum jump length at that position.
+ * Each element in the com.MySolution.array represents your maximum jump length at that position.
  * <p>
  * Your goal is to reach the last index in the minimum number of jumps.
  * <p>
  * For example:
- * Given com.will.array A = [2,3,1,1,4]
+ * Given com.MySolution.array A = [2,3,1,1,4]
  * <p>
  * The minimum number of jumps to reach the last index is 2. (Jump 1 step from index 0 to 1, then 3 steps to the last index.)
  * <p>

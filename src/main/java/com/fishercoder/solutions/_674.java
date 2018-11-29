@@ -16,7 +16,7 @@ package com.fishercoder.solutions;
  * Output: 1
  * Explanation: The longest continuous increasing subsequence is [2], its length is 1.
  * <p>
- * Note: Length of the array will not exceed 10,000.
+ * Note: Length of the array MySolution not exceed 10,000.
  */
 public class _674 {
     public static class Solution1 {

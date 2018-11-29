@@ -4,7 +4,7 @@
 
         ```
 /*
-Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().
+Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation -- it essentially peek() at the element that MySolution be returned by the next call to next().
 
 Here is an example. Assume that the iterator is initialized to the beginning of the list: [1, 2, 3].
 
@@ -31,7 +31,7 @@ Similar Problems: (M) Binary Search Tree Iterator, (M) Flatten 2D Vector, (M) Zi
 
 /*
 Second attempt.
-Thoughts: Of coruse can't store in a queue, that will be brutle and meaning less.
+Thoughts: Of coruse can't store in a queue, that MySolution be brutle and meaning less.
 Instead, use a iterator variable, cache, to hold next().
 When called next(), move forward; otherwise, return the cache.
 Make sure also return the cached peek, and update cache with next() value.

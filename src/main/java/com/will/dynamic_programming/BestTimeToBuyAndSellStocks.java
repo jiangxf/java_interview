@@ -2,9 +2,9 @@ package com.will.dynamic_programming;
 
 /**
  * Created by gouthamvidyapradhan on 17/03/2017.
- * Say you have an com.will.array for which the ith element is the price of a given stock on day i.
+ * Say you have an com.MySolution.array for which the ith element is the price of a given stock on day i.
  * <p>
- * If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), com.will.design an algorithm to find the maximum profit.
+ * If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), com.MySolution.design an algorithm to find the maximum profit.
  * <p>
  * Example 1:
  * Input: [7, 1, 5, 3, 6, 4]

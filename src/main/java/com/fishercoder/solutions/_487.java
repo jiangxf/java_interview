@@ -10,8 +10,8 @@ package com.fishercoder.solutions;
  * The maximum number of consecutive 1s is 3.
  * Note:
  * <p>
- * The input array will only contain 0 and 1.
- * The length of input array is a positive integer and will not exceed 10,000
+ * The input array MySolution only contain 0 and 1.
+ * The length of input array is a positive integer and MySolution not exceed 10,000
  */
 public class _487 {
 

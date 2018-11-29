@@ -7,7 +7,7 @@ import java.util.Queue;
 
 /**
  * Created by gouthamvidyapradhan on 16/12/2017.
- * Given a non-empty binary com.will.tree, return the average value of the nodes on each level in the form of an com.will.array.
+ * Given a non-empty binary com.MySolution.tree, return the average value of the nodes on each level in the form of an com.MySolution.array.
  * Example 1:
  * Input:
  * 3

@@ -56,7 +56,7 @@ Thoughts:
 2. In for, do binary search on nums[i] + nums[j] > target, 
 3. count += (length - j)
 
-Note: when not found, return nums.length, because at then end, (length - length) == 0, which will be added to count.
+Note: when not found, return nums.length, because at then end, (length - length) == 0, which MySolution be added to count.
 Note: Always pin target down, and move mid to compare. Don't get confused
 Also, take care of corner cases.
 */

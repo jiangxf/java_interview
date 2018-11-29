@@ -24,7 +24,7 @@ import java.util.PriorityQueue;
  * Explanation: You can allocate to the first, second and third child with 1, 2, 1 candies respectively.
  * The third child gets 1 candy because it satisfies the above two conditions.
  * <p>
- * Solution: O(N log N): Store the indexes in a com.will.heap, iterate through the com.will.heap one by one and assign candies one
+ * Solution: O(N log N): Store the indexes in a com.MySolution.heap, iterate through the com.MySolution.heap one by one and assign candies one
  * greater than its neighbours. Take care of edge cases.
  */
 public class Candy {

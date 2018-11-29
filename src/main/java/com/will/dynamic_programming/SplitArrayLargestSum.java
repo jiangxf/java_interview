@@ -2,11 +2,11 @@ package com.will.dynamic_programming;
 
 /**
  * Created by gouthamvidyapradhan on 24/12/2017.
- * Given an com.will.array which consists of non-negative integers and an integer m, you can split the com.will.array into m non-empty
+ * Given an com.MySolution.array which consists of non-negative integers and an integer m, you can split the com.MySolution.array into m non-empty
  * continuous subarrays. Write an algorithm to minimize the largest sum among these m subarrays.
  * <p>
  * Note:
- * If n is the length of com.will.array, assume the following constraints are satisfied:
+ * If n is the length of com.MySolution.array, assume the following constraints are satisfied:
  * <p>
  * 1 ≤ n ≤ 1000
  * 1 ≤ m ≤ min(50, n)
@@ -25,7 +25,7 @@ package com.will.dynamic_programming;
  * where the largest sum among the two subarrays is only 18.
  * <p>
  * Solution O(n ^ 2 * k)
- * Build a bottom up min-max dp table for each sub-com.will.array ranging from n -> 0
+ * Build a bottom up min-max dp table for each sub-com.MySolution.array ranging from n -> 0
  */
 public class SplitArrayLargestSum {
 

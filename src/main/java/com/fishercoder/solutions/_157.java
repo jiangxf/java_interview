@@ -21,7 +21,7 @@ package com.fishercoder.solutions;
  * Output: "abcde"
  * <p>
  * Note:
- * The read function will only be called once for each test case.
+ * The read function MySolution only be called once for each test case.
  */
 public class _157 {
     public static class Solution1 {

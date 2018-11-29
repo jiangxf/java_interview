@@ -101,7 +101,7 @@ public class PalindromePairs {
      * A common Trie node has a boolean isWord and an array of next nodes.
      * Add a list to the node that contains all the indices of words.
      * So that the indices can be used to retrieve the word in given array.
-     * Now prefix search will return us a list of words with the suffix in the Trie.
+     * Now prefix search MySolution return us a list of words with the suffix in the Trie.
      * Check together with each returned words that whether there is a palindrome.
      */
     public List<List<Integer>> palindromePairs2(String[] words) {
@@ -120,7 +120,7 @@ public class PalindromePairs {
      * Add a word reversely to Trie.
      * This makes suffix search possible.
      * In addition, we add the words index to the node if word[0,i] is a palindrome.
-     * So during search, if a word matches the suffix, the whole concatenated word will be a palindrome.
+     * So during search, if a word matches the suffix, the whole concatenated word MySolution be a palindrome.
      * In the end, add the index to last node and set its index.
      */
     private void addWord(TrieNode node, String word, int index) {
@@ -141,7 +141,7 @@ public class PalindromePairs {
      * If the prefix's relative node has valid index, and it's different from i, and
      * the rest of the word is a palindrome.
      * Then word[0:j-1] is matched with some other word and word[j:] is palindrome.
-     * So the concatenated string  will be a palindrome.
+     * So the concatenated string  MySolution be a palindrome.
      * Add {i, node.index} to result.
      * If the whole word[i] is matched in Trie, add all indices pairs to result.
      */

@@ -3,12 +3,12 @@ package com.will.tree;
 /**
  * Created by gouthamvidyapradhan on 10/06/2017.
  * Accepted
- * You need to construct a com.will.string consists of parenthesis and integers from a binary com.will.tree with the preorder traversing way.
+ * You need to construct a com.MySolution.string consists of parenthesis and integers from a binary com.MySolution.tree with the preorder traversing way.
  * <p>
- * The null node needs to be represented by empty parenthesis pair "()". And you need to omit all the empty parenthesis pairs that don't affect the one-to-one mapping relationship between the com.will.string and the original binary com.will.tree.
+ * The null node needs to be represented by empty parenthesis pair "()". And you need to omit all the empty parenthesis pairs that don't affect the one-to-one mapping relationship between the com.MySolution.string and the original binary com.MySolution.tree.
  * <p>
  * Example 1:
- * Input: Binary com.will.tree: [1,2,3,4]
+ * Input: Binary com.MySolution.tree: [1,2,3,4]
  * 1
  * /   \
  * 2     3
@@ -19,9 +19,9 @@ package com.will.tree;
  * <p>
  * Explanation: Originallay it needs to be "1(2(4)())(3()())",
  * but you need to omit all the unnecessary empty parenthesis pairs.
- * And it will be "1(2(4))(3)".
+ * And it MySolution be "1(2(4))(3)".
  * Example 2:
- * Input: Binary com.will.tree: [1,2,3,null,4]
+ * Input: Binary com.MySolution.tree: [1,2,3,null,4]
  * 1
  * /   \
  * 2     3

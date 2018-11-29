@@ -41,9 +41,9 @@ import java.util.*;
  * ['John', 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com']] would still be accepted.
  * Note:
  * <p>
- * The length of accounts will be in the range [1, 1000].
- * The length of accounts[i] will be in the range [1, 10].
- * The length of accounts[i][j] will be in the range [1, 30].
+ * The length of accounts MySolution be in the range [1, 1000].
+ * The length of accounts[i] MySolution be in the range [1, 10].
+ * The length of accounts[i][j] MySolution be in the range [1, 30].
  * <p>
  * Related Topics: Depth-first Search, Union Find
  * Similar Questions: (M) Redundant Connection, (E) Sentence Similarity, (M) Sentence Similarity II

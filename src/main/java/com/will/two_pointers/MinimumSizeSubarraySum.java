@@ -3,10 +3,10 @@ package com.will.two_pointers;
 /**
  * Created by gouthamvidyapradhan on 03/12/2017.
  * <p>
- * Given an com.will.array of n positive integers and a positive integer s, find the minimal length of a contiguous
+ * Given an com.MySolution.array of n positive integers and a positive integer s, find the minimal length of a contiguous
  * subarray of which the sum ≥ s. If there isn't one, return 0 instead.
  * <p>
- * For example, given the com.will.array [2,3,1,2,4,3] and s = 7,
+ * For example, given the com.MySolution.array [2,3,1,2,4,3] and s = 7,
  * the subarray [4,3] has the minimal length under the problem constraint.
  * <p>
  * click to show more practice.
@@ -14,7 +14,7 @@ package com.will.two_pointers;
  * Credits:
  * Special thanks to @Freezen for adding this problem and creating all test cases.
  * <p>
- * Solution: O(n) solution. Solve using sliding window sub-com.will.array sum using two pointers.
+ * Solution: O(n) solution. Solve using sliding window sub-com.MySolution.array sum using two pointers.
  */
 public class MinimumSizeSubarraySum {
     /**

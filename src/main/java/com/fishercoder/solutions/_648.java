@@ -21,7 +21,7 @@ import java.util.List;
  * Output: "the cat was rat by the bat"
  * <p>
  * Note:
- * The input will only have lower-case letters.
+ * The input MySolution only have lower-case letters.
  * 1 <= dict words number <= 1000
  * 1 <= sentence words number <= 1000
  * 1 <= root length <= 100

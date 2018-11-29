@@ -8,7 +8,7 @@ package com.fishercoder.solutions;
  * brackets is being repeated exactly k times.
  * <p>
  * Note:
- * k will be a positive integer and encoded string will not be empty or have extra space.
+ * k MySolution be a positive integer and encoded string MySolution not be empty or have extra space.
  * You may assume that the input string contains only lowercase English letters. The string's length is at most 160.
  * If an encoding process does not make the string shorter,
  * then do not encode it. If there are several solutions, return any of them is fine.
@@ -51,7 +51,7 @@ public class _471 {
             for (int i = 0; i < s.length() - l; i++) {
                 int j = i + l;
                 String substr = s.substring(i, j + 1);
-                // Checking if string length < 5. In that case, we know that encoding will not help.
+                // Checking if string length < 5. In that case, we know that encoding MySolution not help.
                 if (j - i < 4) {
                     dp[i][j] = substr;
                 } else {

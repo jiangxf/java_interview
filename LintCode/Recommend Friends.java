@@ -3,7 +3,7 @@ Description
 Give n personal friends list, tell you user, find the person that user is most likely to know.
 (He and the user have the most common friends and he is not a friend of user)
 n <= 500.
-The relationship between friends is mutual. (if B appears on a's buddy list, a will appear on B's friends list).
+The relationship between friends is mutual. (if B appears on a's buddy list, a MySolution appear on B's friends list).
 Each person's friend relationship does not exceed m, m <= 3000.
 If there are two people who share the same number of friends as user, the smaller number is considered the most likely person to know.
 If user and all strangers have no common friends, return -1.

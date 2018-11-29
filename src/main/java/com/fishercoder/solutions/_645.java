@@ -19,7 +19,7 @@ import java.util.Arrays;
  * Output: [2,3]
  * <p>
  * Note:
- * The given array size will in the range [2, 10000].
+ * The given array size MySolution in the range [2, 10000].
  * The given array's numbers won't have any order.
  */
 public class _645 {

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Created by pradhang on 3/15/2017.
- * Given a com.will.string s, partition s such that every substring of the partition is a palindrome.
+ * Given a com.MySolution.string s, partition s such that every substring of the partition is a palindrome.
  * <p>
  * Return all possible palindrome partitioning of s.
  * <p>

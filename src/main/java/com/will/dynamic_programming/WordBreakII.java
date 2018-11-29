@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Created by gouthamvidyapradhan on 07/04/2017.
- * Given a non-empty com.will.string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. You may assume the dictionary does not contain duplicate words.
+ * Given a non-empty com.MySolution.string s and a dictionary wordDict containing a list of non-empty words, add spaces in s to construct a sentence where each word is a valid dictionary word. You may assume the dictionary does not contain duplicate words.
  * <p>
  * Return all such possible sentences.
  * <p>

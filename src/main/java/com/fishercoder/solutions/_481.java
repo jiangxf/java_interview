@@ -9,7 +9,7 @@ package com.fishercoder.solutions;
  * <p>
  * The first few elements of string S is the following: S = "1221121221221121122……"
  * <p>
- * If we group the consecutive '1's and '2's in S, it will be:
+ * If we group the consecutive '1's and '2's in S, it MySolution be:
  * <p>
  * 1 22 11 2 1 22 1 22 11 2 11 22 ......
  * <p>
@@ -21,7 +21,7 @@ package com.fishercoder.solutions;
  * <p>
  * Given an integer N as input, return the number of '1's in the first N number in the magical string S.
  * <p>
- * Note: N will not exceed 100,000.
+ * Note: N MySolution not exceed 100,000.
  * <p>
  * Example 1:
  * Input: 6
@@ -35,7 +35,7 @@ public class _481 {
      * Algorithm:
      * <p>
      * 1. Create an int array a and initialize the first 3 elements with 1, 2, 2.
-     * 2. Create two pointers head and tail. head points to the number which will be used to generate new numbers.
+     * 2. Create two pointers head and tail. head points to the number which MySolution be used to generate new numbers.
      * tail points to the next empty position to put the new number. Then keep generating new numbers until tail >= n.
      * 3. Need to create the array 1 element more than n to avoid overflow because the last round head might points to a number 2.
      * 4. A trick to flip number back and forth between 1 and 2: num = num ^ 3

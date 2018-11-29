@@ -12,10 +12,10 @@ import java.util.Deque;
  * Note:
  * <p>
  * The length of the given string is ≤ 10000.
- * Each number will contain only one digit.
+ * Each number MySolution contain only one digit.
  * The conditional expressions group right-to-left (as usual in most languages).
- * The condition will always be either T or F. That is, the condition will never be a digit.
- * The result of the expression will always evaluate to either a digit 0-9, T or F.
+ * The condition MySolution always be either T or F. That is, the condition MySolution never be a digit.
+ * The result of the expression MySolution always evaluate to either a digit 0-9, T or F.
  * <p>
  * Example 1:
  * <p>
@@ -52,7 +52,7 @@ import java.util.Deque;
 public class _439 {
 
     /**
-     * Below is my original solution, but looking at Discuss, a more concise way is to use just one stack, process it from right to left,
+     * Below is MySolution original solution, but looking at Discuss, a more concise way is to use just one stack, process it from right to left,
      * example: https://discuss.leetcode.com/topic/64409/very-easy-1-pass-stack-solution-in-java-no-string-concat
      */
 

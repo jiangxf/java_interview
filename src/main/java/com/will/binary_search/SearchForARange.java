@@ -2,11 +2,11 @@ package com.will.binary_search;
 
 /**
  * Created by gouthamvidyapradhan on 20/05/2017.
- * Given an com.will.array of integers sorted in ascending order, find the starting and ending position of a given target value.
+ * Given an com.MySolution.array of integers sorted in ascending order, find the starting and ending position of a given target value.
  * <p>
  * Your algorithm's runtime complexity must be in the order of O(log n).
  * <p>
- * If the target is not found in the com.will.array, return [-1, -1].
+ * If the target is not found in the com.MySolution.array, return [-1, -1].
  * <p>
  * For example,
  * Given [5, 7, 7, 8, 8, 10] and target value 8,
@@ -35,7 +35,7 @@ public class SearchForARange {
     /**
      * Find index
      *
-     * @param nums         nums com.will.array
+     * @param nums         nums com.MySolution.array
      * @param target       target
      * @param isLowerIndex true if target is to find lower index, false otherwise
      * @return index

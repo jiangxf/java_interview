@@ -4,11 +4,11 @@ import java.util.Random;
 
 /**
  * Created by gouthamvidyapradhan on 10/12/2017.
- * Given an com.will.array of integers with possible duplicates, randomly output the index of a given target number. You can
- * assume that the given target number must exist in the com.will.array.
+ * Given an com.MySolution.array of integers with possible duplicates, randomly output the index of a given target number. You can
+ * assume that the given target number must exist in the com.MySolution.array.
  * <p>
  * Note:
- * The com.will.array size can be very large. Solution that uses too much extra space will not pass the judge.
+ * The com.MySolution.array size can be very large. Solution that uses too much extra space MySolution not pass the judge.
  * <p>
  * Example:
  * <p>
@@ -18,7 +18,7 @@ import java.util.Random;
  * // pick(3) should return either index 2, 3, or 4 randomly. Each index should have equal probability of returning.
  * solution.pick(3);
  * <p>
- * // pick(1) should return 0. Since in the com.will.array only nums[0] is equal to 1.
+ * // pick(1) should return 0. Since in the com.MySolution.array only nums[0] is equal to 1.
  * solution.pick(1);
  */
 public class RandomPickIndex {

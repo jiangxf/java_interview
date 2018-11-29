@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Created by gouthamvidyapradhan on 15/12/2017.
- * Given an unsorted com.will.array of integers, find the length of the longest consecutive elements sequence.
+ * Given an unsorted com.MySolution.array of integers, find the length of the longest consecutive elements sequence.
  * <p>
  * For example,
  * Given [100, 4, 200, 1, 3, 2],
@@ -16,7 +16,7 @@ import java.util.*;
  * Perform a dfs to count the depth of a graph.
  * <p>
  * Dfs using recursion fails due to StackOverFlowError(due to deep recursion) hence used a iterative approach with a
- * com.will.stack
+ * com.MySolution.stack
  */
 public class LongestConsecutiveSequence {
 

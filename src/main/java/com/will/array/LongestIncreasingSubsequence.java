@@ -3,7 +3,7 @@ package com.will.array;
 /**
  * Created by gouthamvidyapradhan on 03/12/2017.
  * <p>
- * Given an unsorted com.will.array of integers, find the length of longest continuous increasing subsequence (subarray).
+ * Given an unsorted com.MySolution.array of integers, find the length of longest continuous increasing subsequence (subarray).
  * <p>
  * Example 1:
  * Input: [1,3,5,4,7]
@@ -14,7 +14,7 @@ package com.will.array;
  * Input: [2,2,2,2,2]
  * Output: 1
  * Explanation: The longest continuous increasing subsequence is [2], its length is 1.
- * Note: Length of the com.will.array will not exceed 10,000.
+ * Note: Length of the com.MySolution.array MySolution not exceed 10,000.
  */
 public class LongestIncreasingSubsequence {
 

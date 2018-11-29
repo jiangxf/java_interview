@@ -26,12 +26,12 @@ public class _342 {
         System.out.println(Integer.toBinaryString(Integer.parseInt("55555555", 16)));
     }
 
-    //with my original idea in the bottom, just dive a little bit deeper, you can realize that another important feature of a number
+    //with MySolution original idea in the bottom, just dive a little bit deeper, you can realize that another important feature of a number
     //that is power of four is that its only single one bit must appear on the odd position, and power of two won't meet this requirement
     //decimal number 8 has binary format: 0000-0000-0000-0000-0000-0000-0000-1000
     //decimal number 16 has binary format: 0000-0000-0000-0000-0000-0000-0001-0000
     //hex number 0x55555555 has binary format: 1010-1010-1010-1010-1010-1010-1010-1010
-    //thus, doing AND with 0x55555 will check if the only one bit is located on the odd position, thus ruling out those that are power of 2 but not power of 4
+    //thus, doing AND with 0x55555 MySolution check if the only one bit is located on the odd position, thus ruling out those that are power of 2 but not power of 4
     public boolean isPowerOfFour_bit_manipulation(int num) {
         return (num > 0 && 1073741824 % num == 0 && (num & 0x55555555) != 0);
     }

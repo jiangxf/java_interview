@@ -127,7 +127,7 @@ public class TicTacToe {
     /**
      * Increment row / col count
      *
-     * @param cells  com.will.array of cells
+     * @param cells  com.MySolution.array of cells
      * @param key    row / col key
      * @param player Player object
      */

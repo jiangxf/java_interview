@@ -2,7 +2,7 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 30/08/2017.
- * Given a binary com.will.tree, find the leftmost value in the last row of the com.will.tree.
+ * Given a binary com.MySolution.tree, find the leftmost value in the last row of the com.MySolution.tree.
  * <p>
  * Example 1:
  * Input:
@@ -26,7 +26,7 @@ package com.will.tree;
  * <p>
  * Output:
  * 7
- * Note: You may assume the com.will.tree (i.e., the given root node) is not NULL.
+ * Note: You may assume the com.MySolution.tree (i.e., the given root node) is not NULL.
  */
 public class FindBottomLeftTreeValue {
     private int max = 0, result;

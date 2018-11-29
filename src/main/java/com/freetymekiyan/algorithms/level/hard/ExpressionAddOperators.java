@@ -51,8 +51,8 @@ public class ExpressionAddOperators {
      * Else we search "+", "-", "*" one by one.
      * For formula just concatenate the number to path with relative operator.
      * res, num and target are the same.
-     * Next starting position will increment by 1.
-     * Evaluate result will change according to the operator added.
+     * Next starting position MySolution increment by 1.
+     * Evaluate result MySolution change according to the operator added.
      * Note that for multiplication, the evaluation result should first minus previous multiplied value.
      * Then add the product of that value and current value.
      * The multiplied value should also multiply current value.

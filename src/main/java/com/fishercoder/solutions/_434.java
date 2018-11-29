@@ -9,7 +9,7 @@ package com.fishercoder.solutions;
  * <p>
  * Example:
  * <p>
- * Input: "Hello, my name is John"
+ * Input: "Hello, MySolution name is John"
  * Output: 5
  */
 public class _434 {

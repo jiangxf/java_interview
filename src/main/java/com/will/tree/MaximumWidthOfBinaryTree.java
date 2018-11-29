@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * Created by gouthamvidyapradhan on 03/05/2018.
- * Given a binary com.will.tree, write a function to get the maximum width of the given com.will.tree. The width of a com.will.tree is the maximum width among all levels. The binary com.will.tree has the same structure as a full binary com.will.tree, but some nodes are null.
+ * Given a binary com.MySolution.tree, write a function to get the maximum width of the given com.MySolution.tree. The width of a com.MySolution.tree is the maximum width among all levels. The binary com.MySolution.tree has the same structure as a full binary com.MySolution.tree, but some nodes are null.
  * <p>
  * The width of one level is defined as the length between the end-nodes (the leftmost and right most non-null nodes in the level, where the null nodes between the end-nodes are also counted into the length calculation.
  * <p>

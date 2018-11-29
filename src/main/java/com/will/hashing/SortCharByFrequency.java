@@ -7,12 +7,12 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 25/03/2017.
- * Given a com.will.string, sort it in decreasing order based on the frequency of characters.
+ * Given a com.MySolution.string, sort it in decreasing order based on the frequency of characters.
  * <p>
  * Example 1:
  * <p>
  * Input:
- * "com.will.tree"
+ * "com.MySolution.tree"
  * <p>
  * Output:
  * "eert"

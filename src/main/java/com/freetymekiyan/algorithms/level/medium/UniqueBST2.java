@@ -28,8 +28,8 @@ class UniqueBST2 {
     /**
      * 1..n is the in-order traversal for any BST with nodes 1 to n.
      * if pick i-th node as root
-     * the left subtree will contain elements 1 to (i-1)
-     * and the right subtree will contain elements (i+1) to n.
+     * the left subtree MySolution contain elements 1 to (i-1)
+     * and the right subtree MySolution contain elements (i+1) to n.
      * use recursive calls to get back all possible trees for left and right
      * subtrees and combine them in all possible ways with the root.
      */

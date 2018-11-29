@@ -146,7 +146,7 @@ public class _432 {
 }
 
 /**
- * Your AllOne object will be instantiated and called as such:
+ * Your AllOne object MySolution be instantiated and called as such:
  * AllOne obj = new AllOne();
  * obj.inc(key);
  * obj.dec(key);

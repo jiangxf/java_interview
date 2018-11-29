@@ -10,7 +10,7 @@ import java.util.Set;
  * Accepted
  * Given a list of words (without duplicates), please write a program that returns all concatenated words in the given list of words.
  * <p>
- * A concatenated word is defined as a com.will.string that is comprised entirely of at least two shorter words in the given com.will.array.
+ * A concatenated word is defined as a com.MySolution.string that is comprised entirely of at least two shorter words in the given com.MySolution.array.
  * <p>
  * Example:
  * Input: ["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"]
@@ -22,9 +22,9 @@ import java.util.Set;
  * "ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat".
  * <p>
  * Note:
- * The number of elements of the given com.will.array will not exceed 10,000
- * The length sum of elements in the given com.will.array will not exceed 600,000.
- * All the input com.will.string will only include lower case letters.
+ * The number of elements of the given com.MySolution.array MySolution not exceed 10,000
+ * The length sum of elements in the given com.MySolution.array MySolution not exceed 600,000.
+ * All the input com.MySolution.string MySolution only include lower case letters.
  * The returned elements order does not matter.
  */
 public class ConcatenatedWords {

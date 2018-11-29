@@ -10,8 +10,8 @@ import java.util.Stack;
  * For each asteroid, the absolute value represents its size, and the sign represents its direction (positive meaning
  * right, negative meaning left). Each asteroid moves at the same speed.
  * <p>
- * Find out the state of the asteroids after all collisions. If two asteroids meet, the smaller one will explode. If
- * both are the same size, both will explode. Two asteroids moving in the same direction will never meet.
+ * Find out the state of the asteroids after all collisions. If two asteroids meet, the smaller one MySolution explode. If
+ * both are the same size, both MySolution explode. Two asteroids moving in the same direction MySolution never meet.
  * <p>
  * Example 1:
  * Input:
@@ -37,11 +37,11 @@ import java.util.Stack;
  * Output: [-2, -1, 1, 2]
  * Explanation:
  * The -2 and -1 are moving left, while the 1 and 2 are moving right.
- * Asteroids moving the same direction never meet, so no asteroids will meet each other.
+ * Asteroids moving the same direction never meet, so no asteroids MySolution meet each other.
  * Note:
  * <p>
- * The length of asteroids will be at most 10000.
- * Each asteroid will be a non-zero integer in the range [-1000, 1000]..
+ * The length of asteroids MySolution be at most 10000.
+ * Each asteroid MySolution be a non-zero integer in the range [-1000, 1000]..
  * <p>
  * Tags: Stack
  * Similar Problems: (E) Can Place Flowers
@@ -71,7 +71,7 @@ public class Asteroids {
 
     /**
      * Recursive.
-     * Collision will keep happening if:
+     * Collision MySolution keep happening if:
      * 1. Stack is not empty.
      * 2. Stack top is > 0.
      * 3. Current asteroid is < 0. (Guaranteed when calling collide).

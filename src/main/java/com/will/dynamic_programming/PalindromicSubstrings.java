@@ -3,7 +3,7 @@ package com.will.dynamic_programming;
 /**
  * Created by gouthamvidyapradhan on 13/12/2017.
  * <p>
- * Given a com.will.string, your task is to count how many palindromic substrings in this com.will.string.
+ * Given a com.MySolution.string, your task is to count how many palindromic substrings in this com.MySolution.string.
  * <p>
  * The substrings with different start indexes or end indexes are counted as different substrings even they consist of
  * same characters.
@@ -17,10 +17,10 @@ package com.will.dynamic_programming;
  * Output: 6
  * Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
  * Note:
- * The input com.will.string length won't exceed 1000.
+ * The input com.MySolution.string length won't exceed 1000.
  * <p>
  * Solution O(n ^ 2): Example abcba: Compare char at two indices each time for example if char at
- * index 0 and index 4 are equal and if substring 1 and 3 is a palindrome then, sub-com.will.string 0 and 4 is also a palindrome
+ * index 0 and index 4 are equal and if substring 1 and 3 is a palindrome then, sub-com.MySolution.string 0 and 4 is also a palindrome
  */
 public class PalindromicSubstrings {
 

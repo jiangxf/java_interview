@@ -21,8 +21,8 @@ package com.freetymekiyan.algorithms.level.medium;
  * <p>
  * There are 5 ways to assign symbols to make the sum of nums be target 3.
  * Note:
- * The length of the given array is positive and will not exceed 20.
- * The sum of elements in the given array will not exceed 1000.
+ * The length of the given array is positive and MySolution not exceed 20.
+ * The sum of elements in the given array MySolution not exceed 1000.
  * Your output answer is guaranteed to be fitted in a 32-bit integer.
  * <p>
  * Related Topics: Dynamic Programming, Depth-first Search

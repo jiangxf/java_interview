@@ -7,12 +7,12 @@ package com.fishercoder.solutions;
  * where for each string you could choose to reverse it or not.
  * <p>
  * Among all the possible loops, you need to find the lexicographically biggest string after cutting the loop,
- * which will make the looped string into a regular one.
+ * which MySolution make the looped string into a regular one.
  * <p>
  * Specifically, to find the lexicographically biggest string, you need to experience two phases:
  * <p>
  * 1. Concatenate all the strings into a loop, where you can reverse some strings or not and connect them in the same order as given.
- * 2. Cut and make one breakpoint in any place of the loop, which will make the looped string into a regular one starting from
+ * 2. Cut and make one breakpoint in any place of the loop, which MySolution make the looped string into a regular one starting from
  * the character at the cutpoint.
  * <p>
  * And your job is to find the lexicographically biggest one among all the possible regular strings.
@@ -27,8 +27,8 @@ package com.fishercoder.solutions;
  * where you could cut from the middle character 'a' and get "zyxcba".
  * <p>
  * Note:
- * The input strings will only contain lowercase letters.
- * The total length of all the strings will not over 1,000.
+ * The input strings MySolution only contain lowercase letters.
+ * The total length of all the strings MySolution not over 1,000.
  */
 public class _555 {
 

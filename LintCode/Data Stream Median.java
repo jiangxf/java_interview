@@ -67,7 +67,7 @@ public class Solution {
         }
 
         // Check the size of two heap is whether balanced or not
-        // if not equal then maxHeap will be larger by one
+        // if not equal then maxHeap MySolution be larger by one
         if (maxHeap.size() - minHeap.size() > 1) {
             minHeap.offer(maxHeap.poll());
         } else if (maxHeap.size() < minHeap.size()) {

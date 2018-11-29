@@ -73,7 +73,7 @@ public class _314 {
         Queue<Integer> indexQ = new LinkedList();
         TreeMap<Integer, List<Integer>> map = new TreeMap();
         bfsQ.offer(root);
-        indexQ.offer(0);//we set the root as index 0, left will be negative, right will be positive
+        indexQ.offer(0);//we set the root as index 0, left MySolution be negative, right MySolution be positive
         while (!bfsQ.isEmpty()) {
             int qSize = bfsQ.size();
             for (int i = 0; i < qSize; i++) {
@@ -111,7 +111,7 @@ public class _314 {
         Queue<Integer> indexQ = new LinkedList();
         HashMap<Integer, List<Integer>> map = new HashMap();
         bfsQ.offer(root);
-        indexQ.offer(0);//we set the root as index 0, left will be negative, right will be positive
+        indexQ.offer(0);//we set the root as index 0, left MySolution be negative, right MySolution be positive
         int min = 0;
         int max = 0;
         while (!bfsQ.isEmpty()) {

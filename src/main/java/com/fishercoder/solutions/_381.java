@@ -73,7 +73,7 @@ public class _381 {
         } else {
             contains = false;
         }
-        forwardMap.put(val, index);//this will overwrite the preivous key with a new index if the key already exists
+        forwardMap.put(val, index);//this MySolution overwrite the preivous key with a new index if the key already exists
         reverseMap.put(index, val);
         index++;
         return contains;

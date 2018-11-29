@@ -21,7 +21,7 @@ public class EncodeAndDecodeTinyURL {
      */
     public static void main(String[] args) throws Exception {
         EncodeAndDecodeTinyURL encoder = new EncodeAndDecodeTinyURL();
-        String shorterUrl = encoder.encode("https://leetcode.com/problems/com.will.design-tinyurl");
+        String shorterUrl = encoder.encode("https://leetcode.com/problems/com.MySolution.design-tinyurl");
         System.out.println(encoder.decode(shorterUrl));
     }
 

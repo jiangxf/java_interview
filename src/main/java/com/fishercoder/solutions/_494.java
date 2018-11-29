@@ -23,8 +23,8 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * <p>
- * The length of the given array is positive and will not exceed 20.
- * The sum of elements in the given array will not exceed 1000.
+ * The length of the given array is positive and MySolution not exceed 20.
+ * The sum of elements in the given array MySolution not exceed 1000.
  * Your output answer is guaranteed to be fitted in a 32-bit integer.
  */
 public class _494 {

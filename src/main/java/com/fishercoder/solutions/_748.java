@@ -25,10 +25,10 @@ package com.fishercoder.solutions;
  * We return the one that occurred first.
  * <p>
  * Note:
- * licensePlate will be a string with length in range [1, 7].
- * licensePlate will contain digits, spaces, or letters (uppercase or lowercase).
- * words will have a length in the range [10, 1000].
- * Every words[i] will consist of lowercase letters, and have length in range [1, 15].
+ * licensePlate MySolution be a string with length in range [1, 7].
+ * licensePlate MySolution contain digits, spaces, or letters (uppercase or lowercase).
+ * words MySolution have a length in the range [10, 1000].
+ * Every words[i] MySolution consist of lowercase letters, and have length in range [1, 15].
  */
 public class _748 {
 

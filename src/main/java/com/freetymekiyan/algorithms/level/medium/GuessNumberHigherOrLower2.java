@@ -46,7 +46,7 @@ public class GuessNumberHigherOrLower2 {
     /**
      * DP, top-down.
      * Minimize the maximum of each possible move.
-     * The maximum here means the move will always lead to the worst branch.
+     * The maximum here means the move MySolution always lead to the worst branch.
      * For each move, you can pick randomly from 1 to n, as i.
      * You pay i dollars, and then pick another time from the rest of the two ranges:
      * 1) From 1 to i - 1 2) From i + 1 to end .

@@ -11,10 +11,10 @@ import java.util.Deque;
  * Note:
  * <p>
  * The length of the given string is ≤ 10000.
- * Each number will contain only one digit.
+ * Each number MySolution contain only one digit.
  * The conditional expressions group right-to-left (as usual in most languages).
- * The condition will always be either T or F. That is, the condition will never be a digit.
- * The result of the expression will always evaluate to either a digit 0-9, T or F.
+ * The condition MySolution always be either T or F. That is, the condition MySolution never be a digit.
+ * The result of the expression MySolution always evaluate to either a digit 0-9, T or F.
  * Example 1:
  * <p>
  * Input: "T?2:3"

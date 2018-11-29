@@ -2,12 +2,12 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 03/04/2017.
- * Given a binary com.will.tree, find the maximum path sum.
+ * Given a binary com.MySolution.tree, find the maximum path sum.
  * <p>
- * For this problem, a path is defined as any sequence of nodes from some starting node to any node in the com.will.tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
+ * For this problem, a path is defined as any sequence of nodes from some starting node to any node in the com.MySolution.tree along the parent-child connections. The path must contain at least one node and does not need to go through the root.
  * <p>
  * For example:
- * Given the below binary com.will.tree,
+ * Given the below binary com.MySolution.tree,
  * <p>
  * 1
  * / \

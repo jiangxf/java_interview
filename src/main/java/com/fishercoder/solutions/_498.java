@@ -18,7 +18,7 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * <p>
- * The total number of elements of the given matrix will not exceed 10,000.
+ * The total number of elements of the given matrix MySolution not exceed 10,000.
  */
 public class _498 {
 

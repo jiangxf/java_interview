@@ -31,7 +31,7 @@ import java.util.*;
  * There must be no consecutive horizontal lines of equal height in the output skyline. For instance, [...[2 3], [4 5], [7 5], [11 5], [12 7]...] is not acceptable; the three lines of height 5 should be merged into one in the final output as such: [...[2 3], [4 5], [12 7], ...]
  * <p>
  * Solution:
- * 1. Sort com.will.array of points. Each point here is either a start of a rectangle or end of a rectangle.
+ * 1. Sort com.MySolution.array of points. Each point here is either a start of a rectangle or end of a rectangle.
  * 2. Maintain a priority queue of rectangles ordered by increasing order of height, if height of two rectangle is same then,
  * order by left most start index.
  * 3. For each point starting from left-most point:

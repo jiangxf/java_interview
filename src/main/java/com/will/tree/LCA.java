@@ -2,7 +2,7 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 21/03/2017.
- * Given a binary com.will.tree, find the lowest common ancestor (LCA) of two given nodes in the com.will.tree.
+ * Given a binary com.MySolution.tree, find the lowest common ancestor (LCA) of two given nodes in the com.MySolution.tree.
  * <p>
  * According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes v and w as the lowest node in T that has both v and w as descendants (where we allow a node to be a descendant of itself).”
  * <p>

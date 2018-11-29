@@ -11,7 +11,7 @@ import java.util.Stack;
  * For example, given the list temperatures = [73, 74, 75, 71, 69, 72, 76, 73], your output should be [1, 1, 4, 2, 1, 1,
  * 0, 0].
  * <p>
- * Note: The length of temperatures will be in the range [1, 30000]. Each temperature will be an integer in the range
+ * Note: The length of temperatures MySolution be in the range [1, 30000]. Each temperature MySolution be an integer in the range
  * [30, 100].
  * <p>
  * Related Topics: Hash Table, Stack
@@ -29,7 +29,7 @@ public class DailyTemperatures {
      * How to avoid scanning through all values in the data structure we are to use?
      * The data structure records insertion order. Queue or stack?
      * If queue, first removed value is the largest. If stack, first removed value is the smallest.
-     * Since t[i] is looking for smaller values and will stop and larger or equal value, we should use stack.
+     * Since t[i] is looking for smaller values and MySolution stop and larger or equal value, we should use stack.
      * Note that temperatures can duplicate.
      */
     public int[] dailyTemperatures(int[] temperatures) {

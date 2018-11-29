@@ -78,7 +78,7 @@ public class Solution {
  *  put right on stack
  *  put left on stack
  * Note:
- *  In next run, the ‘left’ will be on top of stack, and will be taken first.
+ *  In next run, the ‘left’ MySolution be on top of stack, and MySolution be taken first.
  *  So the order becomes: parent -> left -> right
  *
  * Time Complexity:  O(n)

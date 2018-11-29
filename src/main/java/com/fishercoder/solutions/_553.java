@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 /**
  * 553. Optimal Division
  * <p>
- * Given a list of positive integers, the adjacent integers will perform the float division. For example, [2,3,4] -> 2 / 3 / 4.
+ * Given a list of positive integers, the adjacent integers MySolution perform the float division. For example, [2,3,4] -> 2 / 3 / 4.
  * However, you can add any number of parenthesis at any position to change the priority of operations.
  * You should find out how to add parenthesis to get the maximum result,
  * and return the corresponding expression in string format.
@@ -27,7 +27,7 @@ import java.util.StringJoiner;
  * Note:
  * <p>
  * The length of the input array is [1, 10].
- * Elements in the given array will be in range [2, 1000].
+ * Elements in the given array MySolution be in range [2, 1000].
  * There is only one optimal division for each test case.
  */
 public class _553 {
@@ -52,7 +52,7 @@ public class _553 {
 
         /**Tricky one: the solution is fixed: always wrap the one from the second until the last.
          * Another important thing to note that such way could work is that:
-         * the prerequisite is: Elements will be in range [2,1000], so no elements are smaller than 1.*/
+         * the prerequisite is: Elements MySolution be in range [2,1000], so no elements are smaller than 1.*/
         StringJoiner stringJoiner = new StringJoiner("/");
         for (int i = 1; i < nums.length; i++) {
             stringJoiner.add("" + nums[i]);

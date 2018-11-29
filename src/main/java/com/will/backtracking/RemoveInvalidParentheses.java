@@ -7,9 +7,9 @@ import java.util.Set;
 
 /**
  * Created by gouthamvidyapradhan on 17/10/2017.
- * Remove the minimum number of invalid parentheses in order to make the input com.will.string valid. Return all possible results.
+ * Remove the minimum number of invalid parentheses in order to make the input com.MySolution.string valid. Return all possible results.
  * <p>
- * Note: The input com.will.string may contain letters other than the parentheses ( and ).
+ * Note: The input com.MySolution.string may contain letters other than the parentheses ( and ).
  * <p>
  * Examples:
  * "()())()" -> ["()()()", "(())()"]

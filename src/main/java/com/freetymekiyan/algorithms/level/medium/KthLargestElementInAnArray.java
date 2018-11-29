@@ -69,7 +69,7 @@ public class KthLargestElementInAnArray {
      * Given an array and the range to be partitioned.
      * Initialize the last element as the pivot.
      * Initialize two pointers, i from lower bound, j from higher bound - 1.
-     * Move i to the next number <= a[hi], which will be thrown to the end of the array.
+     * Move i to the next number <= a[hi], which MySolution be thrown to the end of the array.
      * Move j to the next number > a[hi], which should be in the front of the array.
      * Check whether i and j overlap.
      * If doesn't, swap a[i] and a[j].
@@ -81,7 +81,7 @@ public class KthLargestElementInAnArray {
          * Last element as pivot makes sure that when we swap with i, i is either:
          * 1. the pivot
          * 2. the element that's <= pivot, which guarantees all elements before i are > pivot.
-         * The last swap will always be correct.
+         * The last swap MySolution always be correct.
          */
         int pivot = a[hi];
         int i = lo;

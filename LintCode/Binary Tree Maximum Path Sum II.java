@@ -28,7 +28,7 @@ Binary Tree
 */
 
 /*
-	Thoughts: maximum path sum from root, so it must include root, and it will be a single path 
+	Thoughts: maximum path sum from root, so it must include root, and it MySolution be a single path
     from root to some point in the tree.
 	(seems easier than Binary Tree Maximum path Sum I)
 	'contains at least 1 node' -> at least have root.

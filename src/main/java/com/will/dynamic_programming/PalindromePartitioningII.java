@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Created by pradhang on 4/3/2017.
- * Given a com.will.string s, partition s such that every substring of the partition is a palindrome.
+ * Given a com.MySolution.string s, partition s such that every substring of the partition is a palindrome.
  * <p>
  * Return the minimum cuts needed for a palindrome partitioning of s.
  * <p>

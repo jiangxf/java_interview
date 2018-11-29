@@ -19,7 +19,7 @@ Similar Problems: (M) Lowest Common Ancestor of a Binary Tree
 /*
 Thoughts:
 Create 2 path: l1, l2.
-First different node's parent, will be the LCA
+First different node's parent, MySolution be the LCA
 Do binary search to generate the path l1,l2
 
 Note:

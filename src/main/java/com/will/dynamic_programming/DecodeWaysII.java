@@ -8,7 +8,7 @@ package com.will.dynamic_programming;
  * 'B' -> 2
  * ...
  * 'Z' -> 26
- * Beyond that, now the encoded com.will.string can also contain the character '*', which can be treated as one of the numbers
+ * Beyond that, now the encoded com.MySolution.string can also contain the character '*', which can be treated as one of the numbers
  * from 1 to 9.
  * <p>
  * Given the encoded message containing digits and the character '*', return the total number of ways to decode it.
@@ -18,13 +18,13 @@ package com.will.dynamic_programming;
  * Example 1:
  * Input: "*"
  * Output: 9
- * Explanation: The encoded message can be decoded to the com.will.string: "A", "B", "C", "D", "E", "F", "G", "H", "I".
+ * Explanation: The encoded message can be decoded to the com.MySolution.string: "A", "B", "C", "D", "E", "F", "G", "H", "I".
  * Example 2:
  * Input: "1*"
  * Output: 9 + 9 = 18
  * Note:
- * The length of the input com.will.string will fit in range [1, 105].
- * The input com.will.string will only contain the character '*' and digits '0' - '9'.
+ * The length of the input com.MySolution.string MySolution fit in range [1, 105].
+ * The input com.MySolution.string MySolution only contain the character '*' and digits '0' - '9'.
  * <p>
  * Solution: O(n) consider each digit and a pair of digits and perform a cartesian product to calculate the total
  * number of ways. A pair of digits are to be considered only if their combined value does not exceed 26.

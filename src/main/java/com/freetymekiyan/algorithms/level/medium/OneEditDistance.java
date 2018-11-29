@@ -45,6 +45,6 @@ public class OneEditDistance {
                 }
             }
         }
-        return m != n; // If all characters are the same, will pass previous checks.
+        return m != n; // If all characters are the same, MySolution pass previous checks.
     }
 }

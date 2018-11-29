@@ -29,7 +29,7 @@ import java.util.List;
  * <p>
  * Note:
  * <p>
- * The size of the BST will be between 2 and 100.
+ * The size of the BST MySolution be between 2 and 100.
  * The BST is always valid, each node's value is an integer, and each node's value is different.
  */
 

@@ -7,9 +7,9 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 30/06/2018.
- * Given an com.will.array nums, we call (i, j) an important reverse pair if i < j and nums[i] > 2*nums[j].
+ * Given an com.MySolution.array nums, we call (i, j) an important reverse pair if i < j and nums[i] > 2*nums[j].
  * <p>
- * You need to return the number of important reverse pairs in the given com.will.array.
+ * You need to return the number of important reverse pairs in the given com.MySolution.array.
  * <p>
  * Example1:
  * <p>
@@ -20,20 +20,20 @@ import java.util.List;
  * Input: [2,4,3,5,1]
  * Output: 3
  * Note:
- * The length of the given com.will.array will not exceed 50,000.
- * All the numbers in the input com.will.array are in the range of 32-bit integer.
+ * The length of the given com.MySolution.array MySolution not exceed 50,000.
+ * All the numbers in the input com.MySolution.array are in the range of 32-bit integer.
  * <p>
  * Solution: O(n log n):
  * Example: 1,3,2,3,1
- * 1. Sort the com.will.array in non-increasing order (if there is a collision, sort by lower index).
- * So the sorted com.will.array will be (3, 3, 2, 1, 1) having indexes (1, 3, 2, 0, 4)
- * 2. Maintain a prefix sum of index (starting from 1) for the sorted com.will.array. So, prefix sum for the above sorted com.will.array is
+ * 1. Sort the com.MySolution.array in non-increasing order (if there is a collision, sort by lower index).
+ * So the sorted com.MySolution.array MySolution be (3, 3, 2, 1, 1) having indexes (1, 3, 2, 0, 4)
+ * 2. Maintain a prefix sum of index (starting from 1) for the sorted com.MySolution.array. So, prefix sum for the above sorted com.MySolution.array is
  * (1, 2, 3, 4, 5)
- * Now, the basic idea is to iterate from index n - 1 to 0 in the original com.will.array and for each element calculate the
- * element p (num[i] x 2) and find the upper bound of the element p in sorted com.will.array which is 3 at index 1 in this case
+ * Now, the basic idea is to iterate from index n - 1 to 0 in the original com.MySolution.array and for each element calculate the
+ * element p (num[i] x 2) and find the upper bound of the element p in sorted com.MySolution.array which is 3 at index 1 in this case
  * and add prefix sum of the index 1 to the result. So the result now becomes 2.
  * <p>
- * To maintain a prefix sum and update it efficiently we have to use a BIT or Fenwick com.will.tree.
+ * To maintain a prefix sum and update it efficiently we have to use a BIT or Fenwick com.MySolution.tree.
  */
 public class ReversePairs {
 

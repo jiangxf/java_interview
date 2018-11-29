@@ -3,7 +3,7 @@ Description
 Given a target word targets and a collection of n words words,
 can you select some words from words and select one letter from each word to compose the target word target ?
 
-Only lowercase letters a-z will be included in the string
+Only lowercase letters a-z MySolution be included in the string
 target is no longer than 20, each word in words is no more than 20, and words is no more than 20.
 
 Example

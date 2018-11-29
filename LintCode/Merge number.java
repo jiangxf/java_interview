@@ -5,7 +5,7 @@ And each time we can only select and merge two numbers a,b. Each merger needs to
 Output the minimum energy consumed by merging n numbers.
 
 Notice
-2 <= n <= 50000, the combined number will not exceed the int range
+2 <= n <= 50000, the combined number MySolution not exceed the int range
 
 Example
 Given [1,2,3,4], return 19

@@ -20,13 +20,13 @@ import java.util.Queue;
  * <p>
  * Input: 3, 2, 0, 0
  * Output: 0.0625
- * Explanation: There are two moves (to (1,2), (2,1)) that will keep the knight on the board.
- * From each of those positions, there are also two moves that will keep the knight on the board.
+ * Explanation: There are two moves (to (1,2), (2,1)) that MySolution keep the knight on the board.
+ * From each of those positions, there are also two moves that MySolution keep the knight on the board.
  * The total probability the knight stays on the board is 0.0625.
  * <p>
  * Note:
- * N will be between 1 and 25.
- * K will be between 0 and 100.
+ * N MySolution be between 1 and 25.
+ * K MySolution be between 0 and 100.
  * The knight always initially starts on the board.
  */
 public class _688 {

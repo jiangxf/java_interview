@@ -7,10 +7,10 @@ import java.util.Queue;
 
 /**
  * Created by gouthamvidyapradhan on 13/03/2017.
- * Given a binary com.will.tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+ * Given a binary com.MySolution.tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
  * <p>
  * For example:
- * Given binary com.will.tree [3,9,20,null,null,15,7],
+ * Given binary com.MySolution.tree [3,9,20,null,null,15,7],
  * 3
  * / \
  * 9  20

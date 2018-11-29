@@ -5,7 +5,7 @@ import java.util.Set;
 
 /**
  * Created by gouthamvidyapradhan on 23/04/2018.
- * Given a non-empty 2D com.will.array grid of 0's and 1's, an island is a group of 1's (representing land) connected
+ * Given a non-empty 2D com.MySolution.array grid of 0's and 1's, an island is a group of 1's (representing land) connected
  * 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
  * <p>
  * Count the number of distinct islands. An island is considered to be the same as another if and only if one island

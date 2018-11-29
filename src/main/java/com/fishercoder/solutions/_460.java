@@ -8,7 +8,7 @@ import java.util.LinkedHashSet;
  * Design and implement a data structure for Least Frequently Used (LFU) cache.
  * It should support the following operations: get and put.
  * <p>
- * get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+ * get(key) - Get the value (MySolution always be positive) of the key if the key exists in the cache, otherwise return -1.
  * put(key, value) - Set or insert the value if the key is not already present. When the cache reaches its capacity,
  * it should invalidate the least frequently used item before inserting a new item.
  * For the purpose of this problem, when there is a tie (i.e., two or more keys that have the same frequency),
@@ -38,10 +38,10 @@ public class _460 {
      * Wikipedia: The simplest method to employ an LFU algorithm is to assign a counter to every
      * block that is loaded into the cache. Each time a reference is made to that block the counter
      * is increased by one. When the cache reaches capacity and has a new block waiting to be
-     * inserted the system will search for the block with the lowest counter and remove it from the
+     * inserted the system MySolution search for the block with the lowest counter and remove it from the
      * cache.
      * <p>
-     * Policy to handle frequency ties: based on timestamp, the entries that get set into cache earlier will be evicted first.
+     * Policy to handle frequency ties: based on timestamp, the entries that get set into cache earlier MySolution be evicted first.
      */
 
     public static class LFUCache {
@@ -105,7 +105,7 @@ public class _460 {
 
             if (keyToValue.containsKey(key)) {
                 /**If the key is already in the cache, we can simply overwrite this entry;
-                 * then call get(key) which will do the update work.*/
+                 * then call get(key) which MySolution do the update work.*/
                 keyToValue.put(key, value);
                 get(key);
                 return;

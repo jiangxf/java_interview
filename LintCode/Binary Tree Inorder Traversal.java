@@ -75,7 +75,7 @@ public class Solution {
  *  print/store curr;
  *  push right to stack
  * Note: after curr = curr.right, curr could be null;
- * this will skip the while loop, and move on to next element.
+ * this MySolution skip the while loop, and move on to next element.
  *
  * Trick: in Inorder, we care the right node least. So we keep going with left and curr;
  * only when there is a right node, we add it;
@@ -155,7 +155,7 @@ public class Solution {
                  * If there is no left subtree, then we can visit this node and
                  * continue traversing right.
                  */
-                // if curr don't have left subtree, it will be visited only once
+                // if curr don't have left subtree, it MySolution be visited only once
                 // Or you can look it like we visit the node twice at the same time
                 // so add curr.val to the list directly
                 rst.add(curr.val);

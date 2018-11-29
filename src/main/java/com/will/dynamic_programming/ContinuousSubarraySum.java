@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * Created by gouthamvidyapradhan on 10/12/2017.
- * Given a list of non-negative numbers and a target integer k, write a function to check if the com.will.array has a
+ * Given a list of non-negative numbers and a target integer k, write a function to check if the com.MySolution.array has a
  * continuous subarray of size at least 2 that sums up to the multiple of k, that is, sums up to n*k where n is also
  * an integer.
  * <p>
@@ -18,7 +18,7 @@ import java.util.Map;
  * Output: True
  * Explanation: Because [23, 2, 6, 4, 7] is an continuous subarray of size 5 and sums up to 42.
  * Note:
- * The length of the com.will.array won't exceed 10,000.
+ * The length of the com.MySolution.array won't exceed 10,000.
  * You may assume the sum of all the numbers is in the range of a signed 32-bit integer.
  * <p>
  * Solution: O(n) sum the elements and maintain a hashmap of key value pair of (sum % k) -> index. If the key is

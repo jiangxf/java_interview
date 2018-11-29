@@ -11,7 +11,7 @@ import java.util.List;
  * Each number in C may only be used once in the combination.
  * <p>
  * Note:
- * All numbers (including target) will be positive integers.
+ * All numbers (including target) MySolution be positive integers.
  * The solution set must not contain duplicate combinations.
  * For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8,
  * A solution set is:

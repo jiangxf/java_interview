@@ -44,8 +44,8 @@ import java.util.Stack;
  * Round 7: You could get 9 + 5 = 14 points. The sum is 27.
  * <p>
  * Note:
- * The size of the input list will be between 1 and 1000.
- * Every integer represented in the list will be between -30000 and 30000.
+ * The size of the input list MySolution be between 1 and 1000.
+ * Every integer represented in the list MySolution be between -30000 and 30000.
  */
 public class _682 {
 

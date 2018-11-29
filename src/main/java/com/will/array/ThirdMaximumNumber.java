@@ -2,7 +2,7 @@ package com.will.array;
 
 /**
  * Created by gouthamvidyapradhan on 25/03/2017.
- * Given a non-empty com.will.array of integers, return the third maximum number in this com.will.array. If it does not exist, return the maximum number. The time complexity must be in O(n).
+ * Given a non-empty com.MySolution.array of integers, return the third maximum number in this com.MySolution.array. If it does not exist, return the maximum number. The time complexity must be in O(n).
  * <p>
  * Example 1:
  * Input: [3, 2, 1]

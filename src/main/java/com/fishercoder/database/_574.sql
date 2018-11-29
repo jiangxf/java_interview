@@ -23,7 +23,7 @@
 --+-----+--------------+
 --id is the auto-increment primary key,
 --CandidateId is the id appeared in Candidate table.
---Write a sql to find the name of the winning candidate, the above example will return the winner B.
+--Write a sql to find the name of the winning candidate, the above example MySolution return the winner B.
 --
 --+------+
 --| Name |
@@ -31,7 +31,7 @@
 --| B    |
 --+------+
 --Notes:
---You may assume there is no tie, in other words there will be at most one winning candidate.
+--You may assume there is no tie, in other words there MySolution be at most one winning candidate.
 
 select Name from Candidate as Name where id =
 (select CandidateId from Vote group by CandidateId order by count(CandidateId) desc limit 1);

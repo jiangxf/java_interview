@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 09/03/2017.
- * Given a digit com.will.string, return all possible letter combinations that the number could represent.
+ * Given a digit com.MySolution.string, return all possible letter combinations that the number could represent.
  * <p>
  * A mapping of digit to letters (just like on the telephone buttons) is given below.
  * 1 2(abc) 3(def)
@@ -13,7 +13,7 @@ import java.util.List;
  * 7(pqrs) 8(tuv) 9(wxyz)
  * <p>
  * <p>
- * Input:Digit com.will.string "23"
+ * Input:Digit com.MySolution.string "23"
  * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
  * Note:
  * Although the above answer is in lexicographical order, your answer could be in any order you want.

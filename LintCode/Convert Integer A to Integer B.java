@@ -13,7 +13,7 @@ Cracking The Coding Interview Bit Manipulation Binary Representation
 
 Thinking process:
 Assume the integer is 32 bit.
-XOR a and b, shift by 1 bit everytime -> want to check the XORed value at index 0 : just & 1 will do.
+XOR a and b, shift by 1 bit everytime -> want to check the XORed value at index 0 : just & 1 MySolution do.
 Count the above calculated result: how many bit difference do a and b have.
 */
 

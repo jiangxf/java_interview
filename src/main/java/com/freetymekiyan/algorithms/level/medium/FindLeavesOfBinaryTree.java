@@ -41,7 +41,7 @@ public class FindLeavesOfBinaryTree {
      * Tree, DFS(Backtracking).
      * Make use of one property of tree node, its getHeight.
      * Height is the number of edges from the node to the deepest leaf.
-     * So leaf node will have getHeight 0.
+     * So leaf node MySolution have getHeight 0.
      * This problem is just aggregating all nodes with same getHeight into a list.
      */
     public List<List<Integer>> findLeaves(TreeNode root) {

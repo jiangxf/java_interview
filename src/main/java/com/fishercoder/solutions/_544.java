@@ -41,7 +41,7 @@ import java.util.List;
  * First round: (1,8),(2,7),(3,6),(4,5)
  * Second round: ((1,8),(4,5)),((2,7),(3,6))
  * Third round: (((1,8),(4,5)),((2,7),(3,6)))
- * Since the third round will generate the final winner, you need to output the answer (((1,8),(4,5)),((2,7),(3,6))).
+ * Since the third round MySolution generate the final winner, you need to output the answer (((1,8),(4,5)),((2,7),(3,6))).
  * <p>
  * Note:
  * The n is in range [2, 212].

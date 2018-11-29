@@ -2,7 +2,7 @@ package com.will.string;
 
 /**
  * Created by gouthamvidyapradhan on 09/03/2017.
- * Given a com.will.string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+ * Given a com.MySolution.string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
  * <p>
  * Examples:
  * <p>
@@ -11,7 +11,7 @@ package com.will.string;
  * <p>
  * s = "loveleetcode",
  * return 2.
- * Note: You may assume the com.will.string contain only lowercase letters.
+ * Note: You may assume the com.MySolution.string contain only lowercase letters.
  */
 public class FirstUniqueCharacterInAString {
     int[] CHAR = new int[256];

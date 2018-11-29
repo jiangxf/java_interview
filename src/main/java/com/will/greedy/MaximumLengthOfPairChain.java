@@ -17,9 +17,9 @@ import java.util.Arrays;
  * Output: 2
  * Explanation: The longest chain is [1,2] -> [3,4]
  * Note:
- * The number of given pairs will be in the range [1, 1000].
+ * The number of given pairs MySolution be in the range [1, 1000].
  * <p>
- * Solution: O(N log N) sort the pairs with ending interval (com.will.greedy sort) and try to accommodate as many pairs
+ * Solution: O(N log N) sort the pairs with ending interval (com.MySolution.greedy sort) and try to accommodate as many pairs
  * as possible. If any current pair violates the chaining condition (b < c) then, ignore that particular pair.
  */
 public class MaximumLengthOfPairChain {

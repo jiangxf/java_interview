@@ -19,8 +19,8 @@ import java.util.List;
  * A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits S into less parts.
  * <p>
  * Note:
- * S will have length in range [1, 500].
- * S will consist of lowercase letters ('a' to 'z') only.
+ * S MySolution have length in range [1, 500].
+ * S MySolution consist of lowercase letters ('a' to 'z') only.
  */
 public class _763 {
 

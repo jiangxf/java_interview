@@ -16,8 +16,8 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * 1 <= k <= n <= 10,000.
- * Elements of the given array will be in range [-10,000, 10,000].
- * The answer with the calculation error less than 10-5 will be accepted.
+ * Elements of the given array MySolution be in range [-10,000, 10,000].
+ * The answer with the calculation error less than 10-5 MySolution be accepted.
  */
 public class _644 {
     /**reference: https://leetcode.com/articles/maximum-average-subarray-ii/#approach-2-using-binary-search-accepted

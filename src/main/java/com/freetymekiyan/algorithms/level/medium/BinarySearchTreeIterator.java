@@ -8,10 +8,10 @@ import java.util.Deque;
 /**
  * 173. Binary Search Tree Iterator
  * <p>
- * Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a
+ * Implement an iterator over a binary search tree (BST). Your iterator MySolution be initialized with the root node of a
  * BST.
  * <p>
- * Calling next() will return the next smallest number in the BST.
+ * Calling next() MySolution return the next smallest number in the BST.
  * <p>
  * Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the tree.
  * <p>
@@ -42,8 +42,8 @@ public class BinarySearchTreeIterator {
 
     /**
      * Imagine all left subtree of a node is popped out.
-     * The next will be itself.
-     * And then the next will be its right subtree.
+     * The next MySolution be itself.
+     * And then the next MySolution be its right subtree.
      * The right subtree repeats the pattern of pushing all left children into a stack.
      */
     public int next() {

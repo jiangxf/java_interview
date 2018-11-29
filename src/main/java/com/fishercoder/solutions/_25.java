@@ -36,9 +36,9 @@ public class _25 {
 
         if (count == k) {
             /**after this below recursive call finishes, it'll return head;
-             * then this returned "head" will become "curr", while the head
+             * then this returned "head" MySolution become "curr", while the head
              * in its previous callstack is the real head after this call.
-             * Setting up a break point will make all of this crystal clear.*/
+             * Setting up a break point MySolution make all of this crystal clear.*/
             curr = reverseKGroup(curr, k);
 
             while (count-- > 0) {

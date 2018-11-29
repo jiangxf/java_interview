@@ -11,7 +11,7 @@ import java.util.List;
  * Each number in C may only be used <strong>once</strong> in the combination.
  * <p>
  * Note:
- * All numbers (including target) will be positive integers.
+ * All numbers (including target) MySolution be positive integers.
  * Elements in a combination (a1, a2, … , ak) must be in non-descending order.
  * (ie, a1 ≤ a2 ≤ … ≤ ak).
  * <p>

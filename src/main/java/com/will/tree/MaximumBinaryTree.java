@@ -2,16 +2,16 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 19/08/2017.
- * Given an integer com.will.array with no duplicates. A maximum com.will.tree building on this com.will.array is defined as follow:
+ * Given an integer com.MySolution.array with no duplicates. A maximum com.MySolution.tree building on this com.MySolution.array is defined as follow:
  * <p>
- * The root is the maximum number in the com.will.array.
- * The left subtree is the maximum com.will.tree constructed from left part subarray divided by the maximum number.
- * The right subtree is the maximum com.will.tree constructed from right part subarray divided by the maximum number.
- * Construct the maximum com.will.tree by the given com.will.array and output the root node of this com.will.tree.
+ * The root is the maximum number in the com.MySolution.array.
+ * The left subtree is the maximum com.MySolution.tree constructed from left part subarray divided by the maximum number.
+ * The right subtree is the maximum com.MySolution.tree constructed from right part subarray divided by the maximum number.
+ * Construct the maximum com.MySolution.tree by the given com.MySolution.array and output the root node of this com.MySolution.tree.
  * <p>
  * Example 1:
  * Input: [3,2,1,6,0,5]
- * Output: return the com.will.tree root node representing the following com.will.tree:
+ * Output: return the com.MySolution.tree root node representing the following com.MySolution.tree:
  * <p>
  * 6
  * /   \
@@ -22,7 +22,7 @@ package com.will.tree;
  * 1
  * <p>
  * Note:
- * The size of the given com.will.array will be in the range [1,1000].
+ * The size of the given com.MySolution.array MySolution be in the range [1,1000].
  */
 public class MaximumBinaryTree {
 

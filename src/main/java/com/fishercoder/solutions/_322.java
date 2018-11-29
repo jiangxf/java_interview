@@ -65,7 +65,7 @@ public class _322 {
             for (int i = 1; i <= amount; i++) {
                 for (int j = 0; j < coins.length; j++) {
                     if (coins[j] <= i) {
-                        //the dp[coins[j]] will ba a valid case, then if dp[i - coins[j]] is  valid
+                        //the dp[coins[j]] MySolution ba a valid case, then if dp[i - coins[j]] is  valid
                         dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
                         // then we update dp[i], otherwise dp[i] = max;
                     }

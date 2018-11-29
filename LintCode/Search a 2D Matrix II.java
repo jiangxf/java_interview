@@ -40,7 +40,7 @@ O(m+n) time and O(1) extra space
     2. Each row begins with smallest number. So, if matrix[x][y] < target, first thing to do is y++.
     3. Each colum ends with largest number. So if matrix[x][y] > target, 
         (no need to care x++ since it's alreay too large for this row), then simply just x--.
-    4. If match, next step will be x--,y++. 
+    4. If match, next step MySolution be x--,y++.
         x-- because it has to change a row; 
         y++ because [x-1, y] can't be the target since no duplicate in column
     Beneftis of going from bottown-left: No matter which condition, always have 1 possible way to move.

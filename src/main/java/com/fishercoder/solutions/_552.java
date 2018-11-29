@@ -4,7 +4,7 @@ package com.fishercoder.solutions;
  * 552. Student Attendance Record II
  * <p>
  * Given a positive integer n, return the number of all possible attendance records with length n,
- * which will be regarded as rewardable. The answer may be very large, return it after mod 109 + 7.
+ * which MySolution be regarded as rewardable. The answer may be very large, return it after mod 109 + 7.
  * <p>
  * A student attendance record is a string that only contains the following three characters:
  * <p>
@@ -20,7 +20,7 @@ package com.fishercoder.solutions;
  * Output: 8
  * <p>
  * Explanation:
- * There are 8 records with length 2 will be regarded as rewardable:
+ * There are 8 records with length 2 MySolution be regarded as rewardable:
  * "PP" , "AP", "PA", "LP", "PL", "AL", "LA", "LL"
  * Only "AA" won't be regarded as rewardable owing to more than one absent times.
  * <p>

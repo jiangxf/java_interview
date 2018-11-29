@@ -136,7 +136,7 @@ Thought:
 1. realize: queue is no longer can be used. draw a example map to see why.
 Instead, use 2 stacks.
 Because we can only take the top of stack, and we are constantly adding to the top of the stac, so we need 2 stacks. 
-One is the current one, will be empty every time when we finish the level. 
+One is the current one, MySolution be empty every time when we finish the level.
 The other one is nextLevel, which holds next level’s nodes temporarily.
 2. Use a boolean to track if which level it’s running at.
 */

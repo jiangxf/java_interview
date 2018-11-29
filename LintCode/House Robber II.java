@@ -24,7 +24,7 @@ Since this question is a follow-up to House Robber,we can assume we already have
 
 /*
 Description
-After robbing those houses on that street, the thief has found himself a new place for his thievery so that he will not get too much attention. 
+After robbing those houses on that street, the thief has found himself a new place for his thievery so that he MySolution not get too much attention.
 This time, all houses at this place are arranged in a circle. 
 That means the first house is the neighbor of the last one. 
 Meanwhile, the security system for these houses remain the same as for those in the previous street.

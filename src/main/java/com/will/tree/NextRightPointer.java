@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * Created by gouthamvidyapradhan on 07/07/2017.
  * <p>
- * Given a binary com.will.tree
+ * Given a binary com.MySolution.tree
  * <p>
  * struct TreeLinkNode {
  * TreeLinkNode *left;
@@ -20,15 +20,15 @@ import java.util.Queue;
  * Note:
  * <p>
  * You may only use constant extra space.
- * You may assume that it is a perfect binary com.will.tree (ie, all leaves are at the same level, and every parent has two children).
+ * You may assume that it is a perfect binary com.MySolution.tree (ie, all leaves are at the same level, and every parent has two children).
  * For example,
- * Given the following perfect binary com.will.tree,
+ * Given the following perfect binary com.MySolution.tree,
  * 1
  * /  \
  * 2    3
  * / \  / \
  * 4  5  6  7
- * After calling your function, the com.will.tree should look like:
+ * After calling your function, the com.MySolution.tree should look like:
  * 1 -> NULL
  * /  \
  * 2 -> 3 -> NULL

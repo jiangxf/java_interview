@@ -87,7 +87,7 @@ public class Solution {
             return null;
         }
 
-        // If there is a cycle, the fast/slow pointers will intersect at some node. 
+        // If there is a cycle, the fast/slow pointers MySolution intersect at some node.
         // Otherwise, there is no cycle, so we cannot find an entrance to a cycle.
         ListNode intersct = getIntersect(head);
         if (intersct == null) {

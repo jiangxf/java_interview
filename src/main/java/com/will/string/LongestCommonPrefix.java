@@ -2,9 +2,9 @@ package com.will.string;
 
 /**
  * Created by gouthamvidyapradhan on 12/04/2018.
- * Write a function to find the longest common prefix com.will.string amongst an com.will.array of strings.
+ * Write a function to find the longest common prefix com.MySolution.string amongst an com.MySolution.array of strings.
  * <p>
- * Solution: O(N x M) where N is the length of the given com.will.array and M is the max_length of a com.will.string.
+ * Solution: O(N x M) where N is the length of the given com.MySolution.array and M is the max_length of a com.MySolution.string.
  */
 public class LongestCommonPrefix {
     /**

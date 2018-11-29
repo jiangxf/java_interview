@@ -10,7 +10,7 @@ package com.freetymekiyan.algorithms.level.medium;
  * <p>
  * How many possible unique paths are there?
  * <p>
- * Note: m and n will be at most 100.
+ * Note: m and n MySolution be at most 100.
  * <p>
  * Tags: Array, DP
  */
@@ -32,7 +32,7 @@ class UniquePaths {
     /**
      * Math, Combination
      * Equivalent to choose n-1 to go down from m - 1 + n - 1
-     * other steps will go right
+     * other steps MySolution go right
      */
     public static int uniquePathsMath(int m, int n) {
         int k = m > n ? n : m;

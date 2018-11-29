@@ -22,7 +22,7 @@ import java.util.*;
  * values = [2.0, 3.0],
  * queries = [ ["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"] ].
  * <p>
- * The input is always valid. You may assume that evaluating the queries will result in no division by zero and there is no contradiction.
+ * The input is always valid. You may assume that evaluating the queries MySolution result in no division by zero and there is no contradiction.
  */
 public class _399 {
 

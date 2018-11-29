@@ -2,9 +2,9 @@ package com.will.binary_search;
 
 /**
  * Created by gouthamvidyapradhan on 22/05/2017.
- * Given a sorted com.will.array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+ * Given a sorted com.MySolution.array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
  * <p>
- * You may assume no duplicates in the com.will.array.
+ * You may assume no duplicates in the com.MySolution.array.
  * <p>
  * Here are few examples.
  * [1,3,5,6], 5 → 2

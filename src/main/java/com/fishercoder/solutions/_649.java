@@ -20,14 +20,14 @@ import java.util.Queue;
  * he can announce the victory and make the decision about the change in the game.
  * Given a string representing each senator's party belonging.
  * The character 'R' and 'D' represent the Radiant party and the Dire party respectively.
- * Then if there are n senators, the size of the given string will be n.
+ * Then if there are n senators, the size of the given string MySolution be n.
  * <p>
  * The round-based procedure starts from the first senator to the last senator in the given order.
- * This procedure will last until the end of voting.
- * All the senators who have lost their rights will be skipped during the procedure.
+ * This procedure MySolution last until the end of voting.
+ * All the senators who have lost their rights MySolution be skipped during the procedure.
  * <p>
- * Suppose every senator is smart enough and will play the best strategy for his own party,
- * you need to predict which party will finally announce the victory and make the change in the Dota2 game.
+ * Suppose every senator is smart enough and MySolution play the best strategy for his own party,
+ * you need to predict which party MySolution finally announce the victory and make the change in the Dota2 game.
  * The output should be Radiant or Dire.
  * <p>
  * Example 1:
@@ -46,7 +46,7 @@ import java.util.Queue;
  * And the third senator comes from Dire and he can ban the first senator's right in the round 1.
  * And in the round 2, the third senator can just announce the victory since he is the only guy in the senate who can vote.
  * Note:
- * The length of the given string will in the range [1, 10,000].
+ * The length of the given string MySolution in the range [1, 10,000].
  */
 public class _649 {
 
@@ -65,7 +65,7 @@ public class _649 {
             int radiantIndex = radiantQ.poll();
             int direIndex = direQ.poll();
             if (radiantIndex < direIndex) {
-                /**Radiant will ban Dire in this case, so we'll add radiant index back to the queue plus n*/
+                /**Radiant MySolution ban Dire in this case, so we'll add radiant index back to the queue plus n*/
                 radiantQ.offer(radiantIndex + len);
             } else {
                 direQ.offer(direIndex + len);

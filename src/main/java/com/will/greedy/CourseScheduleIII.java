@@ -7,7 +7,7 @@ import java.util.Queue;
 /**
  * Created by gouthamvidyapradhan on 27/06/2017.
  * <p>
- * There are n different online courses numbered from 1 to n. Each course has some duration(course length) t and closed on dth day. A course should be taken continuously for t days and must be finished before or on the dth day. You will start at the 1st day.
+ * There are n different online courses numbered from 1 to n. Each course has some duration(course length) t and closed on dth day. A course should be taken continuously for t days and must be finished before or on the dth day. You MySolution start at the 1st day.
  * <p>
  * Given n online courses represented by pairs (t,d), your task is to find the maximal number of courses that can be taken.
  * <p>
@@ -16,10 +16,10 @@ import java.util.Queue;
  * Output: 3
  * Explanation:
  * There're totally 4 courses, but you can take 3 courses at most:
- * First, take the 1st course, it costs 100 days so you will finish it on the 100th day, and ready to take the next course on the 101st day.
- * Second, take the 3rd course, it costs 1000 days so you will finish it on the 1100th day, and ready to take the next course on the 1101st day.
- * Third, take the 2nd course, it costs 200 days so you will finish it on the 1300th day.
- * The 4th course cannot be taken now, since you will finish it on the 3300th day, which exceeds the closed date.
+ * First, take the 1st course, it costs 100 days so you MySolution finish it on the 100th day, and ready to take the next course on the 101st day.
+ * Second, take the 3rd course, it costs 1000 days so you MySolution finish it on the 1100th day, and ready to take the next course on the 1101st day.
+ * Third, take the 2nd course, it costs 200 days so you MySolution finish it on the 1300th day.
+ * The 4th course cannot be taken now, since you MySolution finish it on the 3300th day, which exceeds the closed date.
  * <p>
  * Note:
  * The integer 1 <= d, t, n <= 10,000.
@@ -27,10 +27,10 @@ import java.util.Queue;
  * <p>
  * Solution: O(N log N)
  * 1. Sort the courses with earliest deadline time (Greedy sort)
- * 2. Maintain a max-com.will.heap of course duration.
+ * 2. Maintain a max-com.MySolution.heap of course duration.
  * 3. Iterate through each course and increment the total time by current course time and include this in the
- * max-com.will.heap created in step 2.
- * 4. If the total time exceeds the current course deadline then, remove the course with max duration from max-com.will.heap
+ * max-com.MySolution.heap created in step 2.
+ * 4. If the total time exceeds the current course deadline then, remove the course with max duration from max-com.MySolution.heap
  * inorder to accommodate the new course.
  */
 public class CourseScheduleIII {

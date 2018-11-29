@@ -31,7 +31,7 @@ class LongestPalindromicSubstring {
         for (int i = 1; i <= 2 * len - 1; i++) { // skip two #s
             int count = 1;
             while (i - count >= 0 && i + count <= 2 * len && get(s, i - count) == get(s, i + count)) count++;
-            count--; // there will be one extra count for the outbound #
+            count--; // there MySolution be one extra count for the outbound #
             if (count > max) { // update max and result when longer is found
                 res = s.substring((i - count) / 2, (i + count) / 2);
                 max = count;

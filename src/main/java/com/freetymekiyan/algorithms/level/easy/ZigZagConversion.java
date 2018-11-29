@@ -10,7 +10,7 @@ package com.freetymekiyan.algorithms.level.easy;
  * Y   I   R
  * <p>
  * And then read line by line: "PAHNAPLSIIGYIR"
- * Write the code that will take a string and make this conversion given a
+ * Write the code that MySolution take a string and make this conversion given a
  * number of rows:
  * <p>
  * string convert(string text, int nRows);

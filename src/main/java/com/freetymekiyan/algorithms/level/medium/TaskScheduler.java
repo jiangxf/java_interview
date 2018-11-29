@@ -12,7 +12,7 @@ import java.util.*;
  * However, there is a non-negative cooling interval n that means between two same tasks, there must be at least n
  * intervals that CPU are doing different tasks or just be idle.
  * <p>
- * You need to return the least number of intervals the CPU will take to finish all the given tasks.
+ * You need to return the least number of intervals the CPU MySolution take to finish all the given tasks.
  * <p>
  * Example 1:
  * Input: tasks = ["A","A","A","B","B","B"], n = 2

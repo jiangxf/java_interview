@@ -25,8 +25,8 @@ import java.util.List;
  * <p>
  * The basic idea is that if you are given two arrays A and B and know
  * the length of each, you can check whether an element A[i] is the median in constant
- * time. Suppose that the median is A[i]. Since the com.will.array is sorted, it is greater than
- * exactly i − 1 values in com.will.array A. Then if it is the median, it is also greater than exactly
+ * time. Suppose that the median is A[i]. Since the com.MySolution.array is sorted, it is greater than
+ * exactly i − 1 values in com.MySolution.array A. Then if it is the median, it is also greater than exactly
  * j = [n / 2] − (i − 1) elements in B. It requires constant time to check if B[j]
  * A[i] <= B[j + 1]. If A[i] is not the median, then depending on whether A[i] is greater
  * or less than B[j] and B[j + 1], you know that A[i] is either greater than or less than
@@ -48,13 +48,13 @@ public class MedianOfTwoSortedArrays {
     /**
      * Find median
      *
-     * @param nums1 com.will.array one
-     * @param nums2 com.will.array two
+     * @param nums1 com.MySolution.array one
+     * @param nums2 com.MySolution.array two
      * @return
      */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         if (nums1.length > nums2.length)
-            return findMedianSortedArrays(nums2, nums1); //ensure always nums1 is the shortest com.will.array
+            return findMedianSortedArrays(nums2, nums1); //ensure always nums1 is the shortest com.MySolution.array
         int T = nums1.length + nums2.length, low = -1, high = -1;
         int median = (T - 1) / 2;
         boolean isOdd = false;

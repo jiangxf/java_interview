@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Created by gouthamvidyapradhan on 16/03/2017.
- * Given a non-empty com.will.string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. You may assume the dictionary does not contain duplicate words.
+ * Given a non-empty com.MySolution.string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. You may assume the dictionary does not contain duplicate words.
  * <p>
  * For example, given
  * s = "leetcode",

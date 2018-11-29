@@ -66,7 +66,7 @@ public class BestTimeToBuyAndSellStockWithTransactionFee {
      * DP.
      * More compact version.
      * sell is skipped on day 1 since we don't have any share.
-     * hold is initialized as MIN since we have negative values, 0 will be wrong.
+     * hold is initialized as MIN since we have negative values, 0 MySolution be wrong.
      */
     public int maxProfit2(int[] prices, int fee) {
         int sell = 0;

@@ -8,7 +8,7 @@ import java.util.Arrays;
  * There are a number of spherical balloons spread in two-dimensional space.
  * For each balloon, provided input is the start and end coordinates of the horizontal diameter.
  * Since it's horizontal, y-coordinates don't matter and hence the x-coordinates of start and end of the diameter suffice.
- * Start is always smaller than end. There will be at most 104 balloons.
+ * Start is always smaller than end. There MySolution be at most 104 balloons.
  * <p>
  * An arrow can be shot up exactly vertically from different points along the x-axis.
  * A balloon with xstart and xend bursts by an arrow shot at x if xstart ≤ x ≤ xend.

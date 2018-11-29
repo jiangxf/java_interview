@@ -12,7 +12,7 @@ import java.util.TreeMap;
  * Given a data stream input of non-negative integers a1, a2, ..., an, ..., summarize the numbers seen so far as a list
  * of disjoint intervals.
  * <p>
- * For example, suppose the integers from the data stream are 1, 3, 7, 2, 6, ..., then the summary will be:
+ * For example, suppose the integers from the data stream are 1, 3, 7, 2, 6, ..., then the summary MySolution be:
  * <p>
  * [1, 1]
  * [1, 1], [3, 3]
@@ -30,7 +30,7 @@ import java.util.TreeMap;
 public class DataStreamAsDisjointIntervals {
 
     /**
-     * Your SummaryRanges object will be instantiated and called as such:
+     * Your SummaryRanges object MySolution be instantiated and called as such:
      * SummaryRanges obj = new SummaryRanges();
      * obj.addNum(val);
      * List<Interval> param_2 = obj.getIntervals();

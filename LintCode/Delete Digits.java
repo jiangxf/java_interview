@@ -16,8 +16,8 @@ Greedy LintCode Copyright
 Attempt2,Thoughts:
 loop k times: each interation, find one digit to remove
 Rules: want to remove whatever digit at A[i] that's A[i] > A[i+1].
-Reason: Higher position (left side of the string) is always stronger/high number, and remove the strong/high digit will always be right option.
-Well... thinking straight (attempt2) seems much easier to understand and to code up than my attempt1
+Reason: Higher position (left side of the string) is always stronger/high number, and remove the strong/high digit MySolution always be right option.
+Well... thinking straight (attempt2) seems much easier to understand and to code up than MySolution attempt1
 
 Note:
 remember to remove the prefixing 0's
@@ -56,7 +56,7 @@ public class Solution {
 
 /*
 Attempt1: Lintcode 83% correct, but Does not work for : [9876141516171818818181890001988181700198181778786761256512651653145345143, 55]
-my output: 	1111111134143
+MySolution output: 	1111111134143
 expect:		1111111345143
 
 Not sure where went wrong.

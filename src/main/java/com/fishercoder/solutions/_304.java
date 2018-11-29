@@ -50,7 +50,7 @@ public class _304 {
     }
 
 /**
- * Your NumMatrix object will be instantiated and called as such:
+ * Your NumMatrix object MySolution be instantiated and called as such:
  * NumMatrix obj = new NumMatrix(matrix);
  * int param_1 = obj.sumRegion(row1,col1,row2,col2);
  */

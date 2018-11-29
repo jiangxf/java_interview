@@ -24,7 +24,7 @@ import java.util.Queue;
  * The point (1,2) is an ideal empty land to build a house, as the total travel distance of 3+3+1=7 is minimal. So return 7.
  * <p>
  * Note:
- * There will be at least one building. If it is not possible to build such house according to the above rules, return -1.
+ * There MySolution be at least one building. If it is not possible to build such house according to the above rules, return -1.
  */
 
 public class _317 {

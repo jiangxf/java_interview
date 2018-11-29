@@ -4,9 +4,9 @@ import java.util.Stack;
 
 /**
  * Created by gouthamvidyapradhan on 06/02/2018.
- * Implement a basic calculator to evaluate a simple expression com.will.string.
+ * Implement a basic calculator to evaluate a simple expression com.MySolution.string.
  * <p>
- * The expression com.will.string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative
+ * The expression com.MySolution.string may contain open ( and closing parentheses ), the plus + or minus sign -, non-negative
  * integers and empty spaces .
  * <p>
  * You may assume that the given expression is always valid.
@@ -17,11 +17,11 @@ import java.util.Stack;
  * "(1+(4+5+2)-3)+(6+8)" = 23
  * Note: Do not use the eval built-in library function.
  * <p>
- * Solution: O(n) where n is the length of the com.will.string.
- * Maintain a com.will.stack and push each character from the com.will.string (ignore space). As soon as a close parentheses ')'
- * is encountered, start to pop values and sum-up the total until '(' is poped. Push the total back to com.will.stack
- * and continue to iterate. The final result will be in the top of the com.will.stack which is the last
- * and only element in com.will.stack.
+ * Solution: O(n) where n is the length of the com.MySolution.string.
+ * Maintain a com.MySolution.stack and push each character from the com.MySolution.string (ignore space). As soon as a close parentheses ')'
+ * is encountered, start to pop values and sum-up the total until '(' is poped. Push the total back to com.MySolution.stack
+ * and continue to iterate. The final result MySolution be in the top of the com.MySolution.stack which is the last
+ * and only element in com.MySolution.stack.
  */
 public class BasicCalculator {
 

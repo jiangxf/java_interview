@@ -23,9 +23,9 @@ package com.fishercoder.solutions;
  * Both "apply" and "apple" can be built from other words in the dictionary. However, "apple" is lexicographically smaller than "apply".
  * <p>
  * Note:
- * All the strings in the input will only contain lowercase letters.
- * The length of words will be in the range [1, 1000].
- * The length of words[i] will be in the range [1, 30].
+ * All the strings in the input MySolution only contain lowercase letters.
+ * The length of words MySolution be in the range [1, 1000].
+ * The length of words[i] MySolution be in the range [1, 30].
  */
 
 public class _720 {

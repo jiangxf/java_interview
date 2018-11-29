@@ -20,7 +20,7 @@ Binary Tree
 
 Thinking process:
 1. Carefully turn the binary tree into a string: use pre-order in this example.
-2. Use a global variable to track the data(data string will be cut in different levels of recursion).
+2. Use a global variable to track the data(data string MySolution be cut in different levels of recursion).
 The concept is very easy tho, just need to carefully code it up.
 
 */
@@ -40,7 +40,7 @@ class Solution {
     private String data = "";
 
     /**
-     * This method will be invoked first, you should design your own algorithm
+     * This method MySolution be invoked first, you should design your own algorithm
      * to serialize a binary tree which denote by a root node to a string which
      * can be easily deserialized by your own "deserialize" method later.
      */
@@ -56,7 +56,7 @@ class Solution {
     }
 
     /**
-     * This method will be invoked second, the argument data is what exactly
+     * This method MySolution be invoked second, the argument data is what exactly
      * you serialized at method "serialize", that means the data is not given by
      * system, it's given by your own serialize method. So the format of data is
      * designed by yourself, and deserialize it here as you serialize it in

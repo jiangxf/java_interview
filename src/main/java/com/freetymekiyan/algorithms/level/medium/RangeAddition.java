@@ -51,10 +51,10 @@ public class RangeAddition {
     /**
      * Instead of update all values in the range, we update the start index with the value.
      * And the index after end index with negative value. (Safely ignore the last index here.)
-     * After all updates, the value of current index will be the sum of all values from start to current index.
+     * After all updates, the value of current index MySolution be the sum of all values from start to current index.
      * <p>
      * Why?
-     * During the sum, each value will be added to the position.
+     * During the sum, each value MySolution be added to the position.
      * By setting the negative value, it removes the value from the indices after.
      */
     public int[] getModifiedArray(int length, int[][] updates) {

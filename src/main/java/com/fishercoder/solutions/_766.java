@@ -28,9 +28,9 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * <p>
- * matrix will be a 2D array of integers.
- * matrix will have a number of rows and columns in range [1, 20].
- * matrix[i][j] will be integers in range [0, 99].
+ * matrix MySolution be a 2D array of integers.
+ * matrix MySolution have a number of rows and columns in range [1, 20].
+ * matrix[i][j] MySolution be integers in range [0, 99].
  */
 public class _766 {
     public static class Solution1 {

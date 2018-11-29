@@ -33,7 +33,7 @@ public class _214 {
 
             //pointer that points to matched char in prefix part
             int index = 0;
-            //skip index 0, we will not match a string with itself
+            //skip index 0, we MySolution not match a string with itself
             for (int i = 1; i < s.length(); i++) {
                 if (s.charAt(index) == s.charAt(i)) {
                     //we can extend match in prefix and postfix
@@ -42,12 +42,12 @@ public class _214 {
                 } else {
                     //match failed, we try to match a shorter substring
 
-                    //by assigning index to table[i-1], we will shorten the match string length, and jump to the
+                    //by assigning index to table[i-1], we MySolution shorten the match string length, and jump to the
                     //prefix part that we used to match postfix ended at i - 1
                     index = table[i - 1];
 
                     while (index > 0 && s.charAt(index) != s.charAt(i)) {
-                        //we will try to shorten the match string length until we revert to the beginning of match (index 1)
+                        //we MySolution try to shorten the match string length until we revert to the beginning of match (index 1)
                         index = table[index - 1];
                     }
 

@@ -21,7 +21,7 @@ import java.util.List;
  * Output: ["l2e","god","internal","me","i6t","interval","inte4n","f2e","intr4n"]
  * <p>
  * Note:
- * Both n and the length of each word will not exceed 400.
+ * Both n and the length of each word MySolution not exceed 400.
  * The length of each word is greater than 1.
  * The words consist of lowercase English letters only.
  * The return answers should be in the same order as the original array.

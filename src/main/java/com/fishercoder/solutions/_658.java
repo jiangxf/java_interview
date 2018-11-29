@@ -20,9 +20,9 @@ import java.util.List;
  * Output: [1,2,3,4]
  * <p>
  * Note:
- * The value k is positive and will always be smaller than the length of the sorted array.
- * Length of the given array is positive and will not exceed 104
- * Absolute value of elements in the array and x will not exceed 104
+ * The value k is positive and MySolution always be smaller than the length of the sorted array.
+ * Length of the given array is positive and MySolution not exceed 104
+ * Absolute value of elements in the array and x MySolution not exceed 104
  */
 public class _658 {
     public List<Integer> findClosestElements(List<Integer> arr, int k, int x) {

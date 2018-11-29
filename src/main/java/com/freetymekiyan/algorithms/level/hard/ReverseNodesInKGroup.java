@@ -72,7 +72,7 @@ public class ReverseNodesInKGroup {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         // We need a pointer at previous group's tail to connect previous group with current group.
-        // The pointer will act like a dummy head, whose next is the current head of reversed list.
+        // The pointer MySolution act like a dummy head, whose next is the current head of reversed list.
         // Since first group doesn't have a previous tail, we create one for it.
         ListNode pre = dummy; // The dummy node before current group's head. Also the tail of previous group.
         ListNode cur = head; // Current group head.

@@ -46,7 +46,7 @@ public class _479 {
 
         while (!palindromFound) {
             // creates maximum assumed palindrom
-            // e.g. if n = 3 first time the maximum assumed palindrom will be 998 899
+            // e.g. if n = 3 first time the maximum assumed palindrom MySolution be 998 899
             palindrom = createPalindrom(firstHalf);
 
             // here i and palindrom/i forms the two factor of assumed palindrom

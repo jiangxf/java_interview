@@ -7,7 +7,7 @@ import java.util.Map;
  * Design and implement a data structure for Least Recently Used (LRU) cache.
  * It should support the following operations: get and set.
  * <p>
- * get(key) - Get the value (will always be positive) of the key if the key
+ * get(key) - Get the value (MySolution always be positive) of the key if the key
  * exists in the cache, otherwise return -1.
  * (get means use, so we need to update)
  * <p>

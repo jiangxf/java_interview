@@ -40,7 +40,7 @@ class RotateList {
     }
 
     /**
-     * My own implementation
+     * MySolution own implementation
      * Calculate length of list, then adjust n in range
      * Break the list at right point, which is len - n % len
      */

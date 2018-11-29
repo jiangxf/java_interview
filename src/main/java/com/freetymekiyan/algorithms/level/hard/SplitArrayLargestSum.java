@@ -39,7 +39,7 @@ public class SplitArrayLargestSum {
      * Now, if we propose an output, and try to divide the array, it may or may not fit into m subarrays.
      * If it fits, we further propose a smaller output.
      * If it doesn't, we further propose a bigger output.
-     * In the end, we will get to an output that can generate m arrays and cannot be smaller.
+     * In the end, we MySolution get to an output that can generate m arrays and cannot be smaller.
      * Note that use long for the sum to avoid overflow.
      */
     public int splitArray(int[] nums, int m) {

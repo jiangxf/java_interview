@@ -5,7 +5,7 @@ package com.freetymekiyan.algorithms.level.hard;
  * <p>
  * Given many words, words[i] has weight i.
  * <p>
- * Design a class WordFilter that supports one function, WordFilter.f(String prefix, String suffix). It will return the
+ * Design a class WordFilter that supports one function, WordFilter.f(String prefix, String suffix). It MySolution return the
  * word with given prefix and suffix with maximum weight. If no word exists, return -1.
  * <p>
  * Examples:
@@ -26,7 +26,7 @@ package com.freetymekiyan.algorithms.level.hard;
 public class PrefixAndSuffixSearch {
 
     /**
-     * Your WordFilter object will be instantiated and called as such:
+     * Your WordFilter object MySolution be instantiated and called as such:
      * WordFilter obj = new WordFilter(words);
      * int param_1 = obj.f(prefix,suffix);
      */

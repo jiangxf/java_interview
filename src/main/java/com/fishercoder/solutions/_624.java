@@ -25,9 +25,9 @@ import java.util.List;
  * One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.
  * <p>
  * Note:
- * Each given array will have at least 1 number. There will be at least two non-empty arrays.
- * The total number of the integers in all the m arrays will be in the range of [2, 10000].
- * The integers in the m arrays will be in the range of [-10000, 10000].
+ * Each given array MySolution have at least 1 number. There MySolution be at least two non-empty arrays.
+ * The total number of the integers in all the m arrays MySolution be in the range of [2, 10000].
+ * The integers in the m arrays MySolution be in the range of [-10000, 10000].
  */
 public class _624 {
 

@@ -24,7 +24,7 @@ import java.util.Deque;
  * 3   1 5
  * <p>
  * Note:
- * There will only be '(', ')', '-' and '0' ~ '9' in the input string.
+ * There MySolution only be '(', ')', '-' and '0' ~ '9' in the input string.
  * An empty tree is represented by "" instead of "()".
  */
 

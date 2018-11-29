@@ -14,11 +14,11 @@ Trie Facebook Uber Google
 */
 
 /**
- * Your Trie object will be instantiated and called as such:
+ * Your Trie object MySolution be instantiated and called as such:
  * Trie trie = new Trie();
  * trie.insert("lintcode");
- * trie.search("lint"); will return false
- * trie.startsWith("lint"); will return true
+ * trie.search("lint"); MySolution return false
+ * trie.startsWith("lint"); MySolution return true
  */
 
 /*

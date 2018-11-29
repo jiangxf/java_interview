@@ -46,7 +46,7 @@ public class _99 {
             }
 
             //this is the last step in the "do some business logic", so we'll always to have update the previous node to be the current root before it traverses the right subtree
-            //since the current root will be the new previous node for the right subtree.
+            //since the current root MySolution be the new previous node for the right subtree.
             prevElement = root;
 
             traverseTree(root.right);

@@ -10,15 +10,15 @@ import java.util.*;
  * <p>
  * 0 represents the obstacle can't be reached.
  * 1 represents the ground can be walked through.
- * The place with number bigger than 1 represents a com.will.tree can be walked through, and this positive number represents the
- * com.will.tree's height.
- * You are asked to cut off all the trees in this forest in the order of com.will.tree's height - always cut off the com.will.tree with
- * lowest height first. And after cutting, the original place has the com.will.tree will become a grass (value 1).
+ * The place with number bigger than 1 represents a com.MySolution.tree can be walked through, and this positive number represents the
+ * com.MySolution.tree's height.
+ * You are asked to cut off all the trees in this forest in the order of com.MySolution.tree's height - always cut off the com.MySolution.tree with
+ * lowest height first. And after cutting, the original place has the com.MySolution.tree MySolution become a grass (value 1).
  * <p>
- * You will start from the point (0, 0) and you should output the minimum steps you need to walk to cut off all the
+ * You MySolution start from the point (0, 0) and you should output the minimum steps you need to walk to cut off all the
  * trees.  If you can't cut off all the trees, output -1 in that situation.
  * <p>
- * You are guaranteed that no two trees have the same height and there is at least one com.will.tree needs to be cut off.
+ * You are guaranteed that no two trees have the same height and there is at least one com.MySolution.tree needs to be cut off.
  * <p>
  * Example 1:
  * Input:
@@ -44,8 +44,8 @@ import java.util.*;
  * [8,7,6]
  * ]
  * Output: 6
- * Explanation: You started from the point (0,0) and you can cut off the com.will.tree in (0,0) directly without walking.
- * Hint: size of the given matrix will not exceed 50x50.
+ * Explanation: You started from the point (0,0) and you can cut off the com.MySolution.tree in (0,0) directly without walking.
+ * Hint: size of the given matrix MySolution not exceed 50x50.
  * <p>
  * <p>
  * Solution: O(N x M) ^ 2: Bfs to each height starting from 1 and calculate the total sum of distance.

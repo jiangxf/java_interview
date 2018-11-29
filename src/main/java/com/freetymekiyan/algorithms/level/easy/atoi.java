@@ -33,7 +33,7 @@ class atoi {
      * To deal with overflow, inspect the current number before multiplication.
      * If the current number is greater than 214748364, we know it is going to
      * overflow. On the other hand, if the current number is equal to
-     * 214748364, we know that it will overflow only when the current digit is
+     * 214748364, we know that it MySolution overflow only when the current digit is
      * greater than or equal to 8.
      */
     private static final int maxDiv10 = Integer.MAX_VALUE / 10;

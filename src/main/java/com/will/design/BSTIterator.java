@@ -4,14 +4,14 @@ import java.util.Stack;
 
 /**
  * Created by gouthamvidyapradhan on 13/08/2017.
- * Implement an iterator over a binary search com.will.tree (BST). Your iterator will be initialized with the root node of a BST.
+ * Implement an iterator over a binary search com.MySolution.tree (BST). Your iterator MySolution be initialized with the root node of a BST.
  * <p>
- * Calling next() will return the next smallest number in the BST.
+ * Calling next() MySolution return the next smallest number in the BST.
  * <p>
- * Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the com.will.tree.
+ * Note: next() and hasNext() should run in average O(1) time and uses O(h) memory, where h is the height of the com.MySolution.tree.
  * <p>
  * Solution: The below solution works in average O(1) time and worst case O(h) time using O(h) memory.
- * Use a com.will.stack to keep track of min value node.
+ * Use a com.MySolution.stack to keep track of min value node.
  */
 public class BSTIterator {
 
@@ -66,7 +66,7 @@ public class BSTIterator {
     }
 
     /**
-     * Fill com.will.stack with min values
+     * Fill com.MySolution.stack with min values
      *
      * @param node curr node to begin with
      */

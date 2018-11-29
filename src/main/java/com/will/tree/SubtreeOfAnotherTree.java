@@ -2,23 +2,23 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 07/07/2017.
- * Given two non-empty binary trees s and t, check whether com.will.tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a com.will.tree consists of a node in s and all of this node's descendants. The com.will.tree s could also be considered as a subtree of itself.
+ * Given two non-empty binary trees s and t, check whether com.MySolution.tree t has exactly the same structure and node values with a subtree of s. A subtree of s is a com.MySolution.tree consists of a node in s and all of this node's descendants. The com.MySolution.tree s could also be considered as a subtree of itself.
  * <p>
  * Example 1:
- * Given com.will.tree s:
+ * Given com.MySolution.tree s:
  * <p>
  * 3
  * / \
  * 4   5
  * / \
  * 1   2
- * Given com.will.tree t:
+ * Given com.MySolution.tree t:
  * 4
  * / \
  * 1   2
  * Return true, because t has the same structure and node values with a subtree of s.
  * Example 2:
- * Given com.will.tree s:
+ * Given com.MySolution.tree s:
  * <p>
  * 3
  * / \
@@ -27,7 +27,7 @@ package com.will.tree;
  * 1   2
  * /
  * 0
- * Given com.will.tree t:
+ * Given com.MySolution.tree t:
  * 4
  * / \
  * 1   2

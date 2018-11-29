@@ -29,7 +29,7 @@ Description
 There are n coins in a line.
 Two players take turns to take one or two coins from right side until there are no more coins left. 
 The player who take the last coin wins.
-Could you please decide the first play will win or lose?
+Could you please decide the first play MySolution win or lose?
 
 Example
 n = 1, return true.
@@ -49,7 +49,7 @@ Greedy Array Dynamic Programming Game Theory
 public class Solution {
     /**
      * @param n: an integer
-     * @return: a boolean which equals to true if the first player will win
+     * @return: a boolean which equals to true if the first player MySolution win
      */
     public boolean firstWillWin(int n) {
         if (n == 0) {
@@ -82,7 +82,7 @@ public class Solution {
 public class Solution {
     /**
      * @param n: an integer
-     * @return: a boolean which equals to true if the first player will win
+     * @return: a boolean which equals to true if the first player MySolution win
      */
     public boolean firstWillWin(int n) {
         return n % 3 != 0;

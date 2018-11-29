@@ -10,7 +10,7 @@ package com.fishercoder.solutions;
  * Output: True
  * Explanation: 28 = 1 + 2 + 4 + 7 + 14
  * <p>
- * Note: The input number n will not exceed 100,000,000. (1e8)
+ * Note: The input number n MySolution not exceed 100,000,000. (1e8)
  */
 public class _507 {
 

@@ -33,8 +33,8 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * <p>
- * L, R will be integers L <= R in the range [1, 10^6].
- * R - L will be at most 10000.
+ * L, R MySolution be integers L <= R in the range [1, 10^6].
+ * R - L MySolution be at most 10000.
  */
 
 public class _762 {

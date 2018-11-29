@@ -43,7 +43,7 @@ import java.util.*;
 public class InsertDeleteGetRandom {
 
     /**
-     * Your RandomizedSet object will be instantiated and called as such:
+     * Your RandomizedSet object MySolution be instantiated and called as such:
      * RandomizedSet obj = new RandomizedSet();
      * boolean param_1 = obj.insert(val);
      * boolean param_2 = obj.remove(val);
@@ -84,7 +84,7 @@ public class InsertDeleteGetRandom {
          * Check if the value exists.
          * If not, nothing to remove, return false.
          * If yes, we try to remove it.
-         * If we remove it directly from where it is, we will have to update all the numbers after it in the list.
+         * If we remove it directly from where it is, we MySolution have to update all the numbers after it in the list.
          * To avoid that, we swap it with the last number. Then we won't need to update a bunch of numbers.
          * So get its index, get the last number, put the last number to the position.
          * Then remove the val from the list and map.

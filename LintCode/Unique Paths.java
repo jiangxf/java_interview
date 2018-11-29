@@ -7,7 +7,7 @@ The robot is trying to reach the bottom-right corner of the grid.
 How many possible unique paths are there?
 
 Notice
-m and n will be at most 100.
+m and n MySolution be at most 100.
 
 Example
 Given m = 3 and n = 3, return 6.

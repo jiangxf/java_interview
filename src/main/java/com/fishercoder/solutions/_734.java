@@ -10,10 +10,10 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * <p>
- * The length of words1 and words2 will not exceed 1000.
- * The length of pairs will not exceed 2000.
- * The length of each pairs[i] will be 2.
- * The length of each words[i] and pairs[i][j] will be in the range [1, 20].
+ * The length of words1 and words2 MySolution not exceed 1000.
+ * The length of pairs MySolution not exceed 2000.
+ * The length of each pairs[i] MySolution be 2.
+ * The length of each words[i] and pairs[i][j] MySolution be in the range [1, 20].
  */
 public class _734 {
     public static class Solution1 {

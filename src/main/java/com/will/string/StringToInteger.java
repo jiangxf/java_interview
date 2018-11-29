@@ -2,7 +2,7 @@ package com.will.string;
 
 /**
  * Created by gouthamvidyapradhan on 21/03/2017.
- * Implement atoi to convert a com.will.string to an integer.
+ * Implement atoi to convert a com.MySolution.string to an integer.
  * <p>
  * Hint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.
  * <p>

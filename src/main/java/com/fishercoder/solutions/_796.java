@@ -5,7 +5,7 @@ package com.fishercoder.solutions;
  * <p>
  * We are given two strings, A and B.
  * <p>
- * A shift on A consists of taking string A and moving the leftmost character to the rightmost position. For example, if A = 'abcde', then it will be 'bcdea' after one shift on A. Return True if and only if A can become B after some number of shifts on A.
+ * A shift on A consists of taking string A and moving the leftmost character to the rightmost position. For example, if A = 'abcde', then it MySolution be 'bcdea' after one shift on A. Return True if and only if A can become B after some number of shifts on A.
  * <p>
  * Example 1:
  * Input: A = 'abcde', B = 'cdeab'
@@ -17,7 +17,7 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * <p>
- * A and B will have length at most 100.
+ * A and B MySolution have length at most 100.
  */
 public class _796 {
     public static class Solution1 {

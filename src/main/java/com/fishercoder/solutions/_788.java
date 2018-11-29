@@ -24,7 +24,7 @@ import java.util.Map;
  * There are four good numbers in the range [1, 10] : 2, 5, 6, 9.
  * Note that 1 and 10 are not good numbers, since they remain unchanged after rotating.
  * <p>
- * Note: N  will be in range [1, 10000].
+ * Note: N  MySolution be in range [1, 10000].
  */
 public class _788 {
     public static class Solution1 {

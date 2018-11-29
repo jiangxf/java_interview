@@ -5,15 +5,15 @@ package com.fishercoder.solutions;
  * <p>
  * Start from integer 1, remove any integer that contains 9 such as 9, 19, 29...
  * <p>
- * So now, you will have a new integer sequence: 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, ...
+ * So now, you MySolution have a new integer sequence: 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, ...
  * <p>
- * Given a positive integer n, you need to return the n-th integer after removing. Note that 1 will be the first integer.
+ * Given a positive integer n, you need to return the n-th integer after removing. Note that 1 MySolution be the first integer.
  * <p>
  * Example 1:
  * Input: 9
  * Output: 10
  * <p>
- * Hint: n will not exceed 9 x 10^8.
+ * Hint: n MySolution not exceed 9 x 10^8.
  */
 public class _660 {
 

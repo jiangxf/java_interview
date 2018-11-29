@@ -10,7 +10,7 @@ import java.util.Map;
  * <p>
  * void addWord(word)
  * bool search(word)
- * search(word) can search a literal word or a regular expression com.will.string containing only letters a-z or .. A . means
+ * search(word) can search a literal word or a regular expression com.MySolution.string containing only letters a-z or .. A . means
  * it can represent any one letter.
  * <p>
  * For example:
@@ -99,7 +99,7 @@ public class WordDictionary {
                     map.put(c, subTrie);
                 }
                 subTrie.add(i + 1, word, length);
-            } else map.put(null, new Trie()); //use null to indicate end of com.will.string
+            } else map.put(null, new Trie()); //use null to indicate end of com.MySolution.string
         }
 
         /**

@@ -75,8 +75,8 @@ public class _694 {
         }
 
         /**
-         * My original idea:
-         * my not fully working yet: the equals() and hashcode() methods need to be refined
+         * MySolution original idea:
+         * MySolution not fully working yet: the equals() and hashcode() methods need to be refined
          * because HashSet is not really filtering the islands wiht the same shape.
          */
         class Quadrilateral {

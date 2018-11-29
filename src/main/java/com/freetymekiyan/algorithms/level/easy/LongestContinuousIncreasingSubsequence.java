@@ -14,7 +14,7 @@ package com.freetymekiyan.algorithms.level.easy;
  * Input: [2,2,2,2,2]
  * Output: 1
  * Explanation: The longest continuous increasing subsequence is [2], its length is 1.
- * Note: Length of the array will not exceed 10,000.
+ * Note: Length of the array MySolution not exceed 10,000.
  * <p>
  * Related Topics: Array
  * Similar Questions: (M) Number of Longest Increasing Subsequence, (H) Minimum Window Subsequence

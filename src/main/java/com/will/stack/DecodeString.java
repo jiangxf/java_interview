@@ -4,12 +4,12 @@ import java.util.Stack;
 
 /**
  * Created by gouthamvidyapradhan on 12/04/2018.
- * Given an encoded com.will.string, return it's decoded com.will.string.
+ * Given an encoded com.MySolution.string, return it's decoded com.MySolution.string.
  * <p>
  * The encoding rule is: k[encoded_string], where the encoded_string inside the square brackets is being repeated
  * exactly k times. Note that k is guaranteed to be a positive integer.
  * <p>
- * You may assume that the input com.will.string is always valid; No extra white spaces, square brackets are well-formed, etc.
+ * You may assume that the input com.MySolution.string is always valid; No extra white spaces, square brackets are well-formed, etc.
  * <p>
  * Furthermore, you may assume that the original data does not contain any digits and that digits are only for those
  * repeat numbers, k. For example, there won't be input like 3a or 2[4].
@@ -20,8 +20,8 @@ import java.util.Stack;
  * s = "3[a2[c]]", return "accaccacc".
  * s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
  * <p>
- * Solution: Maintain a com.will.stack and push items when a character other than ] is encountered. When a character ] is
- * encountered pop elements, build com.will.string and duplicate it.
+ * Solution: Maintain a com.MySolution.stack and push items when a character other than ] is encountered. When a character ] is
+ * encountered pop elements, build com.MySolution.string and duplicate it.
  */
 public class DecodeString {
 

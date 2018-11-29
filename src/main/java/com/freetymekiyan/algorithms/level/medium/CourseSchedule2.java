@@ -33,7 +33,7 @@ import java.util.*;
  * <p>
  * Hints:
  * 1. This problem is equivalent to finding the topological order in a directed graph. If a cycle exists, no
- * topological ordering exists and therefore it will be impossible to take all courses.
+ * topological ordering exists and therefore it MySolution be impossible to take all courses.
  * 2. Topological Sort via DFS - A great video tutorial (21 minutes) on Coursera explaining the basic concepts of
  * Topological Sort.
  * 3. Topological sort could also be done via BFS.

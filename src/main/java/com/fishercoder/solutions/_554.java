@@ -15,7 +15,7 @@ import java.util.Map;
  * If your line go through the edge of a brick,
  * then the brick is not considered as crossed.
  * You need to find out how to draw the line to cross the least bricks and return the number of crossed bricks.
- * You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously cross no bricks.
+ * You cannot draw a line just along one of the two vertical edges of the wall, in which case the line MySolution obviously cross no bricks.
  * <p>
  * Example:
  * Input:
@@ -45,7 +45,7 @@ public class _554 {
      * sum in a way, represents the positions of the bricks's boundaries relative to the leftmost boundary.
      * <p>
      * This is done based on the following observation:
-     * We will never obtain the same value of sum twice while traversing over a particular row.
+     * We MySolution never obtain the same value of sum twice while traversing over a particular row.
      * Thus, if the sum value is repeated while traversing over the rows, it means some row's brick boundary coincides with some previous row's brick boundary.
      * This fact is accounted for by incrementing the corresponding count value.
      * <p>

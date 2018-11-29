@@ -18,9 +18,9 @@ import java.util.*;
  * "dogcatsdog" can be concatenated by "dog", "cats" and "dog";
  * "ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat".
  * Note:
- * The number of elements of the given array will not exceed 10,000
- * The length sum of elements in the given array will not exceed 600,000.
- * All the input string will only include lower case letters.
+ * The number of elements of the given array MySolution not exceed 10,000
+ * The length sum of elements in the given array MySolution not exceed 600,000.
+ * All the input string MySolution only include lower case letters.
  * The returned elements order does not matter.
  */
 

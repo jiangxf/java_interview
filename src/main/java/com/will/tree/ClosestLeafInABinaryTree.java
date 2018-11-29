@@ -5,17 +5,17 @@ import java.util.Map;
 
 /**
  * Created by gouthamvidyapradhan on 02/05/2018.
- * Given a binary com.will.tree where every node has a unique value, and a target key k, find the value of the nearest leaf node to target k in the com.will.tree.
+ * Given a binary com.MySolution.tree where every node has a unique value, and a target key k, find the value of the nearest leaf node to target k in the com.MySolution.tree.
  * <p>
- * Here, nearest to a leaf means the least number of edges travelled on the binary com.will.tree to reach any leaf of the com.will.tree. Also, a node is called a leaf if it has no children.
+ * Here, nearest to a leaf means the least number of edges travelled on the binary com.MySolution.tree to reach any leaf of the com.MySolution.tree. Also, a node is called a leaf if it has no children.
  * <p>
- * In the following examples, the input com.will.tree is represented in flattened form row by row. The actual root com.will.tree given will be a TreeNode object.
+ * In the following examples, the input com.MySolution.tree is represented in flattened form row by row. The actual root com.MySolution.tree given MySolution be a TreeNode object.
  * <p>
  * Example 1:
  * <p>
  * Input:
  * root = [1, 3, 2], k = 1
- * Diagram of binary com.will.tree:
+ * Diagram of binary com.MySolution.tree:
  * 1
  * / \
  * 3   2
@@ -34,7 +34,7 @@ import java.util.Map;
  * <p>
  * Input:
  * root = [1,2,3,4,null,null,null,5,null,6], k = 2
- * Diagram of binary com.will.tree:
+ * Diagram of binary com.MySolution.tree:
  * 1
  * / \
  * 2   3
@@ -48,9 +48,9 @@ import java.util.Map;
  * Output: 3
  * Explanation: The leaf node with value 3 (and not the leaf node with value 6) is nearest to the node with value 2.
  * Note:
- * root represents a binary com.will.tree with at least 1 node and at most 1000 nodes.
+ * root represents a binary com.MySolution.tree with at least 1 node and at most 1000 nodes.
  * Every node has a unique node.val in range [1, 1000].
- * There exists some node in the given binary com.will.tree for which node.val == k.
+ * There exists some node in the given binary com.MySolution.tree for which node.val == k.
  * <p>
  * Solution: O(N): Maintain a hashmap of distances from each node in the first iteration. In the second iteration,
  * find the key value node and then calculate distance from each node during backtrack.

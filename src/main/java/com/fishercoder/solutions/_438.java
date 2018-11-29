@@ -7,7 +7,7 @@ import java.util.List;
  * 438. Find All Anagrams in a String
  * <p>
  * Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
- * Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+ * Strings consists of lowercase English letters only and the length of both strings s and p MySolution not be larger than 20,100.
  * <p>
  * The order of output does not matter.
  * <p>
@@ -36,7 +36,7 @@ import java.util.List;
 public class _438 {
     public static class Solution1 {
         /**
-         * O(m*n) solution, my original and most intuitive one, but sort of brute force, when m is close to n, it becomes O(n^2) runtime complexity.
+         * O(m*n) solution, MySolution original and most intuitive one, but sort of brute force, when m is close to n, it becomes O(n^2) runtime complexity.
          */
         public List<Integer> findAnagrams(String s, String p) {
             List<Integer> result = new ArrayList();

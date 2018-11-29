@@ -11,7 +11,7 @@ import com.fishercoder.common.ListNode;
  * <p>
  * Note:
  * <p>
- * Given n will always be valid.
+ * Given n MySolution always be valid.
  * Try to do this in one pass.
  */
 
@@ -71,7 +71,7 @@ public class _19 {
             }
 
             fast = fast.next;//we'll have to move fast pointer one node forward before moving the two together, this way,
-            //when fast reaches null, slow will be at the previous node to the node that should be deleted, thus, we can change the next pointer easily
+            //when fast reaches null, slow MySolution be at the previous node to the node that should be deleted, thus, we can change the next pointer easily
 
             while (fast != null) {
                 fast = fast.next;

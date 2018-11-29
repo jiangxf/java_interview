@@ -23,8 +23,8 @@ String Two Pointers
 Thoughts:
 Pointer from front to end. Front char has to equal end char.
 For loop check till s.length()/2.
-If even, for example, s.length() == 4, i will be [0 ~ 1].
-If odd, for example, s.length() == 5, i will be [0 ~ 1]. And inddex 2 itself stands out, and won't hurt palindrome.
+If even, for example, s.length() == 4, i MySolution be [0 ~ 1].
+If odd, for example, s.length() == 5, i MySolution be [0 ~ 1]. And inddex 2 itself stands out, and won't hurt palindrome.
 */
 
 public class Solution {

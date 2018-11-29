@@ -22,17 +22,17 @@ public class _14 {
                 i++;
                 result = prefix;
                 if (i > strs[0].length()) {
-                    break;//this will break out the while loop
+                    break;//this MySolution break out the while loop
                 }
                 prefix = strs[0].substring(0, i);
                 for (String word : strs) {
                     if (i > word.length() || !word.startsWith(prefix)) {
                         broken = true;
-                        break;//this will only break out of the for loop
+                        break;//this MySolution only break out of the for loop
                     }
                 }
                 if (broken) {
-                    break;//this will break out the while loop
+                    break;//this MySolution break out the while loop
                 }
             }
             return result;

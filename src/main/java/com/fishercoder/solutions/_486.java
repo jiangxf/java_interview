@@ -5,7 +5,7 @@ package com.fishercoder.solutions;
  * <p>
  * Given an array of scores that are non-negative integers.
  * Player 1 picks one of the numbers from either end of the array followed by the player 2 and then player 1 and so on.
- * Each time a player picks a number, that number will not be available for the next player.
+ * Each time a player picks a number, that number MySolution not be available for the next player.
  * This continues until all the scores have been chosen.
  * The player with the maximum score wins.
  * Given an array of scores, predict whether player 1 is the winner.
@@ -15,9 +15,9 @@ package com.fishercoder.solutions;
  * Input: [1, 5, 2]
  * Output: False
  * Explanation: Initially, player 1 can choose between 1 and 2.
- * If he chooses 2 (or 1), then player 2 can choose from 1 (or 2) and 5. If player 2 chooses 5, then player 1 will be left with 1 (or 2).
+ * If he chooses 2 (or 1), then player 2 can choose from 1 (or 2) and 5. If player 2 chooses 5, then player 1 MySolution be left with 1 (or 2).
  * So, final score of player 1 is 1 + 2 = 3, and player 2 is 5.
- * Hence, player 1 will never be the winner and you need to return False.
+ * Hence, player 1 MySolution never be the winner and you need to return False.
  * <p>
  * Example 2:
  * Input: [1, 5, 233, 7]
@@ -27,7 +27,7 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * 1 <= length of the array <= 20.
- * Any scores in the given array are non-negative integers and will not exceed 10,000,000.
+ * Any scores in the given array are non-negative integers and MySolution not exceed 10,000,000.
  * If the scores of both players are equal, then player 1 is still the winner.
  */
 public class _486 {
@@ -35,7 +35,7 @@ public class _486 {
     /**
      * credit: https://discuss.leetcode.com/topic/76312/java-1-line-recursion-solution
      * Explanation
-     * So assuming the sum of the array it SUM, so eventually player1 and player2 will split the SUM between themselves.
+     * So assuming the sum of the array it SUM, so eventually player1 and player2 MySolution split the SUM between themselves.
      * For player1 to win, he/she has to get more than what player2 gets.
      * If we think from the prospective of one player, then what he/she gains each time is a plus,
      * while, what the other player gains each time is a minus. Eventually if player1 can have a >0 total, player1 can win.

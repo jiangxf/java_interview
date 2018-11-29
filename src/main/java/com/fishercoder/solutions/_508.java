@@ -32,7 +32,7 @@ import java.util.*;
 public class _508 {
 
     public static class Solution1 {
-        //my purely original but verbose solution
+        //MySolution purely original but verbose solution
         public int[] findFrequentTreeSum(TreeNode root) {
             if (root == null) {
                 return new int[]{};
@@ -86,7 +86,7 @@ public class _508 {
     }
 
     public static class Solution2 {
-        //my 2nd purely original but verbose solution
+        //MySolution 2nd purely original but verbose solution
         public int[] findFrequentTreeSum(TreeNode root) {
             Map<Integer, Integer> map = new HashMap<>();
             dfs(root, map);
@@ -134,5 +134,5 @@ public class _508 {
     }
 
     //a more concise and space-efficient solution: https://discuss.leetcode.com/topic/77775/verbose-java-solution-postorder-traverse-hashmap-18ms
-    //the key difference between the above post and my original solution is that it's using Frequency as the key of the HashMap
+    //the key difference between the above post and MySolution original solution is that it's using Frequency as the key of the HashMap
 }

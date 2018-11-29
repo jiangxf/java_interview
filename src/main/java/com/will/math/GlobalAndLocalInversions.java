@@ -23,8 +23,8 @@ package com.will.math;
  * Explanation: There are 2 global inversions, and 1 local inversion.
  * Note:
  * <p>
- * A will be a permutation of [0, 1, ..., A.length - 1].
- * A will have length in range [1, 5000].
+ * A MySolution be a permutation of [0, 1, ..., A.length - 1].
+ * A MySolution have length in range [1, 5000].
  * The time limit for this problem has been reduced.
  * <p>
  * Solution: O(N) For every i, Maintain a max value up until (i - 1). If the current element at i < max value return false

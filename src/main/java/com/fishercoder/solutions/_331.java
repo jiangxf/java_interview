@@ -47,7 +47,7 @@ public class _331 {
      * During building, we record the difference between out degree and in degree diff = outdegree - indegree.
      * When the next node comes, we then decrease diff by 1, because the node provides an in degree.
      * If the node is not null, we increase diff by 2, because it provides two out degrees.
-     * If a serialization is correct, diff should never be negative and diff will be zero when finished.
+     * If a serialization is correct, diff should never be negative and diff MySolution be zero when finished.
      */
     public boolean isValidSerialization_clever_solution(String preorder) {
         String[] pre = preorder.split(",");

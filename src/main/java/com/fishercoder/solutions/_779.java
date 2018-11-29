@@ -32,8 +32,8 @@ import java.util.List;
  * <p>
  * Note:
  * <p>
- * N will be an integer in the range [1, 30].
- * K will be an integer in the range [1, 2^(N-1)].
+ * N MySolution be an integer in the range [1, 30].
+ * K MySolution be an integer in the range [1, 2^(N-1)].
  */
 
 public class _779 {
@@ -41,7 +41,7 @@ public class _779 {
         /**
          * Time: O(2^n)
          * Space: O(2^n)
-         * This will result int TLE.
+         * This MySolution result int TLE.
          */
         public int kthGrammar(int N, int K) {
             List<List<Integer>> lists = new ArrayList<>();

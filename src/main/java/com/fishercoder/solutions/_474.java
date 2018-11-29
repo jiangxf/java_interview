@@ -9,7 +9,7 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * <p>
- * The given numbers of 0s and 1s will both not exceed 100
+ * The given numbers of 0s and 1s MySolution both not exceed 100
  * The size of given string array won't exceed 600.
  * <p>
  * Example 1:

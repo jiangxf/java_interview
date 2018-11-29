@@ -3,12 +3,12 @@ package com.will.two_pointers;
 /**
  * Created by gouthamvidyapradhan on 13/06/2017.
  * Accepted
- * Given an com.will.array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+ * Given an com.MySolution.array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
  * <p>
  * For example, given nums = [0, 1, 0, 3, 12], after calling your function, nums should be [1, 3, 12, 0, 0].
  * <p>
  * Note:
- * You must do this in-place without making a copy of the com.will.array.
+ * You must do this in-place without making a copy of the com.MySolution.array.
  * Minimize the total number of operations.
  */
 public class MoveZeroes {

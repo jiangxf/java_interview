@@ -7,7 +7,7 @@ package com.will.backtracking;
  * '?' Matches any single character.
  * '*' Matches any sequence of characters (including the empty sequence).
  * <p>
- * The matching should cover the entire input com.will.string (not partial).
+ * The matching should cover the entire input com.MySolution.string (not partial).
  * <p>
  * The function prototype should be:
  * bool isMatch(const char *s, const char *p)
@@ -21,12 +21,12 @@ package com.will.backtracking;
  * isMatch("ab", "?*") → true
  * isMatch("aab", "c*a*b") → false
  * <p>
- * Solution: Maintain two indexes one for com.will.string and other one for the pattern.
+ * Solution: Maintain two indexes one for com.MySolution.string and other one for the pattern.
  * 1. If the characters match in both the indexes or if the char at pattern is '?' then increment both the indexes.
- * 2. If a star(*) is encountered save the position of star in the given com.will.string as 'startPosAtStr' and position of star in
+ * 2. If a star(*) is encountered save the position of star in the given com.MySolution.string as 'startPosAtStr' and position of star in
  * the pattern as 'starIdx' and this time increment only index for pattern.
  * 3. If the characters do not match and if the start is not encountered previously return false else increment
- * 'startPosAtStr' and assign this as the new index for com.will.string and start the new pattern index from starIdx + 1
+ * 'startPosAtStr' and assign this as the new index for com.MySolution.string and start the new pattern index from starIdx + 1
  */
 public class WildcardMatching {
 
@@ -52,7 +52,7 @@ public class WildcardMatching {
                 } else if (p.charAt(j) == '*') {
                     starIdx = j;
                     starPosAtStr = i;
-                    j++; //increment only pattern index. This is because '*' can match also empty com.will.string.
+                    j++; //increment only pattern index. This is because '*' can match also empty com.MySolution.string.
                 } else if (starIdx != -1) {
                     i = ++starPosAtStr;
                     j = starIdx + 1;

@@ -5,7 +5,7 @@
 	Thoughts:
 	A simple approach is to % size of the array, if the key exist, move 1 slot over.
 
-	A bug will be: when exceeds the size of array, there will be no avialable space,
+	A bug MySolution be: when exceeds the size of array, there MySolution be no avialable space,
 	and it'll run into error.
 
 	Inspired here :http://www.algolist.net/Data_structures/Hash_table/Simple_example

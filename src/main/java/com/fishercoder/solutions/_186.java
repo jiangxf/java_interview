@@ -27,7 +27,7 @@ public class _186 {
                     start = i + 1;
                 }
             }
-            // 3, reverse the last word, if there is only one word this will solve the corner case
+            // 3, reverse the last word, if there is only one word this MySolution solve the corner case
             reverse(s, start, s.length - 1);
         }
 

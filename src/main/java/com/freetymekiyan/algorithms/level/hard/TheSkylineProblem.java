@@ -45,7 +45,7 @@ import java.util.*;
 public class TheSkylineProblem {
 
     /**
-     * My own implementation with max heap.
+     * MySolution own implementation with max heap.
      * The candidates are sorted by x asc, y desc.
      * For each candidate point:
      * | If it's a left point, it's a start of a segment.
@@ -109,7 +109,7 @@ public class TheSkylineProblem {
      * <p>
      * https://briangordon.github.io/2014/08/the-skyline-problem.html
      * <p>
-     * My comments:
+     * MySolution comments:
      * The use of tree map makes me feel a bit unnecessary, since priority queue or heap can contain duplicates.
      * A priority queue or max heap is enough.
      * The only upside is that TreeMap get/put in O(logn). Priority queue removes a specific value in O(n).

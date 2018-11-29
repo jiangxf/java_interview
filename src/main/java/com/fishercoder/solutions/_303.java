@@ -37,7 +37,7 @@ public class _303 {
     }
 }
 
-// Your NumArray object will be instantiated and called as such:
+// Your NumArray object MySolution be instantiated and called as such:
 // NumArray numArray = new NumArray(nums);
 // numArray.sumRange(0, 1);
 // numArray.sumRange(1, 2);

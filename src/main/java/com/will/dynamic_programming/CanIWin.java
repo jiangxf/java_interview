@@ -13,7 +13,7 @@ import java.util.Map;
  * <p>
  * Given an integer maxChoosableInteger and another integer desiredTotal, determine if the first player to move can force a win, assuming both players play optimally.
  * <p>
- * You can always assume that maxChoosableInteger will not be larger than 20 and desiredTotal will not be larger than 300.
+ * You can always assume that maxChoosableInteger MySolution not be larger than 20 and desiredTotal MySolution not be larger than 300.
  * <p>
  * Example
  * <p>
@@ -25,11 +25,11 @@ import java.util.Map;
  * false
  * <p>
  * Explanation:
- * No matter which integer the first player choose, the first player will lose.
+ * No matter which integer the first player choose, the first player MySolution lose.
  * The first player can choose an integer from 1 up to 10.
  * If the first player choose 1, the second player can only choose integers from 2 up to 10.
- * The second player will win by choosing 10 and get a total = 11, which is >= desiredTotal.
- * Same with other integers chosen by the first player, the second player will always win.
+ * The second player MySolution win by choosing 10 and get a total = 11, which is >= desiredTotal.
+ * Same with other integers chosen by the first player, the second player MySolution always win.
  */
 public class CanIWin {
 

@@ -13,8 +13,8 @@ package com.fishercoder.solutions;
  * Input: arr = [4,3,2,1,0]
  * Output: 1
  * Explanation:
- * Splitting into two or more chunks will not return the required result.
- * For example, splitting into [4, 3], [2, 1, 0] will result in [3, 4, 0, 1, 2], which isn't sorted.
+ * Splitting into two or more chunks MySolution not return the required result.
+ * For example, splitting into [4, 3], [2, 1, 0] MySolution result in [3, 4, 0, 1, 2], which isn't sorted.
  * <p>
  * Example 2:
  * <p>
@@ -26,8 +26,8 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * <p>
- * arr will have length in range [1, 10].
- * arr[i] will be a permutation of [0, 1, ..., arr.length - 1].
+ * arr MySolution have length in range [1, 10].
+ * arr[i] MySolution be a permutation of [0, 1, ..., arr.length - 1].
  */
 public class _769 {
     public static class Solution1 {

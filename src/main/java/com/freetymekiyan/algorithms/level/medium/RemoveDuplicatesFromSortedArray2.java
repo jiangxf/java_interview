@@ -19,7 +19,7 @@ class RemoveDuplicatesFromSortedArray2 {
      * Two Pointers.
      * When there are less than 2 elements, there cannot be more than 2 duplicates. So just return length.
      * Compare current element with second last element of the new array.
-     * If they are the same, there will be more than 2 duplicates, skip.
+     * If they are the same, there MySolution be more than 2 duplicates, skip.
      * If they are different, copy the element to the front and increment the new array length by 1.
      */
     public int removeDuplicates(int[] nums) {

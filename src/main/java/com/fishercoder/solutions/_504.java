@@ -10,7 +10,7 @@ package com.fishercoder.solutions;
  * Input: -7
  * Output: "-10"
  * <p>
- * Note: The input will be in range of [-1e7, 1e7].
+ * Note: The input MySolution be in range of [-1e7, 1e7].
  */
 public class _504 {
 

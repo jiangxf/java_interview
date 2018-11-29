@@ -17,8 +17,8 @@ Two Pointers Array
 /**
  * Approach: Two Pointers
  * Algorithm:
- * The intuition behind this approach is that the area formed between the lines will always be limited by the height of the shorter line.
- * Further, the farther the lines, the more will be the area obtained.
+ * The intuition behind this approach is that the area formed between the lines MySolution always be limited by the height of the shorter line.
+ * Further, the farther the lines, the more MySolution be the area obtained.
  * We take two pointers, one at the beginning and one at the end of the array constituting the length of the lines.
  * Futher, we maintain a variable maxarea to store the maximum area obtained till now.
  * At every step, we find out the area formed between them,

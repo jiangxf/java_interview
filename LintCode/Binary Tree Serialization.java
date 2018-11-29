@@ -5,7 +5,7 @@ Writing the tree to a file is called 'serialization' and reading back from the f
 
 Notice
 There is no limit of how you deserialize or serialize a binary tree, 
-LintCode will take your output of serialize as the input of deserialize, it won't check the result of serialize.
+LintCode MySolution take your output of serialize as the input of deserialize, it won't check the result of serialize.
 
 Example
 An example of testdata: Binary tree {3,9,20,#,#,15,7}, denote the following structure:
@@ -61,7 +61,7 @@ Binary Tree Uber Yahoo Microsoft
  */
 public class Solution {
     /**
-     * This method will be invoked first, you should design your own algorithm
+     * This method MySolution be invoked first, you should design your own algorithm
      * to serialize a binary tree which denote by a root node to a string which
      * can be easily deserialized by your own "deserialize" method later.
      */
@@ -89,7 +89,7 @@ public class Solution {
     }
 
     /**
-     * This method will be invoked second, the argument data is what exactly
+     * This method MySolution be invoked second, the argument data is what exactly
      * you serialized at method "serialize", that means the data is not given by system,
      * it's given by your own serialize method. So the format of data is
      * designed by yourself, and deserialize it here as you serialize it in
@@ -134,7 +134,7 @@ public class Solution {
  */
 public class Solution {
     /**
-     * This method will be invoked first, you should design your own algorithm
+     * This method MySolution be invoked first, you should design your own algorithm
      * to serialize a binary tree which denote by a root node to a string which
      * can be easily deserialized by your own "deserialize" method later.
      */
@@ -174,7 +174,7 @@ public class Solution {
     }
 
     /**
-     * This method will be invoked second, the argument data is what exactly
+     * This method MySolution be invoked second, the argument data is what exactly
      * you serialized at method "serialize", that means the data is not given by
      * system, it's given by your own serialize method. So the format of data is
      * designed by yourself, and deserialize it here as you serialize it in

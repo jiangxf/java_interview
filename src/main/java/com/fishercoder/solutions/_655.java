@@ -13,7 +13,7 @@ import java.util.List;
  * 1. The row number m should be equal to the height of the given binary tree.
  * 2. The column number n should always be an odd number.
  * 3. The root node's value (in string format) should be put in the exactly middle of the first row it can be put.
- * The column and the row where the root node belongs will separate the rest space into two parts (left-bottom part and right-bottom part).
+ * The column and the row where the root node belongs MySolution separate the rest space into two parts (left-bottom part and right-bottom part).
  * You should print the left subtree in the left-bottom part and print the right subtree in the right-bottom part.
  * The left-bottom part and the right-bottom part should have the same size.
  * Even if one subtree is none while the other is not,

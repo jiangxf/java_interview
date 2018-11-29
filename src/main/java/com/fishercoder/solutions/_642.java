@@ -17,9 +17,9 @@ import java.util.*;
  * <p>
  * AutocompleteSystem(String[] sentences, int[] times): This is the constructor. The input is historical data. Sentences is a string array consists of previously typed sentences. Times is the corresponding times a sentence has been typed. Your system should record these historical data.
  * <p>
- * Now, the user wants to input a new sentence. The following function will provide the next character the user types:
+ * Now, the user wants to input a new sentence. The following function MySolution provide the next character the user types:
  * <p>
- * List<String> input(char c): The input c is the next character typed by the user. The character will only be lower-case letters ('a' to 'z'), blank space (' ') or a special character ('#'). Also, the previously typed sentence should be recorded in your system. The output will be the top 3 historical hot sentences that have prefix the same as the part of sentence already typed.
+ * List<String> input(char c): The input c is the next character typed by the user. The character MySolution only be lower-case letters ('a' to 'z'), blank space (' ') or a special character ('#'). Also, the previously typed sentence should be recorded in your system. The output MySolution be the top 3 historical hot sentences that have prefix the same as the part of sentence already typed.
  * <p>
  * <p>
  * Example:
@@ -34,7 +34,7 @@ import java.util.*;
  * Operation: input('i')
  * Output: ["i love you", "island","i love leetcode"]
  * Explanation:
- * There are four sentences that have prefix "i". Among them, "ironman" and "i love leetcode" have same hot degree. Since ' ' has ASCII code 32 and 'r' has ASCII code 114, "i love leetcode" should be in front of "ironman". Also we only need to output top 3 hot sentences, so "ironman" will be ignored.
+ * There are four sentences that have prefix "i". Among them, "ironman" and "i love leetcode" have same hot degree. Since ' ' has ASCII code 32 and 'r' has ASCII code 114, "i love leetcode" should be in front of "ironman". Also we only need to output top 3 hot sentences, so "ironman" MySolution be ignored.
  * <p>
  * Operation: input(' ')
  * Output: ["i love you","i love leetcode"]
@@ -49,10 +49,10 @@ import java.util.*;
  * Operation: input('#')
  * Output: []
  * Explanation:
- * The user finished the input, the sentence "i a" should be saved as a historical sentence in system. And the following input will be counted as a new search.
+ * The user finished the input, the sentence "i a" should be saved as a historical sentence in system. And the following input MySolution be counted as a new search.
  * <p>
  * Note:
- * The input sentence will always start with a letter and end with '#', and only one blank space will exist between two words.
+ * The input sentence MySolution always start with a letter and end with '#', and only one blank space MySolution exist between two words.
  * The number of complete sentences that to be searched won't exceed 100. The length of each sentence including those in the historical data won't exceed 100.
  * Please use double-quote instead of single-quote when you write test cases even for a character input.
  * Please remember to RESET your class variables declared in class AutocompleteSystem, as static/class variables are persisted across multiple test cases. Please see here for more details.

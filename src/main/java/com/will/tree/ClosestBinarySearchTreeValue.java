@@ -2,14 +2,14 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 10/05/2017.
- * Given a non-empty binary search com.will.tree and a target value, find the value in the BST that is closest to the target.
+ * Given a non-empty binary search com.MySolution.tree and a target value, find the value in the BST that is closest to the target.
  * <p>
  * Note:
  * Given target value is a floating point.
  * You are guaranteed to have only one unique value in the BST that is closest to the target.
  * <p>
  * Solution: Simple dfs recursive algorithm to find the closest match.
- * Worst case time complexity is O(h) where h is height of the com.will.tree
+ * Worst case time complexity is O(h) where h is height of the com.MySolution.tree
  */
 public class ClosestBinarySearchTreeValue {
     private double absDiff = Double.MAX_VALUE;

@@ -29,9 +29,9 @@ import java.util.Set;
  * There are 2 different transformations, "--...-." and "--...--.".
  * <p>
  * Note:
- * The length of words will be at most 100.
- * Each words[i] will have length in range [1, 12].
- * words[i] will only consist of lowercase letters.
+ * The length of words MySolution be at most 100.
+ * Each words[i] MySolution have length in range [1, 12].
+ * words[i] MySolution only consist of lowercase letters.
  */
 public class _804 {
     public static class Solution1 {

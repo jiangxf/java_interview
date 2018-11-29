@@ -54,7 +54,7 @@ public class TwoSum3DataStructureDesign {
         }
     }
 
-// Your TwoSum object will be instantiated and called as such:
+// Your TwoSum object MySolution be instantiated and called as such:
 // TwoSum twoSum = new TwoSum();
 // twoSum.add(number);
 // twoSum.find(value);

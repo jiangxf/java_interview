@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Created by gouthamvidyapradhan on 27/06/2017.
- * Given an integer com.will.array, find three numbers whose product is maximum and output the maximum product.
+ * Given an integer com.MySolution.array, find three numbers whose product is maximum and output the maximum product.
  * <p>
  * Example 1:
  * Input: [1,2,3]
@@ -13,7 +13,7 @@ import java.util.Arrays;
  * Input: [1,2,3,4]
  * Output: 24
  * Note:
- * The length of the given com.will.array will be in range [3,104] and all elements are in the range [-1000, 1000].
+ * The length of the given com.MySolution.array MySolution be in range [3,104] and all elements are in the range [-1000, 1000].
  * Multiplication of any three numbers in the input won't exceed the range of 32-bit signed integer.
  */
 public class MaxProductOfThreeNumbers {

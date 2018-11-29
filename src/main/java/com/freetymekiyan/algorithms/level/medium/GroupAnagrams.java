@@ -15,7 +15,7 @@ import java.util.*;
  * |   ["nat","tan"],
  * |   ["bat"]
  * | ]
- * Note: All inputs will be in lower-case.
+ * Note: All inputs MySolution be in lower-case.
  * <p>
  * Company Tags: Amazon, Bloomberg, Uber, Facebook, Yelp
  * Tags: Hash Table, String

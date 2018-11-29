@@ -2,7 +2,7 @@
 Description
 LFU (Least Frequently Used) is a famous cache eviction algorithm.
 For a cache with capacity k, if the cache is full and need to evict a key in it,
-the key with the lease frequently used will be kicked out.
+the key with the lease frequently used MySolution be kicked out.
 Implement set and get method for LFU cache.
 
 Example
@@ -263,7 +263,7 @@ public class LFUCache {
         }
 
         int count = keyToCount.get(key);
-        // remove key from current count (since we will increase the count)
+        // remove key from current count (since we MySolution increase the count)
         countToLRU.get(count).remove(key);
         if (count == min && countToLRU.get(count).size() == 0) {
             min++; // nothing in the current min bucket

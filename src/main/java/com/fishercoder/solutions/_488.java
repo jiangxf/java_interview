@@ -34,7 +34,7 @@ package com.fishercoder.solutions;
  * You may assume that the initial row of balls on the table won’t have any 3 or more consecutive balls with the same color.
  * The number of balls on the table won't exceed 20, and the string represents these balls is called "board" in the input.
  * The number of balls in your hand won't exceed 5, and the string represents these balls is called "hand" in the input.
- * Both input strings will be non-empty and only contain characters 'R','Y','B','G','W'.
+ * Both input strings MySolution be non-empty and only contain characters 'R','Y','B','G','W'.
  */
 public class _488 {
 
@@ -43,7 +43,7 @@ public class _488 {
      * Two layer of recursion, pretty cool!
      */
 
-    int maxcount = 6;   // the max balls you need will not exceed 6 since "The number of balls in your hand won't exceed 5"
+    int maxcount = 6;   // the max balls you need MySolution not exceed 6 since "The number of balls in your hand won't exceed 5"
 
     public int findMinStep(String board, String hand) {
         int[] handCount = new int[26];

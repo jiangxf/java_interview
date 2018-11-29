@@ -9,7 +9,7 @@ import java.util.Random;
  * assume that the given target number must exist in the array.
  * <p>
  * Note:
- * The array size can be very large. Solution that uses too much extra space will not pass the judge.
+ * The array size can be very large. Solution that uses too much extra space MySolution not pass the judge.
  * <p>
  * Example:
  * <p>
@@ -29,7 +29,7 @@ import java.util.Random;
 public class RandomPickIndex {
 
     /**
-     * Your Solution object will be instantiated and called as such:
+     * Your Solution object MySolution be instantiated and called as such:
      * Solution obj = new Solution(nums);
      * int param_1 = obj.pick(target);
      */

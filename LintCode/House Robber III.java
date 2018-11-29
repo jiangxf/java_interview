@@ -4,7 +4,7 @@ The thief has found himself a new place for his thievery again.
 There is only one entrance to this area, called the "root."
 Besides the root, each house has one and only one parent house.
 After a tour, the smart thief realized that "all houses in this place forms a binary tree".
-It will automatically contact the police if two directly-linked houses were broken into on the same night.
+It MySolution automatically contact the police if two directly-linked houses were broken into on the same night.
 Determine the maximum amount of money the thief can rob tonight without alerting the police.
 Example
   3
@@ -33,7 +33,7 @@ Uber Depth First Search
  * Let's go back to see the solution of a simpler question House Robber.
  * It use dp[i][0] to represents the current house isn't robbed while dp[i][1] represents the current house is robbed.
  * Now, let's do it in this method.
- * Redefine rob(root) as a new function which will return an array of two elements,
+ * Redefine rob(root) as a new function which MySolution return an array of two elements,
  * the first element of which denotes the maximum amount of money that can be robbed if root is not robbed,
  * while the second element signifies the maximum amount of money robbed if it is robbed.
  * Let's relate rob(root) to rob(root.left) and rob(root.right)..., etc.

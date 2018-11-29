@@ -2,7 +2,7 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 13/12/2017.
- * Find the sum of all left leaves in a given binary com.will.tree.
+ * Find the sum of all left leaves in a given binary com.MySolution.tree.
  * <p>
  * Example:
  * <p>
@@ -12,7 +12,7 @@ package com.will.tree;
  * /  \
  * 15   7
  * <p>
- * There are two left leaves in the binary com.will.tree, with values 9 and 15 respectively. Return 24.
+ * There are two left leaves in the binary com.MySolution.tree, with values 9 and 15 respectively. Return 24.
  */
 public class SumofLeftLeaves {
 

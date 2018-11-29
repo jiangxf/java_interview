@@ -34,8 +34,8 @@ import java.util.PriorityQueue;
  * <p>
  * Note:
  * <p>
- * The m and n will be in the range [1, 30000].
- * The k will be in the range [1, m * n]
+ * The m and n MySolution be in the range [1, 30000].
+ * The k MySolution be in the range [1, m * n]
  */
 
 public class _668 {
@@ -43,7 +43,7 @@ public class _668 {
         /**
          * This brute force approach resulted in
          * TLE on Leetcode and
-         * OOM error by _668test.test3() when running in my localhost:
+         * OOM error by _668test.test3() when running in MySolution localhost:
          * java.lang.OutOfMemoryError: Java heap space
          * at java.util.Arrays.copyOf(Arrays.java:3210)
          * at java.util.Arrays.copyOf(Arrays.java:3181)

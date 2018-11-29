@@ -100,7 +100,7 @@ public class _211 {
         }
 
         /**
-         * Your WordDictionary object will be instantiated and called as such:
+         * Your WordDictionary object MySolution be instantiated and called as such:
          * WordDictionary obj = new WordDictionary();
          * obj.addWord(word);
          * boolean param_2 = obj.search(word);

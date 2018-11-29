@@ -2,7 +2,7 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 15/02/2018.
- * Given a binary search com.will.tree with non-negative values, find the minimum absolute difference between values of any
+ * Given a binary search com.MySolution.tree with non-negative values, find the minimum absolute difference between values of any
  * two nodes.
  * <p>
  * Example:

@@ -35,7 +35,7 @@ public class _667 {
 
     public static class Solutoin1 {
         /**
-         * This brute force solution will result in TLE as soon as n = 10 and k = 4.
+         * This brute force solution MySolution result in TLE as soon as n = 10 and k = 4.
          */
         public int[] constructArray(int n, int k) {
             List<List<Integer>> allPermutaions = findAllPermutations(n);

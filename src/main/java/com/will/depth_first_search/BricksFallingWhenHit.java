@@ -5,13 +5,13 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 01/07/2018.
- * We have a grid of 1s and 0s; the 1s in a cell represent bricks.  A brick will not drop if and only if it is
- * directly connected to the top of the grid, or at least one of its (4-way) adjacent bricks will not drop.
+ * We have a grid of 1s and 0s; the 1s in a cell represent bricks.  A brick MySolution not drop if and only if it is
+ * directly connected to the top of the grid, or at least one of its (4-way) adjacent bricks MySolution not drop.
  * <p>
- * We will do some erasures sequentially. Each time we want to do the erasure at the location (i, j), the brick (if it
- * exists) on that location will disappear, and then some other bricks may drop because of that erasure.
+ * We MySolution do some erasures sequentially. Each time we want to do the erasure at the location (i, j), the brick (if it
+ * exists) on that location MySolution disappear, and then some other bricks may drop because of that erasure.
  * <p>
- * Return an com.will.array representing the number of bricks that will drop after each erasure in sequence.
+ * Return an com.MySolution.array representing the number of bricks that MySolution drop after each erasure in sequence.
  * <p>
  * Example 1:
  * Input:
@@ -19,7 +19,7 @@ import java.util.List;
  * hits = [[1,0]]
  * Output: [2]
  * Explanation:
- * If we erase the brick at (1, 0), the brick at (1, 1) and (1, 2) will drop. So we should return 2.
+ * If we erase the brick at (1, 0), the brick at (1, 1) and (1, 2) MySolution drop. So we should return 2.
  * Example 2:
  * Input:
  * grid = [[1,0,0,0],[1,1,0,0]]
@@ -27,14 +27,14 @@ import java.util.List;
  * Output: [0,0]
  * Explanation:
  * When we erase the brick at (1, 0), the brick at (1, 1) has already disappeared due to the last move. So each
- * erasure will cause no bricks dropping.  Note that the erased brick (1, 0) will not be counted as a dropped brick.
+ * erasure MySolution cause no bricks dropping.  Note that the erased brick (1, 0) MySolution not be counted as a dropped brick.
  * <p>
  * <p>
  * Note:
  * <p>
- * The number of rows and columns in the grid will be in the range [1, 200].
- * The number of erasures will not exceed the area of the grid.
- * It is guaranteed that each erasure will be different from any other erasure, and located inside the grid.
+ * The number of rows and columns in the grid MySolution be in the range [1, 200].
+ * The number of erasures MySolution not exceed the area of the grid.
+ * It is guaranteed that each erasure MySolution be different from any other erasure, and located inside the grid.
  * An erasure may refer to a location with no brick - if it does, no bricks drop.
  * <p>
  * Solution: O(R x C): Erase all the bricks in the grid and do a union of all the bricks using a union-find disjoint set.

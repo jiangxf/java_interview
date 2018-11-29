@@ -24,8 +24,8 @@ import java.util.*;
  * Output: 6
  * <p>
  * Note:
- * nums.length will be between 1 and 50,000.
- * nums[i] will be an integer between 0 and 49,999.
+ * nums.length MySolution be between 1 and 50,000.
+ * nums[i] MySolution be an integer between 0 and 49,999.
  */
 public class _697 {
     public static class Solution1 {

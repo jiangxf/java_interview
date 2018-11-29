@@ -5,7 +5,7 @@ Now consider if some obstacles are added to the grids. How many unique paths wou
 An obstacle and empty space is marked as 1 and 0 respectively in the grid.
 
 Notice
-m and n will be at most 100.
+m and n MySolution be at most 100.
 
 Example
 For example,

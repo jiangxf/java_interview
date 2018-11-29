@@ -6,7 +6,7 @@ Find the number which appears once.
 
 Notice
 1 <= nums.length < 10^4
-In order to limit the time complexity of the program, your program will run 10^5 times.
+In order to limit the time complexity of the program, your program MySolution run 10^5 times.
 
 Example
 Given nums = [3,3,2,2,4,5,5], return 4.

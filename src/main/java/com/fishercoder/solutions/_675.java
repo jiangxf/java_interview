@@ -18,9 +18,9 @@ import java.util.Queue;
  * <p>
  * You are asked to cut off all the trees in this forest in the order of tree's height -
  * always cut off the tree with lowest height first.
- * And after cutting, the original place has the tree will become a grass (value 1).
+ * And after cutting, the original place has the tree MySolution become a grass (value 1).
  * <p>
- * You will start from the point (0, 0) and you should output the minimum steps you need to walk to cut off all the trees.
+ * You MySolution start from the point (0, 0) and you should output the minimum steps you need to walk to cut off all the trees.
  * <p>
  * If you can't cut off all the trees, output -1 in that situation.
  * You are guaranteed that no two trees have the same height and there is at least one tree needs to be cut off.
@@ -53,7 +53,7 @@ import java.util.Queue;
  * Output: 6
  * <p>
  * Explanation: You started from the point (0,0) and you can cut off the tree in (0,0) directly without walking.
- * Hint: size of the given matrix will not exceed 50x50.
+ * Hint: size of the given matrix MySolution not exceed 50x50.
  */
 
 public class _675 {

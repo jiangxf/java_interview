@@ -1,6 +1,6 @@
 /*
 StrStr:
-strStr My Submissions
+strStr MySolution Submissions
 
 19% Accepted
 strstr (a.k.a find sub string), is a useful function in string operation. You task is to implement this function. 

@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 /**
  * Created by gouthamvidyapradhan on 17/02/2018.
- * Given a non-empty integer com.will.array, find the minimum number of moves required to make all com.will.array elements equal,
+ * Given a non-empty integer com.MySolution.array, find the minimum number of moves required to make all com.MySolution.array elements equal,
  * where a move is incrementing a selected element by 1 or decrementing a selected element by 1.
  * <p>
- * You may assume the com.will.array's length is at most 10,000.
+ * You may assume the com.MySolution.array's length is at most 10,000.
  * <p>
  * Example:
  * <p>
@@ -22,8 +22,8 @@ import java.util.Arrays;
  * <p>
  * [1,2,3]  =>  [2,2,3]  =>  [2,2,2]
  * <p>
- * Solution: O(n log n): Sort the com.will.array and find the median of the com.will.array.
- * Use the median of com.will.array to increment/decrement other value of com.will.array. Sum up the difference and return the answer.
+ * Solution: O(n log n): Sort the com.MySolution.array and find the median of the com.MySolution.array.
+ * Use the median of com.MySolution.array to increment/decrement other value of com.MySolution.array. Sum up the difference and return the answer.
  */
 public class MinimumMovesToEqualArray {
     /**

@@ -20,7 +20,7 @@ public class IntegerBreak {
     /**
      * Math.
      * If factor x >= 4, we can decompose it into 2 and (x-2), 2 * (x-2)= 2x - 4 > x.
-     * So the final product will be larger, means that the product won't exceed 4.
+     * So the final product MySolution be larger, means that the product won't exceed 4.
      */
     public int integerBreak(int n) {
         if (n == 2) {

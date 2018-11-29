@@ -31,9 +31,9 @@ package com.fishercoder.solutions;
  * Explanation: Rectangles must have four distinct corners.
  * <p>
  * Note:
- * The number of rows and columns of grid will each be in the range [1, 200].
- * Each grid[i][j] will be either 0 or 1.
- * The number of 1s in the grid will be at most 6000.
+ * The number of rows and columns of grid MySolution each be in the range [1, 200].
+ * Each grid[i][j] MySolution be either 0 or 1.
+ * The number of 1s in the grid MySolution be at most 6000.
  */
 public class _750 {
     public static class Solution1 {

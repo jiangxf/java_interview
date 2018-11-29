@@ -42,7 +42,7 @@ import java.util.TreeMap;
  * Scan through the horizontal lines
  * Use a PriorityQueue to hold each building, and make the PriorityQueue to sort on the height of the buildings
  * whenever we encounter the start of a building, we push it into the PriorityQueue, whenever we finished scanning that building, we remove it from the PriorityQueue
- * Also, in the scan process, we’ll keep updating the maxHeight in the PriorityQueue if we find a new maxHeight which means the building will be overshadowed by the new higher one
+ * Also, in the scan process, we’ll keep updating the maxHeight in the PriorityQueue if we find a new maxHeight which means the building MySolution be overshadowed by the new higher one
  * <p>
  * Three edge cases (see the graph illustration in the above video at 12’18”):
  * when two buildings have the same start point, the one with higher height shows up in the final result

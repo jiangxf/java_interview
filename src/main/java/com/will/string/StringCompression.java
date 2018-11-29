@@ -2,13 +2,13 @@ package com.will.string;
 
 /**
  * Created by gouthamvidyapradhan on 12/04/2018.
- * Given an com.will.array of characters, compress it in-place.
+ * Given an com.MySolution.array of characters, compress it in-place.
  * <p>
- * The length after compression must always be smaller than or equal to the original com.will.array.
+ * The length after compression must always be smaller than or equal to the original com.MySolution.array.
  * <p>
- * Every element of the com.will.array should be a character (not int) of length 1.
+ * Every element of the com.MySolution.array should be a character (not int) of length 1.
  * <p>
- * After you are done modifying the input com.will.array in-place, return the new length of the com.will.array.
+ * After you are done modifying the input com.MySolution.array in-place, return the new length of the com.MySolution.array.
  * <p>
  * <p>
  * Follow up:
@@ -20,7 +20,7 @@ package com.will.string;
  * ["a","a","b","b","c","c","c"]
  * <p>
  * Output:
- * Return 6, and the first 6 characters of the input com.will.array should be: ["a","2","b","2","c","3"]
+ * Return 6, and the first 6 characters of the input com.MySolution.array should be: ["a","2","b","2","c","3"]
  * <p>
  * Explanation:
  * "aa" is replaced by "a2". "bb" is replaced by "b2". "ccc" is replaced by "c3".
@@ -29,7 +29,7 @@ package com.will.string;
  * ["a"]
  * <p>
  * Output:
- * Return 1, and the first 1 characters of the input com.will.array should be: ["a"]
+ * Return 1, and the first 1 characters of the input com.MySolution.array should be: ["a"]
  * <p>
  * Explanation:
  * Nothing is replaced.
@@ -38,11 +38,11 @@ package com.will.string;
  * ["a","b","b","b","b","b","b","b","b","b","b","b","b"]
  * <p>
  * Output:
- * Return 4, and the first 4 characters of the input com.will.array should be: ["a","b","1","2"].
+ * Return 4, and the first 4 characters of the input com.MySolution.array should be: ["a","b","1","2"].
  * <p>
  * Explanation:
  * Since the character "a" does not repeat, it is not compressed. "bbbbbbbbbbbb" is replaced by "b12".
- * Notice each digit has it's own entry in the com.will.array.
+ * Notice each digit has it's own entry in the com.MySolution.array.
  * Note:
  * All characters have an ASCII value in [35, 126].
  * 1 <= len(chars) <= 1000.

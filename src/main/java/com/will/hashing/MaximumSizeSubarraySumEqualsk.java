@@ -5,11 +5,11 @@ import java.util.Map;
 
 /**
  * Created by gouthamvidyapradhan on 18/10/2017.
- * Given an com.will.array nums and a target value k, find the maximum length of a subarray that sums to k. If there isn't
+ * Given an com.MySolution.array nums and a target value k, find the maximum length of a subarray that sums to k. If there isn't
  * one, return 0 instead.
  * <p>
  * Note:
- * The sum of the entire nums com.will.array is guaranteed to fit within the 32-bit signed integer range.
+ * The sum of the entire nums com.MySolution.array is guaranteed to fit within the 32-bit signed integer range.
  * <p>
  * Example 1:
  * Given nums = [1, -1, 5, -2, 3], k = 3,

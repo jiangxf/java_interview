@@ -23,7 +23,7 @@ package com.freetymekiyan.algorithms.level.medium;
  * which are both strictly increasing.
  * Note:
  * <p>
- * A, B are arrays with the same length, and that length will be in the range [1, 1000].
+ * A, B are arrays with the same length, and that length MySolution be in the range [1, 1000].
  * A[i], B[i] are integer values in the range [0, 2000].
  * <p>
  * Related Topics: Dynamic Programming

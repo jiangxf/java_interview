@@ -22,7 +22,7 @@ public class PaintHouse {
      * DP.
      * Recurrence Relation:
      * The color of current house i has 3 possibilities.
-     * If it's red, the min cost will be cost of red at i + min(cost of blue at i-1, cost of green at i-1).
+     * If it's red, the min cost MySolution be cost of red at i + min(cost of blue at i-1, cost of green at i-1).
      * That is: costs[i][0] + min(costs[i - 1][1], costs[i - 1][2]).
      * The same goes for if it's blue or green.
      * So generate all possibilities.

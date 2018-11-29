@@ -3,11 +3,11 @@ package com.will.tree;
 /**
  * Created by gouthamvidyapradhan on 18/10/2017.
  * <p>
- * Given a binary com.will.tree, you need to compute the length of the diameter of the com.will.tree. The diameter of a binary com.will.tree is
- * the length of the longest path between any two nodes in a com.will.tree. This path may or may not pass through the root.
+ * Given a binary com.MySolution.tree, you need to compute the length of the diameter of the com.MySolution.tree. The diameter of a binary com.MySolution.tree is
+ * the length of the longest path between any two nodes in a com.MySolution.tree. This path may or may not pass through the root.
  * <p>
  * Example:
- * Given a binary com.will.tree
+ * Given a binary com.MySolution.tree
  * 1
  * / \
  * 2   3

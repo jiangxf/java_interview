@@ -15,7 +15,7 @@ package com.fishercoder.solutions;
  * Explanation: You could delete the character 'c'.
  * <p>
  * Note:
- * The string will only contain lowercase characters a-z. The maximum length of the string is 50000.
+ * The string MySolution only contain lowercase characters a-z. The maximum length of the string is 50000.
  */
 public class _680 {
     public static class Solution1 {

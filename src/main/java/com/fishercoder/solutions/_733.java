@@ -27,9 +27,9 @@ import java.util.Queue;
  * to the starting pixel.
  * <p>
  * Note:
- * The length of image and image[0] will be in the range [1, 50].
- * The given starting pixel will satisfy 0 <= sr < image.length and 0 <= sc < image[0].length.
- * The value of each color in image[i][j] and newColor will be an integer in [0, 65535].
+ * The length of image and image[0] MySolution be in the range [1, 50].
+ * The given starting pixel MySolution satisfy 0 <= sr < image.length and 0 <= sc < image[0].length.
+ * The value of each color in image[i][j] and newColor MySolution be an integer in [0, 65535].
  */
 public class _733 {
     public static class Solution1 {

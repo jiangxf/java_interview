@@ -23,7 +23,7 @@ import java.util.Set;
  * <p>
  * Note:
  * 1 <= n <= 2000.
- * Elements in the given array will be in range [-1,000,000, 1,000,000].
+ * Elements in the given array MySolution be in range [-1,000,000, 1,000,000].
  */
 public class _548 {
 

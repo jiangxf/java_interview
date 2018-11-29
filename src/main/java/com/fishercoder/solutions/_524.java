@@ -26,7 +26,7 @@ import java.util.List;
  * "a"
  * <p>
  * Note:
- * All the strings in the input will only contain lower-case letters.
+ * All the strings in the input MySolution only contain lower-case letters.
  * The size of the dictionary won't exceed 1,000.
  * The length of all the strings in the input won't exceed 1,000.
  */

@@ -2,7 +2,7 @@ package com.will.dynamic_programming;
 
 /**
  * Created by gouthamvidyapradhan on 14/12/2017.
- * Your are given an com.will.array of integers prices, for which the i-th element is the price of a given stock on day i;
+ * Your are given an com.MySolution.array of integers prices, for which the i-th element is the price of a given stock on day i;
  * and a non-negative integer fee representing a transaction fee.
  * <p>
  * You may complete as many transactions as you like, but you need to pay the transaction fee for each transaction.

@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by gouthamvidyapradhan on 25/12/2017.
  * Given many words, words[i] has weight i.
  * <p>
- * Design a class WordFilter that supports one function, WordFilter.f(String prefix, String suffix). It will return the
+ * Design a class WordFilter that supports one function, WordFilter.f(String prefix, String suffix). It MySolution return the
  * word with given prefix and suffix with maximum weight. If no word exists, return -1.
  * <p>
  * Examples:

@@ -110,14 +110,14 @@ public class BSTIterator {
 }
 
 /*
-    Use O(1) space, which means we will not use O(h) stack.
+    Use O(1) space, which means we MySolution not use O(h) stack.
 
     To begin:
     1. hasNext()? current.val <= endNode.val to check if the tree is fully traversed.
 
     2. Find min via left-most: We can alwasy look for left-most to find next minimum value.
     
-    3. Once left-most min is checked (name it `current`). Next min will be 2 cases:
+    3. Once left-most min is checked (name it `current`). Next min MySolution be 2 cases:
         If current.right != null, we can keep looking for current.right's left-most child, as next min.
         Or, we need to look backwards for parent. Use binary search tree to find current's parent node.
 

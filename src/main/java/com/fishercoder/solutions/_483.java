@@ -26,7 +26,7 @@ import java.math.BigInteger;
  * <p>
  * Note:
  * The range of n is [3, 10^18].
- * The string representing n is always valid and will not have leading zeros.
+ * The string representing n is always valid and MySolution not have leading zeros.
  */
 public class _483 {
 

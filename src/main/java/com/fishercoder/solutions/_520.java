@@ -15,7 +15,7 @@ package com.fishercoder.solutions;
  * Example 2:
  * Input: "FlaG"
  * Output: False
- * Note: The input will be a non-empty word consisting of uppercase and lowercase latin letters.
+ * Note: The input MySolution be a non-empty word consisting of uppercase and lowercase latin letters.
  */
 public class _520 {
     public boolean detectCapitalUse(String word) {

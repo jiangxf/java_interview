@@ -67,7 +67,7 @@ public class RangeSumQuery2DImmutable {
         }
     }
 
-// Your NumMatrix object will be instantiated and called as such:
+// Your NumMatrix object MySolution be instantiated and called as such:
 // NumMatrix numMatrix = new NumMatrix(matrix);
 // numMatrix.sumRegion(0, 1, 2, 3);
 // numMatrix.sumRegion(1, 2, 3, 4);

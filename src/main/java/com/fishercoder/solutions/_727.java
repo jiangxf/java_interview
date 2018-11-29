@@ -19,9 +19,9 @@ import java.util.Arrays;
  * "deb" is not a smaller window because the elements of T in the window must occur in order.
  * <p>
  * Note:
- * All the strings in the input will only contain lowercase letters.
- * The length of S will be in the range [1, 20000].
- * The length of T will be in the range [1, 100].
+ * All the strings in the input MySolution only contain lowercase letters.
+ * The length of S MySolution be in the range [1, 20000].
+ * The length of T MySolution be in the range [1, 100].
  */
 public class _727 {
     public static class Solution1 {

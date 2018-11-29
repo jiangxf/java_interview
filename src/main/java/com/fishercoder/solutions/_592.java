@@ -32,11 +32,11 @@ import java.util.List;
  * Note:
  * The input string only contains '0' to '9', '/', '+' and '-'. So does the output.
  * Each fraction (input and output) has format ±numerator/denominator.
- * If the first input fraction or the output is positive, then '+' will be omitted.
+ * If the first input fraction or the output is positive, then '+' MySolution be omitted.
  * The input only contains valid irreducible fractions,
- * where the numerator and denominator of each fraction will always be in the range [1,10].
+ * where the numerator and denominator of each fraction MySolution always be in the range [1,10].
  * If the denominator is 1, it means this fraction is actually an integer in a fraction format defined above.
- * The number of given fractions will be in the range [1,10].
+ * The number of given fractions MySolution be in the range [1,10].
  * The numerator and denominator of the final result are guaranteed to be valid and in the range of 32-bit int.
  */
 public class _592 {

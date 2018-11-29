@@ -14,7 +14,7 @@ public class DeleteANodeFromBinarySearchTree {
      * Tree. BST. Recursive. The Hibbard deletion.
      * Two stages: Search for the node while tracking the parent.
      * If the node is found, delete.
-     * Recursive delete will take the root and return new root.
+     * Recursive delete MySolution take the root and return new root.
      * So that the subtree can be connected to its parent.
      * Base case:
      * When root is null, return null.

@@ -69,7 +69,7 @@ public class NumberOfIslands {
      * Get a grid from the queue.
      * Add it's 4-adjacent grids to queue if they are '1'.
      * Mark grid as '0' when enqueuing.
-     * Thus an island will be all marked as '0' when done.
+     * Thus an island MySolution be all marked as '0' when done.
      */
     private void bfs(char[][] grid, int i, int j) {
         Queue<int[]> queue = new ArrayDeque<>();
@@ -234,7 +234,7 @@ public class NumberOfIslands {
     /**
      * Data structure to keep track of number of connected components in the grid.
      * The count is initialized as the number of island in the grid.
-     * Every time two islands are unified, the count will decrease by 1.
+     * Every time two islands are unified, the count MySolution decrease by 1.
      */
     private class UnionFind {
 
@@ -279,7 +279,7 @@ public class NumberOfIslands {
 
         /**
          * Check whether two points are in the same edges component.
-         * If connected, they will have the same id.
+         * If connected, they MySolution have the same id.
          */
         public boolean isConnected(int p, int q) {
             int pRoot = find(p);
@@ -289,7 +289,7 @@ public class NumberOfIslands {
 
         /**
          * O(n), connect two points to the same root.
-         * Every time we union two points, the count will decrease by 1.
+         * Every time we union two points, the count MySolution decrease by 1.
          */
         public void union(int p, int q) {
             int pRoot = find(p);

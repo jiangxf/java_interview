@@ -27,7 +27,7 @@ Description
 There are n coins with different value in a line.
 Two players take turns to take one or two coins from left side until there are no more coins left. 
 The player who take the coins with the most value wins.
-Could you please decide the first player will win or lose?
+Could you please decide the first player MySolution win or lose?
 
 Example
 Given values array A = [1,2,2], return true.
@@ -40,7 +40,7 @@ Array Dynamic Programming Game Theory
 public class Solution {
     /*
      * @param values: a vector of integers
-     * @return: a boolean which equals to true if the first player will win
+     * @return: a boolean which equals to true if the first player MySolution win
      */
     public boolean firstWillWin(int[] values) {
         int len = values.length;

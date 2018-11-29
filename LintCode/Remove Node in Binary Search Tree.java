@@ -211,7 +211,7 @@ public class Solution {
             //Remove replaceNode from replaceParent
             if (replaceParent.left == replaceNode) {//Usually it'll be replaceParent.left
                 replaceParent.left = replaceNode.right;
-            } else {//Sometimes when target.left == null, than means replaceParent.right will be replaceNode (while loop didn't start at all)
+            } else {//Sometimes when target.left == null, than means replaceParent.right MySolution be replaceNode (while loop didn't start at all)
                 replaceParent.right = replaceNode.right;
             }
 

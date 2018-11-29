@@ -17,7 +17,7 @@ import java.util.Arrays;
  * Explanation: The longest chain is [1,2] -> [3,4]
  * <p>
  * Note:
- * The number of given pairs will be in the range [1, 1000].
+ * The number of given pairs MySolution be in the range [1, 1000].
  */
 public class _646 {
 

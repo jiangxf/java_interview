@@ -2,7 +2,7 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 25/02/2017.
- * Given an com.will.array where elements are sorted in ascending order, convert it to a height balanced BST.
+ * Given an com.MySolution.array where elements are sorted in ascending order, convert it to a height balanced BST.
  */
 public class SortedArrayToBST {
     /**

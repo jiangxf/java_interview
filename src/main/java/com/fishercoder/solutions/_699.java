@@ -11,9 +11,9 @@ import java.util.List;
  * square with the left-most point being positions[i][0] and sidelength positions[i][1].
  * The square is dropped with the bottom edge parallel to the number line, and
  * from a higher height than all currently landed squares. We wait for each square to stick before dropping the next.
- * The squares are infinitely sticky on their bottom edge, and will
+ * The squares are infinitely sticky on their bottom edge, and MySolution
  * remain fixed to any positive length surface they touch (either the number line or another square).
- * Squares dropped adjacent to each other will not stick together prematurely.
+ * Squares dropped adjacent to each other MySolution not stick together prematurely.
  * Return a list ans of heights.
  * Each height ans[i] represents the current highest height of any square we have dropped,
  * after dropping squares represented by positions[0], positions[1], ..., positions[i].

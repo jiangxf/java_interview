@@ -9,13 +9,13 @@ import java.util.Arrays;
  * <p>
  * Now, you are given positions of houses and heaters on a horizontal line, find out minimum radius of heaters so that all houses could be covered by those heaters.
  * <p>
- * So, your input will be the positions of houses and heaters seperately, and your expected output will be the minimum radius standard of heaters.
+ * So, your input MySolution be the positions of houses and heaters seperately, and your expected output MySolution be the minimum radius standard of heaters.
  * <p>
  * Note:
- * Numbers of houses and heaters you are given are non-negative and will not exceed 25000.
- * Positions of houses and heaters you are given are non-negative and will not exceed 10^9.
+ * Numbers of houses and heaters you are given are non-negative and MySolution not exceed 25000.
+ * Positions of houses and heaters you are given are non-negative and MySolution not exceed 10^9.
  * As long as a house is in the heaters' warm radius range, it can be warmed.
- * All the heaters follow your radius standard and the warm radius will the same.
+ * All the heaters follow your radius standard and the warm radius MySolution the same.
  * <p>
  * Example 1:
  * Input: [1,2,3],[2]

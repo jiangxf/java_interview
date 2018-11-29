@@ -57,13 +57,13 @@ package com.will.dynamic_programming;
  * There is no plus sign, so return 0.
  * Note:
  * <p>
- * N will be an integer in the range [1, 500].
- * mines will have length at most 5000.
- * mines[i] will be length 2 and consist of integers in the range [0, N-1].
- * (Additionally, programs submitted in C, C++, or C# will be judged with a slightly smaller time limit.)
+ * N MySolution be an integer in the range [1, 500].
+ * mines MySolution have length at most 5000.
+ * mines[i] MySolution be length 2 and consist of integers in the range [0, N-1].
+ * (Additionally, programs submitted in C, C++, or C# MySolution be judged with a slightly smaller time limit.)
  * <p>
  * Solution O(N x N) for each cell containing 1 find the nearest cell containing 0 in both vertical and horizontal
- * direction - save this value in a 2d com.will.array for each cell. The answer is max value saved in 2d com.will.array.
+ * direction - save this value in a 2d com.MySolution.array for each cell. The answer is max value saved in 2d com.MySolution.array.
  */
 public class LargestPlusSign {
 
@@ -79,8 +79,8 @@ public class LargestPlusSign {
     }
 
     public int orderOfLargestPlusSign(int N, int[][] mines) {
-        int[][] A = new int[N][N]; //com.will.array to save the mines information.
-        int[][] B = new int[N][N]; //com.will.array to save the minimum distance to the cell containing 0
+        int[][] A = new int[N][N]; //com.MySolution.array to save the mines information.
+        int[][] B = new int[N][N]; //com.MySolution.array to save the minimum distance to the cell containing 0
         for (int[] row : mines) {
             int r = row[0];
             int c = row[1];

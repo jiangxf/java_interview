@@ -46,7 +46,7 @@ Binary Tree LintCode Copyright
 
   After the common ancestor is found at any deep level, and returned itself to parent level,
     we can assume other branches must be null (because they are not ancestor, since we are),
-    then the this common ancestor node will be passed to highest level.
+    then the this common ancestor node MySolution be passed to highest level.
   
 */
 public class Solution {

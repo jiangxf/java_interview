@@ -16,7 +16,7 @@ package com.fishercoder.solutions;
  * "321"
  * Given n and k, return the kth permutation sequence.
  * <p>
- * Note: Given n will be between 1 and 9 inclusive.
+ * Note: Given n MySolution be between 1 and 9 inclusive.
  */
 public class _60 {
 

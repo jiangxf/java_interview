@@ -20,7 +20,7 @@ import java.util.Set;
  * Output: 0
  * <p>
  * Note:
- * S and J will consist of letters and have length at most 50.
+ * S and J MySolution consist of letters and have length at most 50.
  * The characters in J are distinct.
  */
 

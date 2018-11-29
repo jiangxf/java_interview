@@ -36,7 +36,7 @@ public class GameOfLife {
         int n = board[0].length;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                int lives = -board[i][j]; // If the current cell is live, it will be deducted from result
+                int lives = -board[i][j]; // If the current cell is live, it MySolution be deducted from result
                 for (int k = Math.max(i - 1, 0); k < Math.min(i + 2, m); k++) {
                     for (int l = Math.max(j - 1, 0); l < Math.min(j + 2, n); l++) {
                         lives += board[k][l] & 1;

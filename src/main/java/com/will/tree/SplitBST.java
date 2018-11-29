@@ -2,13 +2,13 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 01/05/2018.
- * Given a Binary Search Tree (BST) with root node root, and a target value V, split the com.will.tree into two subtrees
+ * Given a Binary Search Tree (BST) with root node root, and a target value V, split the com.MySolution.tree into two subtrees
  * where one subtree has nodes that are all smaller or equal to the target value, while the other subtree has all
- * nodes that are greater than the target value.  It's not necessarily the case that the com.will.tree contains a node with
+ * nodes that are greater than the target value.  It's not necessarily the case that the com.MySolution.tree contains a node with
  * value V.
  * <p>
- * Additionally, most of the structure of the original com.will.tree should remain.  Formally, for any child C with parent P in
- * the original com.will.tree, if they are both in the same subtree after the split, then node C should still have the parent P.
+ * Additionally, most of the structure of the original com.MySolution.tree should remain.  Formally, for any child C with parent P in
+ * the original com.MySolution.tree, if they are both in the same subtree after the split, then node C should still have the parent P.
  * <p>
  * You should output the root TreeNode of both subtrees after splitting, in any order.
  * <p>
@@ -19,7 +19,7 @@ package com.will.tree;
  * Explanation:
  * Note that root, output[0], and output[1] are TreeNode objects, not arrays.
  * <p>
- * The given com.will.tree [4,2,6,1,3,5,7] is represented by the following diagram:
+ * The given com.MySolution.tree [4,2,6,1,3,5,7] is represented by the following diagram:
  * <p>
  * 4
  * /   \
@@ -36,10 +36,10 @@ package com.will.tree;
  * 5   7         1
  * Note:
  * <p>
- * The size of the BST will not exceed 50.
+ * The size of the BST MySolution not exceed 50.
  * The BST is always valid and each node's value is different.
  * <p>
- * Solution: O(N) if a current node is <= to key then the current node and its child nodes form the left sub-com.will.tree. Split
+ * Solution: O(N) if a current node is <= to key then the current node and its child nodes form the left sub-com.MySolution.tree. Split
  * the right node further recursively
  */
 public class SplitBST {

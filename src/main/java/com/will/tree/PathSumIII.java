@@ -5,13 +5,13 @@ import java.util.Map;
 
 /**
  * Created by gouthamvidyapradhan on 08/04/2017.
- * You are given a binary com.will.tree in which each node contains an integer value.
+ * You are given a binary com.MySolution.tree in which each node contains an integer value.
  * <p>
  * Find the number of paths that sum to a given value.
  * <p>
  * The path does not need to start or end at the root or a leaf, but it must go downwards (traveling only from parent nodes to child nodes).
  * <p>
- * The com.will.tree has no more than 1,000 nodes and the values are in the range -1,000,000 to 1,000,000.
+ * The com.MySolution.tree has no more than 1,000 nodes and the values are in the range -1,000,000 to 1,000,000.
  * <p>
  * Example:
  * <p>

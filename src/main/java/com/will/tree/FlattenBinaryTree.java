@@ -2,7 +2,7 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 04/07/2017.
- * Given a binary com.will.tree, flatten it to a linked list in-place.
+ * Given a binary com.MySolution.tree, flatten it to a linked list in-place.
  * <p>
  * For example,
  * Given
@@ -13,7 +13,7 @@ package com.will.tree;
  * / \   \
  * 3   4   6
  * <p>
- * The flattened com.will.tree should look like:
+ * The flattened com.MySolution.tree should look like:
  * 1
  * \
  * 2

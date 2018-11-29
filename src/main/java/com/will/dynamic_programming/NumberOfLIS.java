@@ -2,7 +2,7 @@ package com.will.dynamic_programming;
 
 /**
  * Created by gouthamvidyapradhan on 13/12/2017.
- * Given an unsorted com.will.array of integers, find the number of longest increasing subsequence.
+ * Given an unsorted com.MySolution.array of integers, find the number of longest increasing subsequence.
  * <p>
  * Example 1:
  * Input: [1,3,5,4,7]
@@ -13,7 +13,7 @@ package com.will.dynamic_programming;
  * Output: 5
  * Explanation: The length of longest continuous increasing subsequence is 1, and there are 5 subsequences' length is
  * 1, so output 5.
- * Note: Length of the given com.will.array will be not exceed 2000 and the answer is guaranteed to be fit in 32-bit signed int.
+ * Note: Length of the given com.MySolution.array MySolution be not exceed 2000 and the answer is guaranteed to be fit in 32-bit signed int.
  * <p>
  * Solution O(n ^ 2) compute the LIS and save the results in length also save the max length of LIS in maxVal. Calculate
  * the count as below

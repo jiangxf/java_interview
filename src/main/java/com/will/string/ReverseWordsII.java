@@ -2,9 +2,9 @@ package com.will.string;
 
 /**
  * Created by gouthamvidyapradhan on 21/03/2017.
- * Given an input com.will.string, reverse the com.will.string word by word. A word is defined as a sequence of non-space characters.
+ * Given an input com.MySolution.string, reverse the com.MySolution.string word by word. A word is defined as a sequence of non-space characters.
  * <p>
- * The input com.will.string does not contain leading or trailing spaces and the words are always separated by a single space.
+ * The input com.MySolution.string does not contain leading or trailing spaces and the words are always separated by a single space.
  * <p>
  * For example,
  * Given s = "the sky is blue",

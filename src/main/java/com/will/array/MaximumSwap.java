@@ -16,7 +16,7 @@ package com.will.array;
  * Note:
  * The given number is in the range [0, 108]
  * <p>
- * Solution O(n): Create a com.will.array of digit index. Iterate through the digits starting from left and in each iteration
+ * Solution O(n): Create a com.MySolution.array of digit index. Iterate through the digits starting from left and in each iteration
  * check if there is any digit which is greater than the current digit and appearing after the current index, if found
  * then swap and return the new integer.
  */

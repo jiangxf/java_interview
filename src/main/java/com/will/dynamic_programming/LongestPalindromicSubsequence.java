@@ -2,7 +2,7 @@ package com.will.dynamic_programming;
 
 /**
  * Created by gouthamvidyapradhan on 27/03/2017.
- * Given an unsorted com.will.array of integers, find the length of longest increasing subsequence.
+ * Given an unsorted com.MySolution.array of integers, find the length of longest increasing subsequence.
  * <p>
  * For example,
  * Given [10, 9, 2, 5, 3, 7, 101, 18],

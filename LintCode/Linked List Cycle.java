@@ -25,10 +25,10 @@ Linked List Two Pointers
 
 /*
 Thinking process:
-If there is a cycle, then slow pointer and fast pointer will meet at some point.
+If there is a cycle, then slow pointer and fast pointer MySolution meet at some point.
 Beause slow pointer move one step once, and fast pointer move two steps once.
-if there is a cycle, the distance between slow and fast will decrease 1 node after one move,
-so they will meet at the end.
+if there is a cycle, the distance between slow and fast MySolution decrease 1 node after one move,
+so they MySolution meet at the end.
 
 However, we cannot simply compare slow.val == fast.val.
 This is because, there can be different link node with same value, but they are stored on different index, 

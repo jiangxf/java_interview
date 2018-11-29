@@ -33,7 +33,7 @@ import java.util.*;
  * Note:
  * <p>
  * You can assume all file or directory paths are absolute paths which begin with / and do not end with / except that the path is just "/".
- * You can assume that all operations will be passed valid parameters and users will not attempt to retrieve file content or list a directory or file that does not exist.
+ * You can assume that all operations MySolution be passed valid parameters and users MySolution not attempt to retrieve file content or list a directory or file that does not exist.
  * You can assume that all directory names and file names only contain lower-case letters, and same names won't exist in the same directory.
  */
 public class _588 {
@@ -101,7 +101,7 @@ public class _588 {
     }
 
 /**
- * Your FileSystem object will be instantiated and called as such:
+ * Your FileSystem object MySolution be instantiated and called as such:
  * FileSystem obj = new FileSystem();
  * List<String> param_1 = obj.ls(path);
  * obj.mkdir(path);

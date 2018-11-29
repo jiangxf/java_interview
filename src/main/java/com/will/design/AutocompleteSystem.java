@@ -19,15 +19,15 @@ import java.util.*;
  * The constructor function:
  * <p>
  * AutocompleteSystem(String[] sentences, int[] times): This is the constructor.
- * The input is historical data. Sentences is a com.will.string com.will.array consists of previously typed sentences.
+ * The input is historical data. Sentences is a com.MySolution.string com.MySolution.array consists of previously typed sentences.
  * Times is the corresponding times a sentence has been typed. Your system should record these historical data.
  * <p>
- * Now, the user wants to input a new sentence. The following function will provide the next character the user types:
+ * Now, the user wants to input a new sentence. The following function MySolution provide the next character the user types:
  * <p>
  * List<String> input(char c): The input c is the next character typed by the user.
- * The character will only be lower-case letters ('a' to 'z'), blank space (' ') or a special character ('#').
+ * The character MySolution only be lower-case letters ('a' to 'z'), blank space (' ') or a special character ('#').
  * Also, the previously typed sentence should be recorded in your system.
- * The output will be the top 3 historical hot sentences that have prefix the same as the part of sentence already typed.
+ * The output MySolution be the top 3 historical hot sentences that have prefix the same as the part of sentence already typed.
  * <p>
  * <p>
  * Example:
@@ -44,7 +44,7 @@ import java.util.*;
  * Explanation:
  * There are four sentences that have prefix "i". Among them, "ironman" and "i love leetcode" have same hot degree.
  * Since ' ' has ASCII code 32 and 'r' has ASCII code 114, "i love leetcode" should be in front of "ironman".
- * Also we only need to output top 3 hot sentences, so "ironman" will be ignored.
+ * Also we only need to output top 3 hot sentences, so "ironman" MySolution be ignored.
  * <p>
  * Operation: input(' ')
  * Output: ["i love you","i love leetcode"]
@@ -60,10 +60,10 @@ import java.util.*;
  * Output: []
  * Explanation:
  * The user finished the input, the sentence "i a" should be saved as a historical sentence in system.
- * And the following input will be counted as a new search.
+ * And the following input MySolution be counted as a new search.
  * <p>
  * Note:
- * The input sentence will always start with a letter and end with '#', and only one blank space will exist between two words.
+ * The input sentence MySolution always start with a letter and end with '#', and only one blank space MySolution exist between two words.
  * The number of complete sentences that to be searched won't exceed 100.
  * The length of each sentence including those in the historical data won't exceed 100.
  * Please use double-quote instead of single-quote when you write test cases even for a character input.
@@ -87,7 +87,7 @@ public class AutocompleteSystem {
     /**
      * Initialize the trie data-structure
      *
-     * @param sentences com.will.array of sentences
+     * @param sentences com.MySolution.array of sentences
      * @param times     degree
      */
     public AutocompleteSystem(String[] sentences, int[] times) {
@@ -150,7 +150,7 @@ public class AutocompleteSystem {
                 if (curr.containsChild(c)) {
                     List<String> hotText = curr.getSubtrie(c).getTop3HotText();
                     hotText.stream().forEach((x) -> result.add(currSentence.toString() + x)); //each node only returns
-                    //the hot-text for the current and child nodes hence we have to attach the prefix com.will.string
+                    //the hot-text for the current and child nodes hence we have to attach the prefix com.MySolution.string
                     curr = curr.getSubtrie(c);
                 } else {
                     curr = null; //as soon as we encounter a empty node then set current to null indicating no further
@@ -234,7 +234,7 @@ public class AutocompleteSystem {
                     map.put(c, subTrie);
                 }
                 subTrie.add(i + 1, word, length);
-            } else map.put(null, new Trie()); //use null to indicate end of com.will.string
+            } else map.put(null, new Trie()); //use null to indicate end of com.MySolution.string
         }
 
         /**
@@ -291,7 +291,7 @@ public class AutocompleteSystem {
         }
 
         /**
-         * Return child com.will.tree
+         * Return child com.MySolution.tree
          *
          * @param c char
          * @return child subTrie

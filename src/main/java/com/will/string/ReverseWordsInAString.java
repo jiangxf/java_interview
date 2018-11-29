@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 /**
  * Created by gouthamvidyapradhan on 04/07/2017.
- * Given an input com.will.string, reverse the com.will.string word by word.
+ * Given an input com.MySolution.string, reverse the com.MySolution.string word by word.
  * <p>
  * For example,
  * Given s = "the sky is blue",
@@ -15,10 +15,10 @@ import java.util.StringTokenizer;
  * Clarification:
  * What constitutes a word?
  * A sequence of non-space characters constitutes a word.
- * Could the input com.will.string contain leading or trailing spaces?
- * Yes. However, your reversed com.will.string should not contain leading or trailing spaces.
+ * Could the input com.MySolution.string contain leading or trailing spaces?
+ * Yes. However, your reversed com.MySolution.string should not contain leading or trailing spaces.
  * How about multiple spaces between two words?
- * Reduce them to a single space in the reversed com.will.string.
+ * Reduce them to a single space in the reversed com.MySolution.string.
  */
 public class ReverseWordsInAString {
     public static void main(String[] args) throws Exception {

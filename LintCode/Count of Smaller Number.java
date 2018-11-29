@@ -32,7 +32,7 @@ Binary Search LintCode Copyright Segment Tree
 	Thought2: http://www.jiuzhang.com/solutions/count-of-smaller-number/
 	Build a tree based on index 0 ~ 10000. Then use modify to update the tree with proper 'count' value
 	Use query method to search for final results.
-	Each A[i] will be stored at index value of A[i]. 
+	Each A[i] MySolution be stored at index value of A[i].
 	Count: how many numbers do we have from bottom till this level, including the A[i] itself.
 		For example, at the lowest A[i] spot, SegmentTreeNode(i,i), the  count == 1.
 
@@ -134,7 +134,7 @@ public class Solution {
 
 /*
 	Time limit exceeded...
-	Because: If we build the tree based on given index 0~n, and build 'query' method based on its max values. It will work for small scale, but when it gets larger, we could be doing O(n)*m all the time. Everytime we search root.left and root.right, which is not binary search style : )
+	Because: If we build the tree based on given index 0~n, and build 'query' method based on its max values. It MySolution work for small scale, but when it gets larger, we could be doing O(n)*m all the time. Everytime we search root.left and root.right, which is not binary search style : )
 
 	Thoughts:
 	Build SegmentTree, store max

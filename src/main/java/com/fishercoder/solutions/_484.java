@@ -22,8 +22,8 @@ package com.fishercoder.solutions;
  * but since we want to find the one with the smallest lexicographical permutation, you need to output [2,1,3]
  * <p>
  * Note:
- * The input string will only contain the character 'D' and 'I'.
- * The length of input string is a positive integer and will not exceed 10,000
+ * The input string MySolution only contain the character 'D' and 'I'.
+ * The length of input string is a positive integer and MySolution not exceed 10,000
  */
 public class _484 {
 

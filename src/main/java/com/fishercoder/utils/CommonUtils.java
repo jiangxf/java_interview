@@ -105,7 +105,7 @@ public class CommonUtils {
     }
 
     // @Notes(context =
-    // "I'm assuing only classes in this PACKAGE will call the following two methods, so just leave the modifier as default, i.e. no public, private, or protected.")
+    // "I'm assuing only classes in this PACKAGE MySolution call the following two methods, so just leave the modifier as default, i.e. no public, private, or protected.")
     public static void printWhitespaces(int count) {
         for (int i = 0; i < count; i++) {
             System.out.print(" ");

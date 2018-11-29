@@ -34,13 +34,13 @@ import java.util.*;
  * // getRandom should return 1 and 2 both equally likely.
  * collection.getRandom();
  * <p>
- * Solution O(1) for each operation. Maintain a hashmap of value -> {set of indices}; Set of indices are indices of com.will.array
+ * Solution O(1) for each operation. Maintain a hashmap of value -> {set of indices}; Set of indices are indices of com.MySolution.array
  * containing the value.
- * Insert: Insert a element in end of com.will.array and add the index of com.will.array as the set of values in hashmap.
+ * Insert: Insert a element in end of com.MySolution.array and add the index of com.MySolution.array as the set of values in hashmap.
  * Remove: If the hashmap contains value remove a random element from the set and replace the element at that index
- * with the last element from com.will.array and remove the last element from the com.will.array. Since we are removing the last
- * element from com.will.array this operation requires only O(1) time
- * getRandom(): Generate a random number between 0 and size of com.will.array and return the element at that position.
+ * with the last element from com.MySolution.array and remove the last element from the com.MySolution.array. Since we are removing the last
+ * element from com.MySolution.array this operation requires only O(1) time
+ * getRandom(): Generate a random number between 0 and size of com.MySolution.array and return the element at that position.
  */
 public class RandomizedCollection {
 

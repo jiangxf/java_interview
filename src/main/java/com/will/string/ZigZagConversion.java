@@ -6,15 +6,15 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 19/05/2017.
- * The com.will.string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+ * The com.MySolution.string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
  * <p>
  * P   A   H   N
  * A P L S I I G
  * Y   I   R
  * And then read line by line: "PAHNAPLSIIGYIR"
- * Write the code that will take a com.will.string and make this conversion given a number of rows:
+ * Write the code that MySolution take a com.MySolution.string and make this conversion given a number of rows:
  * <p>
- * com.will.string convert(com.will.string text, int nRows);
+ * com.MySolution.string convert(com.MySolution.string text, int nRows);
  * convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
  */
 public class ZigZagConversion {
@@ -30,9 +30,9 @@ public class ZigZagConversion {
     /**
      * Convert and return the result
      *
-     * @param s       input com.will.string
+     * @param s       input com.MySolution.string
      * @param numRows max rows
-     * @return Result com.will.string
+     * @return Result com.MySolution.string
      */
     public String convert(String s, int numRows) {
         if (s == null || s.length() <= numRows || numRows == 1) return s;

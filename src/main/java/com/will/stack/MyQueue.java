@@ -12,9 +12,9 @@ import java.util.Stack;
  * empty() -- Return whether the queue is empty.
  * <p>
  * Notes:
- * You must use only standard operations of a com.will.stack -- which means only push to top, peek/pop from top, size, and is empty operations are valid.
- * Depending on your language, com.will.stack may not be supported natively. You may simulate a com.will.stack by using a list or deque (double-ended queue), as long as you use only standard operations of a com.will.stack.
- * You may assume that all operations are valid (for example, no pop or peek operations will be called on an empty queue).
+ * You must use only standard operations of a com.MySolution.stack -- which means only push to top, peek/pop from top, size, and is empty operations are valid.
+ * Depending on your language, com.MySolution.stack may not be supported natively. You may simulate a com.MySolution.stack by using a list or deque (double-ended queue), as long as you use only standard operations of a com.MySolution.stack.
+ * You may assume that all operations are valid (for example, no pop or peek operations MySolution be called on an empty queue).
  */
 public class MyQueue {
 

@@ -19,7 +19,7 @@ Example
                         6
 Note
 Don't forget to mark the left child of each node to null. 
-Or you will get Time Limit Exceeded or Memory Limit Exceeded.
+Or you MySolution get Time Limit Exceeded or Memory Limit Exceeded.
 
 Challenge
 Do it in-place without any extra memory.

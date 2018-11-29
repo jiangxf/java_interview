@@ -3,7 +3,7 @@ package com.will.two_pointers;
 /**
  * Created by gouthamvidyapradhan on 03/12/2017.
  * <p>
- * Given a com.will.string S and a com.will.string T, find the minimum window in S which will contain all the characters in
+ * Given a com.MySolution.string S and a com.MySolution.string T, find the minimum window in S which MySolution contain all the characters in
  * T in complexity O(n).
  * <p>
  * For example,
@@ -12,9 +12,9 @@ package com.will.two_pointers;
  * Minimum window is "BANC".
  * <p>
  * Note:
- * If there is no such window in S that covers all characters in T, return the empty com.will.string "".
+ * If there is no such window in S that covers all characters in T, return the empty com.MySolution.string "".
  * <p>
- * If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.
+ * If there are multiple such windows, you are guaranteed that there MySolution always be only one unique minimum window in S.
  * <p>
  * Solution O(n). Sliding window sub-sting using two pointers.
  */

@@ -7,7 +7,7 @@ if one of the following is true for the ith position (1 <= i <= N) in this array
 The number at the ith position is divisible by i.
 i is divisible by the number at the ith position.
 Now given N, how many beautiful arrangements can you construct?
-N is a positive integer and will not exceed 15.
+N is a positive integer and MySolution not exceed 15.
 
 Example
 Input: 2

@@ -81,7 +81,7 @@ public class _309 {
     static class solutionWithTheSecondHighestUpvotes {
         /**Surprisingly, this solution is even much faster than the one above provided by the author.*/
         /**
-         * Here I share my no brainer weapon when it comes to this kind of problems.
+         * Here I share MySolution no brainer weapon when it comes to this kind of problems.
          * <p>
          * 1. Define States
          * <p>

@@ -25,7 +25,7 @@ public class _421 {
         int max = 0;
         int mask = 0;
         for (int i = 31; i >= 0; i--) {
-            mask |= (1 << i);//the mask will grow like this: 100...000, 110...000, 111...000 to 111...111, each time, we only get the most left part of all numbers in the given array
+            mask |= (1 << i);//the mask MySolution grow like this: 100...000, 110...000, 111...000 to 111...111, each time, we only get the most left part of all numbers in the given array
             System.out.println("mask = " + Integer.toBinaryString(mask));
             Set<Integer> set = new HashSet<>();
             for (int num : nums) {

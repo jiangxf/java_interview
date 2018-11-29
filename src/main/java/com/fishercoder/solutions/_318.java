@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * 318. Maximum Product of Word Lengths
  * <p>
- * Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case letters. If no such two words exist, return 0.
+ * Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word MySolution contain only lower case letters. If no such two words exist, return 0.
  * <p>
  * Example 1:
  * Given ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]
@@ -69,7 +69,7 @@ public class _318 {
         for (int i = 0; i < words.length; i++) {
             String word = words[i];
             for (int j = 0; j < words[i].length(); j++) {
-                values[i] |= 1 << (word.charAt(j) - 'a');//the reason for left shift by this number "word.charAt(j) -'a'" is for 'a', otherwise 'a' - 'a' will be zero and 'a' will be missed out.
+                values[i] |= 1 << (word.charAt(j) - 'a');//the reason for left shift by this number "word.charAt(j) -'a'" is for 'a', otherwise 'a' - 'a' MySolution be zero and 'a' MySolution be missed out.
             }
         }
         int maxProduct = 0;
@@ -127,7 +127,7 @@ public class _318 {
     }
 
     /**
-     * My natural idea is an O(n^3) algorithm, I thought of Trie, but I don't think it applies well to this question.
+     * MySolution natural idea is an O(n^3) algorithm, I thought of Trie, but I don't think it applies well to this question.
      * This following algorithm made it pass 173/174 test cases, as expected, failed by the last extreme test cases due to TLE.
      */
     public int maxProduct_most_brute_force(String[] words) {

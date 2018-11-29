@@ -17,8 +17,8 @@ package com.freetymekiyan.algorithms.level.medium;
  * Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], what should your return? Is this case a valid tree?
  * According to the definition of tree on Wikipedia: “a tree is an undirected graph in which any two vertices are
  * connected by exactly one path. In other words, any connected graph without simple cycles is a tree.”
- * Note: you can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same
- * as [1, 0] and thus will not appear together in edges.
+ * Note: you can assume that no duplicate edges MySolution appear in edges. Since all edges are undirected, [0, 1] is the same
+ * as [1, 0] and thus MySolution not appear together in edges.
  * <p>
  * Company Tags: Google, Facebook, Zenefits
  * Tags: Depth-first Search, Breadth-first Search, Graph, Union Find
@@ -80,7 +80,7 @@ public class GraphValidTree {
             // Here if we found the child's id are not the same as the parent's.
             // We know the parent can be an intermediate id.
             // So we set parent's id to grand parent's id.
-            // Which will dynamically balance the tree thus reducing O(n) to O(1).
+            // Which MySolution dynamically balance the tree thus reducing O(n) to O(1).
             ids[i] = ids[ids[i]];
             i = ids[i];
         }

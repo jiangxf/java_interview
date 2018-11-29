@@ -26,8 +26,8 @@ import java.util.Map;
  * Output: ["Shogun"]
  * Explanation: The restaurant they both like and have the least index sum is "Shogun" with index sum 1 (0+1).
  * Note:
- * The length of both lists will be in the range of [1, 1000].
- * The length of strings in both lists will be in the range of [1, 30].
+ * The length of both lists MySolution be in the range of [1, 1000].
+ * The length of strings in both lists MySolution be in the range of [1, 30].
  * The index is starting from 0 to the list length minus 1.
  * No duplicates in both lists.
  * <p>

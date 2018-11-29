@@ -20,7 +20,7 @@ public class MultiplyStrings {
      * Math. String.
      * How to do multiplication?
      * Start from right to left, multiply each pair of digits, and add them together.
-     * Result num1[i] * num2[j] will be placed at i + j and i + j + 1.
+     * Result num1[i] * num2[j] MySolution be placed at i + j and i + j + 1.
      * Mimic this process.
      * Special cases:
      * 1) If one of the strings is null, return empty.
@@ -42,7 +42,7 @@ public class MultiplyStrings {
                 int mul = x * (num2.charAt(j) - '0');
                 product[i + j + 1] += mul;
                 product[i + j] += product[i + j + 1] / 10; // Carry.
-                product[i + j + 1] %= 10; // i + j + 1 will cover every digit and make them < 10.
+                product[i + j + 1] %= 10; // i + j + 1 MySolution cover every digit and make them < 10.
             }
         }
 

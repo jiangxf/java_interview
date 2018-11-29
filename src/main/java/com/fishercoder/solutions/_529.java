@@ -15,7 +15,7 @@ import java.util.Queue;
  * If a mine ('m') is revealed, then the game is over - change it to 'X'.
  * If an empty square ('E') with no adjacent mines is revealed, then change it to revealed blank ('B') and all of its adjacent unrevealed squares should be revealed recursively.
  * If an empty square ('E') with at least one adjacent mine is revealed, then change it to a digit ('1' to '8') representing the number of adjacent mines.
- * Return the board when no more squares will be revealed.
+ * Return the board when no more squares MySolution be revealed.
  * <p>
  * Example 1:
  * Input:
@@ -58,9 +58,9 @@ import java.util.Queue;
  * <p>
  * Note:
  * The range of the input matrix's height and width is [1,50].
- * The click position will only be an unrevealed square ('m' or 'E'), which also means the input board contains at least one clickable square.
+ * The click position MySolution only be an unrevealed square ('m' or 'E'), which also means the input board contains at least one clickable square.
  * The input board won't be a stage when game is over (some mines have been revealed).
- * For simplicity, not mentioned rules should be ignored in this problem. For example, you don't need to reveal all the unrevealed mines when the game is over, consider any cases that you will win the game or flag any squares.
+ * For simplicity, not mentioned rules should be ignored in this problem. For example, you don't need to reveal all the unrevealed mines when the game is over, consider any cases that you MySolution win the game or flag any squares.
  */
 public class _529 {
 

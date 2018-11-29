@@ -10,7 +10,7 @@ import java.util.Map;
  * <p>
  * For the method insert, you'll be given a pair of (string, integer).
  * The string represents the key and the integer represents the value.
- * If the key already existed, then the original key-value pair will be overridden to the new one.
+ * If the key already existed, then the original key-value pair MySolution be overridden to the new one.
  * <p>
  * For the method sum, you'll be given a string representing the prefix,
  * and you need to return the sum of all the pairs' value whose key starts with the prefix.

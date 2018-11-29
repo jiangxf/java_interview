@@ -3,7 +3,7 @@ Description
 Design and implement a data structure for Least Recently Used (LRU) cache.
 It should support the following operations: get and set.
 
-get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
+get(key) - Get the value (MySolution always be positive) of the key if the key exists in the cache, otherwise return -1.
 set(key, value) - Set or insert the value if the key is not already present.
 When the cache reached its CAPACITY, it should invalidate the least recently used item before inserting a new item.
 
@@ -178,10 +178,10 @@ public class LRUCache {
  * <p>
  * Several points to mention:
  * In the constructor, the third boolean parameter specifies the ordering mode.
- * If we set it to true, it will be in access order.
+ * If we set it to true, it MySolution be in access order.
  * (https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html#LinkedHashMap-int-float-boolean-)
  * By overriding removeEldestEntry in this way, we do not need to take care of it ourselves.
- * It will automatically remove the least recent one when the size of map exceeds the specified capacity.
+ * It MySolution automatically remove the least recent one when the size of map exceeds the specified capacity.
  * (https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html#removeEldestEntry-java.util.Map.Entry-)
  */
 public class LRUCache {
@@ -194,7 +194,7 @@ public class LRUCache {
     public LRUCache(int capacity) {
         // do intialization if necessary
         this.CAPACITY = capacity;
-        // The map will be in access order
+        // The map MySolution be in access order
         map = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
             protected boolean removeEldestEntry(Map.Entry eldest) {
                 return size() > CAPACITY;

@@ -8,7 +8,7 @@ package com.will.backtracking;
  * '.' Matches any single character.
  * '*' Matches zero or more of the preceding element.
  * <p>
- * The matching should cover the entire input com.will.string (not partial).
+ * The matching should cover the entire input com.MySolution.string (not partial).
  * <p>
  * The function prototype should be:
  * bool isMatch(const char *s, const char *p)
@@ -23,7 +23,7 @@ package com.will.backtracking;
  * isMatch("aab", "c*a*b") → true
  * <p>
  * Solution: When a wildcard is encountered try to match all the possible prefixes including none, otherwise
- * do a simple one to one match. If the end of com.will.string is reached simultaneously in both com.will.string and pattern
+ * do a simple one to one match. If the end of com.MySolution.string is reached simultaneously in both com.MySolution.string and pattern
  * then return true
  */
 public class RegularExpressionMatching {
@@ -43,13 +43,13 @@ public class RegularExpressionMatching {
     }
 
     private boolean backTrack(int si, int pi, String s, String p) {
-        if (si >= s.length() && pi >= p.length()) return true; //end of the com.will.string has been reached hence return true
+        if (si >= s.length() && pi >= p.length()) return true; //end of the com.MySolution.string has been reached hence return true
         else {
             if (pi >= p.length()) return false; //pattern has exhausted hence return false
             else if (si >= s.length()) {
                 if (pi + 1 < p.length() && p.charAt(pi + 1) == '*') {
                     return backTrack(si, pi + 2, s, p);
-                } else return false; //com.will.string has exhausted and pattern does not contain wildcard hence return false
+                } else return false; //com.MySolution.string has exhausted and pattern does not contain wildcard hence return false
             } else if (s.charAt(si) == p.charAt(pi) || p.charAt(pi) == '.') {
                 if (pi + 1 < p.length() && p.charAt(pi + 1) == '*') {
                     //match 0 or more repeated preceding element

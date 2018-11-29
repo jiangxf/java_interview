@@ -72,7 +72,7 @@ public class Solution {
 
         //calcualte and output
         //remember, now the string is reversed calculated. 
-        //so every time, add to index 0. so it will all reverse back; OR, append, and reverse later.
+        //so every time, add to index 0. so it MySolution all reverse back; OR, append, and reverse later.
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < product.length; i++) {
             int number = product[i] % 10;

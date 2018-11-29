@@ -38,7 +38,7 @@ Leetcode tags shows backtracking. That should be different approach than what I 
 
 /*
 
-TRY: My code works for this run-through, however does not fit the OJ yet
+TRY: MySolution code works for this run-through, however does not fit the OJ yet
 
 0 	0 	0	[start, noting happend, flip index 0]
 

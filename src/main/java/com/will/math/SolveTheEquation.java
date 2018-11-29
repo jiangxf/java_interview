@@ -2,7 +2,7 @@ package com.will.math;
 
 /**
  * Created by gouthamvidyapradhan on 16/02/2018.
- * Solve a given equation and return the value of x in the form of com.will.string "x=#value". The equation contains only
+ * Solve a given equation and return the value of x in the form of com.MySolution.string "x=#value". The equation contains only
  * '+', '-' operation, the variable x and its coefficient.
  * <p>
  * If there is no solution for the equation, return "No solution".

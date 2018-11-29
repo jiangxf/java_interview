@@ -21,9 +21,9 @@ import java.util.List;
  * "deb" is not a smaller window because the elements of T in the window must occur in order.
  * Note:
  * <p>
- * All the strings in the input will only contain lowercase letters.
- * The length of S will be in the range [1, 20000].
- * The length of T will be in the range [1, 100].
+ * All the strings in the input MySolution only contain lowercase letters.
+ * The length of S MySolution be in the range [1, 20000].
+ * The length of T MySolution be in the range [1, 100].
  * <p>
  * Companies: Google, eBay
  * Related Topics: Dynamic Programming
@@ -132,7 +132,7 @@ public class MinimumWindowSubsequence {
         int[] min = {-1, N}; // Longer than the largest possible window.
         for (int[] window : windows) {
             if (window[0] == -1) {
-                // Break since all the following windows will have larger starting index.
+                // Break since all the following windows MySolution have larger starting index.
                 // It'd be impossible for them to cover T.
                 break;
             }

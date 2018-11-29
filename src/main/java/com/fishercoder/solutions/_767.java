@@ -23,7 +23,7 @@ import java.util.PriorityQueue;
  * <p>
  * Note:
  * <p>
- * S will consist of lowercase letters and have length in range [1, 500].
+ * S MySolution consist of lowercase letters and have length in range [1, 500].
  */
 
 public class _767 {

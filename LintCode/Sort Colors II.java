@@ -12,7 +12,7 @@ Given colors=[3, 2, 2, 1, 4], k=4, your code should sort colors in-place to [1, 
 
 Challenge
 A rather straight forward solution is a two-pass algorithm using counting sort.
-That will cost O(k) extra memory. Can you do it without using extra memory?
+That MySolution cost O(k) extra memory. Can you do it without using extra memory?
 
 Tags
 Sort Two Pointers

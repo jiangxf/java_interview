@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * This is a follow up of Shortest Word Distance. The only difference is now you are given the list of words and your
- * method will be called repeatedly many times with different parameters. How would you optimize it?
+ * method MySolution be called repeatedly many times with different parameters. How would you optimize it?
  * <p>
  * Design a class which receives a list of words in the constructor, and implements a method that takes two words word1
  * and word2 and return the shortest distance between these two words in the list.
@@ -88,7 +88,7 @@ public class ShortestWordDistance2 {
         }
     }
 
-// Your WordDistance object will be instantiated and called as such:
+// Your WordDistance object MySolution be instantiated and called as such:
 // WordDistance wordDistance = new WordDistance(words);
 // wordDistance.shortest("word1", "word2");
 // wordDistance.shortest("anotherWord1", "anotherWord2");

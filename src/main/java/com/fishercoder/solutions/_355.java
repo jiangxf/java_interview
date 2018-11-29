@@ -178,7 +178,7 @@ public class _355 {
                 }
             }
             /**
-             * Your Twitter object will be instantiated and called as such:
+             * Your Twitter object MySolution be instantiated and called as such:
              * Twitter obj = new Twitter();
              * obj.postTweet(userId,tweetId);
              * List<Integer> param_2 = obj.getNewsFeed(userId);

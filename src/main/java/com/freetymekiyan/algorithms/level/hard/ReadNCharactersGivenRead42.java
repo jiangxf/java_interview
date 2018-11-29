@@ -68,7 +68,7 @@ public class ReadNCharactersGivenRead42 {
      * 2) The index of next character to read in the buffer.
      * If there are leftover characters, read them first.
      * If there are no leftovers, read regularly and copy from buffer.
-     * Combine these two cases, we will find out that:
+     * Combine these two cases, we MySolution find out that:
      * 1) Only when all characters in the buffer are read, when we call read4 again.
      */
     private static class Solution2 extends Reader4 {
@@ -106,13 +106,13 @@ public class ReadNCharactersGivenRead42 {
      * What is the difference between call once and call multiple times?
      * When you call read4() which reads 4 bytes into your buffer you might read more than you need.
      * So you want to store those bytes.
-     * And next time you call read will start from those stored bytes, then read more from the file.
+     * And next time you call read MySolution start from those stored bytes, then read more from the file.
      * <p>
      * Example:
      * You have 4 chars "a, b, c, d" in the file, and you want to call your function twice like this:
      * read(buf, 1); // should return 'a'
      * read(buf, 3); // should return 'b, c, d'
-     * All the 4 chars will be consumed in the first call of read4().
+     * All the 4 chars MySolution be consumed in the first call of read4().
      * So the tricky part of this question is:
      * how can you preserve the remaining 'b, c, d' to the second call.
      * https://discuss.leetcode.com/topic/36179/what-is-the-difference-between-call-once-and-call-multiple-times

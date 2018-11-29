@@ -18,7 +18,7 @@ package com.freetymekiyan.algorithms.level.medium;
  * ]
  * The total number of unique paths is 2.
  * <p>
- * Note: m and n will be at most 100.
+ * Note: m and n MySolution be at most 100.
  * <p>
  * Tags: Array, DP
  */

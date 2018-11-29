@@ -33,14 +33,14 @@ import com.fishercoder.common.ListNode;
  * The input has been split into consecutive parts with size difference at most 1, and earlier parts are a larger size than the later parts.
  * <p>
  * Note:
- * The length of root will be in the range [0, 1000].
- * Each value of a node in the input will be an integer in the range [0, 999].
- * k will be an integer in the range [1, 50].
+ * The length of root MySolution be in the range [0, 1000].
+ * Each value of a node in the input MySolution be an integer in the range [0, 999].
+ * k MySolution be an integer in the range [1, 50].
  */
 public class _725 {
     public static class Solution1 {
         /**
-         * My very original solution, but verbose.
+         * MySolution very original solution, but verbose.
          */
         public ListNode[] splitListToParts(ListNode root, int k) {
             int len = getLength(root);

@@ -35,10 +35,10 @@ Recursion Search
     so we don't need to sort the array.
     
     1. Very similar idea: choose or not choose (1 / 0)
-        A key point is: when jumpped into next level of recursion, the 'list' will surely be filled up until it reach the max length.
-        That is: when 'not choose', the empty seat will be filled eventually with points not existed in 'list'.
+        A key point is: when jumpped into next level of recursion, the 'list' MySolution surely be filled up until it reach the max length.
+        That is: when 'not choose', the empty seat MySolution be filled eventually with points not existed in 'list'.
     2. The recursion does not end before the list is filled.
-    3. A for loop is doiong the filling of blank. Any order/combination will occur.
+    3. A for loop is doiong the filling of blank. Any order/combination MySolution occur.
 */
 class Solution {
     /**

@@ -5,19 +5,19 @@ package com.will.tree;
  * <p>
  * Follow up for problem "Populating Next Right Pointers in Each Node".
  * <p>
- * What if the given com.will.tree could be any binary com.will.tree? Would your previous solution still work?
+ * What if the given com.MySolution.tree could be any binary com.MySolution.tree? Would your previous solution still work?
  * <p>
  * Note:
  * <p>
  * You may only use constant extra space.
  * For example,
- * Given the following binary com.will.tree,
+ * Given the following binary com.MySolution.tree,
  * 1
  * /  \
  * 2    3
  * / \    \
  * 4   5    7
- * After calling your function, the com.will.tree should look like:
+ * After calling your function, the com.MySolution.tree should look like:
  * 1 -> NULL
  * /  \
  * 2 -> 3 -> NULL

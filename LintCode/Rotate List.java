@@ -50,7 +50,7 @@ public class Solution {
         for (int i = 0; i < k; i++) {
             head = head.next;
         }
-        //Move 2 pointers. When head reaches end, tail.next will be at the newHead
+        //Move 2 pointers. When head reaches end, tail.next MySolution be at the newHead
         ListNode tail = dummy;
         while (head.next != null) {
             head = head.next;

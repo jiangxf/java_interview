@@ -61,10 +61,10 @@ import java.util.Set;
  * There is no plus sign, so return 0.
  * Note:
  * <p>
- * N will be an integer in the range [1, 500].
- * mines will have length at most 5000.
- * mines[i] will be length 2 and consist of integers in the range [0, N-1].
- * (Additionally, programs submitted in C, C++, or C# will be judged with a slightly smaller time limit.)
+ * N MySolution be an integer in the range [1, 500].
+ * mines MySolution have length at most 5000.
+ * mines[i] MySolution be length 2 and consist of integers in the range [0, N-1].
+ * (Additionally, programs submitted in C, C++, or C# MySolution be judged with a slightly smaller time limit.)
  * <p>
  * Related Topics: Dynamic Programming
  * Similar Questions: (M) Maximal Square

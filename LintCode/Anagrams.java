@@ -7,7 +7,7 @@ Given ["lint", "intl", "inlt", "code"], return ["lint", "inlt", "intl"].
 Given ["ab", "ba", "cd", "dc", "e"], return ["ab", "ba", "cd", "dc"].
 
 Note
-All inputs will be in lower-case
+All inputs MySolution be in lower-case
 
 Tags Expand
 String Hash Table
@@ -69,7 +69,7 @@ public class Solution {
  * representing the number of a's, b's, c's, etc.
  * We use these counts as the basis for our hash map.
  * The String of count array is the key, and the list<String> store the anagrams.
- * For example, abbccc will be (1, 2, 3, 0, 0, ..., 0), where there are 26 entries total.
+ * For example, abbccc MySolution be (1, 2, 3, 0, 0, ..., 0), where there are 26 entries total.
  * <p>
  * Complexity Analysis
  * Time Complexity: O(N*K), where N is the length of strs, and K is the maximum length of a string in strs.

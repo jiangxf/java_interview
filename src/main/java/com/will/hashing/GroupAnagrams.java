@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 10/03/2017.
- * Given an com.will.array of strings, group anagrams together.
+ * Given an com.MySolution.array of strings, group anagrams together.
  * <p>
  * For example, given: ["eat", "tea", "tan", "ate", "nat", "bat"],
  * Return:
@@ -17,7 +17,7 @@ import java.util.List;
  * ["nat","tan"],
  * ["bat"]
  * ]
- * Note: All inputs will be in lower-case.
+ * Note: All inputs MySolution be in lower-case.
  */
 public class GroupAnagrams {
     private int[] A = new int[256];

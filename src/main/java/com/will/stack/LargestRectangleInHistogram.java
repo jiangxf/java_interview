@@ -12,14 +12,14 @@ import java.util.Stack;
  * <p>
  * Solution O(N):
  * <p>
- * 1) Create an empty com.will.stack.
+ * 1) Create an empty com.MySolution.stack.
  * <p>
  * 2) Start from first bar, and do following for every bar ‘hist[i]’ where ‘i’ varies from 0 to n-1.
- * a) If com.will.stack is empty or hist[i] is higher than the bar at top of com.will.stack, then push ‘i’ to com.will.stack.
- * b) If this bar is smaller than the top of com.will.stack, then keep removing the top of com.will.stack while top of the com.will.stack is greater. Let the removed bar be hist[tp].
- * Calculate area of rectangle with hist[tp] as smallest bar. For hist[tp], the ‘left index’ is previous (previous to tp) item in com.will.stack and ‘right index’ is ‘i’ (current index).
+ * a) If com.MySolution.stack is empty or hist[i] is higher than the bar at top of com.MySolution.stack, then push ‘i’ to com.MySolution.stack.
+ * b) If this bar is smaller than the top of com.MySolution.stack, then keep removing the top of com.MySolution.stack while top of the com.MySolution.stack is greater. Let the removed bar be hist[tp].
+ * Calculate area of rectangle with hist[tp] as smallest bar. For hist[tp], the ‘left index’ is previous (previous to tp) item in com.MySolution.stack and ‘right index’ is ‘i’ (current index).
  * <p>
- * 3) If the com.will.stack is not empty, then one by one remove all bars from com.will.stack and do step 2.b for every removed bar.
+ * 3) If the com.MySolution.stack is not empty, then one by one remove all bars from com.MySolution.stack and do step 2.b for every removed bar.
  */
 public class LargestRectangleInHistogram {
     public static void main(String[] args) throws Exception {

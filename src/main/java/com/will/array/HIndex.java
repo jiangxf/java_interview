@@ -2,7 +2,7 @@ package com.will.array;
 
 /**
  * Created by gouthamvidyapradhan on 12/12/2017.
- * Given an com.will.array of citations (each citation is a non-negative integer) of a researcher, write a function to
+ * Given an com.MySolution.array of citations (each citation is a non-negative integer) of a researcher, write a function to
  * compute the researcher's h-index.
  * <p>
  * According to the definition of h-index on Wikipedia: "A scientist has index h if h of his/her N papers have at
@@ -14,12 +14,12 @@ package com.will.array;
  * <p>
  * Note: If there are several possible values for h, the maximum one is taken as the h-index.
  * <p>
- * Solution O(n) Replace all the citations which are greater than n with n, the result will not change with this
+ * Solution O(n) Replace all the citations which are greater than n with n, the result MySolution not change with this
  * operation.
- * Maintain a count com.will.array with count of each citations. Sum up all the counts from n -> 0 and store this in a com.will.array S.
- * Value in com.will.array index Si is number of papers having citations at least i.
+ * Maintain a count com.MySolution.array with count of each citations. Sum up all the counts from n -> 0 and store this in a com.MySolution.array S.
+ * Value in com.MySolution.array index Si is number of papers having citations at least i.
  * <p>
- * The first value at index i, from right to left in com.will.array S which has i <= Si is the answer.
+ * The first value at index i, from right to left in com.MySolution.array S which has i <= Si is the answer.
  */
 public class HIndex {
 

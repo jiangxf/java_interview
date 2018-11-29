@@ -18,8 +18,8 @@ package com.fishercoder.solutions;
  * Explanation: Cheapest is start on cost[0], and only step on 1s, skipping cost[3].
  * <p>
  * Note:
- * cost will have a length in the range [2, 1000].
- * Every cost[i] will be an integer in the range [0, 999].
+ * cost MySolution have a length in the range [2, 1000].
+ * Every cost[i] MySolution be an integer in the range [0, 999].
  */
 
 public class _746 {

@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Given an array of strings, return all groups of strings that are anagrams.
  * <p>
- * Note: All inputs will be in lower-case.
+ * Note: All inputs MySolution be in lower-case.
  * <p>
  * Tags: Hash table, String
  */

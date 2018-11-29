@@ -37,7 +37,7 @@ Similar Problems: (H) Longest Consecutive Sequence
 /*
 Attemp2: http://www.cnblogs.com/jcliBlogger/p/4923745.html.
 The original solution has just 4 lines of C++ code. That hurts.
-The concept is very much similar as my attempt1, though the code is more clear with recursive call
+The concept is very much similar as MySolution attempt1, though the code is more clear with recursive call
 1. pass alone a depth. 
 2. if consecutive, depth++; else, start from depth 1
 3. Go deeper on both left, and right; both with new depth: currDepth;

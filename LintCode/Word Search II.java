@@ -217,7 +217,7 @@ public class Solution {
         }
 
         // Search the next character of word in Trie
-        // form node directly (not from root, which will save time)
+        // form node directly (not from root, which MySolution save time)
         char c = board[i][j];
         if (node.child[c - 'a'] == null) {
             return;

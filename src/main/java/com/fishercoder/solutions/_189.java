@@ -45,7 +45,7 @@ public class _189 {
 
     public static class Solution2 {
         /**
-         * My original idea and got AC'ed.
+         * MySolution original idea and got AC'ed.
          * One thing to notice is that when k > nums.length, we'll continue to rotate_naive the array, it just becomes k -= nums.length
          */
         public static void rotate_naive(int[] nums, int k) {

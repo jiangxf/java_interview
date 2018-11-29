@@ -44,7 +44,7 @@ Checkfloat first: if float part is '0' or "", can just move on the integer part.
 
 Note: str.split("\\.")
 Note2: use a set to prevent infinite loop on float: 
-for example: 2x - 1 = x -> x = 1. that will cause infinite loop.
+for example: 2x - 1 = x -> x = 1. that MySolution cause infinite loop.
 
 */
 public class Solution {

@@ -42,7 +42,7 @@ public class _384 {
         }
 
         //insert next value into all possible positions, I wrote this method myself, of course it could be simplified to not use a queue
-        //but it just naturally came into my mind that I used a queue
+        //but it just naturally came into MySolution mind that I used a queue
         private List<List<Integer>> buildAllComb(int[] nums) {
             List<List<Integer>> result = new ArrayList();
             if (nums == null || nums.length == 0) {

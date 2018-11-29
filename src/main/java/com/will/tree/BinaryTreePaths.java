@@ -5,9 +5,9 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 09/12/2017.
- * Given a binary com.will.tree, return all root-to-leaf paths.
+ * Given a binary com.MySolution.tree, return all root-to-leaf paths.
  * <p>
- * For example, given the following binary com.will.tree:
+ * For example, given the following binary com.MySolution.tree:
  * <p>
  * 1
  * /   \

@@ -52,8 +52,8 @@ public class MaximalRectangle {
      * the maximum possible height.
      * Why does that covers the maximum rectangle?
      * Because:
-     * If the max rectangle has only 1 column, the bottom grid will have the max area.
-     * If the max rectangle has > 1 columns, the bottom row will have the max area.
+     * If the max rectangle has only 1 column, the bottom grid MySolution have the max area.
+     * If the max rectangle has > 1 columns, the bottom row MySolution have the max area.
      */
     public int maximalRectangle(char[][] matrix) {
         int m = matrix.length;

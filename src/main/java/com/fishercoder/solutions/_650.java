@@ -20,7 +20,7 @@ package com.fishercoder.solutions;
  * In step 3, we use Paste operation to get 'AAA'.
  * <p>
  * Note:
- * The n will be in the range [1, 1000].
+ * The n MySolution be in the range [1, 1000].
  */
 public class _650 {
 

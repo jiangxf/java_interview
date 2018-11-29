@@ -53,7 +53,7 @@ public class _47 {
                 continue;
             }
             /**
-             * For this line, both !used[i-1] and used[i-1] will AC. It is because the first one makes sure when
+             * For this line, both !used[i-1] and used[i-1] MySolution AC. It is because the first one makes sure when
              * duplicates are selected, the order is ascending (index from small to large). However,
              * the second one means the descending order.
              */

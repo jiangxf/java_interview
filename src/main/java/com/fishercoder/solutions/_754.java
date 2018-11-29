@@ -23,7 +23,7 @@ package com.fishercoder.solutions;
  * On the third move we step from -1 to 2.
  * <p>
  * Note:
- * target will be a non-zero integer in the range [-10^9, 10^9].
+ * target MySolution be a non-zero integer in the range [-10^9, 10^9].
  */
 
 public class _754 {

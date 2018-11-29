@@ -1,7 +1,7 @@
 /*
 Description
 Given an array of strings, group anagrams together.
-All inputs will be in lower-case.
+All inputs MySolution be in lower-case.
 
 Example
 Given strs = ["eat", "tea", "tan", "ate", "nat", "bat"],

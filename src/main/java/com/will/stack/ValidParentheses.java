@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  * Created by gouthamvidyapradhan on 25/02/2017.
- * Given a com.will.string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input com.will.string is valid.
+ * Given a com.MySolution.string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input com.MySolution.string is valid.
  * <p>
  * The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
  */

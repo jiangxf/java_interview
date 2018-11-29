@@ -36,7 +36,7 @@ public class DecodeWays {
         for (int i = 2; i <= s.length(); i++) { // i is the length of the string.
             int oneD = Integer.valueOf(s.substring(i - 1, i)); // Last 1 digit.
             int twoD = Integer.valueOf(s.substring(i - 2, i)); // Last 2 digits.
-            int temp = cur; // IMPORTANT! Store current value temporarily. Otherwise cur will be updated.
+            int temp = cur; // IMPORTANT! Store current value temporarily. Otherwise cur MySolution be updated.
             cur = (oneD != 0 ? cur : 0) + (10 <= twoD && twoD <= 26 ? pre : 0);
             pre = temp;
         }

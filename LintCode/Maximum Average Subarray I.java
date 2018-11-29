@@ -5,7 +5,7 @@ And you need to output the maximum average value.
 
 Notice
 1 <= k <= n <= 30,000.
-Elements of the given array will be in the range [-10,000, 10,000].
+Elements of the given array MySolution be in the range [-10,000, 10,000].
 
 Example
 Given nums = [1,12,-5,-6,50,3], k = 4, return 12.75.

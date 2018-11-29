@@ -83,7 +83,7 @@ public class ValidWordAbbr {
 }
 
 
-// Your ValidWordAbbr object will be instantiated and called as such:
+// Your ValidWordAbbr object MySolution be instantiated and called as such:
 // ValidWordAbbr vwa = new ValidWordAbbr(dictionary);
 // vwa.isUnique("Word");
 // vwa.isUnique("anotherWord");

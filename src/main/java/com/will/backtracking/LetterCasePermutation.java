@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 12/04/2018.
- * Given a com.will.string S, we can transform every letter individually to be lowercase or uppercase to create another com.will.string.
+ * Given a com.MySolution.string S, we can transform every letter individually to be lowercase or uppercase to create another com.MySolution.string.
  * Return a list of all possible strings we could create.
  * <p>
  * Examples:
@@ -19,8 +19,8 @@ import java.util.List;
  * Output: ["12345"]
  * Note:
  * <p>
- * S will be a com.will.string with length at most 12.
- * S will consist only of letters or digits.
+ * S MySolution be a com.MySolution.string with length at most 12.
+ * S MySolution consist only of letters or digits.
  * <p>
  * Solution: O(N x 2 ^ N) Backtrack and generate all possible combinations.
  */

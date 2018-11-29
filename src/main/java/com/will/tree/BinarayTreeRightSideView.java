@@ -5,10 +5,10 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 12/03/2017.
- * Given a binary com.will.tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+ * Given a binary com.MySolution.tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
  * <p>
  * For example:
- * Given the following binary com.will.tree,
+ * Given the following binary com.MySolution.tree,
  * 1            <---
  * /   \
  * 2     3         <---

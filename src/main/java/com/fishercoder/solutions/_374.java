@@ -7,8 +7,8 @@ package com.fishercoder.solutions;
  * Every time you guess wrong, I'll tell you whether the number is higher or lower.
  * You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
  * <p>
- * -1 : My number is lower
- * 1 : My number is higher
+ * -1 : MySolution number is lower
+ * 1 : MySolution number is higher
  * 0 : Congrats! You got it!
  * Example:
  * n = 10, I pick 6.

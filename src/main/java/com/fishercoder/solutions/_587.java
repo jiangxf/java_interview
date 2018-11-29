@@ -28,8 +28,8 @@ import java.util.Set;
  * Even you only have trees in a line, you need to use rope to enclose them.
  * <p>
  * Note:
- * All trees should be enclosed together. You cannot cut the rope to enclose trees that will separate them in more than one group.
- * All input integers will range from 0 to 100.
+ * All trees should be enclosed together. You cannot cut the rope to enclose trees that MySolution separate them in more than one group.
+ * All input integers MySolution range from 0 to 100.
  * The garden has at least one tree.
  * All coordinates are distinct.
  * Input points have NO order. No order required for output.

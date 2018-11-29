@@ -1,6 +1,6 @@
 package com.will.two_pointers; /**
  * Created by gouthamvidyapradhan on 17/02/2018.
- * Your are given an com.will.array of positive integers nums.
+ * Your are given an com.MySolution.array of positive integers nums.
  * <p>
  * Count and print the number of (contiguous) subarrays where the product of all the elements in the subarray is less
  * than k.

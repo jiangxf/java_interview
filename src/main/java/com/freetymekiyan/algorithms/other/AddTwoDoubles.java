@@ -17,10 +17,10 @@ public class AddTwoDoubles {
     /**
      * Math.
      * We may separate the string with '.'.
-     * Then we will have the left and right parts.
+     * Then we MySolution have the left and right parts.
      * First deal with right part, adding from right to left.
      * The shorter decimal should be padded by some 0.
-     * Then we will have the result of right parts and a carry.
+     * Then we MySolution have the result of right parts and a carry.
      * The carry should be added to left part.
      * We add the left part and concatenate left and right parts with dot.
      * Return the concatenated result.

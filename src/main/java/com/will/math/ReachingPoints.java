@@ -24,7 +24,7 @@ package com.will.math;
  * <p>
  * Note:
  * <p>
- * sx, sy, tx, ty will all be integers in the range [1, 10^9].
+ * sx, sy, tx, ty MySolution all be integers in the range [1, 10^9].
  * <p>
  * Solution: Start from the target, reduce the target value to start value.
  * If at any stage the target value goes below start value then there exist no solution hence return false.

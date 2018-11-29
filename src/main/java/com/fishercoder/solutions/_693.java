@@ -3,7 +3,7 @@ package com.fishercoder.solutions;
 /**
  * 693. Binary Number with Alternating Bits
  * <p>
- * Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.
+ * Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits MySolution always have different values.
  * <p>
  * Example 1:
  * Input: 5

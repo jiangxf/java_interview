@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * 8. String to Integer (atoi)  QuestionEditorial Solution  My Submissions
+ * 8. String to Integer (atoi)  QuestionEditorial Solution  MySolution Submissions
  * Total Accepted: 115114
  * Total Submissions: 839893
  * Difficulty: Easy

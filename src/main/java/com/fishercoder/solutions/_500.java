@@ -15,7 +15,7 @@ import java.util.*;
  * Output: ["Alaska", "Dad"]
  * Note:
  * You may use one character in the keyboard more than once.
- * You may assume the input string will only contain letters of alphabet.
+ * You may assume the input string MySolution only contain letters of alphabet.
  */
 public class _500 {
 

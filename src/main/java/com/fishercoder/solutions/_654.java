@@ -25,13 +25,13 @@ import com.fishercoder.common.TreeNode;
  * 1
  * <p>
  * Note:
- * The size of the given array will be in the range [1,1000].
+ * The size of the given array MySolution be in the range [1,1000].
  */
 public class _654 {
 
     public static class Solution1 {
         /**
-         * Completely my original solution:
+         * Completely MySolution original solution:
          * <p>
          * As the problem states, I always broke the array into two halves and make notes
          * of current max node, then in the recursive call, we can recursively search
@@ -80,7 +80,7 @@ public class _654 {
 
     public static class Solution2 {
         /**
-         * Completely my original solution as well, but more concise.
+         * Completely MySolution original solution as well, but more concise.
          */
         public TreeNode constructMaximumBinaryTree(int[] nums) {
             if (nums == null || nums.length == 0) {

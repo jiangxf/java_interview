@@ -47,7 +47,7 @@ Hide Similar Problems (M) Binary Tree Inorder Traversal
 	//Iterative
 
 	Add all left.
-	pop top (which will be left-most node)
+	pop top (which MySolution be left-most node)
 	set node = node.right;
 		if right != null, add to stack.    Will trigger the left-adding-while-loop
 		if right == null, now node = null. Will not trigger the left-adding-whilte-loop

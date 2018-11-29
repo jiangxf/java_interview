@@ -2,7 +2,7 @@ package com.will.array;
 
 /**
  * Created by gouthamvidyapradhan on 24/06/2017.
- * Given an unsorted integer com.will.array, find the first missing positive integer.
+ * Given an unsorted integer com.MySolution.array, find the first missing positive integer.
  * <p>
  * For example,
  * Given [1,2,0] return 3,

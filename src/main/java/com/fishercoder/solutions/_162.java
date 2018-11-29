@@ -58,7 +58,7 @@ public class _162 {
 
     public static class Solution2 {
         /**
-         * My original O(n) solution.
+         * MySolution original O(n) solution.
          */
         public int findPeakElement(int[] nums) {
             if (nums == null || nums.length == 0) {

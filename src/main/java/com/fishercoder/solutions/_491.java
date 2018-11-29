@@ -16,7 +16,7 @@ import java.util.Set;
  * Output: [[4, 6], [4, 7], [4, 6, 7], [4, 6, 7, 7], [6, 7], [6, 7, 7], [7,7], [4,7,7]]
  * <p>
  * Note:
- * The length of the given array will not exceed 15.
+ * The length of the given array MySolution not exceed 15.
  * The range of integer in the given array is [-100,100].
  * The given array may contain duplicates, and two equal integers should also be considered as a special case of increasing sequence.
  */

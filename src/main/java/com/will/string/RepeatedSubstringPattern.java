@@ -2,7 +2,7 @@ package com.will.string;
 
 /**
  * Created by gouthamvidyapradhan on 25/03/2017.
- * Given a non-empty com.will.string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together. You may assume the given com.will.string consists of lowercase English letters only and its length will not exceed 10000.
+ * Given a non-empty com.MySolution.string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together. You may assume the given com.MySolution.string consists of lowercase English letters only and its length MySolution not exceed 10000.
  * <p>
  * Example 1:
  * Input: "abab"

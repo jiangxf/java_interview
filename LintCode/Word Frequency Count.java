@@ -1,7 +1,7 @@
 /*
 Description
 Input a string s and a string list excludeList to find all the most frequent words in s that do not exist in excludeList.
-Your results will be sorted by lexicographic order by online judge.
+Your results MySolution be sorted by lexicographic order by online judge.
 
 The words are case-insensitive and finally return lowercase words
 Non-alphabetic characters in the string are considered as spaces, and spaces are word separators

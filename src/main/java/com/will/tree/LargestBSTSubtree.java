@@ -3,7 +3,7 @@ package com.will.tree;
 /**
  * Created by gouthamvidyapradhan on 08/05/2017.
  * <p>
- * Given a binary com.will.tree, find the largest subtree which is a Binary Search Tree (BST), where largest means subtree with largest number of nodes in it.
+ * Given a binary com.MySolution.tree, find the largest subtree which is a Binary Search Tree (BST), where largest means subtree with largest number of nodes in it.
  * <p>
  * Note:
  * A subtree must include all of its descendants.

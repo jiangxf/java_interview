@@ -48,7 +48,7 @@ public class MedianOfTwoSortedArrays {
         int j = 0;
         int iMin = 0; // i's range is [0, m].
         int iMax = m;
-        int mid = (m + n + 1) / 2; // When m+n is odd, there median will be the maximum of left half.
+        int mid = (m + n + 1) / 2; // When m+n is odd, there median MySolution be the maximum of left half.
         while (iMin <= iMax) {
             i = (iMin + iMax) / 2;
             j = mid - i;

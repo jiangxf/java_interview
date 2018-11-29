@@ -13,8 +13,8 @@ package com.fishercoder.solutions;
  * If three or more candies of the same type are adjacent vertically or horizontally,
  * "crush" them all at the same time - these positions become empty.
  * After crushing all candies simultaneously, if an empty space on the board has candies on top of itself,
- * then these candies will drop until they hit a candy or bottom at the same time.
- * (No new candies will drop outside the top boundary.)
+ * then these candies MySolution drop until they hit a candy or bottom at the same time.
+ * (No new candies MySolution drop outside the top boundary.)
  * After the above steps, there may exist more candies that can be crushed.
  * If so, you need to repeat the above steps.
  * If there does not exist more candies that can be crushed (ie. the board is stable), then return the current board.
@@ -31,9 +31,9 @@ package com.fishercoder.solutions;
  * Explanation:
  * <p>
  * Note:
- * The length of board will be in the range [3, 50].
- * The length of board[i] will be in the range [3, 50].
- * Each board[i][j] will initially start as an integer in the range [1, 2000].
+ * The length of board MySolution be in the range [3, 50].
+ * The length of board[i] MySolution be in the range [3, 50].
+ * Each board[i][j] MySolution initially start as an integer in the range [1, 2000].
  */
 public class _723 {
     public static class Solution1 {

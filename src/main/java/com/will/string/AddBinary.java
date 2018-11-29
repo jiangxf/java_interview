@@ -3,7 +3,7 @@ package com.will.string;
 /**
  * Created by gouthamvidyapradhan on 25/11/2017.
  * <p>
- * Given two binary strings, return their sum (also a binary com.will.string).
+ * Given two binary strings, return their sum (also a binary com.MySolution.string).
  * <p>
  * For example,
  * a = "11"

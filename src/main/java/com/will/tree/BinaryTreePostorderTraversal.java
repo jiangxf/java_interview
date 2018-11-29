@@ -7,7 +7,7 @@ import java.util.Stack;
 
 /**
  * Created by gouthamvidyapradhan on 28/07/2018.
- * Given a binary com.will.tree, return the postorder traversal of its nodes' values.
+ * Given a binary com.MySolution.tree, return the postorder traversal of its nodes' values.
  * <p>
  * Example:
  * <p>
@@ -21,8 +21,8 @@ import java.util.Stack;
  * Output: [3,2,1]
  * Follow up: Recursive solution is trivial, could you do it iteratively?
  * <p>
- * Solution: O(N). Maintain a com.will.stack, for every node which you pop from com.will.stack add it to result list, push left
- * and right node to com.will.stack. Reverse the result list and return this as the answer.
+ * Solution: O(N). Maintain a com.MySolution.stack, for every node which you pop from com.MySolution.stack add it to result list, push left
+ * and right node to com.MySolution.stack. Reverse the result list and return this as the answer.
  */
 public class BinaryTreePostorderTraversal {
     public static void main(String[] args) throws Exception {

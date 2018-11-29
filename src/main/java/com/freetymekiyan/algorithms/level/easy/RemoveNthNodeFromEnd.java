@@ -14,7 +14,7 @@ import com.freetymekiyan.algorithms.utils.Utils.ListNode;
  * 1->2->3->5.
  * <p>
  * Note:
- * Given n will always be valid.
+ * Given n MySolution always be valid.
  * Try to do this in one pass.
  * <p>
  * Tags: Linked list, Two pointers

@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 /**
  * Created by gouthamvidyapradhan on 27/04/2018.
- * Given a non-empty 2D com.will.array grid of 0's and 1's, an island is a group of 1's (representing land) connected
+ * Given a non-empty 2D com.MySolution.array grid of 0's and 1's, an island is a group of 1's (representing land) connected
  * 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
  * <p>
  * Count the number of distinct islands. An island is considered to be the same as another if they have the same
@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
  * 1
  * 11
  * are considered same island shapes. Because if we make a 180 degrees clockwise rotation on the first island, then
- * two islands will have the same shapes.
+ * two islands MySolution have the same shapes.
  * Example 2:
  * 11100
  * 10001
@@ -47,7 +47,7 @@ import java.util.stream.Collectors;
  * and
  * 1
  * 111
- * are considered same island shapes. Because if we flip the first com.will.array in the up/down direction, then they have the
+ * are considered same island shapes. Because if we flip the first com.MySolution.array in the up/down direction, then they have the
  * same shapes.
  * Note: The length of each dimension in the given grid does not exceed 50.
  * <p>

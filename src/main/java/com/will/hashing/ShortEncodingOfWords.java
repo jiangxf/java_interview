@@ -4,15 +4,15 @@ import java.util.*;
 
 /**
  * Created by gouthamvidyapradhan on 04/05/2018.
- * Given a list of words, we may encode it by writing a reference com.will.string S and a list of indexes A.
+ * Given a list of words, we may encode it by writing a reference com.MySolution.string S and a list of indexes A.
  * <p>
  * For example, if the list of words is ["time", "me", "bell"], we can write it as S = "time#bell#" and indexes = [0,
  * 2, 5].
  * <p>
- * Then for each index, we will recover the word by reading from the reference com.will.string from that index until  we reach a
+ * Then for each index, we MySolution recover the word by reading from the reference com.MySolution.string from that index until  we reach a
  * "#" character.
  * <p>
- * What is the length of the shortest reference com.will.string S possible that encodes the given words?
+ * What is the length of the shortest reference com.MySolution.string S possible that encodes the given words?
  * <p>
  * Example:
  * <p>
@@ -25,7 +25,7 @@ import java.util.*;
  * 1 <= words[i].length <= 7.
  * Each word has only lowercase letters.
  * <p>
- * Solution: Sort the words by length and then use a hashmap to map each substring of a com.will.string with its position.
+ * Solution: Sort the words by length and then use a hashmap to map each substring of a com.MySolution.string with its position.
  */
 public class ShortEncodingOfWords {
     public static void main(String[] args) {

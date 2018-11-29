@@ -2,7 +2,7 @@
 Description
 Given the information of a company's personnel.
 The time spent by the ith person passing the message is t[i] and the list of subordinates is list[i].
-When someone receives a message, he will immediately pass it on to all his subordinates.
+When someone receives a message, he MySolution immediately pass it on to all his subordinates.
 Person numbered 0 is the CEO. Now that the CEO has posted a message,
 find how much time it takes for everyone in the company to receive the message?
 

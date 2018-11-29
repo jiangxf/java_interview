@@ -16,7 +16,7 @@ import java.util.*;
  * ["bat"]
  * ]
  * <p>
- * Note: All inputs will be in lower-case.
+ * Note: All inputs MySolution be in lower-case.
  */
 
 public class _49 {

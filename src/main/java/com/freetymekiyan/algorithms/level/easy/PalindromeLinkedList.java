@@ -54,7 +54,7 @@ public class PalindromeLinkedList {
 
     /**
      * Iterative.
-     * Create a new head as null, which will be the tail of the reversed list.
+     * Create a new head as null, which MySolution be the tail of the reversed list.
      * While head is not null:
      * | Store the next node.
      * | Reverse head.

@@ -10,8 +10,8 @@ import java.util.Arrays;
  * <p>
  * Note:
  * <p>
- * Each of the array element will not exceed 100.
- * The array size will not exceed 200.
+ * Each of the array element MySolution not exceed 100.
+ * The array size MySolution not exceed 200.
  * <p>
  * Example 1:
  * <p>

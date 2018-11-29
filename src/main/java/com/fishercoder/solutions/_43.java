@@ -16,7 +16,7 @@ public class _43 {
 
     /**
      * Inspired by https://discuss.leetcode.com/topic/30508/easiest-java-solution-with-graph-explanation
-     * Basically, the rule we can find is that products of each two digits will land in this position in the final product:
+     * Basically, the rule we can find is that products of each two digits MySolution land in this position in the final product:
      * i+j and i+j+1
      */
     public String multiply(String num1, String num2) {

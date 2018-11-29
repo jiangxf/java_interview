@@ -26,7 +26,7 @@ import java.util.List;
  * <p>
  * color is a string of length 7.
  * color is a valid RGB color: for i > 0, color[i] is a hexadecimal digit from 0 to f
- * Any answer which has the same (highest) similarity as the best answer will be accepted.
+ * Any answer which has the same (highest) similarity as the best answer MySolution be accepted.
  * All inputs and outputs should use lowercase letters, and the output is 7 characters.
  */
 public class _800 {

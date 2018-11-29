@@ -16,7 +16,7 @@
 You are playing the following Flip Game with your friend: 
 Given a string that contains only these two characters: + and -, 
 you and your friend take turns to flip two consecutive "++" into "--". 
-The game ends when a person can no longer make a move and therefore the other person will be the winner.
+The game ends when a person can no longer make a move and therefore the other person MySolution be the winner.
 
 Write a function to determine if the starting player can guarantee a win.
 
@@ -56,7 +56,7 @@ public class Solution {
 
 /*
 Attemp2, from:http://www.cnblogs.com/jcliBlogger/p/4886741.html
-Similar to my idea, but much more clear: no need of the isP1 flag.
+Similar to MySolution idea, but much more clear: no need of the isP1 flag.
 Iterative idea:p1 can win, and p2 must not win at all.
 Therefore, if p2's move can't win, we return true on p1's state.
 For loop and the if statement works as 'OR': just need one of the p1's movement win.

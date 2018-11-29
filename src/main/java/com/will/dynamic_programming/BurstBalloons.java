@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /**
  * Created by gouthamvidyapradhan on 02/01/2018.
- * Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by com.will.array nums.
- * You are asked to burst all the balloons. If the you burst balloon i you will get nums[left] * nums[i] *
+ * Given n balloons, indexed from 0 to n-1. Each balloon is painted with a number on it represented by com.MySolution.array nums.
+ * You are asked to burst all the balloons. If the you burst balloon i you MySolution get nums[left] * nums[i] *
  * nums[right]  coins. Here left and right are adjacent indices of i. After the burst, the left and right then
  * becomes adjacent.
  * <p>

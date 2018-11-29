@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * Created by gouthamvidyapradhan on 08/07/2018.
- * Given a com.will.string containing just the characters '(' and ')', find the length of the longest valid (well-formed)
+ * Given a com.MySolution.string containing just the characters '(' and ')', find the length of the longest valid (well-formed)
  * parentheses substring.
  * <p>
  * Example 1:
@@ -18,9 +18,9 @@ import java.util.Stack;
  * Output: 4
  * Explanation: The longest valid parentheses substring is "()()"
  * <p>
- * Solution: O(N) Iterate through each of the parentheses and if '(' is encountered push it to com.will.stack else check the top
- * of the com.will.stack to see if there is a matching parentheses, if yes pop it and then take the length (currIndex - index at
- * top of the com.will.stack). Maintain a max length and return this as the answer.
+ * Solution: O(N) Iterate through each of the parentheses and if '(' is encountered push it to com.MySolution.stack else check the top
+ * of the com.MySolution.stack to see if there is a matching parentheses, if yes pop it and then take the length (currIndex - index at
+ * top of the com.MySolution.stack). Maintain a max length and return this as the answer.
  */
 public class LongestValidParentheses {
 

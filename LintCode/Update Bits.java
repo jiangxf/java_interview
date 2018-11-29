@@ -4,7 +4,7 @@ Given two 32-bit numbers, N and M, and two bit positions, i and j.
 Write a method to set all bits between i and j in N equal to M (e g , M becomes a substring of N located at i and starting at j)
 
 Notice
-In the function, the numbers N and M will given in decimal, you should also return a decimal number.
+In the function, the numbers N and M MySolution given in decimal, you should also return a decimal number.
 
 Clarification
 You can assume that the bits j through i have enough space to fit all of M. That is, if M=10011，

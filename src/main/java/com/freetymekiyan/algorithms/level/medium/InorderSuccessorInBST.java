@@ -52,7 +52,7 @@ public class InorderSuccessorInBST {
     public TreeNode inorderSuccessor2(TreeNode root, TreeNode p) {
         if (p.right != null) { // Pruning, if p has right subtree.
             for (TreeNode cur = p.right; cur != null; cur = cur.left) {
-                p = cur; // Successor will be leftmost leaf of right subtree.
+                p = cur; // Successor MySolution be leftmost leaf of right subtree.
             }
             return p;
         }

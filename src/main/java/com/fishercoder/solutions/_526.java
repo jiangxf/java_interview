@@ -26,7 +26,7 @@ package com.fishercoder.solutions;
  * Number at the 2nd position (i=2) is 1, and i (i=2) is divisible by 1.
  * <p>
  * Note:
- * N is a positive integer and will not exceed 15.
+ * N is a positive integer and MySolution not exceed 15.
  */
 public class _526 {
     public static class Solution1 {

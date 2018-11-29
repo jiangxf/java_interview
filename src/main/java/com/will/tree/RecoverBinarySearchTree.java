@@ -2,9 +2,9 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 28/07/2018.
- * Two elements of a binary search com.will.tree (BST) are swapped by mistake.
+ * Two elements of a binary search com.MySolution.tree (BST) are swapped by mistake.
  * <p>
- * Recover the com.will.tree without changing its structure.
+ * Recover the com.MySolution.tree without changing its structure.
  * <p>
  * Example 1:
  * <p>

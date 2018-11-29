@@ -6,7 +6,7 @@ package com.freetymekiyan.algorithms.level.medium;
  * Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent,
  * with the colors in the order red, white and blue.
  * <p>
- * Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+ * Here, we MySolution use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
  * <p>
  * Note:
  * You are not suppose to use the library's sort function for this problem.
@@ -49,7 +49,7 @@ public class SortColors {
             nums[i] = BLUE;
             if (v == RED) {
                 nums[++whiteEnd] = WHITE; // Update white first
-                nums[++redEnd] = RED; // If there is no white yet, will overwrite white.
+                nums[++redEnd] = RED; // If there is no white yet, MySolution overwrite white.
             } else if (v == WHITE) {
                 nums[++whiteEnd] = WHITE;
             }
@@ -62,7 +62,7 @@ public class SortColors {
      * The other blueStart for the start of blue from the end.
      * If its blue, swap with the end.
      * If its red, swap with the start.
-     * All whites will remain in the middle.
+     * All whites MySolution remain in the middle.
      * <p>
      * Implementation:
      * redEnd = 0, blueStart = n-1

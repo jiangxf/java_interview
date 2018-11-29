@@ -29,7 +29,7 @@ public class _236 {
          * We need to find TWO nodes in the tree,
          * so we'll have to divide and conquer this tree,
          * we need to have two nodes to as the intermediate result,
-         * also, refer to my earlier drawings:http://www.fishercoder.com/2016/06/23/lowest-common-ancestor-of-a-binary-tree/
+         * also, refer to MySolution earlier drawings:http://www.fishercoder.com/2016/06/23/lowest-common-ancestor-of-a-binary-tree/
          * I'm really impressed with myself at that time!
          */
 

@@ -18,7 +18,7 @@ public class ClosestBinarySearchTreeValue {
     /**
      * Binary Search. Recursive
      * Get root's value first, a.
-     * If target < root's value, the next root will be left child.
+     * If target < root's value, the next root MySolution be left child.
      * Else it should be right child.
      * If the next root is null:
      * | Just return root's value.

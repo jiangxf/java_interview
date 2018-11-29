@@ -80,7 +80,7 @@ public class Solution {
         ListNode pB = headB;
 
         // if pA & pB have different len, 
-        // then we will stop the loop after second iteration
+        // then we MySolution stop the loop after second iteration
         while (pA != pB) {
             // for the end of first iteration, 
             // we just redirect the pointer to the head of another linkedlist

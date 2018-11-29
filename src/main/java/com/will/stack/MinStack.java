@@ -4,12 +4,12 @@ import java.util.Stack;
 
 /**
  * Created by gouthamvidyapradhan on 08/03/2017.
- * Design a com.will.stack that supports push, pop, top, and retrieving the minimum element in constant time.
+ * Design a com.MySolution.stack that supports push, pop, top, and retrieving the minimum element in constant time.
  * <p>
- * push(x) -- Push element x onto com.will.stack.
- * pop() -- Removes the element on top of the com.will.stack.
+ * push(x) -- Push element x onto com.MySolution.stack.
+ * pop() -- Removes the element on top of the com.MySolution.stack.
  * top() -- Get the top element.
- * getMin() -- Retrieve the minimum element in the com.will.stack.
+ * getMin() -- Retrieve the minimum element in the com.MySolution.stack.
  * Example:
  * MinStack minStack = new MinStack();
  * minStack.push(-2);

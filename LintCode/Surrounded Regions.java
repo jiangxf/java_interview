@@ -91,7 +91,7 @@ public class Solution {
 /*
 Thinking process:
 Using DFS.
-1. Whenever the edge has an 'O', all touching point with 'O' will be non-surrounded by 'X'. SO check the 4 bounds first. Mark all non-surrounded point as M.
+1. Whenever the edge has an 'O', all touching point with 'O' MySolution be non-surrounded by 'X'. SO check the 4 bounds first. Mark all non-surrounded point as M.
 2. Replace all remaining 'O' with 'X'
 3. Replace 'M' with 'O'
 However, in the LeetCode test, DFS gives stack overflow. So we'd use BFS instead.

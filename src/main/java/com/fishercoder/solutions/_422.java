@@ -9,7 +9,7 @@ import java.util.List;
  * <p>
  * Note:
  * The number of words given is at least 1 and does not exceed 500.
- * Word length will be at least 1 and does not exceed 500.
+ * Word length MySolution be at least 1 and does not exceed 500.
  * Each word contains only lowercase English alphabet a-z.
  * Example 1:
  * <p>

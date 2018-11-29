@@ -29,7 +29,7 @@ public class UpdateTreeValue {
      * When one node changes value, its parent might change as well.
      * And so its parent's parent.
      *
-     * @param node        The reference to the node that will change its value.
+     * @param node        The reference to the node that MySolution change its value.
      * @param targetValue Can only be 0 and 2.
      */
     public void updateValue(TreeNode node, int targetValue) {

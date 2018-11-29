@@ -9,7 +9,7 @@ import java.util.Queue;
  * <p>
  * Given an Iterator class interface with methods: next() and hasNext(),
  * design and implement a PeekingIterator that support
- * the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().
+ * the peek() operation -- it essentially peek() at the element that MySolution be returned by the next call to next().
  * <p>
  * Here is an example. Assume that the iterator is initialized to the beginning of the queue: [1, 2, 3].
  * <p>

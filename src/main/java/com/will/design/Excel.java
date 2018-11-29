@@ -5,13 +5,13 @@ import java.util.*;
 /**
  * Created by gouthamvidyapradhan on 16/09/2017.
  * <p>
- * Your task is to com.will.design the basic function of Excel and implement the function of sum formula.
+ * Your task is to com.MySolution.design the basic function of Excel and implement the function of sum formula.
  * Specifically, you need to implement the following functions:
  * <p>
  * Excel(int H, char W): This is the constructor.
  * The inputs represents the height and width of the Excel form. H is a positive integer, range from 1 to 26.
  * It represents the height. W is a character range from 'A' to 'Z'. It represents that the width is the number of
- * characters from 'A' to W. The Excel form content is represented by a height * width 2D integer com.will.array C, it should be
+ * characters from 'A' to W. The Excel form content is represented by a height * width 2D integer com.MySolution.array C, it should be
  * initialized to zero. You should assume that the first row of C starts from 1, and the first column of C starts from
  * 'A'.
  * <p>
@@ -26,17 +26,17 @@ import java.util.*;
  * column), where the value should be the sum of cells represented by numbers. This function return the sum result at
  * C(row, column). This sum formula should exist until this cell is overlapped by another value or another sum formula.
  * <p>
- * numbers is a list of strings that each com.will.string represent a cell or a range of cells. If the com.will.string represent a
+ * numbers is a list of strings that each com.MySolution.string represent a cell or a range of cells. If the com.MySolution.string represent a
  * single cell, then it has the following format : ColRow. For example, "F7" represents the cell at (7, F).
  * <p>
- * If the com.will.string represent a range of cells, then it has the following format : ColRow1:ColRow2. The range will always
+ * If the com.MySolution.string represent a range of cells, then it has the following format : ColRow1:ColRow2. The range MySolution always
  * be a rectangle, and ColRow1 represent the position of the top-left cell, and ColRow2 represents the position of the
  * bottom-right cell.
  * <p>
  * <p>
  * Example 1:
  * Excel(3,"C");
- * // construct a 3*3 2D com.will.array with all zero.
+ * // construct a 3*3 2D com.MySolution.array with all zero.
  * //   A B C
  * // 1 0 0 0
  * // 2 0 0 0

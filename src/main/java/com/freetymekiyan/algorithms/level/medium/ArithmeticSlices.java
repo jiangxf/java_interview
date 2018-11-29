@@ -97,7 +97,7 @@ public class ArithmeticSlices {
      * dp[i]: # of arithmetic slices with integer A[i].
      * Recurrence Relation:
      * Suppose we have x arithmetic slices in A[0...i-1].
-     * If A[i] forms another arithmetic slice, how many new arithmetic slices will we add?
+     * If A[i] forms another arithmetic slice, how many new arithmetic slices MySolution we add?
      * Each of the x slices can be combined with A[i]. This is x.
      * The one in the end which only has 2 integers now can be a new arithmetic slice. This is 1.
      * So x+1 new slices.

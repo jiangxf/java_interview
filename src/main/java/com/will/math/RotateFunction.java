@@ -2,9 +2,9 @@ package com.will.math;
 
 /**
  * Created by gouthamvidyapradhan on 18/03/2017.
- * Given an com.will.array of integers A and let n to be its length.
+ * Given an com.MySolution.array of integers A and let n to be its length.
  * <p>
- * Assume Bk to be an com.will.array obtained by rotating the com.will.array A k positions clock-wise, we define a "rotation function" F on A as follow:
+ * Assume Bk to be an com.MySolution.array obtained by rotating the com.MySolution.array A k positions clock-wise, we define a "rotation function" F on A as follow:
  * <p>
  * F(k) = 0 * Bk[0] + 1 * Bk[1] + ... + (n-1) * Bk[n-1].
  * <p>

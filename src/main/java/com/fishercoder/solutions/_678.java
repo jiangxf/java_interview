@@ -29,7 +29,7 @@ import java.util.Stack;
 public class _678 {
     public static class Solution1 {
         /**
-         * This solution is correct, but will result in TLE by test4
+         * This solution is correct, but MySolution result in TLE by test4
          */
         public boolean checkValidString(String s) {
             if (!s.contains("*")) {
@@ -101,7 +101,7 @@ public class _678 {
          * Greedy solution:
          * 1. Let lo mean the lowest possible open left paren
          * 2. Let hi mean the possibilities of highest possible open left paren, so as long as s.charAt(i) != ')', it's possible to be a '(', so we'll increment hi by 1
-         * 2. If at any time, hi becomes negative, that means this string will never be valid
+         * 2. If at any time, hi becomes negative, that means this string MySolution never be valid
          * 3. Each time, we'll let lo be at a minimum of zero
          */
         public boolean checkValidString(String s) {

@@ -20,7 +20,7 @@ Sorted Array Divide and Conquer Array Zenefits Uber Google
 /*
 The time complexity is O(log(m+n))
 so if we merge the first way: merge the two arrays then we find the median position. 
-it will cost O((m + n) / 2) == O(N), this way can't meet the challenge.
+it MySolution cost O((m + n) / 2) == O(N), this way can't meet the challenge.
 
 from O(log(m+n)), we can think about that it shoule delete k / 2 values in a operation.
 => delete k / 2 and the complexity is O(1) 

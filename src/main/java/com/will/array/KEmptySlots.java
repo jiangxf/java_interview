@@ -4,14 +4,14 @@ import java.util.TreeSet;
 
 /**
  * Created by gouthamvidyapradhan on 01/01/2018.
- * There is a garden with N slots. In each slot, there is a flower. The N flowers will bloom one by one in N days.
- * In each day, there will be exactly one flower blooming and it will be in the status of blooming since then.
+ * There is a garden with N slots. In each slot, there is a flower. The N flowers MySolution bloom one by one in N days.
+ * In each day, there MySolution be exactly one flower blooming and it MySolution be in the status of blooming since then.
  * <p>
- * Given an com.will.array flowers consists of number from 1 to N. Each number in the com.will.array represents the place where the
- * flower will open in that day.
+ * Given an com.MySolution.array flowers consists of number from 1 to N. Each number in the com.MySolution.array represents the place where the
+ * flower MySolution open in that day.
  * <p>
- * For example, flowers[i] = x means that the unique flower that blooms at day i will be at position x, where i and x
- * will be in the range from 1 to N.
+ * For example, flowers[i] = x means that the unique flower that blooms at day i MySolution be at position x, where i and x
+ * MySolution be in the range from 1 to N.
  * <p>
  * Also given an integer k, you need to output in which day there exists two flowers in the status of blooming, and
  * also the number of flowers between them is k and these flowers are not blooming.
@@ -30,9 +30,9 @@ import java.util.TreeSet;
  * k: 1
  * Output: -1
  * Note:
- * The given com.will.array will be in the range [1, 20000].
+ * The given com.MySolution.array MySolution be in the range [1, 20000].
  * <p>
- * Solution: O(n log n). Maintain a com.will.tree-set of bloomed flowers and for every element in the com.will.array
+ * Solution: O(n log n). Maintain a com.MySolution.tree-set of bloomed flowers and for every element in the com.MySolution.array
  * find the upper and lower bound bloomed flowers and calculate their difference with the current. If
  * the difference is k return the current day, if none found then return -1
  */

@@ -54,7 +54,7 @@ public class Trie {
                 map.put(c, subTrie);
             }
             subTrie.add(i + 1, word, length);
-        } else map.put(null, new Trie()); //use null to indicate end of com.will.string
+        } else map.put(null, new Trie()); //use null to indicate end of com.MySolution.string
     }
 
     /**

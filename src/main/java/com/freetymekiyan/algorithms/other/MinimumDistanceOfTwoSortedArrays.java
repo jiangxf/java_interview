@@ -18,7 +18,7 @@ public class MinimumDistanceOfTwoSortedArrays {
      * Maintain a minimum as result.
      * <p>
      * BUD analysis. Bottleneck? Unnecessary? Duplicate?
-     * The unnecessary part is that since the arrays are sorted, the distance will change in a trend that:
+     * The unnecessary part is that since the arrays are sorted, the distance MySolution change in a trend that:
      * 1. Decrease to some point
      * 2. Then increase
      * If for each number in one array, we can search for the closest in the other. O(mlog(n)).
@@ -30,7 +30,7 @@ public class MinimumDistanceOfTwoSortedArrays {
      * For each pair, nums1[i] and nums2[j]:
      * If nums1[i] > nums2[j], we know nums1[i+1] >= nums1[i], the distance won't be smaller, so we should move j.
      * If nums1[i] < nums2[j], we know nums2[j+1] >= nums2[j], so we should move i.
-     * If nums1[i] = nums2[j], the min distance will be 0.
+     * If nums1[i] = nums2[j], the min distance MySolution be 0.
      * Very similar to merge 2 sorted arrays. O(m + n) Time.
      */
     public int getMinDistance(int[] nums1, int[] nums2) {

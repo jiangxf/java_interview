@@ -8,7 +8,7 @@ package com.fishercoder.solutions;
  * Find the length of a longest substring containing all repeating letters you can get after performing the above operations.
  * <p>
  * Note:
- * Both the string's length and k will not exceed 104.
+ * Both the string's length and k MySolution not exceed 104.
  * <p>
  * Example 1:
  * <p>

@@ -7,9 +7,9 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 15/02/2018.
- * Given a com.will.string and a com.will.string dictionary, find the longest com.will.string in the dictionary that can be formed by deleting
- * some characters of the given com.will.string. If there are more than one possible results, return the longest word with the
- * smallest lexicographical order. If there is no possible result, return the empty com.will.string.
+ * Given a com.MySolution.string and a com.MySolution.string dictionary, find the longest com.MySolution.string in the dictionary that can be formed by deleting
+ * some characters of the given com.MySolution.string. If there are more than one possible results, return the longest word with the
+ * smallest lexicographical order. If there is no possible result, return the empty com.MySolution.string.
  * <p>
  * Example 1:
  * Input:
@@ -24,7 +24,7 @@ import java.util.List;
  * Output:
  * "a"
  * Note:
- * All the strings in the input will only contain lower-case letters.
+ * All the strings in the input MySolution only contain lower-case letters.
  * The size of the dictionary won't exceed 1,000.
  * The length of all the strings in the input won't exceed 1,000.
  * <p>

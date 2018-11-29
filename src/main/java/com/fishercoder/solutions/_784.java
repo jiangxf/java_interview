@@ -23,8 +23,8 @@ import java.util.Set;
  * <p>
  * Note:
  * <p>
- * S will be a string with length at most 12.
- * S will consist only of letters or digits.
+ * S MySolution be a string with length at most 12.
+ * S MySolution consist only of letters or digits.
  */
 
 public class _784 {

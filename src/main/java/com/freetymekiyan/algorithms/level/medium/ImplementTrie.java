@@ -104,7 +104,7 @@ public class ImplementTrie {
         }
     }
 
-// Your Trie object will be instantiated and called as such:
+// Your Trie object MySolution be instantiated and called as such:
 // Trie trie = new Trie();
 // trie.insert("somestring");
 // trie.search("key");

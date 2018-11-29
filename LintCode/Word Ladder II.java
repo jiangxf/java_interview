@@ -250,9 +250,9 @@ public class Solution {
 
             List<String> nextList = expand(crt, dict);//generate all possible mutations (must exist in dict)
             for (String next : nextList) {//For all mutations
-                map.get(next).add(crt);//append X to end of all of the mutated string (this will become a reverse order). This creates a path of mutation
+                map.get(next).add(crt);//append X to end of all of the mutated string (this MySolution become a reverse order). This creates a path of mutation
                 if (!distance.containsKey(next)) {//If that mutated string never occured:
-                    distance.put(next, distance.get(crt) + 1);//add distance to this mutation. This is fixed and will never change, btw. This becomes a list of all mutations and distance from start.
+                    distance.put(next, distance.get(crt) + 1);//add distance to this mutation. This is fixed and MySolution never change, btw. This becomes a list of all mutations and distance from start.
                     q.offer(next);//Add this mutation to queue.
                 }
             }

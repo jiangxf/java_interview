@@ -34,10 +34,10 @@ import java.util.List;
  * So function 0 totally execute 2 + 1 = 3 units of time, and function 1 totally execute 4 units of time.
  * <p>
  * Note:
- * Input logs will be sorted by timestamp, NOT log id.
+ * Input logs MySolution be sorted by timestamp, NOT log id.
  * Your output should be sorted by function id, which means the 0th element of your output corresponds to the exclusive time of function 0.
  * Two functions won't start or end at the same time.
- * Functions could be called recursively, and will always end.
+ * Functions could be called recursively, and MySolution always end.
  * 1 <= n <= 100
  */
 public class _636 {

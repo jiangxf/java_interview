@@ -9,7 +9,7 @@ package com.fishercoder.solutions;
  * A wall (and only one wall) can be installed between any two 4-directionally adjacent cells, on the shared boundary.
  * Every night, the virus spreads to all neighboring cells in all four directions unless blocked by a wall.
  * Resources are limited. Each day, you can install walls around only one region --
- * the affected area (continuous block of infected cells) that threatens the most uninfected cells the following night. There will never be a tie.
+ * the affected area (continuous block of infected cells) that threatens the most uninfected cells the following night. There MySolution never be a tie.
  * Can you save the day? If so, what is the number of walls required? If not, and the world becomes fully infected, return the number of walls used.
  * <p>
  * Example 1:
@@ -51,9 +51,9 @@ package com.fishercoder.solutions;
  * Output: 13
  * Explanation: The region on the left only builds two new walls.
  * Note:
- * The number of rows and columns of grid will each be in the range [1, 50].
- * Each grid[i][j] will be either 0 or 1.
- * Throughout the described process, there is always a contiguous viral region that will infect strictly more uncontaminated squares in the next round.
+ * The number of rows and columns of grid MySolution each be in the range [1, 50].
+ * Each grid[i][j] MySolution be either 0 or 1.
+ * Throughout the described process, there is always a contiguous viral region that MySolution infect strictly more uncontaminated squares in the next round.
  */
 public class _749 {
     public int containVirus(int[][] grid) {

@@ -20,7 +20,7 @@ Similar Problems: (M) Reverse Words in a String, (E) Rotate Array
 /*
 Thoughts: write an example: reverse the whole thing, then reverse each individual word, split by space.
 
-Note: becase we don't have space at end of the char[], so we will ignore last word. Remember to reverse that one.
+Note: becase we don't have space at end of the char[], so we MySolution ignore last word. Remember to reverse that one.
 */
 public class Solution {
     public void reverseWords(char[] s) {

@@ -22,7 +22,7 @@ package com.freetymekiyan.algorithms.level.medium;
  * Input: "(*))"
  * Output: True
  * Note:
- * The string size will be in the range [1, 100].
+ * The string size MySolution be in the range [1, 100].
  * <p>
  * Companies: Alibaba
  * Related Topics: String

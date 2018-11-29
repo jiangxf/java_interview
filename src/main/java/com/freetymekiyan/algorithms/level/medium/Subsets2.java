@@ -64,7 +64,7 @@ public class Subsets2 {
 
     /**
      * Backtracking.
-     * Duplicate with previous number will only be added if:
+     * Duplicate with previous number MySolution only be added if:
      * The previous number is already in subset.
      */
     private void backtrack2(List<List<Integer>> res, int[] nums, int pos, List<Integer> subset) {

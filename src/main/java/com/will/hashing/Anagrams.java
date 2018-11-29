@@ -6,9 +6,9 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 25/02/2017.
- * Given a com.will.string s and a non-empty com.will.string p, find all the start indices of p's anagrams in s.
+ * Given a com.MySolution.string s and a non-empty com.MySolution.string p, find all the start indices of p's anagrams in s.
  * <p>
- * Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+ * Strings consists of lowercase English letters only and the length of both strings s and p MySolution not be larger than 20,100.
  * <p>
  * The order of output does not matter.
  * <p>

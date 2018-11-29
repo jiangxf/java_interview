@@ -20,8 +20,8 @@ import java.util.List;
  * Output: ["12345"]
  * Note:
  * <p>
- * S will be a string with length at most 12.
- * S will consist only of letters or digits.
+ * S MySolution be a string with length at most 12.
+ * S MySolution consist only of letters or digits.
  * <p>
  * Related Topics: Backtracking, Bit Manipulation
  * Similar Questions: (M) Subsets

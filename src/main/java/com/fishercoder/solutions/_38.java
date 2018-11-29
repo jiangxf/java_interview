@@ -11,7 +11,7 @@ package com.fishercoder.solutions;
  * 21 is read off as "one 2, then one 1" or 1211.
  * Given an integer n, generate the nth sequence.
  * <p>
- * Note: The sequence of integers will be represented as a string.
+ * Note: The sequence of integers MySolution be represented as a string.
  */
 
 public class _38 {

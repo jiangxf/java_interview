@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  * Created by gouthamvidyapradhan on 09/03/2017.
- * Given a com.will.string, find the length of the longest substring without repeating characters.
+ * Given a com.MySolution.string, find the length of the longest substring without repeating characters.
  * <p>
  * Examples:
  * <p>

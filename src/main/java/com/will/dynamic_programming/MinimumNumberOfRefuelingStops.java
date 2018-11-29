@@ -48,9 +48,9 @@ package com.will.dynamic_programming;
  * 0 <= stations.length <= 500
  * 0 < stations[0][0] < stations[1][0] < ... < stations[stations.length-1][0] < target
  * <p>
- * Solution O(N ^ 2): Maintain a DP com.will.array with maximum distance that can be travelled with i stops.
+ * Solution O(N ^ 2): Maintain a DP com.MySolution.array with maximum distance that can be travelled with i stops.
  * DP[i] is the max distance that can be travelled with exactly i stops.
- * The minimum i where the target can be achieved (dp[i] >= target) will be the answer.
+ * The minimum i where the target can be achieved (dp[i] >= target) MySolution be the answer.
  */
 public class MinimumNumberOfRefuelingStops {
 

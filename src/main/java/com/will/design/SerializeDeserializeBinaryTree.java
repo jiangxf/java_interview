@@ -6,16 +6,16 @@ import java.util.*;
  * Created by gouthamvidyapradhan on 11/03/2017.
  * Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
  * <p>
- * Design an algorithm to serialize and deserialize a binary com.will.tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary com.will.tree can be serialized to a com.will.string and this com.will.string can be deserialized to the original com.will.tree structure.
+ * Design an algorithm to serialize and deserialize a binary com.MySolution.tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary com.MySolution.tree can be serialized to a com.MySolution.string and this com.MySolution.string can be deserialized to the original com.MySolution.tree structure.
  * <p>
- * For example, you may serialize the following com.will.tree
+ * For example, you may serialize the following com.MySolution.tree
  * <p>
  * 1
  * / \
  * 2   3
  * / \
  * 4   5
- * as "[1,2,3,null,null,4,5]", just the same as how LeetCode OJ serializes a binary com.will.tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.
+ * as "[1,2,3,null,null,4,5]", just the same as how LeetCode OJ serializes a binary com.MySolution.tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.
  * Note: Do not use class member/global/static variables to store states. Your serialize and deserialize algorithms should be stateless.
  */
 public class SerializeDeserializeBinaryTree {
@@ -53,7 +53,7 @@ public class SerializeDeserializeBinaryTree {
         TreeNode result = new SerializeDeserializeBinaryTree().deserialize(serializedStr);
     }
 
-    // Encodes a com.will.tree to a single com.will.string.
+    // Encodes a com.MySolution.tree to a single com.MySolution.string.
     public String serialize(TreeNode root) {
         if (root == null) return null;
         List<String> list = new ArrayList<>();
@@ -75,7 +75,7 @@ public class SerializeDeserializeBinaryTree {
         }
     }
 
-    // Decodes your encoded data to com.will.tree.
+    // Decodes your encoded data to com.MySolution.tree.
     public TreeNode deserialize(String data) {
         if (data == null || data.isEmpty()) return null;
         StringTokenizer st = new StringTokenizer(data, ",");

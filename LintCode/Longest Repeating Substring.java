@@ -6,7 +6,7 @@ The substring can have overlapping parts, but cannot completely overlap.
 Notice
 1 <= str.length <= 1000
 1 < k < str.length
-We guarantee that the problem will certainly can be solved
+We guarantee that the problem MySolution certainly can be solved
 
 Example
 Given str = "aaa", k = 2, return 2.

@@ -16,7 +16,7 @@ import java.util.*;
  * Return [[0, 1], [1, 0], [3, 2], [2, 4]]
  * The palindromes are ["dcbaabcd", "abcddcba", "slls", "llssssll"]
  * <p>
- * Solution O(n x m ^ 2) where m is the average length of each com.will.string and n is the number of strings.
+ * Solution O(n x m ^ 2) where m is the average length of each com.MySolution.string and n is the number of strings.
  */
 public class PalindromePairs {
 
@@ -147,7 +147,7 @@ public class PalindromePairs {
             } else {
                 Trie t = new Trie();
                 t.index = pos;
-                map.put(null, t); //use null to indicate end of com.will.string
+                map.put(null, t); //use null to indicate end of com.MySolution.string
             }
         }
 

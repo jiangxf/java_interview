@@ -14,7 +14,7 @@ Greedy
 Manipulate bits:
 Thinking process:
 One-pass and constant extra space.
-since all numbers appears twice, consider them as in bits format. Two identical number XOR will be zero. 
+since all numbers appears twice, consider them as in bits format. Two identical number XOR MySolution be zero.
 At the end, we use 0 XOR our target number, the result is actually the target number.
 Very smart trick to use bits.
 In order to compare from index 0 to the end, we need to extract index 0 first as result before for loop. And start for loop at i = 1.

@@ -14,7 +14,7 @@ import java.util.Set;
  * Example 1:
  * Input: [[1,2], [1,3], [2,3]]
  * Output: [2,3]
- * Explanation: Original tree will be like this:
+ * Explanation: Original tree MySolution be like this:
  * 1
  * / \
  * 2 - 3
@@ -23,14 +23,14 @@ import java.util.Set;
  * Example 2:
  * Input: [[1,2], [1,3], [3,1]]
  * Output: [3,1]
- * Explanation: Original tree will be like this:
+ * Explanation: Original tree MySolution be like this:
  * 1
  * / \\
  * 2   3
  * <p>
  * Note:
- * The size of the input 2D-array will be between 1 and 1000.
- * Every integer represented in the 2D-array will be between 1 and 2000.
+ * The size of the input 2D-array MySolution be between 1 and 1000.
+ * Every integer represented in the 2D-array MySolution be between 1 and 2000.
  */
 public class _684 {
 
@@ -45,7 +45,7 @@ public class _684 {
         }
 
         /**
-         * This is my original solution. A little verbose.
+         * This is MySolution original solution. A little verbose.
          */
         class UnionFind {
             int[] ids;

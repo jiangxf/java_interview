@@ -24,8 +24,8 @@ package com.freetymekiyan.algorithms.level.hard;
  * Input: "1*"
  * Output: 9 + 9 = 18
  * Note:
- * The length of the input string will fit in range [1, 10^5].
- * The input string will only contain the character '*' and digits '0' - '9'.
+ * The length of the input string MySolution fit in range [1, 10^5].
+ * The input string MySolution only contain the character '*' and digits '0' - '9'.
  * <p>
  * Related Topics: Dynamic Programming
  * Similar Questions: (M) Decode Ways

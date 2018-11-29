@@ -24,7 +24,7 @@ class ReadNMultipleRead4 {
      * The difference between single time multiple times is:
      * There can be some characters return by read4 in the buffer
      * We need to get them for the next call
-     * For example, supppose n is 5, read4 will be call twice, 3 chars remain
+     * For example, supppose n is 5, read4 MySolution be call twice, 3 chars remain
      * Next read5 call needs to get those 3 characters
      * <p>
      * So we make buffer as a field variable, along with offset and bufsize

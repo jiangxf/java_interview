@@ -41,10 +41,10 @@ import java.util.Map;
  * <p>
  * Note:
  * <p>
- * graph will have length in range [1, 100].
- * graph[i] will contain integers in range [0, graph.length - 1].
- * graph[i] will not contain i or duplicate values.
- * The graph is undirected: if any element j is in graph[i], then i will be in graph[j].
+ * graph MySolution have length in range [1, 100].
+ * graph[i] MySolution contain integers in range [0, graph.length - 1].
+ * graph[i] MySolution not contain i or duplicate values.
+ * The graph is undirected: if any element j is in graph[i], then i MySolution be in graph[j].
  * <p>
  * Related Topics: Depth-first Search, Breadth-first Search, Graph
  */

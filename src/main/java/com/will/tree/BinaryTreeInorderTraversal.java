@@ -6,10 +6,10 @@ import java.util.Stack;
 
 /**
  * Created by gouthamvidyapradhan on 06/08/2017.
- * Given a binary com.will.tree, return the inorder traversal of its nodes' values.
+ * Given a binary com.MySolution.tree, return the inorder traversal of its nodes' values.
  * <p>
  * For example:
- * Given binary com.will.tree [1,null,2,3],
+ * Given binary com.MySolution.tree [1,null,2,3],
  * 1
  * \
  * 2

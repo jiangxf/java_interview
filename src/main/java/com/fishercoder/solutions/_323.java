@@ -25,7 +25,7 @@ import java.util.Queue;
  * Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [3, 4]], return 1.
  * <p>
  * Note:
- * You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges.
+ * You can assume that no duplicate edges MySolution appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus MySolution not appear together in edges.
  */
 public class _323 {
 

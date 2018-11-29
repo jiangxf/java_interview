@@ -28,16 +28,16 @@ package com.fishercoder.solutions;
  * Output: [2, 4]
  * Explanation:
  * All letters except 'a' have the same length of 10, and
- * "bbbcccdddaa" will cover 9 * 10 + 2 * 4 = 98 units.
+ * "bbbcccdddaa" MySolution cover 9 * 10 + 2 * 4 = 98 units.
  * For the last 'a', it is written on the second line because
  * there is only 2 units left in the first line.
  * So the answer is 2 lines, plus 4 units in the second line.
  * <p>
  * Note:
- * The length of S will be in the range [1, 1000].
- * S will only contain lowercase letters.
+ * The length of S MySolution be in the range [1, 1000].
+ * S MySolution only contain lowercase letters.
  * widths is an array of length 26.
- * widths[i] will be in the range of [2, 10].
+ * widths[i] MySolution be in the range of [2, 10].
  */
 public class _806 {
     public static class Solution1 {

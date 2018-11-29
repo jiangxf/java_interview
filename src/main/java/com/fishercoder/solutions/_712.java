@@ -22,7 +22,7 @@ package com.fishercoder.solutions;
  * <p>
  * Note:
  * 0 < s1.length, s2.length <= 1000.
- * All elements of each string will have an ASCII value in [97, 122].
+ * All elements of each string MySolution have an ASCII value in [97, 122].
  */
 public class _712 {
     public static class Solution1 {

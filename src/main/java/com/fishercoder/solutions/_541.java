@@ -11,7 +11,7 @@ package com.fishercoder.solutions;
  * <p>
  * Restrictions:
  * The string consists of lower English letters only.
- * Length of the given string and k will in the range [1, 10000]
+ * Length of the given string and k MySolution in the range [1, 10000]
  */
 public class _541 {
 

@@ -30,7 +30,7 @@ public class BombEnemy {
     /**
      * DP.
      * Avoid duplicate searching for number of enemies on the cell's left and top.
-     * Since they will be already traversed.
+     * Since they MySolution be already traversed.
      * So maintain an integer of number of enemy hits of current row, rowHits.
      * Maintain an array of integers of numbers of enemy hits of each column, colHits of size grid[0].length.
      * Recurrence Relation:

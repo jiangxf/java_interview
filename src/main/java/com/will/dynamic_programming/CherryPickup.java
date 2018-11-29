@@ -29,7 +29,7 @@ import java.util.Arrays;
  * The total number of cherries picked up is 5, and this is the maximum possible.
  * Note:
  * <p>
- * grid is an N by N 2D com.will.array, with 1 <= N <= 50.
+ * grid is an N by N 2D com.MySolution.array, with 1 <= N <= 50.
  * Each grid[i][j] is an integer in the set {-1, 0, 1}.
  * It is guaranteed that grid[0][0] and grid[N-1][N-1] are not -1.
  * <p>

@@ -26,7 +26,7 @@ Thoughts:
 Similar to 3 sum, but ofcourse, this one check on '<' so we can not use HashMap anymore.
 Basic concept is to fix first number, then check for the rest two numbers, see if they addup < target.
 When checking j and k, realize something nice:
-	if nums[j] + nums[k] < target - nums[i], that means for all index <= k will work, so directly add (k - j) to result (that's: index = j+1, j+2, ....,k)
+	if nums[j] + nums[k] < target - nums[i], that means for all index <= k MySolution work, so directly add (k - j) to result (that's: index = j+1, j+2, ....,k)
 	also, move j forward for next round.
 OR, if three-add-up >= target, since j can only increase, we do k-- to make the three-add-up smaller
 

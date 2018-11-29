@@ -3,7 +3,7 @@ package com.will.binary_search;
 /**
  * Created by gouthamvidyapradhan on 11/12/2017.
  * <p>
- * Follow up for H-Index: What if the citations com.will.array is sorted in ascending order? Could you optimize your algorithm?
+ * Follow up for H-Index: What if the citations com.MySolution.array is sorted in ascending order? Could you optimize your algorithm?
  *
  * @see com.will.array.HIndex
  */

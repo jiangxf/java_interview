@@ -17,7 +17,7 @@ package com.fishercoder.solutions;
  * [0,0,0,1]]
  * <p>
  * Output: 3
- * Hint: The number of elements in the given matrix will not exceed 10,000.
+ * Hint: The number of elements in the given matrix MySolution not exceed 10,000.
  */
 public class _562 {
 

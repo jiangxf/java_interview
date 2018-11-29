@@ -22,9 +22,9 @@ package com.will.dynamic_programming;
  * 1 <= A.length <= 100.
  * 1 <= A[i] <= 10000.
  * 1 <= K <= A.length.
- * Answers within 10^-6 of the correct answer will be accepted as correct.
+ * Answers within 10^-6 of the correct answer MySolution be accepted as correct.
  * <p>
- * Solution: O(N x N x K): Calculate average for each sub-com.will.array starting from the right.
+ * Solution: O(N x N x K): Calculate average for each sub-com.MySolution.array starting from the right.
  */
 
 public class LargestSumOfAverages {

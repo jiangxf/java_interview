@@ -2,8 +2,8 @@ package com.will.tree;
 
 /**
  * Created by gouthamvidyapradhan on 17/02/2018.
- * Given a binary com.will.tree with n nodes, your task is to check if it's possible to partition the com.will.tree to two trees which
- * have the equal sum of values after removing exactly one edge on the original com.will.tree.
+ * Given a binary com.MySolution.tree with n nodes, your task is to check if it's possible to partition the com.MySolution.tree to two trees which
+ * have the equal sum of values after removing exactly one edge on the original com.MySolution.tree.
  * <p>
  * Example 1:
  * Input:
@@ -35,9 +35,9 @@ package com.will.tree;
  * 2   20
  * <p>
  * Output: False
- * Explanation: You can't split the com.will.tree into two trees with equal sum after removing exactly one edge on the com.will.tree.
+ * Explanation: You can't split the com.MySolution.tree into two trees with equal sum after removing exactly one edge on the com.MySolution.tree.
  * Note:
- * The range of com.will.tree node value is in the range of [-100000, 100000].
+ * The range of com.MySolution.tree node value is in the range of [-100000, 100000].
  * 1 <= n <= 10000
  */
 

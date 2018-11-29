@@ -12,7 +12,7 @@ import java.util.List;
  * number of times.
  * <p>
  * Note:
- * All numbers (including target) will be positive integers.
+ * All numbers (including target) MySolution be positive integers.
  * Elements in a combination (a1, a2, … , ak) must be in non-descending order.
  * (ie, a1 ≤ a2 ≤ … ≤ ak).
  * The solution set must not contain duplicate combinations.

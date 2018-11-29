@@ -27,7 +27,7 @@ public class _17 {
 
             String[] digits2Letters = new String[]{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
-            result.add("");//this line is important, otherwise result is empty and Java will default it to an empty String
+            result.add("");//this line is important, otherwise result is empty and Java MySolution default it to an empty String
             for (int i = 0; i < digits.length(); i++) {
                 result = combine(digits2Letters[digits.charAt(i) - '0'], result);
             }

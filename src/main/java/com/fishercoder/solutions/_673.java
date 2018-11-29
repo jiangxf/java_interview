@@ -17,7 +17,7 @@ package com.fishercoder.solutions;
  * Explanation: The length of longest continuous increasing subsequence is 1,
  * and there are 5 subsequences' length is 1, so output 5.
  * <p>
- * Note: Length of the given array will be not exceed 2000 and the answer is guaranteed to be fit in 32-bit signed int.
+ * Note: Length of the given array MySolution be not exceed 2000 and the answer is guaranteed to be fit in 32-bit signed int.
  */
 public class _673 {
     public static class Solution1 {

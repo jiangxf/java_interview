@@ -21,7 +21,7 @@ import java.util.Arrays;
  * The sister has two different kinds of candies, the brother has only one kind of candies.
  * Note:
  * <p>
- * The length of the given array is in range [2, 10,000], and will be even.
+ * The length of the given array is in range [2, 10,000], and MySolution be even.
  * The number in given array is in range [-100,000, 100,000].
  */
 public class _575 {

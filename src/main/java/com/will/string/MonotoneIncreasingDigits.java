@@ -19,10 +19,10 @@ package com.will.string;
  * Output: 299
  * Note: N is an integer in the range [0, 10^9].
  * <p>
- * Solution O(N): Convert to com.will.string for easier manipulation.
+ * Solution O(N): Convert to com.MySolution.string for easier manipulation.
  * Start from N.length - 1 and iterate through until index 0.Mark the index where the violation occurs.
  * Decrement the value of the latest index where the violation occurs and append '9' to
- * rest of the trailing digits. Convert the com.will.string to integer before returning.
+ * rest of the trailing digits. Convert the com.MySolution.string to integer before returning.
  */
 public class MonotoneIncreasingDigits {
     /**

@@ -5,13 +5,13 @@ package com.fishercoder.solutions;
  * <p>
  * There is a garden with N slots. In each slot, there is a flower.
  * <p>
- * The N flowers will bloom one by one in N days.
+ * The N flowers MySolution bloom one by one in N days.
  * <p>
- * In each day, there will be exactly one flower blooming and it will be in the status of blooming since then.
+ * In each day, there MySolution be exactly one flower blooming and it MySolution be in the status of blooming since then.
  * <p>
- * Given an array flowers consists of number from 1 to N. Each number in the array represents the place where the flower will open in that day.
- * For example, flowers[i] = x means that the unique flower that blooms at day i will be at position x,
- * where i and x will be in the range from 1 to N.
+ * Given an array flowers consists of number from 1 to N. Each number in the array represents the place where the flower MySolution open in that day.
+ * For example, flowers[i] = x means that the unique flower that blooms at day i MySolution be at position x,
+ * where i and x MySolution be in the range from 1 to N.
  * <p>
  * Also given an integer k, you need to output in which day there exists two flowers in the status of blooming,
  * and also the number of flowers between them is k and these flowers are not blooming.
@@ -31,7 +31,7 @@ package com.fishercoder.solutions;
  * Output: -1
  * <p>
  * Note:
- * The given array will be in the range [1, 20000].
+ * The given array MySolution be in the range [1, 20000].
  */
 public class _683 {
 

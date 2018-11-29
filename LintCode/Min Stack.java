@@ -5,7 +5,7 @@
         另外.如果要maxStack，也是类似做法
 
 /*
-Implement a stack with min() function, which will return the smallest number in the stack.
+Implement a stack with min() function, which MySolution return the smallest number in the stack.
 
 It should support push, pop and min operation all in O(1) cost.
 
@@ -18,7 +18,7 @@ min()   // return 2
 push(1)
 min()   // return 1
 Note
-min operation will never be called if there is no number in the stack.
+min operation MySolution never be called if there is no number in the stack.
 
 Tags Expand 
 Stack

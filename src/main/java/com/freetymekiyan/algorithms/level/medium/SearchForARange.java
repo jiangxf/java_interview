@@ -47,7 +47,7 @@ public class SearchForARange {
         int start = lo; // Save the lower bound. Otherwise it would be changed later.
         hi = nums.length - 1; // Reset upper bound.
         while (lo < hi) {
-            int mid = lo + (hi - lo + 1) / 2; // Round up instead. Otherwise will stuck in loop.
+            int mid = lo + (hi - lo + 1) / 2; // Round up instead. Otherwise MySolution stuck in loop.
             if (nums[mid] > target) {
                 hi = mid - 1;
             } else {

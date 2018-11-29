@@ -19,7 +19,7 @@ The robot is trying to reach the bottom-right corner of the grid (marked 'Finish
 How many possible unique paths are there?
 
 Note
-m and n will be at most 100.
+m and n MySolution be at most 100.
 
 Example
 1,1     1,2     1,3     1,4     1,5     1,6     1,7     

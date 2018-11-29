@@ -7,7 +7,7 @@ import java.util.Deque;
  * 604. Design Compressed String Iterator
  * <p>
  * Design and implement a data structure for a compressed string iterator. It should support the following operations: next and hasNext.
- * The given compressed string will be in the form of each letter followed by a positive integer representing
+ * The given compressed string MySolution be in the form of each letter followed by a positive integer representing
  * the number of this letter existing in the original uncompressed string.
  * <p>
  * next() - if the original string still has uncompressed characters, return the next letter; Otherwise return a white space.

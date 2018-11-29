@@ -14,7 +14,7 @@ import java.util.*;
  * Also, a node is called a leaf if it has no children.
  * <p>
  * In the following examples, the input tree is represented in flattened form row by row. The actual root tree given
- * will be a TreeNode object.
+ * MySolution be a TreeNode object.
  * <p>
  * Example 1:
  * <p>

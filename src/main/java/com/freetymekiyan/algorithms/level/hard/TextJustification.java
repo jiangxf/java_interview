@@ -13,7 +13,7 @@ import java.util.List;
  * spaces ' ' when necessary so that each line has exactly L characters.
  * <p>
  * Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not
- * divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.
+ * divide evenly between words, the empty slots on the left MySolution be assigned more spaces than the slots on the right.
  * <p>
  * For the last line of text, it should be left justified and no extra space is inserted between words.
  * <p>

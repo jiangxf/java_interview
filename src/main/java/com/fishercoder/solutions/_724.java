@@ -24,8 +24,8 @@ package com.fishercoder.solutions;
  * There is no index that satisfies the conditions in the problem statement.
  * <p>
  * Note:
- * The length of nums will be in the range [0, 10000].
- * Each element nums[i] will be an integer in the range [-1000, 1000].
+ * The length of nums MySolution be in the range [0, 10000].
+ * Each element nums[i] MySolution be an integer in the range [-1000, 1000].
  */
 public class _724 {
     public static class Solution1 {

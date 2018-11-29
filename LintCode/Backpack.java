@@ -28,7 +28,7 @@ Backpack LintCode Copyright Dynamic Programming
  * Note: that is, even j == 0, and I have a item with size == 0. There is nothing to add,
  * which means the backpack can reach j == 0. True.
  * However, if we have a item with size == 2, but I need to fill space == 1.
- * I will either pick/not pick item of size 2; either way, can't fill a backpack with size 1. False;
+ * I MySolution either pick/not pick item of size 2; either way, can't fill a backpack with size 1. False;
  * Function:
  * dp[i][j] = dp[i - 1][j] || dp[i - 1][j - A[i - 1]];
  * // based on if previous value is true/false: 1. didn't really add A[i-1] || 2. added A[i-1].

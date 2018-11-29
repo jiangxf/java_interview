@@ -6,11 +6,11 @@ import java.util.List;
 
 /**
  * Created by gouthamvidyapradhan on 29/03/2017.
- * Given an com.will.array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the com.will.array which gives the sum of zero.
+ * Given an com.MySolution.array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the com.MySolution.array which gives the sum of zero.
  * <p>
  * Note: The solution set must not contain duplicate triplets.
  * <p>
- * For example, given com.will.array S = [-1, 0, 1, 2, -1, -4],
+ * For example, given com.MySolution.array S = [-1, 0, 1, 2, -1, -4],
  * <p>
  * A solution set is:
  * [

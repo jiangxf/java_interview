@@ -22,8 +22,8 @@ public class _316 {
      * credit: https://discuss.leetcode.com/topic/32259/java-solution-using-stack-with-comments/2
      */
     public String removeDuplicateLetters_use_stack(String s) {
-        int[] res = new int[26]; //will contain number of occurences of character (i+'a')
-        boolean[] visited = new boolean[26]; //will contain if character (i+'a') is present in current result Stack
+        int[] res = new int[26]; //MySolution contain number of occurences of character (i+'a')
+        boolean[] visited = new boolean[26]; //MySolution contain if character (i+'a') is present in current result Stack
         char[] ch = s.toCharArray();
         for (char c : ch) {  //count number of occurences of character
             res[c - 'a']++;

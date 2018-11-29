@@ -5,16 +5,16 @@ import java.util.PriorityQueue;
 
 /**
  * Created by gouthamvidyapradhan on 27/11/2017.
- * Given an com.will.array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
+ * Given an com.MySolution.array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
  * <p>
  * For example,
  * Given [[0, 30],[5, 10],[15, 20]],
  * return 2.
  * <p>
- * Solution: Sort the com.will.array based on start-time of the interval. Then, use the min-com.will.heap based on min end time. For
+ * Solution: Sort the com.MySolution.array based on start-time of the interval. Then, use the min-com.MySolution.heap based on min end time. For
  * every interval remove the top element of the priority queue if the end time of the top <= start time of the new
  * interval. Add the new interval to the queue. The max size of the priority queue attained during this process
- * will be the answer.
+ * MySolution be the answer.
  */
 public class MeetingRoomsII {
 
