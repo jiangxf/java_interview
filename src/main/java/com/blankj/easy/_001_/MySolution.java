@@ -1,4 +1,4 @@
-package com.blankj.easy._001;
+package com.blankj.easy._001_;
 
 import com.google.common.collect.Maps;
 import org.slf4j.Logger;

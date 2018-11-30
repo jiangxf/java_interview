@@ -1,4 +1,4 @@
-package com.blankj.easy._027;
+package com.blankj.easy._027_;
 
 /**
  * <pre>
@@ -19,12 +19,24 @@ public class Solution {
     }
 
     public int removeElement(int[] nums, int val) {
-        int tail = 0;
-        for (int i = 0, len = nums.length; i < len; ++i) {
-            if (nums[i] != val) {
-                nums[tail++] = nums[i];
+        int len = nums.length;
+
+        int temp = 0;
+        for (int i = 0; i < len; i++) {
+            if(nums[i] != val){
+                nums[temp++] = nums[i];
             }
         }
-        return tail;
+        return temp;
     }
+
+//    public int removeElement(int[] nums, int val) {
+//        int tail = 0;
+//        for (int i = 0, len = nums.length; i < len; ++i) {
+//            if (nums[i] != val) {
+//                nums[tail++] = nums[i];
+//            }
+//        }
+//        return tail;
+//    }
 }

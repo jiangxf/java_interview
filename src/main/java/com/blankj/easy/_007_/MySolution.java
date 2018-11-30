@@ -1,10 +1,7 @@
-package com.blankj.easy._007;
+package com.blankj.easy._007_;
 
-import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA
