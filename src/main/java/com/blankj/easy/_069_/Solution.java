@@ -1,4 +1,4 @@
-package com.blankj.easy._069;
+package com.blankj.easy._069_;
 
 /**
  * <pre>
@@ -15,10 +15,18 @@ public class Solution {
     }
 
     public int mySqrt(int x) {
-        long n = x;
-        while (n * n > x) {
-            n = (n + x / n) >> 1;
+        int half = x;
+        while (half * half > x) {
+            half = (half + x / half) >> 1;
         }
-        return (int) n;
+        return half;
     }
+
+//    public int mySqrt(int x) {
+//        long n = x;
+//        while (n * n > x) {
+//            n = (n + x / n) >> 1;
+//        }
+//        return (int) n;
+//    }
 }
